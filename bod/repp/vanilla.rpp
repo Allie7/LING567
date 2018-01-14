@@ -1,0 +1,9 @@
+;;;
+;;; Basic repp file, partially customized according
+;;; to your choices file.
+;;;
+;;; 
+:[ \!"#$%&()\*\+,-\./:;<=>?@\[\]\^{|}~\\]
+!^(.+)$								 \1 
+!\t								 
+!  +								 

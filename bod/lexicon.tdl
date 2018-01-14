@@ -1,0 +1,22 @@
+;;; -*- Mode: TDL; Coding: utf-8 -*-
+;;; Nouns
+
+nga_s := ergative-pronoun-1st-lex-noun-lex &
+  [ STEM < "nga_s" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_I_n_rel" ].
+
+nga := noun3-noun-lex &
+  [ STEM < "nga" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_I_n_rel" ].
+
+;;; Adjectives
+
+;;; Verbs
+
+%27si_byung := intransitive-verb-lex-verb-lex &
+  [ STEM < "'si_byung" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_die_v_rel" ].
+
+bcag_song := transitive-verb-lex-verb-lex &
+  [ STEM < "bcag_song" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_break_v_rel" ].
