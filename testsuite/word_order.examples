@@ -11,3 +11,91 @@ nga	'si_byung
 I	die_PRF
 'I have died.'
 
+#inferred ungrammatical 
+Source: author
+Vetted: f
+Judgment: u
+Phenomena: wo 
+'si_byung	nga
+'si_byung	nga
+die_PRF		nga
+'I have died.'
+
+#
+# Second examples
+# this shows examples of the 
+# ergative-agent-object phrases
+#
+Source: a:132
+Vetted: s
+Judgment: g
+Phenomena: wo, c,
+nga_s   stag    bsad_pa_yin
+nga_s   stag    bsad_pa_yin
+I       tiger   killed_PRF
+'I killed the tiger.'
+
+#SVO
+Source: author
+Vetted: f
+Judgment: u
+Phenomena: wo, c,
+nga_s	bsad_pa_yin	stag
+nga_s	bsad_pa_yin	stag
+I	killed_PRF	stag
+'I killed the tiger.'
+
+#will change with fronting
+#see page 282-283 of source C
+#this applies to marked constituents but not unmarked ones; need more examples
+#OSV
+Source: author
+Vetted: f
+Judgment: u
+Phenomena: wo, c,
+stag	nga_s	bsad_pa_yin
+stag	nga_s	bsad_pa_yin
+tiger	I	killed_PRF
+'I killed the tiger.'
+
+#OVS
+Source: author
+Vetted: f
+Judgment: u
+Phenomena: wo, c,
+stag	bsad_pa_yin	nga_s
+stag	bsad_pa_yin	nga_s
+tiger	killed_PRF	I
+'I killed the tiger.'
+
+#VOS
+Source: author
+Vetted: f
+Judgment: u
+Phenomena: wo, c,
+bsad_pa_yin	stag	nga_s
+bsad_pa_yin	stag	nga_s
+killed_PRF	tiger	I
+'I killed the tiger.'
+
+#VSO
+Source: author
+Vetted: f
+Judgment: u
+Phenomena: wo, c,
+bsad_pa_yin	nga_s	stag
+bsad_pa_yin	nga_s	stag
+killed_PRF	I	tiger
+'I killed the tiger.'
+
+
+
+
+
+
+
+
+
+
+
+
