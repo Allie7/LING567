@@ -5,5 +5,10 @@ Page #		Sentence			Quality
 132		I broke the cup			aligned
 132		I cried				aligned
 132		I died				aligned
+133		*I killed the tigger		aligned
+133		I'll kill the tiger		aligned
+133		I went to Seattle		aligned
+133		I will go to Seattle		aligned
+133		*I will go to Seattle		aligned
 
 
