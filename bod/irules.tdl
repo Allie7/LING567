@@ -1,1 +1,18 @@
 ;;; -*- Mode: TDL; Coding: utf-8 -*-
+;;; Inflecting Lexical Rule Instances
+
+dative-lex-rule-suffix :=
+%suffix (* la)
+dative-lex-rule-lex-rule.
+
+ergative-lex-rule-suffix1 :=
+%suffix (* s)
+ergative-lex-rule-lex-rule.
+
+ergative-lex-rule-suffix2 :=
+%suffix (* gyis)
+ergative-lex-rule-lex-rule.
+
+instrumental-lex-rule-suffix :=
+%suffix (* gus)
+instrumental-lex-rule-lex-rule.

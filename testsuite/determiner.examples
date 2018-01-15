@@ -1,0 +1,25 @@
+#Determinants are considered noun particles or adjectives
+#without those incorporated, we will have them act as traditional
+#determiners for now
+
+Source: d:100
+Vetted: s
+Judgment: g
+Phenomena: wo, c,
+`mi__bculngatsam cig yogred
+`mi__bculngatsam cig yogred
+PeopleFiteenAbout num exist
+'There are about fiteeen people.'
+
+Source: d:100
+Vetted: s
+Judgment: g
+Phenomena: wo, c,
+`mi__bculngatsam  yogred
+`mi__bculngatsam  yogred
+PeopleFiteenAbout exist
+'There are about fiteeen people.'
+
+
+
+

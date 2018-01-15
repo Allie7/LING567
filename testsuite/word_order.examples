@@ -30,9 +30,9 @@ Source: a:132
 Vetted: s
 Judgment: g
 Phenomena: wo, c,
-nga_s   stag    bsad_pa_yin
-nga_s   stag    bsad_pa_yin
-I       tiger   killed_PRF
+ngas	stag    bsad_pa_yin
+nga-s	stag    bsad_pa_yin
+I-ERG	tiger	killed_PRF
 'I killed the tiger.'
 
 #SVO
@@ -40,9 +40,9 @@ Source: author
 Vetted: f
 Judgment: u
 Phenomena: wo, c,
-nga_s	bsad_pa_yin	stag
-nga_s	bsad_pa_yin	stag
-I	killed_PRF	stag
+ngas	bsad_pa_yin	stag
+nga-s	bsad_pa_yin	stag
+I-ERG	killed_PRF	stag
 'I killed the tiger.'
 
 #will change with fronting
@@ -54,8 +54,8 @@ Vetted: f
 Judgment: u
 Phenomena: wo, c,
 stag	nga_s	bsad_pa_yin
-stag	nga_s	bsad_pa_yin
-tiger	I	killed_PRF
+stag	nga-s	bsad_pa_yin
+tiger	I-ERG	killed_PRF
 'I killed the tiger.'
 
 #OVS
@@ -63,9 +63,9 @@ Source: author
 Vetted: f
 Judgment: u
 Phenomena: wo, c,
-stag	bsad_pa_yin	nga_s
-stag	bsad_pa_yin	nga_s
-tiger	killed_PRF	I
+stag	bsad_pa_yin	ngas
+stag	bsad_pa_yin	nga-s
+tiger	killed_PRF	I-ERG
 'I killed the tiger.'
 
 #VOS
@@ -73,9 +73,9 @@ Source: author
 Vetted: f
 Judgment: u
 Phenomena: wo, c,
-bsad_pa_yin	stag	nga_s
-bsad_pa_yin	stag	nga_s
-killed_PRF	tiger	I
+bsad_pa_yin	stag	ngas
+bsad_pa_yin	stag	nga-s
+killed_PRF	tiger	I-ERG
 'I killed the tiger.'
 
 #VSO
@@ -83,9 +83,9 @@ Source: author
 Vetted: f
 Judgment: u
 Phenomena: wo, c,
-bsad_pa_yin	nga_s	stag
-bsad_pa_yin	nga_s	stag
-killed_PRF	I	tiger
+bsad_pa_yin	ngas	stag
+bsad_pa_yin	nga-s	stag
+killed_PRF	I-ERG	tiger
 'I killed the tiger.'
 
 

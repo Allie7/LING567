@@ -1,11 +1,18 @@
+#
+# Example 1 for lab 2
+# These are basic ungrammarical examples
+#
+
 Source: a:132
 Vetted: s
 Judgment: g
 Phenomena: wo, c,
-nga_s	stag	bsad_pa_yin
-nga_s	stag	bsad_pa_yin
-I	tiger	killed_PRF
+ngas	stag	bsad_pa_yin
+nga-s	stag	bsad_pa_yin
+I-ERG	tiger	killed_PRF
 'I killed the tiger.'
+
+#Missing ergative
 
 Source: a:133
 Vetted: s
@@ -15,6 +22,59 @@ nga	stag	bsad_pa_yin
 nga	stag	bsad_pa_yin
 I	tiger	killed_PRF
 'I killed the tiger.'
+
+#
+# dative for object
+# these are inferred by the mention of
+# special cases from c:274
+# It also notes that dative is not a valid argument
+# for kill
+
+Source: c:274
+Vetted: s
+Judgment: g
+Phenomena: wo, c
+thubbstangyis	blobzangla	gzhus_song
+thubbstan-gyis	blobzang-la	gzhus_song
+Thubten-ERG	Lobsang-DAT	Hit_PRF
+'Thubten hit Lobsang'
+
+Source: c:274
+Vetted: s
+Judgment: u
+Phenomena: wo, c
+thubbstangyis  blobzangla     bsad_pa_red
+thubbstan-gyis  blobzang-la     bsad_pa_red
+Thubten-ERG     Lobsang-DAT     kill_PRF
+'Thubten killed Lobsang'
+
+
+#
+# Instrumental
+#
+
+Source: b:203
+Vetted: s
+Judgment: g
+Phenomena: wo
+khos		yige		bris_song
+kho-s		yige		bris_song
+3sg-ERG		letter		wrote_aux
+‘He wrote the letter.’
+
+Source: b:203
+Vetted: s
+Judgment: g
+Phenomena: wo, c
+khos		yige		smyug_gus	bris_song
+kho-s		yige            smyug-gus	bris_song
+3sg-ERG		letter		pen-INST	wrote_aux
+‘He wrote the letter with a pen.’
+
+
+
+
+
 
 
 

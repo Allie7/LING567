@@ -2,7 +2,7 @@
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;;; Grammar of Tibetan
 ;;; created at:
-;;;     Sun Jan 14 07:35:10 UTC 2018
+;;;     Mon Jan 15 04:48:08 UTC 2018
 ;;; based on Matrix customization system version of:
 ;;;     Wed Dec 20 23:31:10 UTC 2017
 ;;;
@@ -19,6 +19,12 @@ non-mod-lex-item := lex-item &
 ;;;;;;;;;;;;;;;;;;;;;;;;;
 
 noun :+ [ CASE case ].
+
+inflected :+ [ CASE-MARKER-FLAG luk,
+    NOUN-FLAG luk ].
+
+infl-satisfied :+ [ CASE-MARKER-FLAG na-or-+,
+    NOUN-FLAG na-or-+ ].
 
 png :+ [ PER person ].
 
@@ -39,6 +45,9 @@ basic-head-opt-subj-phrase :+ [ HEAD-DTR.SYNSEM.LOCAL.CAT.VAL.COMPS < > ].
 case := *top*.
 erg := case.  ; ergative
 abs := case.  ; absolutive
+gen := case.  ; genitive
+dat := case.  ; dative
+ins := case.  ; instrumental
 
 ;;; Person
 
@@ -49,7 +58,8 @@ person := *top*.
 
 ;;; Tense
 
-nonfuture := tense.
+past := tense.
+present := tense.
 future := tense.
 
 ;;; Aspect
@@ -64,13 +74,17 @@ imperfective := aspect.
 ;;; Nouns
 
 noun-lex := basic-noun-lex & basic-one-arg & no-hcons-lex-item & non-mod-lex-item &
-  [ ARG-ST < #spr >,
-    SYNSEM.LOCAL.CAT.VAL [ COMPS < >,
+  [ SYNSEM.LOCAL.CAT.VAL [ SPR < #spr &
+                                 [ LOCAL.CAT.HEAD det ] >,
+                           COMPS < >,
                            SUBJ < >,
-                           SPEC < >,
-                           SPR < #spr &
-                                 [ LOCAL.CAT.HEAD det,
-                                   OPT + ] > ] ].
+                           SPEC < > ],
+    ARG-ST < #spr >,
+    INFLECTED [ CASE-MARKER-FLAG -,
+                NOUN-FLAG + ] ].
+
+no-spr-noun-lex := noun-lex &
+  [ SYNSEM.LOCAL.CAT.VAL.SPR < [ OPT + ] > ].
 
 ; Nouns which cannot take specifiers mark their SPR requirement
 ; as OPT +.  Making the non-head daughter OPT - in this rule
@@ -85,12 +99,17 @@ head-spec-phrase := basic-head-spec-phrase & head-initial &
 basic-abs-noun-noun-lex := noun-lex &
   [ SYNSEM.LOCAL.CAT.HEAD.CASE abs ].
 
-ergative-pronoun-1st-lex-noun-lex := noun-lex &
-  [ SYNSEM.LOCAL [ CAT.HEAD.CASE erg,
-                   CONT.HOOK.INDEX.PNG.PER 1st ] ].
-
-noun3-noun-lex := basic-abs-noun-noun-lex &
+first-person-noun-lex := no-spr-noun-lex &
   [ SYNSEM.LOCAL.CONT.HOOK.INDEX.PNG.PER 1st ].
+
+3rd-person-noun-lex := no-spr-noun-lex &
+  [ SYNSEM.LOCAL.CONT.HOOK.INDEX.PNG.PER 3rd ].
+
+2nd-person-lex-noun-lex := no-spr-noun-lex &
+  [ SYNSEM.LOCAL.CONT.HOOK.INDEX.PNG.PER 2nd ].
+
+proper-noun-lex-noun-lex := no-spr-noun-lex &
+  [ SYNSEM.LOCAL.CONT.HOOK.INDEX.PNG.PER 3rd ].
 
 ;;; Verbs
 
@@ -128,11 +147,18 @@ erg-abs-transitive-verb-lex := transitive-verb-lex &
              [ LOCAL.CAT.HEAD noun &
                               [ CASE abs ] ] > ].
 
-intransitive-verb-lex-verb-lex := abs-intransitive-verb-lex &
+intransitive-verb-lex-verb-lex := abs-intransitive-verb-lex.
+
+transitive-verb-lex-verb-lex := perfective-verb-verb-lex & erg-abs-transitive-verb-lex.
+
+perfective-verb-verb-lex := verb-lex &
   [ SYNSEM.LOCAL.CONT.HOOK.INDEX.E.ASPECT perfective ].
 
-transitive-verb-lex-verb-lex := erg-abs-transitive-verb-lex &
-  [ SYNSEM.LOCAL.CONT.HOOK.INDEX.E.ASPECT perfective ].
+perfective-intransitive-verb-verb-lex := intransitive-verb-lex-verb-lex & perfective-verb-verb-lex.
+
+perfective-transitive-dative-verb-lex-verb-lex := perfective-verb-verb-lex & transitive-verb-lex &
+  [ SYNSEM.LOCAL.CAT.VAL [ SUBJ.FIRST.LOCAL.CAT.HEAD.CASE erg,
+                           COMPS.FIRST.LOCAL.CAT.HEAD.CASE dat ] ].
 
 ;;; Others
 
@@ -144,11 +170,44 @@ determiner-lex := basic-determiner-lex & norm-zero-arg & non-mod-lex-item &
                            COMPS < >,
                            SUBJ < > ] ].
 
+determinant-adj-lex-determiner-lex := determiner-lex & no-icons-lex-item.
+
 ;;;;;;;;;;;;;;;;;;;
 ;;; Lexical Rules
 ;;;;;;;;;;;;;;;;;;;
 
+; Adjective Incorporation
+
+adj_incorporation-lex-rule := add-only-rule &
+  [ C-CONT [ RELS <! arg1-ev-relation &
+                     [ LBL #ltop,
+                       ARG1 #index ] !>,
+             HOOK #hook ],
+    DTR.SYNSEM.LOCAL [ CAT.HEAD noun,
+                       CONT.HOOK #hook &
+                                 [ LTOP #ltop,
+                                   INDEX #index ] ] ].
+
 ;;; Lexical rule types
+
+case-marker-lex-rule-super := add-only-no-ccont-rule &
+  [ INFLECTED [ CASE-MARKER-FLAG +,
+                NOUN-FLAG #noun ],
+    DTR noun-lex &
+        [ INFLECTED.NOUN-FLAG #noun ] ].
+
+dative-lex-rule-lex-rule := case-marker-lex-rule-super & infl-lex-rule &
+  [ DTR.INFLECTED.NOUN-FLAG +,
+    SYNSEM.LOCAL.CAT.HEAD.CASE dat ].
+
+bare-abs-rule-lex-rule := case-marker-lex-rule-super & const-lex-rule &
+  [ SYNSEM.LOCAL.CAT.HEAD.CASE abs ].
+
+ergative-lex-rule-lex-rule := case-marker-lex-rule-super & infl-lex-rule &
+  [ SYNSEM.LOCAL.CAT.HEAD.CASE erg ].
+
+instrumental-lex-rule-lex-rule := case-marker-lex-rule-super & infl-lex-rule &
+  [ SYNSEM.LOCAL.CAT.HEAD.CASE ins ].
 
 ;;;;;;;;;;;;;;;;;;;
 ;;; Phrasal Types
