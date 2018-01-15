@@ -1,40 +1,30 @@
-
-#self-centered PAST tense auxilary 'byung'
-Source: b:143
+#the following examples only contains self-centered, 1st person cases
+#present tense
+Source: b:137
 Vetted: s
 Judgment: g
 Phenomena: tam
-khonggis   gnangbyung
-khong-gis  gnang-byung
-3SG-SBJ    give-AUX 
-'He gave it(to me).'
+ngas  yige    cig briskyiyod
+ngas  yige    cig bris-kyi-yod
+1ST-SBJ letter  num write-LK-AUX
+'I am writing a letter.'
 
-#other-centered PAST tense auxilary 'byung'
-Source: b:143
+#past tense
+Source: b:137
 Vetted: s
 Judgment: g
 Phenomena: tam
-khonggis    gnangsong
-khonggis    gnang-song
-3SG-SBJ     give-AUX
-'He gave it (to you or to someone else).'
-
-#PRESENT TENSE
-Source: b:151
-Vetted: s
-Judgment: g
-Phenomena: tam
-nga   nagiyod
-nga   na-gi-yod
-1SG   be ill-LK-AUX
-'I am chronically sick.'
+ngas  yige    klogbayin
+ngas  yige    klog-ba-yin
+1ST-SBJ letter  read-LK-AUX
+'I read the letter.'
 
 #FUTURE TENSE
-Source: b:215
+Source: b:137
 Vetted: s
 Judgment: g
 Phenomena: tam
-kho laska   byaspa'dug
-kho las-ka  byas-pa-'dug
-3SG work    did-LK-AUX
-'He is sure to do the work.'`
+sangnyin  ngas    laska  'di   byedkyiyin
+sangnyin  ngas    laska  'di   byed-kyi-yin
+tomorrow  1ST-SBJ work   this  do-LK-AUX
+'He is sure to do the work.'
