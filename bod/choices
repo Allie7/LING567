@@ -64,9 +64,7 @@ section=arg-opt
 
 section=lexicon
 adj_incorp=on
-  noun1_name=basic-abs-noun
-    noun1_feat1_name=case
-    noun1_feat1_value=abs
+  noun1_name=basic-noun
   noun1_det=opt
     noun1_stem1_orth=dkaryol
     noun1_stem1_pred=_cup_n_rel

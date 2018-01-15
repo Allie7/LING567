@@ -1,23 +1,23 @@
 ;;; -*- Mode: TDL; Coding: utf-8 -*-
 ;;; Nouns
 
-dkaryol := basic-abs-noun-noun-lex &
+dkaryol := basic-noun-noun-lex &
   [ STEM < "dkaryol" >,
     SYNSEM.LKEYS.KEYREL.PRED "_cup_n_rel" ].
 
-stag := basic-abs-noun-noun-lex &
+stag := basic-noun-noun-lex &
   [ STEM < "stag" >,
     SYNSEM.LKEYS.KEYREL.PRED "_tiger_n_rel" ].
 
-%60mi__bculngatsam := basic-abs-noun-noun-lex &
+%60mi__bculngatsam := basic-noun-noun-lex &
   [ STEM < "`mi__bculngatsam" >,
     SYNSEM.LKEYS.KEYREL.PRED "_fifteen_people_n_rel" ].
 
-smyug := basic-abs-noun-noun-lex &
+smyug := basic-noun-noun-lex &
   [ STEM < "smyug" >,
     SYNSEM.LKEYS.KEYREL.PRED "_pen_n_rel" ].
 
-yige := basic-abs-noun-noun-lex &
+yige := basic-noun-noun-lex &
   [ STEM < "yige" >,
     SYNSEM.LKEYS.KEYREL.PRED "_letter_n_rel" ].
 

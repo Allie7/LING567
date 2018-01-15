@@ -1,7 +1,6 @@
 #
 # Example 1 for lab 2
-# These are basic ungrammarical examples
-#
+# These are basic ungrammarical 
 
 Source: a:132
 Vetted: s
@@ -22,6 +21,9 @@ nga	stag	bsad_pa_yin
 nga	stag	bsad_pa_yin
 I	tiger	killed_PRF
 'I killed the tiger.'
+
+
+
 
 #
 # dative for object
