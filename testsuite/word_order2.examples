@@ -2,21 +2,16 @@ Source: b:203
 Vetted: s
 Judgment: g
 Phenomena: wo
-khos.           yi.ge           bris.song
-khos.           yi.ge           bris.song
-3sg-smp letter  wrote-aux
+khos      yige    brissong
+kho-s     yige    bris-song
+3SG-SBJ   letter  wrote-AUX
 ‘He wrote the letter.’
 
-Source: b:203
-Vetted: s
-Judgment: g
-Phenomena: wo, c
-khos.           yi.ge    smyug.gus. bris.song
-khos.           yi.ge            smyug.gus. bris.song
-3sg-smp letter   pen-instr  wrote-aux
-‘He wrote the letter with a pen.’
-
-
-
-
-
+Source: author
+Vetted: f
+Judgement: u
+Phenomena: wo
+khos    brissong    yige
+kho-s   bris-song   yige
+3SG-SBJ wrote-AUX   letter
+'He wrote the letter.'
