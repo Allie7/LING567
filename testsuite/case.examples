@@ -23,8 +23,6 @@ I	tiger	killed_PRF
 'I killed the tiger.'
 
 
-
-
 #
 # dative for object
 # these are inferred by the mention of
@@ -38,7 +36,7 @@ Judgment: g
 Phenomena: wo, c
 thubbstangyis	blobzangla	gzhus_song
 thubbstan-gyis	blobzang-la	gzhus_song
-Thubten-ERG	Lobsang-DAT	Hit_PRF
+Thubten-ERG	Lobsang-DAT	hit_PRF
 'Thubten hit Lobsang'
 
 Source: c:274

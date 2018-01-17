@@ -42,7 +42,7 @@ Judgment: u
 Phenomena: wo, c,
 ngas	bsad_pa_yin	stag
 nga-s	bsad_pa_yin	stag
-I-ERG	killed_PRF	stag
+I-ERG	killed_PRF	tiger
 'I killed the tiger.'
 
 #will change with fronting
@@ -89,7 +89,28 @@ killed_PRF	I-ERG	tiger
 'I killed the tiger.'
 
 
+#
+# Auxiliary particle order
+#
 
+
+Source: b:132
+Vetted: s
+Judgment: g
+Phenomena: wo
+ma_phyinpa_redda
+ma_phyin-pa_red-da
+not_went-link_aux-emph
+'Certainly he didn't go.'
+
+Source: author
+Vetted: f
+Judgment: u
+Phenomena: wo
+pa_redma_phyinda
+ma_phyin-pa_red-da
+not_went-link_aux-emph
+'Certainly he didn't go.'
 
 
 

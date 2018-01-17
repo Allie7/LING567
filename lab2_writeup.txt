@@ -1,0 +1,194 @@
+John Cadigan
+Ling 567
+Winter 2018
+Januray 16, 2018
+
+
+Lab 2 Writeup
+
+
+
+There is tone in Tibetan, so we have included the following as markers for high and low tones: ' and `. Later, we should pick more distinct symbols.
+
+I & II. Test suite instances and choices
+
+A. Word Order
+
+(Lhasa) Tibetan is an ergative-absolutive SOV language. For intranstivie verbs, the subject is absolutive. For transitive verbs, the agent/subject of transitive verbs is ergative and the object is absolutive. We have illustrated all of the basic word orders. Here is one positive, SOV,  and one negative SVO:
+
+Example #1
+Source: a:132
+Vetted: s
+Judgment: g
+Phenomena: wo, c,
+ngas    stag    bsad_pa_yin
+nga-s   stag    bsad_pa_yin
+I-ERG   tiger   killed_PRF
+'I killed the tiger.'
+
+Example #2
+#SVO
+Source: author
+Vetted: f
+Judgment: u
+Phenomena: wo, c,
+ngas    bsad_pa_yin     stag
+nga-s   bsad_pa_yin     stag
+I-ERG   killed_PRF      tiger
+'I killed the tiger.'
+
+
+According to source B, auxiliary verbs are particles.
+
+
+Choices: To implement this, we selected the SOV word order and ergative-absolutive paradigm under case. These two vhoices together along with the lexicon and morphology are what distinguish these sentences as grammatical and ungrammatical.
+
+B. Case
+
+(Lhasa) Tibetan has a range of 4-6 cases depending on the analysis because some wordforms cover multiple domains; due to their similarity DeLancey (Source C) refers to them as post-clitics
+
+a. Ergative-instrumental: gis,gyis,kyis, -s after a vowel
+b. Absolutitive: " "
+c. Dative-Locative: la
+d. Ablative:  nas/na
+e. Genitive: gi/gyi/kyi
+
+Unmarked items fall into the absolutitive case and ergative cases can be marked with -s as in "Example #1". Here are two examples showing that most transitive verbs take the absolutitive as their object, verbs such as hit take the dative as their argument
+
+Example #3
+Source: c:274
+Vetted: s
+Judgment: g
+Phenomena: wo, c
+thubbstangyis   blobzangla      gzhus_song
+thubbstan-gyis  blobzang-la     gzhus_song
+Thubten-ERG     Lobsang-DAT     hit_PRF
+'Thubten hit Lobsang'
+
+Example #4
+Source: c:274
+Vetted: s
+Judgment: u
+Phenomena: wo, c
+thubbstangyis  blobzangla     bsad_pa_red
+thubbstan-gyis  blobzang-la     bsad_pa_red
+Thubten-ERG     Lobsang-DAT     kill_PRF
+'Thubten killed Lobsang'
+
+
+Although the ergative and instrumental cases fall into the same bucket under DeLancey's analysis; The instrumental case can appear alongside an item in the ergative case:
+
+Example #5
+Source: b:203
+Vetted: s
+Judgment: g
+Phenomena: wo, c
+khos            yige            smyug_gus       bris_song
+kho-s           yige            smyug-gus       bris_song
+3sg-ERG         letter          pen-INST        wrote_aux
+‘He wrote the letter with a pen.’
+
+
+Choices: For our first grammar, we had to decide whether to make case part of all the different lexicon entries which would become cumbersome, make them clitics and/or morphological rules. Attempts were made to implement the various forms as clitics, but ultimately it was decided to use morphological rules because the nouns in our examples have been simple
+
+C. Pronouns
+
+D. Rest of NP
+
+In source b, "determinants" are often refered to as noun particles. "cig" is one of the forms which contributes to the specificity of the noun it is joined with. They are not obligatory as illustrated in the following two examples:
+
+Example #6
+Source: d:100
+Vetted: s
+Judgment: g
+Phenomena: wo, c,
+`mi__bculngatsam cig yogred
+`mi__bculngatsam cig yogred
+PeopleFiteenAbout num exist
+'There are about fiteeen people.'
+
+Example #7
+Source: d:100
+Vetted: s
+Judgment: g
+Phenomena: wo, c,
+`mi__bculngatsam  yogred
+`mi__bculngatsam  yogred
+PeopleFiteenAbout exist
+'There are about fiteeen people.'
+
+Choices: 
+The simplest option was to include determiners as descrete words. There are some 
+
+E. Tense/Aspect
+
+According to source b, there are 4 tenses in Tibetan:
+a. present
+b. past
+c. future
+d. imperative
+
+We have examples of them as follows
+
+Example #8
+#present tense
+Source: b:137
+Vetted: s
+Judgment: g
+Phenomena: tam
+ngas  yige    cig briskyiyod
+ngas  yige    cig bris-kyi-yod
+1ST-SBJ letter  num write-LK-AUX
+'I am writing a letter.'
+
+Example #9
+#past tense
+Source: b:137
+Vetted: s
+Judgment: g
+Phenomena: tam
+ngas  yige    klogbayin
+ngas  yige    klog-ba-yin
+1ST-SBJ letter  read-LK-AUX
+'I read the letter.'
+
+Example #10
+#FUTURE TENSE
+Source: b:137
+Vetted: s
+Judgment: g
+Phenomena: tam
+sangnyin  ngas    laska  'di   byedkyiyin
+sangnyin  ngas    laska  'di   byed-kyi-yin
+tomorrow  1ST-SBJ work   this  do-LK-AUX
+'He is sure to do the work.'
+
+#IMPERATIVE
+Source: b:227
+Vetted: s
+Judgment: g
+Phenomena: tam
+laska   'di     tsharba         byed    ''a    
+work    this    finish-nom      do      IMP
+'Try to finish the work'
+
+For aspect, there is a perfect and imperfect.
+
+Choices: we have not yet included negative examples or made choices with respect to these yet.
+
+F. Wh-questions
+
+
+
+
+
+III. Testsuite instances not yet covered
+
+
+
+
+IV. Coverage and Overgeneration
+
+V. Inability to cope
+
+
