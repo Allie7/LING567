@@ -7,8 +7,7 @@ Januray 16, 2018
 Lab 2 Writeup
 
 
-
-There is tone in Tibetan, so we have included the following as markers for high and low tones: ' and `. Later, we should pick more distinct symbols.
+There is tone in Tibetan, so we have included the following as markers for high and low tones: ' and `. Also, we have adopted _ as a means of joining together particles and long phrases from grammatical examples which we can't parse yet set as "about fiteeen people."
 
 I & II. Test suite instances and choices
 
@@ -38,7 +37,16 @@ I-ERG   killed_PRF      tiger
 'I killed the tiger.'
 
 
-According to source B, auxiliary verbs are particles.
+According to source B, auxiliary verbs are particles. They follow the verb.
+
+Source: b:178
+Vetted: s
+Judgment: g
+Phenomena: pn, wo
+nga 'grodgosred
+nga 'gro-dgos-red
+I   go-LK-AUX
+'I  must go.'
 
 
 Choices: To implement this, we selected the SOV word order and ergative-absolutive paradigm under case. These two vhoices together along with the lexicon and morphology are what distinguish these sentences as grammatical and ungrammatical.
@@ -93,6 +101,22 @@ Choices: For our first grammar, we had to decide whether to make case part of al
 
 C. Pronouns
 
+Theere are pronouns for I, you and he/she in Tibetan. They do not have to agree with the verb in terms of number or gender, so it is nearly impossible to come up with ungrammatical examples at this point. We have illustrations of "I", "you", "he", and "she" as follows: 
+
+Source: b:178
+Vetted: s
+Judgment: g
+Phenomena: pn, wo
+nga 'grodgosred
+nga 'gro-dgos-red
+I   go-LK-AUX
+'I  must go.'
+ 
+
+Choices: 
+To implement pronouns we just had to add them to our lexicon. At first we added them as distinct types, but it may be possible to collapse them into a single noun type since they aren't marked for agreement. 
+
+
 D. Rest of NP
 
 In source b, "determinants" are often refered to as noun particles. "cig" is one of the forms which contributes to the specificity of the noun it is joined with. They are not obligatory as illustrated in the following two examples:
@@ -118,7 +142,7 @@ PeopleFiteenAbout exist
 'There are about fiteeen people.'
 
 Choices: 
-The simplest option was to include determiners as descrete words. There are some 
+The simplest option was to include determiners as descrete words. There are words of various determiners such as "these" and "that". 
 
 E. Tense/Aspect
 
@@ -163,6 +187,7 @@ sangnyin  ngas    laska  'di   byed-kyi-yin
 tomorrow  1ST-SBJ work   this  do-LK-AUX
 'He is sure to do the work.'
 
+Example #11
 #IMPERATIVE
 Source: b:227
 Vetted: s
@@ -178,8 +203,29 @@ Choices: we have not yet included negative examples or made choices with respect
 
 F. Wh-questions
 
+For questions, there are interrogative noun such as "su." They undergo inflection which obviates the need for them to appear in particular places in the sentence. As can be seen in these examples, the question word appears in the middle of the sentence; this appears to be the pattern, but it is not specified in the sources covered so far.
+
+Example #12
+Source: b:130
+Vetted: s
+Judgment: g
+Phenomena: c,
+khongla rogspa    su  yogredpa
+khongla rogspa    su  yogredpa
+3SG-LOC many-NOM  who exist-wh.interr
+'Who was with him?'
+
+Example #13
+Source: b:198
+chalag  digyad sus tshong_pa_red_pa
+chalag  di-gyad         sus     tshong_pa_red_pa
+thing   this-num        who-ERG sell_link_aux_interr
+'Who sold the things?'
 
 
+Choices: 
+
+We have not yet included negative examples or made choices with respsect to these yet.
 
 
 III. Testsuite instances not yet covered
@@ -189,6 +235,9 @@ III. Testsuite instances not yet covered
 
 IV. Coverage and Overgeneration
 
-V. Inability to cope
+V. Outside domain of customization
+
+Both of the scholars who we have read, DeLancey and Denwood, both claim that sometimes the ergative marking on a subject indicates that they volunatarily performed the action. Others have analyzed it as a more complicated verb hierarchy.  
+
 
 
