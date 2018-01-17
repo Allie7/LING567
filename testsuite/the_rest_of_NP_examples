@@ -1,27 +1,17 @@
-Source: b:102
-Vetted: s
+Source: author
+Vetted: f
 Judgment: g
 Phenomena: noun phrases
-khangpa de    khonggi   red
-khangoa de    khong-gi  red
-house   that  he-GEN    be
-'That house is his.'
+yige    de    khonggi   red
+yige    de    khong-gi  red
+letter  that  he-GEN    be
+'That letter is his.'
 
-Source: b:133
-Vetted: s
+Source: author
+Vetted: f
 Judgment: g
 Phenomena: noun phrases
-deb   medpa'dra
-deb   med-pa-'dra
-book  neg-EXIST-AUX
-'The book doesn't seem to be here.'
-
-Source: b:207
-Vetted: s
-Judgment: g
-Phenomena: noun phrases
-deb   'di  srid'dzinnas    parbskrun byaspared
-deb   'di  srid'dzin-nas   parbskrun byaspared
-book  this president-ABL   publish-LK-AUX
-'The book was published by the President.'
-
+yige    medpa'dra
+yige    med-pa-'dra
+letter  neg-EXIST-AUX
+'The letter doesn't seem to be here.'
