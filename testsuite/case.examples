@@ -1,3 +1,5 @@
+
+
 #
 # Example 1 for lab 2
 # These are basic ungrammarical 
@@ -22,14 +24,33 @@ nga	stag	bsad_pa_yin
 I	tiger	killed_PRF
 'I killed the tiger.'
 
+#dative instead of ergative
 
-#
+Source: author
+Vetted: f
+Judgment: u
+Phenomena: wo, c,
+nga-la	stag	bsad_pa_yin
+nga-la	stag	bsad_pa_yin
+I-DAT	tiger	killed_PRF
+'I killed the tiger.'
+
+
+#two dative 
+Source: author
+Vetted: f
+Judgment: u
+Phenomena: wo, c,
+nga-la	stag-la		bsad_pa_yin
+nga-la	stag-la		bsad_pa_yin
+I-DAT	tiger-DAT	killed_PRF
+'I killed the tiger.'
+
 # dative for object
 # these are inferred by the mention of
 # special cases from c:274
 # It also notes that dative is not a valid argument
 # for kill
-
 Source: c:274
 Vetted: s
 Judgment: g
@@ -37,6 +58,17 @@ Phenomena: wo, c
 thubbstangyis	blobzangla	gzhus_song
 thubbstan-gyis	blobzang-la	gzhus_song
 Thubten-ERG	Lobsang-DAT	hit_PRF
+'Thubten hit Lobsang'
+
+#assumed based on information
+#from above
+Source: author
+Vetted: f
+Judgment: u
+Phenomena: wo, c
+thubbstangyis	blobzang	gzhus_song
+thubbstan-gyis	blobzang	gzhus_song
+Thubten-ERG	Lobsang		hit_PRF
 'Thubten hit Lobsang'
 
 Source: c:274
@@ -72,10 +104,27 @@ kho-s		yige            smyug-gus	bris_song
 ‘He wrote the letter with a pen.’
 
 
+##
+## Ditransitive example
+## Uses dative 
+##
 
+Source: b:215
+Vetted: s
+Judgment: g
+Phenomena: c,
+ngas     khola     yige     btanggiyin
+nga-s    kho-la    yige     btang-gi-yin
+1SG-SBJ  3SG-LOC   letter   send-LK-AUX
+'I will send him a letter."
 
-
-
-
+Source: author
+Vetted: f
+Judgement: ug
+Phenomena: c
+ngas    kh    yige    btanggiyin
+nga-s    kho   yige    btang-gi-yin
+I-ERG  3SG   letter  send-LK-AUX
+'I will send him a letter.'
 
 

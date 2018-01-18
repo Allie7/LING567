@@ -40,3 +40,50 @@ work	this	finish_nom	do	IMP
 'Try to finish the work'
 
 
+###########
+# Aspect  #
+###########
+
+
+#perfective
+Source: a:132
+Vetted: s
+Judgment: g
+Phenomena: wo, c, tam
+nga     'si_byung
+nga     'si_byung
+I       die_PRF
+'I have died.'
+
+#habitual is formed with tense
+#and markers
+
+
+#recent aspect
+#reference time immediately follows event time
+#may be used with past or present
+#lexical past or present stem + linking particle
+Source: a:161
+Vetted: t
+Judgment: g
+Phenomena: wo, c, tam
+nga	blebs-gro-yin
+I	arrive-LK-AUX
+'I had just arrived'
+
+#(prospective) gerunditive aspect
+# Source b "an event which though intended or desireable
+# had no, has not or will not have happened at the reference time
+Source: a:162
+Vetted: t
+Judgment: g
+Phenomena: wo, c, tam
+nga	nyocha		nyo-rygu-in
+I	shopping	buy-LK-AUX
+'I have still to do the shopping'
+
+
+
+
+
+

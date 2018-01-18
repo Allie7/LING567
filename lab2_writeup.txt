@@ -7,7 +7,7 @@ Januray 16, 2018
 Lab 2 Writeup
 
 
-There is tone in Tibetan, so we have included the following as markers for high and low tones: ' and `. Also, we have adopted _ as a means of joining together particles and long phrases from grammatical examples which we can't parse yet set as "about fiteeen people."
+There is tone in Tibetan, so we have included the following as markers for high and low tones: ' and `. Also, we have adopted _ as a means of joining together particles and long phrases from grammatical examples which we can't parse yet such as "about fiteeen people."
 
 I & II. Test suite instances and choices
 
@@ -47,7 +47,6 @@ nga 'grodgosred
 nga 'gro-dgos-red
 I   go-LK-AUX
 'I  must go.'
-
 
 Choices: To implement this, we selected the SOV word order and ergative-absolutive paradigm under case. These two vhoices together along with the lexicon and morphology are what distinguish these sentences as grammatical and ungrammatical.
 
@@ -97,11 +96,11 @@ kho-s           yige            smyug-gus       bris_song
 ‘He wrote the letter with a pen.’
 
 
-Choices: For our first grammar, we had to decide whether to make case part of all the different lexicon entries which would become cumbersome, make them clitics and/or morphological rules. Attempts were made to implement the various forms as clitics, but ultimately it was decided to use morphological rules because the nouns in our examples have been simple
+Choices: For our first grammar, we had to decide whether to make case part of all the different lexicon entries which would become cumbersome, make them clitics and/or morphological rules. Attempts were made to implement the various forms as clitics, but at this point it was decided to use morphological rules because the nouns in our examples have been simple--this may change, but it appears we can only have one case per clitic. We may use morphological rules to operate on clitics though.
 
 C. Pronouns
 
-Theere are pronouns for I, you and he/she in Tibetan. They do not have to agree with the verb in terms of number or gender, so it is nearly impossible to come up with ungrammatical examples at this point. We have illustrations of "I", "you", "he", and "she" as follows: 
+There are pronouns for I, you and he/she in Tibetan. They do not have to agree with the verb in terms of number or gender, so it is nearly impossible to come up with ungrammatical examples at this point. We have illustrations of "I", "you", "he", and "she" as follows: 
 
 Source: b:178
 Vetted: s
@@ -112,9 +111,8 @@ nga 'gro-dgos-red
 I   go-LK-AUX
 'I  must go.'
  
-
 Choices: 
-To implement pronouns we just had to add them to our lexicon. At first we added them as distinct types, but it may be possible to collapse them into a single noun type since they aren't marked for agreement. 
+To implement pronouns we just had to add them to our lexicon. At first we added them as distinct types, but it may be possible to collapse them into a single noun type since they aren't marked for agreement.  
 
 
 D. Rest of NP
@@ -141,18 +139,31 @@ Phenomena: wo, c,
 PeopleFiteenAbout exist
 'There are about fiteeen people.'
 
+We have one synthetic ungrammatical example based on the description of noun particles appearing to the right of the noun.
+
+#assumed ungrammatical 
+#with the information about particle order
+Source: author
+Vetted: f
+Judgment: u
+Phenomena: wo, c,
+cig `mi__bculngatsam yogred
+cig `mi__bculngatsam yogred
+num PeopleFiteenAbout exist
+'There are about fiteeen people.'
+
 Choices: 
-The simplest option was to include determiners as descrete words. There are words of various determiners such as "these" and "that". 
+
+The simplest option was to include determiners as descrete words. Depending on challenges, the determinants may become more morphological.
 
 E. Tense/Aspect
 
-According to source b, there are 4 tenses in Tibetan:
+Tense is realized in the stem of the verbs. iAccording to source b, there are 3 tenses in Tibetan:
 a. present
 b. past
 c. future
-d. imperative
 
-We have examples of them as follows
+We have one example of each tense such as this one. Unfortunately our examples include linking and auxiliary verbs.
 
 Example #8
 #present tense
@@ -165,45 +176,48 @@ ngas  yige    cig bris-kyi-yod
 1ST-SBJ letter  num write-LK-AUX
 'I am writing a letter.'
 
-Example #9
-#past tense
-Source: b:137
+For aspect, there are:
+a. several perfect markers with some slight differences in meaning
+
+Source: a:132
 Vetted: s
 Judgment: g
-Phenomena: tam
-ngas  yige    klogbayin
-ngas  yige    klog-ba-yin
-1ST-SBJ letter  read-LK-AUX
-'I read the letter.'
+Phenomena: wo, c,
+nga     'si_byung
+nga     'si_byung
+I       die_PRF
+'I have died.'
 
-Example #10
-#FUTURE TENSE
-Source: b:137
-Vetted: s
+b. recent aspect: reference time immediately follows event time 
+
+Source: a:161
+Vetted: t
 Judgment: g
-Phenomena: tam
-sangnyin  ngas    laska  'di   byedkyiyin
-sangnyin  ngas    laska  'di   byed-kyi-yin
-tomorrow  1ST-SBJ work   this  do-LK-AUX
-'He is sure to do the work.'
+Phenomena: wo, c
+nga     blebs-gro-yin
+I       arrive-LK-AUX
+'I had just arrived'
 
-Example #11
-#IMPERATIVE
-Source: b:227
-Vetted: s
+c. (Prospective) gerunditive aspect: intended or desireable with respect to reference time but not completed
+
+Source: a:162
+Vetted: t
 Judgment: g
-Phenomena: tam
-laska   'di     tsharba         byed    ''a    
-work    this    finish-nom      do      IMP
-'Try to finish the work'
+Phenomena: wo, c
+nga     nyocha          nyo-rygu-in
+I       shopping        buy-LK-AUX
+'I have still to do the shopping'
 
-For aspect, there is a perfect and imperfect.
+Others include:
+d. imminent aspect
+e. preparative aspect
+f. premeditated aspect
 
-Choices: we have not yet included negative examples or made choices with respect to these yet.
+Choices: we have not yet made choices with respect to these yet.
 
 F. Wh-questions
 
-For questions, there are interrogative noun such as "su." They undergo inflection which obviates the need for them to appear in particular places in the sentence. As can be seen in these examples, the question word appears in the middle of the sentence; this appears to be the pattern, but it is not specified in the sources covered so far.
+For questions, there are interrogative noun such as "su." They undergo inflection which seems to obviate the need for them to appear in situ; example #13 shows the subject in OSV order. It appears that Wh questions appear in the middle of the sentence, but it is not clear from the documentation that this happens.
 
 Example #12
 Source: b:130
@@ -217,6 +231,8 @@ khongla rogspa    su  yogredpa
 
 Example #13
 Source: b:198
+Vetted: s
+Judgement:g
 chalag  digyad sus tshong_pa_red_pa
 chalag  di-gyad         sus     tshong_pa_red_pa
 thing   this-num        who-ERG sell_link_aux_interr
@@ -227,11 +243,12 @@ Choices:
 
 We have not yet included negative examples or made choices with respsect to these yet.
 
-
 III. Testsuite instances not yet covered
 
-
-
+We do not parse any of the testsuite instances dealing with:
+* Questions
+* Aspect & Tense
+* Auxiliary verbs
 
 IV. Coverage and Overgeneration
 

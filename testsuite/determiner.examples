@@ -11,6 +11,17 @@ Phenomena: wo, c,
 PeopleFiteenAbout num exist
 'There are about fiteeen people.'
 
+#assumed ungrammatical 
+#with the information about particle order
+Source: author
+Vetted: f
+Judgment: u
+Phenomena: wo, c,
+cig `mi__bculngatsam yogred
+cig `mi__bculngatsam yogred
+num PeopleFiteenAbout exist
+'There are about fiteeen people.'
+
 Source: d:100
 Vetted: s
 Judgment: g
