@@ -21,9 +21,9 @@ Source: a:132
 Vetted: s
 Judgment: g
 Phenomena: wo, c,
-ngas    stag    bsad_pa_yin
-nga-s   stag    bsad_pa_yin
-I-ERG   tiger   killed_PRF
+ngas    stag    bsadpayin
+nga-s   stag    bsad-pa-yin
+I-SBJ   tiger   killed-LK-AUX
 'I killed the tiger.'
 
 Example #2
@@ -32,9 +32,9 @@ Source: author
 Vetted: f
 Judgment: u
 Phenomena: wo, c,
-ngas    bsad_pa_yin     stag
-nga-s   bsad_pa_yin     stag
-I-ERG   killed_PRF      tiger
+ngas    bsadpayin       stag
+nga-s   bsad-pa-yin     stag
+I-SBJ   killed-LK-AUX   tiger
 'I killed the tiger.'
 
 
@@ -70,9 +70,9 @@ Source: c:274
 Vetted: s
 Judgment: u
 Phenomena: wo, c
-thubbstangyis  blobzangla     bsad_pa_red
-thubbstan-gyis  blobzang-la     bsad_pa_red
-Thubten-ERG     Lobsang-DAT     kill_PRF
+thubbstangyis  blobzangla     bsadpared
+thubbstan-gyis  blobzang-la   bsad-pa-red
+Thubten-ERG     Lobsang-DAT   kill_PRF
 'Thubten killed Lobsang'
 
 
