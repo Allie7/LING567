@@ -4,36 +4,35 @@ Judgment: g
 Phenomena: c,
 gare  zerba
 gare  zerba
-what say-wh.INTERR
+what say_wh.INTERR
 'What's it called?'
 
 Source: b:130
 Vetted: s
 Judgment: g
 Phenomena: c,wh
-khongla rogspa    su  yogredpa
-khongla rogspa    su  yogredpa
-3SG-LOC many-NOM  who exist-wh.INTERR
+khongla rogspa    su  yogred-pa
+khong-la rogs-pa    su  yogred-pa
+3SG-LOC many-NOM  who exist_wh-INTERR
 'Who was with him?'
 
 Source: b:130
 Vetted: s
 Judgment: g
 Phenomena: wh,c
-khyedrang   su    yinpa
-khyedrang   su    yinpa
-you         who   be-wh.INTERR
+khyedrang   su    yin-pa
+khyedrang   su    yin-pa
+you         who   be_wh-INTERR
 'Who are you?'
 
 Source: b:130
 Vetted: s
 Judgment: g
 Phenomena: wh
-gare  yinnam
-gare  yinam
+gare  yin-am
+gare  yin-am
 what  be-alt
 'Why?'
-
 
 Source: b:165
 Vetted: s
@@ -49,7 +48,7 @@ Vetted: s
 Judgement: g
 Phenomena: c,wh
 chalag  digyad sus tshong_pa_red_pa
-chalag	di-gyad		sus	tshong_pa_red_pa
+chalag	di-gyad		su-s	tshong_pa_red_pa
 thing	this-num 	who-ERG	sell_link_aux_interr
-'Who sold the things'
+'Who sold the things?'
 
