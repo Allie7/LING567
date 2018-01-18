@@ -1,0 +1,563 @@
+Language: Tibetan
+Language code: bod
+Lines: translit translit-seg gloss translat
+Author: John Cadigan and Xinyi Ji
+Date: January 13, 2018
+Source a:DeLancey, Scott. "Transitivity and ergative case in Lhasa Tibetan." Annual Meeting of the Berkeley Linguistics Society. Vol. 10. 1984.
+Source b:Denwood, Philip. Tibetan. Vol. 3. John Benjamins Publishing, 1999.
+Source c:LaPolla, Randy J., and Graham Thurgood, eds. The Sino-Tibetan Languages. Routledge, 2006.
+
+
+
+
+
+#testsuite/case.examples
+
+
+
+
+#
+# Example 1 for lab 2
+# These are basic ungrammarical 
+
+Source: a:132
+Vetted: s
+Judgment: g
+Phenomena: wo, c, tam
+ngas	stag	bsad_pa_yin
+nga-s	stag	bsad_pa_yin
+I-ERG	tiger	killed_PRF
+'I killed the tiger.'
+
+#Missing ergative
+
+Source: a:133
+Vetted: s
+Judgment: u
+Phenomena: c
+nga	stag	bsad_pa_yin
+nga	stag	bsad_pa_yin
+I	tiger	killed_PRF
+'I killed the tiger.'
+
+#dative instead of ergative
+
+Source: author
+Vetted: f
+Judgment: u
+Phenomena: c
+ngala	stag	bsad_pa_yin
+nga-la	stag	bsad_pa_yin
+I-DAT	tiger	killed_PRF
+'I killed the tiger.'
+
+
+#two dative 
+Source: author
+Vetted: f
+Judgment: u
+Phenomena: c
+ngala	stagla		bsad_pa_yin
+nga-la	stag-la		bsad_pa_yin
+I-DAT	tiger-DAT	killed_PRF
+'I killed the tiger.'
+
+# dative for object
+# these are inferred by the mention of
+# special cases from c:274
+# It also notes that dative is not a valid argument
+# for kill
+Source: c:274
+Vetted: s
+Judgment: g
+Phenomena: wo, c, tam
+thubbstangyis	blobzangla	gzhus_song
+thubbstan-gyis	blobzang-la	gzhus_song
+Thubten-ERG	Lobsang-DAT	hit_PRF
+'Thubten hit Lobsang'
+
+#assumed based on information
+#from above
+Source: author
+Vetted: f
+Judgment: u
+Phenomena: c
+thubbstangyis	blobzang	gzhus_song
+thubbstan-gyis	blobzang	gzhus_song
+Thubten-ERG	Lobsang		hit_PRF
+'Thubten hit Lobsang'
+
+Source: c:274
+Vetted: s
+Judgment: u
+Phenomena: c
+thubbstangyis  blobzangla     bsad_pa_red
+thubbstan-gyis  blobzang-la     bsad_pa_red
+Thubten-ERG     Lobsang-DAT     kill_PRF
+'Thubten killed Lobsang'
+
+
+#
+# Instrumental
+#
+
+Source: b:203
+Vetted: s
+Judgment: g
+Phenomena: wo, c , tam
+khos		yige		bris_song
+kho-s		yige		bris_song
+3sg-ERG		letter		wrote_aux
+‘He wrote the letter.’
+
+Source: b:203
+Vetted: s
+Judgment: g
+Phenomena: wo, c, tam
+khos		yige		smyuggus	bris_song
+kho-s		yige            smyug-gus	bris_song
+3sg-ERG		letter		pen-INST	wrote_aux
+‘He wrote the letter with a pen.’
+
+
+##
+## Ditransitive example
+## Uses dative 
+##
+
+Source: b:215
+Vetted: s
+Judgment: g
+Phenomena: c
+ngas     khola     yige     btanggiyin
+nga-s    kho-la    yige     btang-gi-yin
+1SG-SBJ  3SG-LOC   letter   send-LK-AUX
+'I will send him a letter."
+
+Source: author
+Vetted: f
+Judgement: u
+Phenomena: c
+ngas    kho    yige    btanggiyin
+nga-s    kho   yige    btang-gi-yin
+I-ERG  3SG   letter  send-LK-AUX
+'I will send him a letter.'
+
+
+#testsuite/determiner.examples
+
+
+#Determinants are considered noun particles or adjectives
+#without those incorporated, we will have them act as traditional
+#determiners for now
+
+Source: d:100
+Vetted: s
+Judgment: g
+Phenomena: wo, c, det
+`mi__bculngatsam cig yogred
+`mi__bculngatsam cig yogred
+PeopleFiteenAbout num exist
+'There are about fiteeen people.'
+
+#assumed ungrammatical 
+#with the information about particle order
+Source: author
+Vetted: f
+Judgment: u
+Phenomena: det
+cig `mi__bculngatsam yogred
+cig `mi__bculngatsam yogred
+num PeopleFiteenAbout exist
+'There are about fiteeen people.'
+
+Source: d:100
+Vetted: s
+Judgment: g
+Phenomena: wo, c, det
+`mi__bculngatsam  yogred
+`mi__bculngatsam  yogred
+PeopleFiteenAbout exist
+'There are about fiteeen people.'
+
+
+
+
+
+#testsuite/pronouns.examples
+
+
+#Examples using the various pronouns
+
+Source: d:279
+Vetted: s
+Judgment: g
+Phenomena: wo, c, pn 
+khos dkaryol bcag_song
+kho-s dkaryol bcag_song
+S/He-ERG cup broke_PERF
+'He broke the cup'
+
+#
+# More examples from the books
+#
+
+Source: b:178
+Vetted: s
+Judgment: g
+Phenomena: pn, wo
+nga 'gro dgosred
+nga 'gro-dgos_red
+I   go-LK_AUX
+'I  must go.'
+
+Source: b:107
+Vetted: s
+Judgment: g
+Phenomena: pn
+kyedrang 'gro  dgoskyired
+kyedrang 'gro  dgos-kyi-red
+you       go    should-LK-AUX
+'you  should go'
+
+Source: b:178
+Vetted: s
+Judgment: g
+Phenomena: pn
+khong 'grodgos    byedkyired
+khong 'gro-dgos   byed-kyi-red
+she    go-nom     do-LK-AUX
+'she will have to go.'
+
+Source: b:178
+Vetted: s
+Judgment: g
+Phenomena: pn
+kho grosdgosred
+kho gros-dgos-red
+he  go-LK-AUX
+'He must go.'
+
+
+
+#testsuite/tense&aspect_examples.examples
+
+
+#the following examples only contains self-centered, 1st person cases so far
+#present tense
+Source: b:137
+Vetted: s
+Judgment: g
+Phenomena: wo, c, tam
+ngas    yige    cig briskyiyod
+nga-s   yige    cig bris-kyi-yod
+1ST-SBJ letter  num write-LK-AUX
+'I am writing a letter.'
+
+#past tense
+Source: b:137
+Vetted: s
+Judgment: g
+Phenomena: wo, c, tam
+ngas  yige    klogbayin
+nga-s  yige    klog-ba-yin
+1ST-SBJ letter  read-LK-AUX
+'I read the letter.'
+
+#FUTURE TENSE
+Source: b:137
+Vetted: s
+Judgment: g
+Phenomena: wo, c, tam
+sangnyin  ngas    laska  'di   byedkyiyin
+sangnyin  nga-s    laska  'di   byed-kyi-yin
+tomorrow  1ST-SBJ  work   this  do-LK-AUX
+'He is sure to do the work.'
+
+#IMPERATIVE
+Source: b:227
+Vetted: s
+Judgment: g
+Phenomena: wo, c, tam
+laska	'di	tsharba		byed	''a
+lask	'di	tsharba		byed	''a	
+work	this	finish_nom	do	IMP
+'Try to finish the work'
+
+###########
+# Aspect  #
+###########
+
+
+#perfect
+Source: a:132
+Vetted: s
+Judgment: g
+Phenomena: wo, c, tam
+nga     'si_byung
+nga     'si_byung
+I       die_PRF
+'I have died.'
+
+#habitual is formed with tense
+#and markers
+
+
+#recent aspect
+#reference time immediately follows event time
+#may be used with past or present
+#lexical past or present stem + linking particle
+Source: a:161
+Vetted: t
+Judgment: g
+Phenomena: wo, c, tam
+nga	blebsgroyin
+nga	blebs-gro-yin
+I	arrive-LK-AUX
+'I had just arrived'
+
+#(prospective) gerunditive aspect
+# Source b "an event which though intended or desireable
+# had no, has not or will not have happened at the reference time
+Source: a:162
+Vetted: t
+Judgment: g
+Phenomena: wo, c, tam
+nga	nyocha		nyoryguin
+nga	nyocha		nyo-rygu-in
+I	shopping	buy-LK-AUX
+'I have still to do the shopping'
+
+
+#testsuite/the_rest_of_NP_examples.examples
+
+
+Source: author
+Vetted: f
+Judgment: g
+Phenomena: det, tam, neg
+yige    de    medpa'dra
+yige    de    med-pa-'dra
+letter  that  neg-EXIST-AUX 
+'That letter does not seem to be here'
+
+Source: author
+Vetted: f
+Judgment: g
+Phenomena: det, tam, neg
+yige    medpa'dra
+yige    med-pa-'dra
+letter  neg-EXIST-AUX
+'The letter does not seem to be here.'
+
+#testsuite/wh_questions_example.examples
+
+
+Source: b:108
+Vetted: s
+Judgment: g
+Phenomena: c, wh
+gare  zerba
+gare  zerba
+what say_wh.INTERR
+'What's it called?'
+
+Source: b:130
+Vetted: s
+Judgment: g
+Phenomena: c,wh
+khongla rogspa    su  yogred-pa
+khong-la rogs-pa    su  yogred-pa
+3SG-LOC many-NOM  who exist_wh-INTERR
+'Who was with him?'
+
+Source: b:130
+Vetted: s
+Judgment: g
+Phenomena: wh,c
+kyedrang   su    yin-pa
+kyedrang   su    yin-pa
+you         who   be_wh-INTERR
+'Who are you?'
+
+Source: b:130
+Vetted: s
+Judgment: g
+Phenomena: wh
+gare  yin-am
+gare  yin-am
+what  be-alt
+'Why?'
+
+Source: b:165
+Vetted: s
+Judgement: g
+Phenomena: c,wh
+kyedrang	ganas		phebspa
+kyedrang	ga-nas		phebs-pa
+you		what-ABL	come-INTERR
+'Where did you come from?'
+
+Source: b:198
+Vetted: s
+Judgement: g
+Phenomena: c,wh
+chalag  digyad sus tshong_pa_red_pa
+chalag	di-gyad		su-s	tshong_pa_red_pa
+thing	this-num 	who-ERG	sell_link_aux_interr
+'Who sold the things?'
+
+
+#testsuite/word_order2.examples
+
+
+Source: b:203
+Vetted: s
+Judgment: g
+Phenomena: wo
+khos      yige    brissong
+kho-s     yige    bris-song
+3SG-SBJ   letter  wrote-AUX
+‘He wrote the letter.’
+
+Source: author
+Vetted: f
+Judgement: u
+Phenomena: wo
+khos    brissong    yige
+kho-s   bris-song   yige
+3SG-SBJ wrote-AUX   letter
+'He wrote the letter.'
+
+#testsuite/word_order.examples
+
+
+#First example
+# This shows an intransitive verb
+# The analysis of this includes volition
+# but I am not including that into the grammar yet
+Source: a:132
+Vetted: s
+Judgment: g
+Phenomena: wo, c, 
+nga	'si_byung
+nga	'si_byung
+I	die_PRF
+'I have died.'
+
+#inferred ungrammatical 
+Source: author
+Vetted: f
+Judgment: u
+Phenomena: wo 
+'si_byung	nga
+'si_byung	nga
+die_PRF		nga
+'I have died.'
+
+#
+# Second examples
+# this shows examples of the 
+# ergative-agent-object phrases
+#
+Source: a:132
+Vetted: s
+Judgment: g
+Phenomena: wo, c,
+ngas	stag    bsad_pa_yin
+nga-s	stag    bsad_pa_yin
+I-ERG	tiger	killed_PRF
+'I killed the tiger.'
+
+#SVO
+Source: author
+Vetted: f
+Judgment: u
+Phenomena: wo
+ngas	bsad_pa_yin	stag
+nga-s	bsad_pa_yin	stag
+I-ERG	killed_PRF	tiger
+'I killed the tiger.'
+
+#will change with fronting
+#see page 282-283 of source C
+#this applies to marked constituents but not unmarked ones; need more examples
+#OSV
+Source: author
+Vetted: f
+Judgment: u
+Phenomena: wo
+stag	ngas	bsad_pa_yin
+stag	nga-s	bsad_pa_yin
+tiger	I-ERG	killed_PRF
+'I killed the tiger.'
+
+#OVS
+Source: author
+Vetted: f
+Judgment: u
+Phenomena: wo
+stag	bsad_pa_yin	ngas
+stag	bsad_pa_yin	nga-s
+tiger	killed_PRF	I-ERG
+'I killed the tiger.'
+
+#VOS
+Source: author
+Vetted: f
+Judgment: u
+Phenomena: wo
+bsad_pa_yin	stag	ngas
+bsad_pa_yin	stag	nga-s
+killed_PRF	tiger	I-ERG
+'I killed the tiger.'
+
+#VSO
+Source: author
+Vetted: f
+Judgment: u
+Phenomena: wo
+bsad_pa_yin	ngas	stag
+bsad_pa_yin	nga-s	stag
+killed_PRF	I-ERG	tiger
+'I killed the tiger.'
+
+
+#
+# Auxiliary particle order
+#
+
+Source: b:132
+Vetted: s
+Judgment: g
+Phenomena: wo
+ma_phyinpa_redda
+ma_phyin-pa_red-da
+not_went-link_aux-emph
+'Certainly he didn't go.'
+
+Source: author
+Vetted: f
+Judgment: u
+Phenomena: wo
+pa_redma_phyinda
+ma_phyin-pa_red-da
+not_went-link_aux-emph
+'Certainly he didn't go.'
+
+#multiple linking and aux verbs
+#multiple tense aspect modality
+Source: b:166
+Vetted: s
+Judgment: g
+Phenomena: tam, wo, c
+khonggis        slobsbyong      gnangmusyingired
+khong-gis       slobsbyong      gnang-mus-yin-gi-red
+She-ERG         study           do-LK-AUX-LK-AUX
+"She's probably at her studies"
+
+
+
+
+
+

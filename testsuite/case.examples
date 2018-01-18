@@ -7,7 +7,7 @@
 Source: a:132
 Vetted: s
 Judgment: g
-Phenomena: wo, c,
+Phenomena: wo, c, tam
 ngas	stag	bsad_pa_yin
 nga-s	stag	bsad_pa_yin
 I-ERG	tiger	killed_PRF
@@ -18,7 +18,7 @@ I-ERG	tiger	killed_PRF
 Source: a:133
 Vetted: s
 Judgment: u
-Phenomena: wo, c,
+Phenomena: c
 nga	stag	bsad_pa_yin
 nga	stag	bsad_pa_yin
 I	tiger	killed_PRF
@@ -29,8 +29,8 @@ I	tiger	killed_PRF
 Source: author
 Vetted: f
 Judgment: u
-Phenomena: wo, c,
-nga-la	stag	bsad_pa_yin
+Phenomena: c
+ngala	stag	bsad_pa_yin
 nga-la	stag	bsad_pa_yin
 I-DAT	tiger	killed_PRF
 'I killed the tiger.'
@@ -40,8 +40,8 @@ I-DAT	tiger	killed_PRF
 Source: author
 Vetted: f
 Judgment: u
-Phenomena: wo, c,
-nga-la	stag-la		bsad_pa_yin
+Phenomena: c
+ngala	stagla		bsad_pa_yin
 nga-la	stag-la		bsad_pa_yin
 I-DAT	tiger-DAT	killed_PRF
 'I killed the tiger.'
@@ -54,7 +54,7 @@ I-DAT	tiger-DAT	killed_PRF
 Source: c:274
 Vetted: s
 Judgment: g
-Phenomena: wo, c
+Phenomena: wo, c, tam
 thubbstangyis	blobzangla	gzhus_song
 thubbstan-gyis	blobzang-la	gzhus_song
 Thubten-ERG	Lobsang-DAT	hit_PRF
@@ -65,7 +65,7 @@ Thubten-ERG	Lobsang-DAT	hit_PRF
 Source: author
 Vetted: f
 Judgment: u
-Phenomena: wo, c
+Phenomena: c
 thubbstangyis	blobzang	gzhus_song
 thubbstan-gyis	blobzang	gzhus_song
 Thubten-ERG	Lobsang		hit_PRF
@@ -74,7 +74,7 @@ Thubten-ERG	Lobsang		hit_PRF
 Source: c:274
 Vetted: s
 Judgment: u
-Phenomena: wo, c
+Phenomena: c
 thubbstangyis  blobzangla     bsad_pa_red
 thubbstan-gyis  blobzang-la     bsad_pa_red
 Thubten-ERG     Lobsang-DAT     kill_PRF
@@ -88,7 +88,7 @@ Thubten-ERG     Lobsang-DAT     kill_PRF
 Source: b:203
 Vetted: s
 Judgment: g
-Phenomena: wo
+Phenomena: wo, c , tam
 khos		yige		bris_song
 kho-s		yige		bris_song
 3sg-ERG		letter		wrote_aux
@@ -97,8 +97,8 @@ kho-s		yige		bris_song
 Source: b:203
 Vetted: s
 Judgment: g
-Phenomena: wo, c
-khos		yige		smyug_gus	bris_song
+Phenomena: wo, c, tam
+khos		yige		smyuggus	bris_song
 kho-s		yige            smyug-gus	bris_song
 3sg-ERG		letter		pen-INST	wrote_aux
 ‘He wrote the letter with a pen.’
@@ -112,7 +112,7 @@ kho-s		yige            smyug-gus	bris_song
 Source: b:215
 Vetted: s
 Judgment: g
-Phenomena: c,
+Phenomena: c
 ngas     khola     yige     btanggiyin
 nga-s    kho-la    yige     btang-gi-yin
 1SG-SBJ  3SG-LOC   letter   send-LK-AUX
@@ -120,11 +120,10 @@ nga-s    kho-la    yige     btang-gi-yin
 
 Source: author
 Vetted: f
-Judgement: ug
+Judgement: u
 Phenomena: c
-ngas    kh    yige    btanggiyin
+ngas    kho    yige    btanggiyin
 nga-s    kho   yige    btang-gi-yin
 I-ERG  3SG   letter  send-LK-AUX
 'I will send him a letter.'
-
 

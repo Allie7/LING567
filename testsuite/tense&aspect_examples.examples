@@ -3,7 +3,7 @@
 Source: b:137
 Vetted: s
 Judgment: g
-Phenomena: tam
+Phenomena: wo, c, tam
 ngas    yige    cig briskyiyod
 nga-s   yige    cig bris-kyi-yod
 1ST-SBJ letter  num write-LK-AUX
@@ -13,8 +13,8 @@ nga-s   yige    cig bris-kyi-yod
 Source: b:137
 Vetted: s
 Judgment: g
-Phenomena: tam
-nga-s  yige    klogbayin
+Phenomena: wo, c, tam
+ngas  yige    klogbayin
 nga-s  yige    klog-ba-yin
 1ST-SBJ letter  read-LK-AUX
 'I read the letter.'
@@ -23,8 +23,8 @@ nga-s  yige    klog-ba-yin
 Source: b:137
 Vetted: s
 Judgment: g
-Phenomena: tam
-sangnyin  nga-s    laska  'di   byedkyiyin
+Phenomena: wo, c, tam
+sangnyin  ngas    laska  'di   byedkyiyin
 sangnyin  nga-s    laska  'di   byed-kyi-yin
 tomorrow  1ST-SBJ  work   this  do-LK-AUX
 'He is sure to do the work.'
@@ -33,19 +33,18 @@ tomorrow  1ST-SBJ  work   this  do-LK-AUX
 Source: b:227
 Vetted: s
 Judgment: g
-Phenomena: tam
+Phenomena: wo, c, tam
 laska	'di	tsharba		byed	''a
 lask	'di	tsharba		byed	''a	
 work	this	finish_nom	do	IMP
 'Try to finish the work'
-
 
 ###########
 # Aspect  #
 ###########
 
 
-#perfective
+#perfect
 Source: a:132
 Vetted: s
 Judgment: g
@@ -67,6 +66,7 @@ Source: a:161
 Vetted: t
 Judgment: g
 Phenomena: wo, c, tam
+nga	blebsgroyin
 nga	blebs-gro-yin
 I	arrive-LK-AUX
 'I had just arrived'
@@ -78,12 +78,8 @@ Source: a:162
 Vetted: t
 Judgment: g
 Phenomena: wo, c, tam
+nga	nyocha		nyoryguin
 nga	nyocha		nyo-rygu-in
 I	shopping	buy-LK-AUX
 'I have still to do the shopping'
-
-
-
-
-
 

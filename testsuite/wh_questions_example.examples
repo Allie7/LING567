@@ -1,7 +1,7 @@
 Source: b:108
 Vetted: s
 Judgment: g
-Phenomena: c,
+Phenomena: c, wh
 gare  zerba
 gare  zerba
 what say_wh.INTERR
@@ -20,8 +20,8 @@ Source: b:130
 Vetted: s
 Judgment: g
 Phenomena: wh,c
-khyedrang   su    yin-pa
-khyedrang   su    yin-pa
+kyedrang   su    yin-pa
+kyedrang   su    yin-pa
 you         who   be_wh-INTERR
 'Who are you?'
 
@@ -38,8 +38,8 @@ Source: b:165
 Vetted: s
 Judgement: g
 Phenomena: c,wh
-khyedrang	ganas		phebspa
-khyedrang	ga-nas		phebs-pa
+kyedrang	ganas		phebspa
+kyedrang	ga-nas		phebs-pa
 you		what-ABL	come-INTERR
 'Where did you come from?'
 

@@ -5,7 +5,7 @@
 Source: d:100
 Vetted: s
 Judgment: g
-Phenomena: wo, c,
+Phenomena: wo, c, det
 `mi__bculngatsam cig yogred
 `mi__bculngatsam cig yogred
 PeopleFiteenAbout num exist
@@ -16,7 +16,7 @@ PeopleFiteenAbout num exist
 Source: author
 Vetted: f
 Judgment: u
-Phenomena: wo, c,
+Phenomena: det
 cig `mi__bculngatsam yogred
 cig `mi__bculngatsam yogred
 num PeopleFiteenAbout exist
@@ -25,7 +25,7 @@ num PeopleFiteenAbout exist
 Source: d:100
 Vetted: s
 Judgment: g
-Phenomena: wo, c,
+Phenomena: wo, c, det
 `mi__bculngatsam  yogred
 `mi__bculngatsam  yogred
 PeopleFiteenAbout exist

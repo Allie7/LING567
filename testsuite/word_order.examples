@@ -39,7 +39,7 @@ I-ERG	tiger	killed_PRF
 Source: author
 Vetted: f
 Judgment: u
-Phenomena: wo, c,
+Phenomena: wo
 ngas	bsad_pa_yin	stag
 nga-s	bsad_pa_yin	stag
 I-ERG	killed_PRF	tiger
@@ -52,8 +52,8 @@ I-ERG	killed_PRF	tiger
 Source: author
 Vetted: f
 Judgment: u
-Phenomena: wo, c,
-stag	nga_s	bsad_pa_yin
+Phenomena: wo
+stag	ngas	bsad_pa_yin
 stag	nga-s	bsad_pa_yin
 tiger	I-ERG	killed_PRF
 'I killed the tiger.'
@@ -62,7 +62,7 @@ tiger	I-ERG	killed_PRF
 Source: author
 Vetted: f
 Judgment: u
-Phenomena: wo, c,
+Phenomena: wo
 stag	bsad_pa_yin	ngas
 stag	bsad_pa_yin	nga-s
 tiger	killed_PRF	I-ERG
@@ -72,7 +72,7 @@ tiger	killed_PRF	I-ERG
 Source: author
 Vetted: f
 Judgment: u
-Phenomena: wo, c,
+Phenomena: wo
 bsad_pa_yin	stag	ngas
 bsad_pa_yin	stag	nga-s
 killed_PRF	tiger	I-ERG
@@ -82,7 +82,7 @@ killed_PRF	tiger	I-ERG
 Source: author
 Vetted: f
 Judgment: u
-Phenomena: wo, c,
+Phenomena: wo
 bsad_pa_yin	ngas	stag
 bsad_pa_yin	nga-s	stag
 killed_PRF	I-ERG	tiger
@@ -111,8 +111,16 @@ ma_phyin-pa_red-da
 not_went-link_aux-emph
 'Certainly he didn't go.'
 
-
-
+#multiple linking and aux verbs
+#multiple tense aspect modality
+Source: b:166
+Vetted: s
+Judgment: g
+Phenomena: tam, wo, c
+khonggis        slobsbyong      gnangmusyingired
+khong-gis       slobsbyong      gnang-mus-yin-gi-red
+She-ERG         study           do-LK-AUX-LK-AUX
+"She's probably at her studies"
 
 
 

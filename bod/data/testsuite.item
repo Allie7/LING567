@@ -1,1 +1,47 @@
-1@a:132@@@1@wo,c,@nga	'si-byung@@@@1@2@I	die-PRF'I have died.'@john cadigan and xinyi ji@january 13, 2018
+1@a:132@@@1@wo,c,tam@ngas	stag	bsad_pa_yin@@@@1@3@I-ERG	tiger	killed_PRF'I killed the tiger.'@john cadigan and xinyi ji@january 13, 2018
+2@a:133@@@1@c@nga	stag	bsad_pa_yin@@@@0@3@I	tiger	killed_PRF'I killed the tiger.'@john cadigan and xinyi ji@january 13, 2018
+3@author@@@1@c@ngala	stag	bsad_pa_yin@@@@0@3@I-DAT	tiger	killed_PRF'I killed the tiger.'@john cadigan and xinyi ji@january 13, 2018
+4@author@@@1@c@ngala	stagla		bsad_pa_yin@@@@0@3@I-DAT	tiger-DAT	killed_PRF'I killed the tiger.'@john cadigan and xinyi ji@january 13, 2018
+5@c:274@@@1@wo,c,tam@thubbstangyis	blobzangla	gzhus_song@@@@1@3@Thubten-ERG	Lobsang-DAT	hit_PRF'Thubten hit Lobsang'@john cadigan and xinyi ji@january 13, 2018
+6@author@@@1@c@thubbstangyis	blobzang	gzhus_song@@@@0@3@Thubten-ERG	Lobsang		hit_PRF'Thubten hit Lobsang'@john cadigan and xinyi ji@january 13, 2018
+7@c:274@@@1@c@thubbstangyis  blobzangla     bsad_pa_red@@@@0@3@Thubten-ERG     Lobsang-DAT     kill_PRF'Thubten killed Lobsang'@john cadigan and xinyi ji@january 13, 2018
+8@b:203@@@1@wo,c,tam@khos		yige		bris_song@@@@1@3@3sg-ERG		letter		wrote_aux‘He wrote the letter.’@john cadigan and xinyi ji@january 13, 2018
+9@b:203@@@1@wo,c,tam@khos		yige		smyuggus	bris_song@@@@1@4@3sg-ERG		letter		pen-INST	wrote_aux‘He wrote the letter with a pen.’@john cadigan and xinyi ji@january 13, 2018
+10@b:215@@@1@c@ngas     khola     yige     btanggiyin@@@@1@4@1SG-SBJ  3SG-LOC   letter   send-LK-AUX'I will send him a letter."@john cadigan and xinyi ji@january 13, 2018
+11@author@@@1@c@ngas    kho    yige    btanggiyin@@@@0@4@I-ERG  3SG   letter  send-LK-AUX'I will send him a letter.'@john cadigan and xinyi ji@january 13, 2018
+12@d:100@@@1@wo,c,det@`mi__bculngatsam cig yogred@@@@1@3@PeopleFiteenAbout num exist'There are about fiteeen people.'@john cadigan and xinyi ji@january 13, 2018
+13@author@@@1@det@cig `mi__bculngatsam yogred@@@@0@3@num PeopleFiteenAbout exist'There are about fiteeen people.'@john cadigan and xinyi ji@january 13, 2018
+14@d:100@@@1@wo,c,det@`mi__bculngatsam  yogred@@@@1@2@PeopleFiteenAbout exist'There are about fiteeen people.'@john cadigan and xinyi ji@january 13, 2018
+15@d:279@@@1@wo,c,pn@khos dkaryol bcag_song@@@@1@3@S/He-ERG cup broke_PERF'He broke the cup'@john cadigan and xinyi ji@january 13, 2018
+16@b:178@@@1@pn,wo@nga 'gro dgosred@@@@1@3@I   go-LK_AUX'I  must go.'@john cadigan and xinyi ji@january 13, 2018
+17@b:107@@@1@pn@kyedrang 'gro  dgoskyired@@@@1@3@you       go    should-LK-AUX'you  should go'@john cadigan and xinyi ji@january 13, 2018
+18@b:178@@@1@pn@khong 'grodgos    byedkyired@@@@1@3@she    go-nom     do-LK-AUX'she will have to go.'@john cadigan and xinyi ji@january 13, 2018
+19@b:178@@@1@pn@kho grosdgosred@@@@1@2@he  go-LK-AUX'He must go.'@john cadigan and xinyi ji@january 13, 2018
+20@b:137@@@1@wo,c,tam@ngas    yige    cig briskyiyod@@@@1@4@1ST-SBJ letter  num write-LK-AUX'I am writing a letter.'@john cadigan and xinyi ji@january 13, 2018
+21@b:137@@@1@wo,c,tam@ngas  yige    klogbayin@@@@1@3@1ST-SBJ letter  read-LK-AUX'I read the letter.'@john cadigan and xinyi ji@january 13, 2018
+22@b:137@@@1@wo,c,tam@sangnyin  ngas    laska  'di   byedkyiyin@@@@1@5@tomorrow  1ST-SBJ  work   this  do-LK-AUX'He is sure to do the work.'@john cadigan and xinyi ji@january 13, 2018
+23@b:227@@@1@wo,c,tam@laska	'di	tsharba		byed	''a@@@@1@5@work	this	finish_nom	do	IMP'Try to finish the work'@john cadigan and xinyi ji@january 13, 2018
+24@a:132@@@1@wo,c,tam@nga     'si_byung@@@@1@2@I       die_PRF'I have died.'@john cadigan and xinyi ji@january 13, 2018
+25@a:161@@@1@wo,c,tam@nga	blebsgroyin@@@@1@2@I	arrive-LK-AUX'I had just arrived'@john cadigan and xinyi ji@january 13, 2018
+26@a:162@@@1@wo,c,tam@nga	nyocha		nyoryguin@@@@1@3@I	shopping	buy-LK-AUX'I have still to do the shopping'@john cadigan and xinyi ji@january 13, 2018
+27@author@@@1@det,tam,neg@yige    de    medpa'dra@@@@1@3@letter  that  neg-EXIST-AUX'That letter does not seem to be here'@john cadigan and xinyi ji@january 13, 2018
+28@author@@@1@det,tam,neg@yige    medpa'dra@@@@1@2@letter  neg-EXIST-AUX'The letter does not seem to be here.'@john cadigan and xinyi ji@january 13, 2018
+29@b:108@@@1@c,wh@gare  zerba@@@@1@2@what say_wh.INTERR'What's it called?'@john cadigan and xinyi ji@january 13, 2018
+30@b:130@@@1@c,wh@khongla rogspa    su  yogred-pa@@@@1@4@3SG-LOC many-NOM  who exist_wh-INTERR'Who was with him?'@john cadigan and xinyi ji@january 13, 2018
+31@b:130@@@1@wh,c@kyedrang   su    yin-pa@@@@1@3@you         who   be_wh-INTERR'Who are you?'@john cadigan and xinyi ji@january 13, 2018
+32@b:130@@@1@wh@gare  yin-am@@@@1@2@what  be-alt'Why?'@john cadigan and xinyi ji@january 13, 2018
+33@b:165@@@1@c,wh@kyedrang	ganas		phebspa@@@@1@3@you		what-ABL	come-INTERR'Where did you come from?'@john cadigan and xinyi ji@january 13, 2018
+34@b:198@@@1@c,wh@chalag  digyad sus tshong_pa_red_pa@@@@1@4@thing	this-num 	who-ERG	sell_link_aux_interr'Who sold the things?'@john cadigan and xinyi ji@january 13, 2018
+35@b:203@@@1@wo@khos      yige    brissong@@@@1@3@3SG-SBJ   letter  wrote-AUX‘He wrote the letter.’@john cadigan and xinyi ji@january 13, 2018
+36@author@@@1@wo@khos    brissong    yige@@@@0@3@3SG-SBJ wrote-AUX   letter'He wrote the letter.'@john cadigan and xinyi ji@january 13, 2018
+37@a:132@@@1@wo,c,@nga	'si_byung@@@@1@2@I	die_PRF'I have died.'@john cadigan and xinyi ji@january 13, 2018
+38@author@@@1@wo@'si_byung	nga@@@@0@2@die_PRF		nga'I have died.'@john cadigan and xinyi ji@january 13, 2018
+39@a:132@@@1@wo,c,@ngas	stag    bsad_pa_yin@@@@1@3@I-ERG	tiger	killed_PRF'I killed the tiger.'@john cadigan and xinyi ji@january 13, 2018
+40@author@@@1@wo@ngas	bsad_pa_yin	stag@@@@0@3@I-ERG	killed_PRF	tiger'I killed the tiger.'@john cadigan and xinyi ji@january 13, 2018
+41@author@@@1@wo@stag	ngas	bsad_pa_yin@@@@0@3@tiger	I-ERG	killed_PRF'I killed the tiger.'@john cadigan and xinyi ji@january 13, 2018
+42@author@@@1@wo@stag	bsad_pa_yin	ngas@@@@0@3@tiger	killed_PRF	I-ERG'I killed the tiger.'@john cadigan and xinyi ji@january 13, 2018
+43@author@@@1@wo@bsad_pa_yin	stag	ngas@@@@0@3@killed_PRF	tiger	I-ERG'I killed the tiger.'@john cadigan and xinyi ji@january 13, 2018
+44@author@@@1@wo@bsad_pa_yin	ngas	stag@@@@0@3@killed_PRF	I-ERG	tiger'I killed the tiger.'@john cadigan and xinyi ji@january 13, 2018
+45@b:132@@@1@wo@ma_phyinpa_redda@@@@1@1@not_went-link_aux-emph'Certainly he didn't go.'@john cadigan and xinyi ji@january 13, 2018
+46@author@@@1@wo@pa_redma_phyinda@@@@0@1@not_went-link_aux-emph'Certainly he didn't go.'@john cadigan and xinyi ji@january 13, 2018
+47@b:166@@@1@tam,wo,c@khonggis        slobsbyong      gnangmusyingired@@@@1@3@She-ERG         study           do-LK-AUX-LK-AUX"She's probably at her studies"@john cadigan and xinyi ji@january 13, 2018
