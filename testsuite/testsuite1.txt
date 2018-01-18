@@ -12,7 +12,7 @@ Source: author
 Vetted: f
 Judgment: g
 Phenomena: wo, pn, c
-ngass      yige    brissong
+ngas      yige    brissong
 nga-s     yige    bris-song
 3SG-SBJ   letter  wrote-AUX
 ‘I wrote the letter.’
@@ -115,8 +115,8 @@ Source: b:137
 Vetted: s
 Judgment: g
 Phenomena: tam
-sangnyin  ngas    laska  'di   byedkyiyin
-sangnyin  nga-s   laska  'di   byed-kyi-yin
+ngas    laska  'di   byedkyiyin
+nga-s   laska  'di   byed-kyi-yin
 tomorrow  1ST-SBJ work   this  do-LK-AUX
 'I am sure to do the work.'
 
