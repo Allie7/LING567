@@ -4,8 +4,8 @@ Source: b:137
 Vetted: s
 Judgment: g
 Phenomena: tam
-ngas  yige    cig briskyiyod
-ngas  yige    cig bris-kyi-yod
+ngas    yige    cig briskyiyod
+nga-s   yige    cig bris-kyi-yod
 1ST-SBJ letter  num write-LK-AUX
 'I am writing a letter.'
 
@@ -14,8 +14,8 @@ Source: b:137
 Vetted: s
 Judgment: g
 Phenomena: tam
-ngas  yige    klogbayin
-ngas  yige    klog-ba-yin
+nga-s  yige    klogbayin
+nga-s  yige    klog-ba-yin
 1ST-SBJ letter  read-LK-AUX
 'I read the letter.'
 
@@ -24,9 +24,9 @@ Source: b:137
 Vetted: s
 Judgment: g
 Phenomena: tam
-sangnyin  ngas    laska  'di   byedkyiyin
-sangnyin  ngas    laska  'di   byed-kyi-yin
-tomorrow  1ST-SBJ work   this  do-LK-AUX
+sangnyin  nga-s    laska  'di   byedkyiyin
+sangnyin  nga-s    laska  'di   byed-kyi-yin
+tomorrow  1ST-SBJ  work   this  do-LK-AUX
 'He is sure to do the work.'
 
 #IMPERATIVE
@@ -34,7 +34,7 @@ Source: b:227
 Vetted: s
 Judgment: g
 Phenomena: tam
-laska	'di	tsharba		byed	''a
+laska	'di	  tsharba		byed	''a
 work	this	finish-nom	do	IMP
 'Try to finish the work'
 
