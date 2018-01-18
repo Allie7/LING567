@@ -1,0 +1,167 @@
+
+Source: b:203
+Vetted: s
+Judgment: g
+Phenomena: wo, pn, c
+khos      yige    brissong
+kho-s     yige    bris-song
+3SG-SBJ   letter  wrote-AUX
+‘He wrote the letter.’
+
+Source: author
+Vetted: f
+Judgment: g
+Phenomena: wo, pn, c
+ngas      yige    brissong
+nga-s     yige    bris-song
+3SG-SBJ   letter  wrote-AUX
+‘I wrote the letter.’
+
+Source: author
+Vetted: f
+Judgment: g
+Phenomena: wo, pn
+khongs    yige    brissong
+khong-s   yige    bris-song
+3SG-SBJ   letter  wrote-AUX
+‘She wrote the letter.’
+
+Source: author
+Vetted: f
+Judgment: g
+Phenomena: wo, pn
+khyedrangs    yige    brissong
+khongrang-s   yige    bris-song
+2ND-SBJ       letter  wrote-AUX
+‘You wrote the letter.’
+
+Source: author
+Vetted: f
+Judgement: u
+Phenomena: wo
+khos    brissong    yige
+kho-s   bris-song   yige
+3SG-SBJ wrote-AUX   letter
+'He wrote the letter.'
+
+Source: author
+Vetted: f
+Judgment: g
+Phenomena: noun phrases
+yige    de    medpa'dra
+yige    de    med-pa-'dra
+letter  that  neg-EXIST-AUX 
+'That letter does not seem to be here'
+
+Source: author
+Vetted: f
+Judgment: g
+Phenomena: noun phrases
+yige    medpa'dra
+yige    med-pa-'dra
+letter  neg-EXIST-AUX
+'The letter does not seem to be here.'
+
+Source: a:132
+Vetted: s
+Judgment: g
+Phenomena: wo, c, tam
+ngas    stag    bsadpayin
+nga-s   stag    bsad-pa-yin
+1ST   tiger   killed-LK-AUX
+'I killed the tiger.'
+
+Source: b:215
+Vetted: s
+Judgment: g
+Phenomena: c, tam, wo
+ngas     khola     yige     btanggiyin
+nga-s    kho-la    yige     btang-gi-yin 
+1SG-SBJ  3SG-LOC   letter   send-LK-AUX
+'I will send him a letter."
+
+Source: author
+Vetted: f
+Judgement: u
+Phenomena: c
+ngas    kho   yige    btanggiyin
+nga-s   kho   yige    btang-gi-yin
+ST-LOC  3SG   letter  send-LK-AUX
+'I will send him a letter.'
+
+#the following examples only contains self-centered, 1st person cases so far
+#present tense
+Source: b:137
+Vetted: s
+Judgment: g
+Phenomena: tam
+ngas    yige    cig briskyiyod
+nga-s   yige    cig bris-kyi-yod
+1ST-SBJ letter  num write-LK-AUX
+'I am writing a letter.'
+
+#past tense
+Source: b:137
+Vetted: s
+Judgment: g
+Phenomena: tam
+ngas    yige    klogbayin
+nga-s   yige    klog-ba-yin
+1ST-SBJ letter  read-LK-AUX
+'I read the letter.'
+
+#FUTURE TENSE
+Source: b:137
+Vetted: s
+Judgment: g
+Phenomena: tam
+ngas    laska  'di   byedkyiyin
+nga-s   laska  'di   byed-kyi-yin
+tomorrow  1ST-SBJ work   this  do-LK-AUX
+'I am sure to do the work.'
+
+#FUTURE TENSE
+Source: author
+Vetted: f
+Judgment: u
+Phenomena: tam
+sangnyin  ngas    yige    klogbayin
+sangnyin  nga-s   yige    klog-ba-yin
+tomorrow  1ST-SBJ letter  read-LK-AUX
+'I am sure to read the letter'
+
+Source: b:118
+Vetted: s
+Judgment: g
+Phenomena: c,
+gare  zerba
+gare  zer-ba
+what say-wh.INTERR
+'What's it called?'
+
+Source: b:130
+Vetted: s
+Judgment: g
+Phenomena: c,
+khongla rogspa    su  yogredpa
+khongla rogspa    su  yog-red-pa
+3SG-LOC many-NOM  who exist-wh.INTERR
+'Who was with him?'
+
+Source: b:130
+Vetted: s
+Judgment: g
+Phenomena: c,
+khyedrang   su    yinpa
+khyedrang   su    yin-pa
+2ND         who   be-wh.INTERR
+'Who are you?'
+
+Source: b:130
+Vetted: s
+Judgment: g
+Phenomena: c,
+gare  yinnam
+gare  yin-nam
+what  be-ALT
+'Why?'
