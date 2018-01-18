@@ -2,9 +2,9 @@
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;;; Grammar of Tibetan
 ;;; created at:
-;;;     Mon Jan 15 06:30:41 UTC 2018
+;;;     Thu Jan 18 21:07:26 UTC 2018
 ;;; based on Matrix customization system version of:
-;;;     Wed Dec 20 23:31:10 UTC 2017
+;;;     Thu Jan 18 20:23:02 UTC 2018
 ;;;
 ;;; This is a basic grammar of Lhasa Tibetan
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
@@ -20,6 +20,9 @@ non-mod-lex-item := lex-item &
 
 noun :+ [ CASE case ].
 
+head :+ [ AUX bool,
+    FORM form ].
+
 inflected :+ [ CASE-MARKER-FLAG luk,
     NOUN-FLAG luk ].
 
@@ -30,9 +33,6 @@ png :+ [ PER person ].
 
 basic-head-comp-phrase :+ [ SYNSEM.LOCAL.CAT.MC #mc,
     HEAD-DTR.SYNSEM.LOCAL.CAT.MC #mc ].
-
-basic-head-mod-phrase-simple :+ [ SYNSEM.LOCAL.CAT.MC #mc,
-    NON-HEAD-DTR.SYNSEM.LOCAL.CAT.MC #mc ].
 
 basic-head-opt-subj-phrase :+ [ HEAD-DTR.SYNSEM.LOCAL.CAT.VAL.COMPS < > ].
 
@@ -56,6 +56,12 @@ person := *top*.
 2nd := person.
 3rd := person.
 
+;;; Form
+
+form := *top*.
+nonfinite := form.
+finite := form.
+
 ;;; Tense
 
 past := tense.
@@ -64,8 +70,12 @@ future := tense.
 
 ;;; Aspect
 
-perfective := aspect.
-imperfective := aspect.
+perfect := aspect.
+recent := aspect.
+prospective := aspect.
+imminent := aspect.
+preparative := aspect.
+premeditated := aspect.
 
 ;;;;;;;;;;;;;;;;;;;
 ;;; Lexical Types
@@ -80,8 +90,8 @@ noun-lex := basic-noun-lex & basic-one-arg & no-hcons-lex-item & non-mod-lex-ite
                            SUBJ < >,
                            SPEC < > ],
     ARG-ST < #spr >,
-    INFLECTED [ NOUN-FLAG +,
-                CASE-MARKER-FLAG - ] ].
+    INFLECTED [ CASE-MARKER-FLAG -,
+                NOUN-FLAG + ] ].
 
 no-spr-noun-lex := noun-lex &
   [ SYNSEM.LOCAL.CAT.VAL.SPR < [ OPT + ] > ].
@@ -110,12 +120,36 @@ first-person-noun-lex := no-spr-noun-lex &
 proper-noun-lex-noun-lex := no-spr-noun-lex &
   [ SYNSEM.LOCAL.CONT.HOOK.INDEX.PNG.PER 3rd ].
 
+1st_erg_pron-noun-lex := no-spr-noun-lex &
+  [ SYNSEM.LOCAL [ CAT.HEAD.CASE erg,
+                   CONT.HOOK.INDEX.PNG.PER 1st ] ].
+
+1st_loc_pron-noun-lex := no-spr-noun-lex &
+  [ SYNSEM.LOCAL.CONT.HOOK.INDEX.PNG.PER 1st ].
+
+3rd_erg_pron-noun-lex := no-spr-noun-lex &
+  [ SYNSEM.LOCAL [ CONT.HOOK.INDEX.PNG.PER 3rd,
+                   CAT.HEAD.CASE abs ] ].
+
+2nd_erg_pron-noun-lex := no-spr-noun-lex &
+  [ SYNSEM.LOCAL [ CAT.HEAD.CASE erg,
+                   CONT.HOOK.INDEX.PNG.PER 2nd ] ].
+
+3rd_loc_pron-noun-lex := no-spr-noun-lex &
+  [ SYNSEM.LOCAL [ CAT.HEAD.CASE abs,
+                   CONT.HOOK.INDEX.PNG.PER 3rd ] ].
+
 ;;; Verbs
 
-verb-lex := basic-verb-lex & non-mod-lex-item &
-  [ SYNSEM.LOCAL [ CAT.VAL [ SPR < >,
-                             SPEC < >,
-                             SUBJ < #subj > ],
+verb-lex := non-mod-lex-item &
+  [ SYNSEM.LOCAL.CAT [ HEAD verb,
+                       HC-LIGHT - ] ].
+
+main-verb-lex := verb-lex & basic-verb-lex &
+  [ SYNSEM.LOCAL [ CAT [ HEAD.AUX -,
+                         VAL [ SPR < >,
+                               SPEC < >,
+                               SUBJ < #subj > ] ],
                    CONT.HOOK.XARG #xarg ],
     ARG-ST.FIRST #subj &
                  [ LOCAL [ CAT cat-sat &
@@ -123,11 +157,14 @@ verb-lex := basic-verb-lex & non-mod-lex-item &
                                        COMPS < > ] ],
                            CONT.HOOK.INDEX #xarg ] ] ].
 
-intransitive-verb-lex := verb-lex & intransitive-lex-item &
+aux-lex := verb-lex &
+  [ SYNSEM.LOCAL.CAT.HEAD.AUX + ].
+
+intransitive-verb-lex := main-verb-lex & intransitive-lex-item &
   [ SYNSEM.LOCAL.CAT.VAL.COMPS < >,
     ARG-ST.FIRST.LOCAL.CAT.HEAD noun ].
 
-transitive-verb-lex := verb-lex & transitive-lex-item &
+transitive-verb-lex := main-verb-lex & transitive-lex-item &
   [ SYNSEM.LOCAL.CAT.VAL.COMPS < #comps >,
     ARG-ST < [ LOCAL.CAT.HEAD noun ],
              #comps &
@@ -146,18 +183,73 @@ erg-abs-transitive-verb-lex := transitive-verb-lex &
              [ LOCAL.CAT.HEAD noun &
                               [ CASE abs ] ] > ].
 
-intransitive-verb-lex-verb-lex := abs-intransitive-verb-lex.
+intransitive-verb-lex-verb-lex := abs-intransitive-verb-lex &
+  [ SYNSEM.LOCAL.CAT.HEAD.FORM form ].
 
-transitive-verb-lex-verb-lex := perfective-verb-verb-lex & erg-abs-transitive-verb-lex.
+transitive-verb-lex-verb-lex := perfect-verb-verb-lex & erg-abs-transitive-verb-lex &
+  [ SYNSEM.LOCAL.CAT.HEAD.FORM form ].
 
-perfective-verb-verb-lex := verb-lex &
-  [ SYNSEM.LOCAL.CONT.HOOK.INDEX.E.ASPECT perfective ].
+perfect-verb-verb-lex := verb-lex &
+  [ SYNSEM.LOCAL [ CONT.HOOK.INDEX.E.ASPECT perfect,
+                   CAT.HEAD.FORM form ] ].
 
-perfective-intransitive-verb-verb-lex := intransitive-verb-lex-verb-lex & perfective-verb-verb-lex.
+perfective-intransitive-verb-verb-lex := intransitive-verb-lex-verb-lex & perfect-verb-verb-lex &
+  [ SYNSEM.LOCAL.CAT.HEAD.FORM form ].
 
-perfective-transitive-dative-verb-lex-verb-lex := perfective-verb-verb-lex & transitive-verb-lex &
-  [ SYNSEM.LOCAL.CAT.VAL [ SUBJ.FIRST.LOCAL.CAT.HEAD.CASE erg,
-                           COMPS.FIRST.LOCAL.CAT.HEAD.CASE dat ] ].
+perfective-transitive-dative-verb-lex-verb-lex := perfect-verb-verb-lex & transitive-verb-lex &
+  [ SYNSEM.LOCAL.CAT [ VAL [ SUBJ.FIRST.LOCAL.CAT.HEAD.CASE erg,
+                             COMPS.FIRST.LOCAL.CAT.HEAD.CASE dat ],
+                       HEAD.FORM form ] ].
+
+future-ditransitive-verb-lex-verb-lex := erg-abs-transitive-verb-lex &
+  [ SYNSEM.LOCAL.CONT.HOOK.INDEX.E.TENSE future ].
+
+past-transitive-verb-lex-verb-lex := erg-abs-transitive-verb-lex &
+  [ SYNSEM.LOCAL.CONT.HOOK.INDEX.E.TENSE past ].
+
+;;; Auxiliaries
+
+arg-comp-aux := aux-lex & basic-two-arg &
+  [ SYNSEM.LOCAL [ CAT.VAL [ SPR < >,
+                             SPEC < >,
+                             COMPS < #comps . #vcomps >,
+                             SUBJ < #subj > ],
+                   CONT.HOOK.XARG #xarg ],
+    ARG-ST < #subj &
+             [ LOCAL [ CAT [ HEAD noun &
+                                  [ CASE #case ],
+                             VAL [ SUBJ < >,
+                                   SPR < >,
+                                   SPEC < >,
+                                   COMPS < > ] ],
+                       CONT.HOOK.INDEX #xarg ] ],
+             #comps &
+             [ LIGHT +,
+               LOCAL [ CONT.HOOK.XARG #xarg,
+                       CAT [ HEAD verb,
+                             VAL [ COMPS #vcomps,
+                                   SUBJ < [ LOCAL.CAT.HEAD.CASE #case ] > ] ] ] ] > ].
+
+; Somewhat surprisingly, this inherits from basic-two-arg, so
+; that the non-local features are amalgamated from subj, the
+; lexical verb complement, but not the other complements, if any.
+
+; Not inheriting from basic-verb-lex, so need to put in
+; event-relation by hand here.
+
+arg-comp-aux-with-pred := arg-comp-aux & hcons-lex-item &
+  [ SYNSEM [ LOCAL.CONT.HCONS <! qeq &
+                                 [ HARG #harg,
+                                   LARG #larg ] !>,
+             LKEYS.KEYREL event-relation &
+                          [ ARG1 #harg ] ],
+    ARG-ST < [ ],
+             [ LOCAL.CONT.HOOK.LTOP #larg ] > ].
+
+linking_verbs-aux-lex := arg-comp-aux-with-pred &
+  [ SYNSEM.LOCAL.CAT.VAL.COMPS.FIRST.LOCAL.CAT.HEAD.FORM form ].
+
+;;; Complementizers
 
 ;;; Others
 

@@ -56,6 +56,12 @@ E.TENSE : E.TENSE
   * <> *
 
 E.ASPECT : E.ASPECT
+  perfect <> perfect
+  recent <> recent
+  prospective <> prospective
+  imminent <> imminent
+  preparative <> preparative
+  premeditated <> premeditated
   * <> *
 
 E.MOOD : E.MOOD

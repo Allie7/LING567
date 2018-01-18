@@ -21,21 +21,37 @@ yige := basic-noun-noun-lex &
   [ STEM < "yige" >,
     SYNSEM.LKEYS.KEYREL.PRED "_letter_n_rel" ].
 
+laska := basic-noun-noun-lex &
+  [ STEM < "laska" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_work_n_rel" ].
+
+%27grodgos := basic-noun-noun-lex &
+  [ STEM < "'grodgos" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_go_nom_n_rel" ].
+
 nga := first-person-noun-lex &
   [ STEM < "nga" >,
-    SYNSEM.LKEYS.KEYREL.PRED "_I_n_1_rel" ].
+    SYNSEM.LKEYS.KEYREL.PRED "_pron_n_1_rel" ].
 
 kho := 3rd-person-noun-lex &
   [ STEM < "kho" >,
-    SYNSEM.LKEYS.KEYREL.PRED "_she_he_n_rel" ].
+    SYNSEM.LKEYS.KEYREL.PRED "_pron_n_2_rel" ].
 
 mo := 3rd-person-noun-lex &
   [ STEM < "mo" >,
-    SYNSEM.LKEYS.KEYREL.PRED "_she_n_rel" ].
+    SYNSEM.LKEYS.KEYREL.PRED "_pron_n_3_rel" ].
+
+khong := 3rd-person-noun-lex &
+  [ STEM < "khong" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_pron_n_4_rel" ].
 
 kyed := 2nd-person-lex-noun-lex &
   [ STEM < "kyed" >,
-    SYNSEM.LKEYS.KEYREL.PRED "_you_n_rel" ].
+    SYNSEM.LKEYS.KEYREL.PRED "_pron_n_5_rel" ].
+
+kyedrang := 2nd-person-lex-noun-lex &
+  [ STEM < "kyedrang" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_pron_n_6_rel" ].
 
 thubbstan := proper-noun-lex-noun-lex &
   [ STEM < "thubbstan" >,
@@ -45,6 +61,30 @@ blobzang := proper-noun-lex-noun-lex &
   [ STEM < "blobzang" >,
     SYNSEM.LKEYS.KEYREL.PRED "_lobsang_n_rel" ].
 
+ngas := 1st_erg_pron-noun-lex &
+  [ STEM < "ngas" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_pron_n_7_rel" ].
+
+ngala := 1st_loc_pron-noun-lex &
+  [ STEM < "ngala" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_pron_n_rel" ].
+
+khos := 3rd_erg_pron-noun-lex &
+  [ STEM < "khos" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_pron_n_rel" ].
+
+khyedrangs := 2nd_erg_pron-noun-lex &
+  [ STEM < "khyedrangs" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_pron_n_rel" ].
+
+khola := 3rd_loc_pron-noun-lex &
+  [ STEM < "khola" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_pron_n_rel" ].
+
+khongla := 3rd_loc_pron-noun-lex &
+  [ STEM < "khongla" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_pron_n_rel" ].
+
 ;;; Adjectives
 
 ;;; Verbs
@@ -52,6 +92,14 @@ blobzang := proper-noun-lex-noun-lex &
 yogred := intransitive-verb-lex-verb-lex &
   [ STEM < "yogred" >,
     SYNSEM.LKEYS.KEYREL.PRED "_exist_v_rel" ].
+
+medpa%27dra := intransitive-verb-lex-verb-lex &
+  [ STEM < "medpa'dra" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_nothere_v_rel" ].
+
+%27gro := intransitive-verb-lex-verb-lex &
+  [ STEM < "'gro" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_go_v_rel" ].
 
 bcag_song := transitive-verb-lex-verb-lex &
   [ STEM < "bcag_song" >,
@@ -69,6 +117,22 @@ bris_song := transitive-verb-lex-verb-lex &
   [ STEM < "bris_song" >,
     SYNSEM.LKEYS.KEYREL.PRED "_write_v_rel" ].
 
+brissong := transitive-verb-lex-verb-lex &
+  [ STEM < "brissong" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_wrote_v_rel" ].
+
+briskyiyod := transitive-verb-lex-verb-lex &
+  [ STEM < "briskyiyod" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_write_v_rel" ].
+
+klogbayin_1 := transitive-verb-lex-verb-lex &
+  [ STEM < "klogbayin" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_read_v_rel" ].
+
+byedkyired := transitive-verb-lex-verb-lex &
+  [ STEM < "byedkyired" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_do_v_rel" ].
+
 %27si_byung := perfective-intransitive-verb-verb-lex &
   [ STEM < "'si_byung" >,
     SYNSEM.LKEYS.KEYREL.PRED "_die_v_rel" ].
@@ -77,8 +141,33 @@ gzhus_song := perfective-transitive-dative-verb-lex-verb-lex &
   [ STEM < "gzhus_song" >,
     SYNSEM.LKEYS.KEYREL.PRED "_hit_v_rel" ].
 
+btanggiyin := future-ditransitive-verb-lex-verb-lex &
+  [ STEM < "btanggiyin" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_will_send_v_rel" ].
+
+klogbayin_2 := past-transitive-verb-lex-verb-lex &
+  [ STEM < "klogbayin" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_read_v_rel" ].
+
+;;; Auxiliaries
+
+dgos_red := linking &
+  [ SYNSEM.LKEYS.KEYREL.PRED "must" ].
+
 ;;; Determiners
 
 cig := determinant-adj-lex-determiner-lex &
   [ STEM < "cig" >,
     SYNSEM.LKEYS.KEYREL.PRED "_a_q_rel" ].
+
+de := determinant-adj-lex-determiner-lex &
+  [ STEM < "de" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_that_q_rel" ].
+
+%27di := determinant-adj-lex-determiner-lex &
+  [ STEM < "'di" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_this_q_rel" ].
+
+rogspa := determinant-adj-lex-determiner-lex &
+  [ STEM < "rogspa" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_many_q_rel" ].
