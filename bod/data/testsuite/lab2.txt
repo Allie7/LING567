@@ -252,6 +252,24 @@ kho gros-dgos-red
 he  go-LK-AUX
 'He must go.'
 
+#made-up examples, plural forms
+Source: author
+Vetted: f
+Judgment: g
+Phenomena: pn
+khotsho grosdgosred
+khot-sho gros-dgos-red
+3RD_M-PL  go-LK-AUX
+'They must go.'
+
+Source: b:178
+Vetted: s
+Judgment: g
+Phenomena: pn
+motsho  'grodgos    byedkyired
+morang-tsho 'gro-dgos   byed-kyi-red
+3RD_F-PL    go-nom     do-LK-AUX
+'They will have to go.'
 
 
 #testsuite/tense&aspect_examples.examples
