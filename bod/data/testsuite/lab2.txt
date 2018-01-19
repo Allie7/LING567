@@ -207,8 +207,8 @@ Vetted: s
 Judgment: g
 Phenomena: wo, c, pn 
 #khos dkaryol bcag_song
-khos dkaryol bcag_song
-kho-s dkaryol bcag_song
+khos dkaryol bcagsong
+kho-s dkaryol bcag-song
 S/He-ERG cup broke_PERF
 'He broke the cup'
 
@@ -399,7 +399,7 @@ Source: b:130
 Vetted: s
 Judgment: g
 Phenomena: c,wh
-khongla rogspa    su  yogred-pa
+khongla rogspa    su  yogredpa
 khong-la rogs-pa    su  yogred-pa
 3SG-DAT many-NOM  who exist_wh-INTERR
 'Who was with him?'
@@ -435,8 +435,8 @@ Source: b:198
 Vetted: s
 Judgement: g
 Phenomena: c,wh
-chalag  digyad sus tshong_pa_red_pa
-chalag	di-gyad		su-s	tshong_pa_red_pa
+chalag  digyad sus tshongparedpa
+chalag	di-gyad		su-s	tshong-pa-red-pa
 thing	this-num 	who-ERG	sell_link_aux_interr
 'Who sold the things?'
 
