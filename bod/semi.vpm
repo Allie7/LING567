@@ -44,9 +44,13 @@ PNG.PER : PNG.PER
   * <> *
 
 PNG.NUM : PNG.NUM
+  pl <> pl
+  sg <> sg
   * <> *
 
 PNG.GEND : PNG.GEND
+  f <> f
+  m <> m
   * <> *
 
 E.TENSE : E.TENSE
@@ -56,12 +60,9 @@ E.TENSE : E.TENSE
   * <> *
 
 E.ASPECT : E.ASPECT
-  perfect <> perfect
-  recent <> recent
-  prospective <> prospective
-  imminent <> imminent
-  preparative <> preparative
-  premeditated <> premeditated
+  prf <> prf
+  rec <> rec
+  pros <> pros
   * <> *
 
 E.MOOD : E.MOOD
