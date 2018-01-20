@@ -19,25 +19,28 @@ Source c:LaPolla, Randy J., and Graham Thurgood, eds. The Sino-Tibetan Languages
 #
 # Example 1 for lab 2
 # These are basic ungrammarical 
+#ngas	stag	bsad-pa-yin
 
 Source: a:132
 Vetted: s
 Judgment: g
 Phenomena: wo, c, tam
-ngas	stag	bsad_pa_yin
-nga-s	stag	bsad_pa_yin
-I-ERG	tiger	killed_PRF
+ngas	stag	bsadpayin
+nga-s	stag	bsad-pa-yin
+I-ERG	tiger	killed-LK-PRF
 'I killed the tiger.'
 
 #Missing ergative
+
+#nga stag bsad_pa_yin
 
 Source: a:133
 Vetted: s
 Judgment: u
 Phenomena: c
-nga	stag	bsad_pa_yin
-nga	stag	bsad_pa_yin
-I	tiger	killed_PRF
+nga	stag	bsadpayin
+nga	stag	bsad-pa-yin
+I	tiger	killed-LK-PRF
 'I killed the tiger.'
 
 #dative instead of ergative
@@ -46,9 +49,9 @@ Source: author
 Vetted: f
 Judgment: u
 Phenomena: c
-ngala	stag	bsad_pa_yin
-nga-la	stag	bsad_pa_yin
-I-DAT	tiger	killed_PRF
+ngala   stag  bsadpayin
+nga-la	stag	bsad-pa-yin
+I-DAT	tiger	killed-pa-PRF
 'I killed the tiger.'
 
 
@@ -57,11 +60,13 @@ Source: author
 Vetted: f
 Judgment: u
 Phenomena: c
-ngala	stagla		bsad_pa_yin
-nga-la	stag-la		bsad_pa_yin
-I-DAT	tiger-DAT	killed_PRF
+ngala	stagla		bsadpayin
+nga-la	stag-la		bsad-pa-yin
+I-DAT	tiger-	killed-LK-PRF
 'I killed the tiger.'
 
+
+#thubbstangyis	blobzangla	gzhus_song
 # dative for object
 # these are inferred by the mention of
 # special cases from c:274
@@ -71,29 +76,34 @@ Source: c:274
 Vetted: s
 Judgment: g
 Phenomena: wo, c, tam
-thubbstangyis	blobzangla	gzhus_song
-thubbstan-gyis	blobzang-la	gzhus_song
-Thubten-ERG	Lobsang-DAT	hit_PRF
+thubbstangyis	blobzangla	gzhussong
+thubbstan-gyis	blobzang-la	gzhus-song
+Thubten-ERG	Lobsang-DAT	hit-PRF
 'Thubten hit Lobsang'
 
+
+
+#thubbstangyis	blobzang	gzhus_song
 #assumed based on information
 #from above
 Source: author
 Vetted: f
 Judgment: u
 Phenomena: c
-thubbstangyis	blobzang	gzhus_song
-thubbstan-gyis	blobzang	gzhus_song
-Thubten-ERG	Lobsang		hit_PRF
+thubbstangyis	blobzang	gzhussong
+thubbstan-gyis	blobzang	gzhus-song
+Thubten-ERG	Lobsang		hit-PRF
 'Thubten hit Lobsang'
 
+
+#thubbstangyis  blobzangla     bsad_pa_red
 Source: c:274
 Vetted: s
 Judgment: u
 Phenomena: c
-thubbstangyis  blobzangla     bsad_pa_red
-thubbstan-gyis  blobzang-la     bsad_pa_red
-Thubten-ERG     Lobsang-DAT     kill_PRF
+thubbstangyis  blobzangla     bsadpared
+thubbstan-gyis  blobzang-la     bsad-pa-red
+Thubten-ERG     Lobsang-DAT     kill-LK-PRF
 'Thubten killed Lobsang'
 
 
@@ -101,22 +111,26 @@ Thubten-ERG     Lobsang-DAT     kill_PRF
 # Instrumental
 #
 
+#khos		yige		bris_song
 Source: b:203
 Vetted: s
 Judgment: g
 Phenomena: wo, c , tam
-khos		yige		bris_song
-kho-s		yige		bris_song
-3sg-ERG		letter		wrote_aux
+khos		yige		brissong
+kho-s		yige		bris-song
+3sg-ERG		letter		wrote-AUX
 ‘He wrote the letter.’
 
+
+
+#khos		  yige  		smyuggus	bris_song
 Source: b:203
 Vetted: s
 Judgment: g
 Phenomena: wo, c, tam
-khos		yige		smyuggus	bris_song
-kho-s		yige            smyug-gus	bris_song
-3sg-ERG		letter		pen-INST	wrote_aux
+khos		  yige  		smyuggus	brissong
+kho-s		  yige      smyug-gus	bris-song
+3sg-ERG		letter		pen-INST	wrote-AUX
 ‘He wrote the letter with a pen.’
 
 
@@ -131,16 +145,16 @@ Judgment: g
 Phenomena: c
 ngas     khola     yige     btanggiyin
 nga-s    kho-la    yige     btang-gi-yin
-1SG-SBJ  3SG-LOC   letter   send-LK-AUX
+1SG-ERG  3SG-DAT   letter   send-LK-AUX
 'I will send him a letter."
 
 Source: author
 Vetted: f
 Judgement: u
 Phenomena: c
-ngas    kho    yige    btanggiyin
-nga-s    kho   yige    btang-gi-yin
-I-ERG  3SG   letter  send-LK-AUX
+ngas    kho   yige    btanggiyin
+nga-s   kho   yige    btang-gi-yin
+I-ERG   3SG   letter  send-LK-AUX
 'I will send him a letter.'
 
 
@@ -151,33 +165,41 @@ I-ERG  3SG   letter  send-LK-AUX
 #without those incorporated, we will have them act as traditional
 #determiners for now
 
+
+#`mi_bculngatsam cig yogred
 Source: d:100
 Vetted: s
 Judgment: g
 Phenomena: wo, c, det
-`mi__bculngatsam cig yogred
-`mi__bculngatsam cig yogred
-PeopleFiteenAbout num exist
+`mibculngatsam    cig yogred
+`mi-bculngatsam   cig yog_red
+People-FiteenAbout num exist
 'There are about fiteeen people.'
 
+
+
+#cig `mi__bculngatsam yogred
 #assumed ungrammatical 
 #with the information about particle order
 Source: author
 Vetted: f
 Judgment: u
 Phenomena: det
-cig `mi__bculngatsam yogred
-cig `mi__bculngatsam yogred
-num PeopleFiteenAbout exist
+cig `mibculngatsam yogred
+cig `mi-bculngatsam yog_red
+num People-FiteenAbout exist
 'There are about fiteeen people.'
 
+
+
+#`mi__bculngatsam  yogred
 Source: d:100
 Vetted: s
 Judgment: g
 Phenomena: wo, c, det
-`mi__bculngatsam  yogred
-`mi__bculngatsam  yogred
-PeopleFiteenAbout exist
+`mibculngatsam  yogred
+`mi-bculngatsam  yog_red
+People-FiteenAbout exist
 'There are about fiteeen people.'
 
 
@@ -189,13 +211,17 @@ PeopleFiteenAbout exist
 
 #Examples using the various pronouns
 
+
+
+#khos dkaryol bcag_song
+
 Source: d:279
 Vetted: s
 Judgment: g
 Phenomena: wo, c, pn 
-khos dkaryol bcag_song
-kho-s dkaryol bcag_song
-S/He-ERG cup broke_PERF
+khos dkaryol bcagsong
+kho-s dkaryol bcag-song
+S/He-ERG cup broke-PERF
 'He broke the cup'
 
 #
@@ -206,9 +232,9 @@ Source: b:178
 Vetted: s
 Judgment: g
 Phenomena: pn, wo
-nga 'gro dgosred
-nga 'gro-dgos_red
-I   go-LK_AUX
+nga 'grodgosred
+nga 'gro-dgos-red
+I   go-LK-AUX
 'I  must go.'
 
 Source: b:107
@@ -238,6 +264,24 @@ kho gros-dgos-red
 he  go-LK-AUX
 'He must go.'
 
+#made-up examples, plural forms
+Source: author
+Vetted: f
+Judgment: g
+Phenomena: pn
+khotsho grosdgosred
+khot-sho gros-dgos-red
+3RD-M_PL  go-LK-AUX
+'They must go.'
+
+Source: b:178
+Vetted: s
+Judgment: g
+Phenomena: pn
+motsho  'grodgos    byedkyired
+morang-tsho 'gro-dgos   byed-kyi-red
+3RD-F_PL    go-nom     do-LK-AUX
+'They will have to go.'
 
 
 #testsuite/tense&aspect_examples.examples
@@ -251,7 +295,7 @@ Judgment: g
 Phenomena: wo, c, tam
 ngas    yige    cig briskyiyod
 nga-s   yige    cig bris-kyi-yod
-1ST-SBJ letter  num write-LK-AUX
+1ST-AUX letter  num write-LK-AUX
 'I am writing a letter.'
 
 #past tense
@@ -261,7 +305,7 @@ Judgment: g
 Phenomena: wo, c, tam
 ngas  yige    klogbayin
 nga-s  yige    klog-ba-yin
-1ST-SBJ letter  read-LK-AUX
+1ST-ERG letter  read-LK-AUX
 'I read the letter.'
 
 #FUTURE TENSE
@@ -271,7 +315,7 @@ Judgment: g
 Phenomena: wo, c, tam
 sangnyin  ngas    laska  'di   byedkyiyin
 sangnyin  nga-s    laska  'di   byed-kyi-yin
-tomorrow  1ST-SBJ  work   this  do-LK-AUX
+tomorrow  1ST-ERG  work   this  do-LK-AUX
 'He is sure to do the work.'
 
 #IMPERATIVE
@@ -294,9 +338,9 @@ Source: a:132
 Vetted: s
 Judgment: g
 Phenomena: wo, c, tam
-nga     'si_byung
-nga     'si_byung
-I       die_PRF
+nga     'sibyung
+nga     'si-byung
+I       die-PRF
 'I have died.'
 
 #habitual is formed with tense
@@ -366,16 +410,16 @@ Source: b:130
 Vetted: s
 Judgment: g
 Phenomena: c,wh
-khongla rogspa    su  yogred-pa
+khongla rogspa    su  yogredpa
 khong-la rogs-pa    su  yogred-pa
-3SG-LOC many-NOM  who exist_wh-INTERR
+3SG-DAT many-NOM  who exist_wh-INTERR
 'Who was with him?'
 
 Source: b:130
 Vetted: s
 Judgment: g
 Phenomena: wh,c
-kyedrang   su    yin-pa
+kyedrang   su    yinpa
 kyedrang   su    yin-pa
 you         who   be_wh-INTERR
 'Who are you?'
@@ -402,9 +446,9 @@ Source: b:198
 Vetted: s
 Judgement: g
 Phenomena: c,wh
-chalag  digyad sus tshong_pa_red_pa
-chalag	di-gyad		su-s	tshong_pa_red_pa
-thing	this-num 	who-ERG	sell_link_aux_interr
+chalag  digyad sus tshongparedpa
+chalag	di-gyad		su-s	tshong-pa-red-pa
+thing	this-num 	who-ERG	sell-link-aux-interr
 'Who sold the things?'
 
 
@@ -417,7 +461,7 @@ Judgment: g
 Phenomena: wo
 khos      yige    brissong
 kho-s     yige    bris-song
-3SG-SBJ   letter  wrote-AUX
+3SG-ERG   letter  wrote-AUX
 ‘He wrote the letter.’
 
 Source: author
@@ -426,7 +470,7 @@ Judgement: u
 Phenomena: wo
 khos    brissong    yige
 kho-s   bris-song   yige
-3SG-SBJ wrote-AUX   letter
+3SG-ERG wrote-AUX   letter
 'He wrote the letter.'
 
 #testsuite/word_order.examples
@@ -440,9 +484,9 @@ Source: a:132
 Vetted: s
 Judgment: g
 Phenomena: wo, c, 
-nga	'si_byung
-nga	'si_byung
-I	die_PRF
+nga	'sibyung
+nga	'si-byung
+I	die-PRF
 'I have died.'
 
 #inferred ungrammatical 
@@ -450,9 +494,9 @@ Source: author
 Vetted: f
 Judgment: u
 Phenomena: wo 
-'si_byung	nga
-'si_byung	nga
-die_PRF		nga
+'sibyung	nga
+'si-byung	nga
+die-PRF		nga
 'I have died.'
 
 #
@@ -464,9 +508,9 @@ Source: a:132
 Vetted: s
 Judgment: g
 Phenomena: wo, c,
-ngas	stag    bsad_pa_yin
-nga-s	stag    bsad_pa_yin
-I-ERG	tiger	killed_PRF
+ngas	stag    bsadpayin
+nga-s	stag    bsad-pa-yin
+I-ERG	tiger	killed-LK-PRF
 'I killed the tiger.'
 
 #SVO
@@ -474,9 +518,9 @@ Source: author
 Vetted: f
 Judgment: u
 Phenomena: wo
-ngas	bsad_pa_yin	stag
-nga-s	bsad_pa_yin	stag
-I-ERG	killed_PRF	tiger
+ngas	bsadpayin	stag
+nga-s	bsad-pa-yin	stag
+I-ERG	killed-LK-PRF	tiger
 'I killed the tiger.'
 
 #will change with fronting
@@ -487,9 +531,9 @@ Source: author
 Vetted: f
 Judgment: u
 Phenomena: wo
-stag	ngas	bsad_pa_yin
-stag	nga-s	bsad_pa_yin
-tiger	I-ERG	killed_PRF
+stag	ngas	bsadpayin
+stag	nga-s	bsad-pa-yin
+tiger	I-ERG	killed-LK-PRF
 'I killed the tiger.'
 
 #OVS
@@ -497,19 +541,20 @@ Source: author
 Vetted: f
 Judgment: u
 Phenomena: wo
-stag	bsad_pa_yin	ngas
+stag	bsadpayin	ngas
 stag	bsad_pa_yin	nga-s
 tiger	killed_PRF	I-ERG
 'I killed the tiger.'
 
 #VOS
+
 Source: author
 Vetted: f
 Judgment: u
 Phenomena: wo
-bsad_pa_yin	stag	ngas
-bsad_pa_yin	stag	nga-s
-killed_PRF	tiger	I-ERG
+bsadpayin	stag	ngas
+bsad-pa-yin	stag	nga-s
+killed-LK-PRF	tiger	I-ERG
 'I killed the tiger.'
 
 #VSO
@@ -517,9 +562,9 @@ Source: author
 Vetted: f
 Judgment: u
 Phenomena: wo
-bsad_pa_yin	ngas	stag
-bsad_pa_yin	nga-s	stag
-killed_PRF	I-ERG	tiger
+bsadpayin	ngas	stag
+bsad-pa-yin	nga-s	stag
+killed-LK-PRF	I-ERG	tiger
 'I killed the tiger.'
 
 
@@ -531,16 +576,16 @@ Source: b:132
 Vetted: s
 Judgment: g
 Phenomena: wo
-ma_phyinpa_redda
-ma_phyin-pa_red-da
-not_went-link_aux-emph
+maphyinparedda
+ma-phyin-pa-red-da
+not-went-LK-AUX-emph
 'Certainly he didn't go.'
 
 Source: author
 Vetted: f
 Judgment: u
 Phenomena: wo
-pa_redma_phyinda
+paredmaphyinda
 ma_phyin-pa_red-da
 not_went-link_aux-emph
 'Certainly he didn't go.'
@@ -555,9 +600,4 @@ khonggis        slobsbyong      gnangmusyingired
 khong-gis       slobsbyong      gnang-mus-yin-gi-red
 She-ERG         study           do-LK-AUX-LK-AUX
 "She's probably at her studies"
-
-
-
-
-
 
