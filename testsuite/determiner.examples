@@ -1,34 +1,45 @@
+#testsuite/determiner.examples
+
+
 #Determinants are considered noun particles or adjectives
 #without those incorporated, we will have them act as traditional
 #determiners for now
 
+
+#`mi_bculngatsam cig yogred
 Source: d:100
 Vetted: s
 Judgment: g
 Phenomena: wo, c, det
-`mi__bculngatsam cig yogred
-`mi__bculngatsam cig yogred
-PeopleFiteenAbout num exist
+`mibculngatsam    cig yogred
+`mi-bculngatsam   cig yog_red
+People-FiteenAbout num exist
 'There are about fiteeen people.'
 
+
+
+#cig `mi__bculngatsam yogred
 #assumed ungrammatical 
 #with the information about particle order
 Source: author
 Vetted: f
 Judgment: u
 Phenomena: det
-cig `mi__bculngatsam yogred
-cig `mi__bculngatsam yogred
-num PeopleFiteenAbout exist
+cig `mibculngatsam yogred
+cig `mi-bculngatsam yog_red
+num People-FiteenAbout exist
 'There are about fiteeen people.'
 
+
+
+#`mi__bculngatsam  yogred
 Source: d:100
 Vetted: s
 Judgment: g
 Phenomena: wo, c, det
-`mi__bculngatsam  yogred
-`mi__bculngatsam  yogred
-PeopleFiteenAbout exist
+`mibculngatsam  yogred
+`mi-bculngatsam  yog_red
+People-FiteenAbout exist
 'There are about fiteeen people.'
 
 

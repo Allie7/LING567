@@ -1,12 +1,16 @@
 #Examples using the various pronouns
 
+
+
+#khos dkaryol bcag_song
+
 Source: d:279
 Vetted: s
 Judgment: g
 Phenomena: wo, c, pn 
-khos dkaryol bcag_song
-kho-s dkaryol bcag_song
-S/He-ERG cup broke_PERF
+khos dkaryol bcagsong
+kho-s dkaryol bcag-song
+S/He-ERG cup broke-PERF
 'He broke the cup'
 
 #
@@ -17,9 +21,9 @@ Source: b:178
 Vetted: s
 Judgment: g
 Phenomena: pn, wo
-nga 'gro dgosred
-nga 'gro-dgos_red
-I   go-LK_AUX
+nga 'grodgosred
+nga 'gro-dgos-red
+I   go-LK-AUX
 'I  must go.'
 
 Source: b:107
@@ -49,4 +53,22 @@ kho gros-dgos-red
 he  go-LK-AUX
 'He must go.'
 
+#made-up examples, plural forms
+Source: author
+Vetted: f
+Judgment: g
+Phenomena: pn
+khotsho grosdgosred
+khot-sho gros-dgos-red
+3RD-M_PL  go-LK-AUX
+'They must go.'
+
+Source: b:178
+Vetted: s
+Judgment: g
+Phenomena: pn
+motsho  'grodgos    byedkyired
+morang-tsho 'gro-dgos   byed-kyi-red
+3RD-F_PL    go-nom     do-LK-AUX
+'They will have to go.'
 

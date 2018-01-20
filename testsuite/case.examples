@@ -1,27 +1,28 @@
-
-
 #
 # Example 1 for lab 2
 # These are basic ungrammarical 
+#ngas	stag	bsad-pa-yin
 
 Source: a:132
 Vetted: s
 Judgment: g
 Phenomena: wo, c, tam
-ngas	stag	bsad_pa_yin
-nga-s	stag	bsad_pa_yin
-I-ERG	tiger	killed_PRF
+ngas	stag	bsadpayin
+nga-s	stag	bsad-pa-yin
+I-ERG	tiger	killed-LK-PRF
 'I killed the tiger.'
 
 #Missing ergative
+
+#nga stag bsad_pa_yin
 
 Source: a:133
 Vetted: s
 Judgment: u
 Phenomena: c
-nga	stag	bsad_pa_yin
-nga	stag	bsad_pa_yin
-I	tiger	killed_PRF
+nga	stag	bsadpayin
+nga	stag	bsad-pa-yin
+I	tiger	killed-LK-PRF
 'I killed the tiger.'
 
 #dative instead of ergative
@@ -30,9 +31,9 @@ Source: author
 Vetted: f
 Judgment: u
 Phenomena: c
-ngala	stag	bsad_pa_yin
-nga-la	stag	bsad_pa_yin
-I-DAT	tiger	killed_PRF
+ngala   stag  bsadpayin
+nga-la	stag	bsad-pa-yin
+I-DAT	tiger	killed-pa-PRF
 'I killed the tiger.'
 
 
@@ -41,11 +42,13 @@ Source: author
 Vetted: f
 Judgment: u
 Phenomena: c
-ngala	stagla		bsad_pa_yin
-nga-la	stag-la		bsad_pa_yin
-I-DAT	tiger-DAT	killed_PRF
+ngala	stagla		bsadpayin
+nga-la	stag-la		bsad-pa-yin
+I-DAT	tiger-	killed-LK-PRF
 'I killed the tiger.'
 
+
+#thubbstangyis	blobzangla	gzhus_song
 # dative for object
 # these are inferred by the mention of
 # special cases from c:274
@@ -55,29 +58,34 @@ Source: c:274
 Vetted: s
 Judgment: g
 Phenomena: wo, c, tam
-thubbstangyis	blobzangla	gzhus_song
-thubbstan-gyis	blobzang-la	gzhus_song
-Thubten-ERG	Lobsang-DAT	hit_PRF
+thubbstangyis	blobzangla	gzhussong
+thubbstan-gyis	blobzang-la	gzhus-song
+Thubten-ERG	Lobsang-DAT	hit-PRF
 'Thubten hit Lobsang'
 
+
+
+#thubbstangyis	blobzang	gzhus_song
 #assumed based on information
 #from above
 Source: author
 Vetted: f
 Judgment: u
 Phenomena: c
-thubbstangyis	blobzang	gzhus_song
-thubbstan-gyis	blobzang	gzhus_song
-Thubten-ERG	Lobsang		hit_PRF
+thubbstangyis	blobzang	gzhussong
+thubbstan-gyis	blobzang	gzhus-song
+Thubten-ERG	Lobsang		hit-PRF
 'Thubten hit Lobsang'
 
+
+#thubbstangyis  blobzangla     bsad_pa_red
 Source: c:274
 Vetted: s
 Judgment: u
 Phenomena: c
-thubbstangyis  blobzangla     bsad_pa_red
-thubbstan-gyis  blobzang-la     bsad_pa_red
-Thubten-ERG     Lobsang-DAT     kill_PRF
+thubbstangyis  blobzangla     bsadpared
+thubbstan-gyis  blobzang-la     bsad-pa-red
+Thubten-ERG     Lobsang-DAT     kill-LK-PRF
 'Thubten killed Lobsang'
 
 
@@ -85,22 +93,26 @@ Thubten-ERG     Lobsang-DAT     kill_PRF
 # Instrumental
 #
 
+#khos		yige		bris_song
 Source: b:203
 Vetted: s
 Judgment: g
 Phenomena: wo, c , tam
-khos		yige		bris_song
-kho-s		yige		bris_song
-3sg-ERG		letter		wrote_aux
+khos		yige		brissong
+kho-s		yige		bris-song
+3sg-ERG		letter		wrote-AUX
 ‘He wrote the letter.’
 
+
+
+#khos		  yige  		smyuggus	bris_song
 Source: b:203
 Vetted: s
 Judgment: g
 Phenomena: wo, c, tam
-khos		yige		smyuggus	bris_song
-kho-s		yige            smyug-gus	bris_song
-3sg-ERG		letter		pen-INST	wrote_aux
+khos		  yige  		smyuggus	brissong
+kho-s		  yige      smyug-gus	bris-song
+3sg-ERG		letter		pen-INST	wrote-AUX
 ‘He wrote the letter with a pen.’
 
 
@@ -115,15 +127,14 @@ Judgment: g
 Phenomena: c
 ngas     khola     yige     btanggiyin
 nga-s    kho-la    yige     btang-gi-yin
-1SG-SBJ  3SG-LOC   letter   send-LK-AUX
+1SG-ERG  3SG-DAT   letter   send-LK-AUX
 'I will send him a letter."
 
 Source: author
 Vetted: f
 Judgement: u
 Phenomena: c
-ngas    kho    yige    btanggiyin
-nga-s    kho   yige    btang-gi-yin
-I-ERG  3SG   letter  send-LK-AUX
+ngas    kho   yige    btanggiyin
+nga-s   kho   yige    btang-gi-yin
+I-ERG   3SG   letter  send-LK-AUX
 'I will send him a letter.'
-

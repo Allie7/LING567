@@ -1,3 +1,4 @@
+
 #the following examples only contains self-centered, 1st person cases so far
 #present tense
 Source: b:137
@@ -6,7 +7,7 @@ Judgment: g
 Phenomena: wo, c, tam
 ngas    yige    cig briskyiyod
 nga-s   yige    cig bris-kyi-yod
-1ST-SBJ letter  num write-LK-AUX
+1ST-AUX letter  num write-LK-AUX
 'I am writing a letter.'
 
 #past tense
@@ -16,7 +17,7 @@ Judgment: g
 Phenomena: wo, c, tam
 ngas  yige    klogbayin
 nga-s  yige    klog-ba-yin
-1ST-SBJ letter  read-LK-AUX
+1ST-ERG letter  read-LK-AUX
 'I read the letter.'
 
 #FUTURE TENSE
@@ -26,7 +27,7 @@ Judgment: g
 Phenomena: wo, c, tam
 sangnyin  ngas    laska  'di   byedkyiyin
 sangnyin  nga-s    laska  'di   byed-kyi-yin
-tomorrow  1ST-SBJ  work   this  do-LK-AUX
+tomorrow  1ST-ERG  work   this  do-LK-AUX
 'He is sure to do the work.'
 
 #IMPERATIVE
@@ -49,9 +50,9 @@ Source: a:132
 Vetted: s
 Judgment: g
 Phenomena: wo, c, tam
-nga     'si_byung
-nga     'si_byung
-I       die_PRF
+nga     'sibyung
+nga     'si-byung
+I       die-PRF
 'I have died.'
 
 #habitual is formed with tense
@@ -82,4 +83,5 @@ nga	nyocha		nyoryguin
 nga	nyocha		nyo-rygu-in
 I	shopping	buy-LK-AUX
 'I have still to do the shopping'
+
 

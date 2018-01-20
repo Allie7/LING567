@@ -1,3 +1,21 @@
+Source: b:203
+Vetted: s
+Judgment: g
+Phenomena: wo
+khos      yige    brissong
+kho-s     yige    bris-song
+3SG-ERG   letter  wrote-AUX
+‘He wrote the letter.’
+
+Source: author
+Vetted: f
+Judgement: u
+Phenomena: wo
+khos    brissong    yige
+kho-s   bris-song   yige
+3SG-ERG wrote-AUX   letter
+'He wrote the letter.'
+
 #First example
 # This shows an intransitive verb
 # The analysis of this includes volition
@@ -6,9 +24,9 @@ Source: a:132
 Vetted: s
 Judgment: g
 Phenomena: wo, c, 
-nga	'si_byung
-nga	'si_byung
-I	die_PRF
+nga	'sibyung
+nga	'si-byung
+I	die-PRF
 'I have died.'
 
 #inferred ungrammatical 
@@ -16,9 +34,9 @@ Source: author
 Vetted: f
 Judgment: u
 Phenomena: wo 
-'si_byung	nga
-'si_byung	nga
-die_PRF		nga
+'sibyung	nga
+'si-byung	nga
+die-PRF		nga
 'I have died.'
 
 #
@@ -30,9 +48,9 @@ Source: a:132
 Vetted: s
 Judgment: g
 Phenomena: wo, c,
-ngas	stag    bsad_pa_yin
-nga-s	stag    bsad_pa_yin
-I-ERG	tiger	killed_PRF
+ngas	stag    bsadpayin
+nga-s	stag    bsad-pa-yin
+I-ERG	tiger	killed-LK-PRF
 'I killed the tiger.'
 
 #SVO
@@ -40,9 +58,9 @@ Source: author
 Vetted: f
 Judgment: u
 Phenomena: wo
-ngas	bsad_pa_yin	stag
-nga-s	bsad_pa_yin	stag
-I-ERG	killed_PRF	tiger
+ngas	bsadpayin	stag
+nga-s	bsad-pa-yin	stag
+I-ERG	killed-LK-PRF	tiger
 'I killed the tiger.'
 
 #will change with fronting
@@ -53,9 +71,9 @@ Source: author
 Vetted: f
 Judgment: u
 Phenomena: wo
-stag	ngas	bsad_pa_yin
-stag	nga-s	bsad_pa_yin
-tiger	I-ERG	killed_PRF
+stag	ngas	bsadpayin
+stag	nga-s	bsad-pa-yin
+tiger	I-ERG	killed-LK-PRF
 'I killed the tiger.'
 
 #OVS
@@ -63,19 +81,20 @@ Source: author
 Vetted: f
 Judgment: u
 Phenomena: wo
-stag	bsad_pa_yin	ngas
+stag	bsadpayin	ngas
 stag	bsad_pa_yin	nga-s
 tiger	killed_PRF	I-ERG
 'I killed the tiger.'
 
 #VOS
+
 Source: author
 Vetted: f
 Judgment: u
 Phenomena: wo
-bsad_pa_yin	stag	ngas
-bsad_pa_yin	stag	nga-s
-killed_PRF	tiger	I-ERG
+bsadpayin	stag	ngas
+bsad-pa-yin	stag	nga-s
+killed-LK-PRF	tiger	I-ERG
 'I killed the tiger.'
 
 #VSO
@@ -83,9 +102,9 @@ Source: author
 Vetted: f
 Judgment: u
 Phenomena: wo
-bsad_pa_yin	ngas	stag
-bsad_pa_yin	nga-s	stag
-killed_PRF	I-ERG	tiger
+bsadpayin	ngas	stag
+bsad-pa-yin	nga-s	stag
+killed-LK-PRF	I-ERG	tiger
 'I killed the tiger.'
 
 
@@ -97,16 +116,16 @@ Source: b:132
 Vetted: s
 Judgment: g
 Phenomena: wo
-ma_phyinpa_redda
-ma_phyin-pa_red-da
-not_went-link_aux-emph
+maphyinparedda
+ma-phyin-pa-red-da
+not-went-LK-AUX-emph
 'Certainly he didn't go.'
 
 Source: author
 Vetted: f
 Judgment: u
 Phenomena: wo
-pa_redma_phyinda
+paredmaphyinda
 ma_phyin-pa_red-da
 not_went-link_aux-emph
 'Certainly he didn't go.'
@@ -121,7 +140,6 @@ khonggis        slobsbyong      gnangmusyingired
 khong-gis       slobsbyong      gnang-mus-yin-gi-red
 She-ERG         study           do-LK-AUX-LK-AUX
 "She's probably at her studies"
-
 
 
 
