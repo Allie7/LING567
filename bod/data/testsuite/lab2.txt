@@ -178,7 +178,6 @@ People-FiteenAbout num exist
 
 
 
-#cig `mi__bculngatsam yogred
 #assumed ungrammatical 
 #with the information about particle order
 Source: author

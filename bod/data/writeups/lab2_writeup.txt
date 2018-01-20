@@ -1,4 +1,4 @@
-John Cadigan
+John Cadigan (and Xinyi Ji) 
 Ling 567
 Winter 2018
 Januray 16, 2018
@@ -6,7 +6,7 @@ Januray 16, 2018
 
 Lab 2 Writeup
 
-There is tone in Tibetan, so we have included the following as markers for high and low tones: ' and `. Also, we have adopted _ as a means of joining together particles and long phrases from grammatical examples which we can't parse yet such as "about fiteeen people."
+There is tone in Tibetan, so we have included the following as markers for high and low tones: ' and `. Also, we adopted _ as a means of joining together particles and long phrases from grammatical examples which we couldn't parse yet such as "about fiteeen people,", but that has been removed for the most part.
 
 I & II. Test suite instances and choices
 
@@ -57,7 +57,20 @@ khong-gis       slobsbyong      gnang-mus-yin-gi-red
 She-ERG         study           do-LK-AUX-LK-AUX
 "She's probably at her studies"
 
-Choices: To implement this, we selected the SOV word order and ergative-absolutive paradigm under case. These two vhoices together along with the lexicon and morphology are what distinguish these sentences as grammatical and ungrammatical. We definied "transitive-verb-lex" which accepts an ergative subject and absolutive object and "perfective-intransitive-verb" which accepts absolutive agents. For auxiliary verbs, we have specified that they should follow the verb, but we haven't been able to include them yet.
+
+There are some verb-forms that are currently analyzed as transitive verbs with underspecified, and hence, absolutive subjects and objects. In this sentence, go has been nominalized and is the complement of the do verb. Because it is nounified, we implemented it as a transitive verb:
+
+Source: b:178
+Vetted: s
+Judgment: g
+Phenomena: pn
+khong 'grodgos    byedkyired
+khong 'gro-dgos   byed-kyi-red
+she    go-nom     do-LK-AUX
+'she will have to go.'
+
+
+Choices: To implement this, we selected the SOV word order and ergative-absolutive paradigm under case. These two vhoices together along with the lexicon and morphology are what distinguish these sentences as grammatical and ungrammatical. We definied "transitive-verb-lex" which accepts an ergative subject and absolutive object and "perfective-intransitive-verb" which accepts absolutive agents. We have specialized types for verbs which accept dative arguments, perfective-transitive-dative-verb-lex , and two underspecified arguments, future-transitive-lex. For auxiliary verbs, we have specified that they should follow the verb, but we haven't been able to include them yet.
 
 B. Case
 
@@ -69,7 +82,7 @@ c. Dative-Locative: la
 d. Ablative:  nas/na
 e. Genitive: gi/gyi/kyi
 
-Unmarked items fall into the absolutitive case and ergative cases can be marked with -s as in "Example #1". Here are two examples showing that most transitive verbs take the absolutitive as their object, verbs such as hit take the dative as their argument
+Unmarked items fall into the absolutitive case and ergative cases can be marked with -s as in "Example #1". Here are two examples showing that most transitive verbs take the absolutitive as their object; for the previously mentioned "perfective-transitive-dative-verb-lex" such as hit and ditransitive verbs take the dative as their argument
 
 Example #3
 Source: c:274
@@ -81,35 +94,42 @@ thubbstan-gyis  blobzang-la     gzhus_song
 Thubten-ERG     Lobsang-DAT     hit_PRF
 'Thubten hit Lobsang'
 
+This is thus incorrect:
+
 Example #4
 Source: c:274
 Vetted: s
 Judgment: u
 Phenomena: wo, c
 thubbstangyis  blobzangla     bsadpared
-thubbstan-gyis  blobzang-la   bsad-pa-red
-Thubten-ERG     Lobsang-DAT   kill_PRF
+thubbstan-gyis  blobzang-la   bsad-pared
+Thubten-ERG     Lobsang-DAT   kill-PRF
 'Thubten killed Lobsang'
 
 
-Although the ergative and instrumental cases fall into the same bucket under DeLancey's analysis; The instrumental case can appear alongside an item in the ergative case:
+Although the ergative and instrumental cases fall into the same bucket under DeLancey's analysis; the instrumental case can appear alongside an item in the ergative case:
 
 Example #5
 Source: b:203
 Vetted: s
 Judgment: g
 Phenomena: wo, c
-khos            yige            smyug_gus       bris_song
-kho-s           yige            smyug-gus       bris_song
-3sg-ERG         letter          pen-INST        wrote_aux
+khos            yige            smyuggus       brissong
+kho-s           yige            smyug-gus       bris-song
+3sg-ERG         letter          pen-INST        wrote-aux
 ‘He wrote the letter with a pen.’
 
 
-Choices: For our first grammar, we had to decide whether to make case part of all the different lexicon entries which would become cumbersome, make them clitics and/or morphological rules. Attempts were made to implement the various forms as clitics, but at this point it was decided to use morphological rules because the nouns in our examples have been simple--this may change, but it appears we can only have one case per adposition. We may use morphological rules to operate on adpositions though.
+Choices: For our first grammar, we had to decide whether to make case part of all the different lexicon entries which would become cumbersome, make them clitics and/or morphological rules. We underspecified the case on most nouns and added them with the following rules which act on nouns:
+bare-abs-rule turns nouns into absolutitive ones without adding a string because the case is the unmarked default
+dative-lex-rule adds the dative/locative particle "la" to a noun
+ergative-lex-rule adds either s or gyis to the noun to turn it into the ergative
+instrumental-lex-rule adds gus to make the word instrumental
+Attempts were made to implement the various forms as clitics, but at this point it was decided to use morphological rules because the nouns in our examples have been simple--this may change. Also it appears we can only have one case per adposition in the customization system. Perhaps morphological rules could operate on adpositions though.
 
 C. Pronouns
 
-There are pronouns for I, you and he/she in Tibetan. They do not have to agree with the verb in terms of number or gender, so it is nearly impossible to come up with ungrammatical examples at this point. We have illustrations of "I", "you", "he", and "she" as follows: 
+There are pronouns for I, you and he/she in Tibetan. They do not have to agree with the verb in terms of number or gender, so it is nearly impossible to come up with ungrammatical examples at this point. With morphological rules, we could add improper inflections. We have illustrations of "I", "you", "he", and "she" as follows: 
 
 Source: b:178
 Vetted: s
@@ -119,32 +139,46 @@ nga 'grodgosred
 nga 'gro-dgos-red
 I   go-LK-AUX
 'I  must go.'
- 
+
+
+There's also an optional affix '-rang', which means "self" for pronouns. such as:
+
+nga               ngarang
+1st-SG            1st-SG  
+
+The plural forms of the pronouns add '-tsho' to the singular forms, such as:
+
+nga               ngatsho
+1ST-SG            1ST-PL
+
+khorang               khorangtsho
+3RD-masculine-SG  3RD-masculine-PL
+
+It should be noted that for the 3rd person feminine plurals the '-rang' morpheme is not optional: 'morangtsho'. Also, Tibetan has distinct honorific/ordinary forms for pronouns. And though we decided not to take honorific forms into account, the honorific form of 3rd person pronouns "khong", which means "he" or "she", appears very frequently in the examples we find.
+
 Choices: 
-To implement pronouns we just had to add them to our lexicon. At first we added them as distinct types, but it may be possible to collapse them into a single noun type since they aren't marked for agreement.  
+To implement pronouns we just had to add them to our lexicon. At first we did not put any information about number or gender because there is no agreement, but after some feedback we did so. We also found the plural pronoun examples.
 
 D. Rest of NP
 
 In source b, "determinants" are often refered to as noun particles. "cig" is one of the forms which contributes to the specificity of the noun it is joined with. They are not obligatory as illustrated in the following two examples:
 
-Example #6
 Source: d:100
 Vetted: s
 Judgment: g
 Phenomena: wo, c,
-`mi__bculngatsam cig yogred
-`mi__bculngatsam cig yogred
-PeopleFiteenAbout num exist
+`mibculngatsam cig yogred
+`mi-bculnga-tsam cig yogred
+people-fiteen-about num exist
 'There are about fiteeen people.'
 
-Example #7
 Source: d:100
 Vetted: s
 Judgment: g
 Phenomena: wo, c,
-`mi__bculngatsam  yogred
-`mi__bculngatsam  yogred
-PeopleFiteenAbout exist
+`mibculngatsam  yogred
+`mi-bculnga-tsam  yogred
+people-fiteen-about exist
 'There are about fiteeen people.'
 
 We have one synthetic ungrammatical example based on the description of noun particles appearing to the right of the noun.
@@ -155,9 +189,9 @@ Source: author
 Vetted: f
 Judgment: u
 Phenomena: wo, c,
-cig `mi__bculngatsam yogred
-cig `mi__bculngatsam yogred
-num PeopleFiteenAbout exist
+cig `mibculngatsam yogred
+cig `mi-bculnga-tsam yogred
+num people-fiteen-about exist
 'There are about fiteeen people.'
 
 Choices: 
@@ -166,12 +200,12 @@ The simplest option was to include determiners as descrete words. Depending on c
 
 E. Tense/Aspect
 
-Tense is realized in the stem of the verbs. iAccording to source b, there are 3 tenses in Tibetan:
+Tense is realized in the stem of the verbs. According to source b, there are 3 tenses in Tibetan:
 a. present
 b. past
 c. future
 
-We have one example of each tense such as this one. Unfortunately our examples include linking and auxiliary verbs which make them hard to parse. 
+We have one example of each tense such as this one. Unfortunately our examples include linking and auxiliary verbs which make them hard to parse. For some of them we have specified the verbs as one word.
 
 Example #8
 #present tense
@@ -180,8 +214,8 @@ Vetted: s
 Judgment: g
 Phenomena: tam
 ngas  yige    cig briskyiyod
-ngas  yige    cig bris-kyi-yod
-1ST-SBJ letter  num write-LK-AUX
+nga-s  yige    cig bris-kyi-yod
+1ST-ERG letter  num write-LK-AUX
 'I am writing a letter.'
 
 For aspect, there are:
@@ -191,9 +225,9 @@ Source: a:132
 Vetted: s
 Judgment: g
 Phenomena: wo, c,
-nga     'si_byung
-nga     'si_byung
-I       die_PRF
+nga     'sibyung
+nga     'si-byung
+I       die-PRF
 'I have died.'
 
 b. recent aspect: reference time immediately follows event time 
@@ -226,7 +260,7 @@ Choices: we have not yet made choices with respect to these yet.
 
 F. Wh-questions
 
-For questions, there are interrogative noun such as "su." They undergo inflection which seems to obviate the need for them to appear in situ; example #13 shows the subject in OSV order. It appears that Wh questions appear in the middle of the sentence, but it is not clear from the documentation that this happens.
+For questions, there are interrogative noun such as "su." They undergo inflection which seems to obviate the need for them to appear in situ; example #13 shows the subject in OSV order. However, it appears that Wh nouns appear in the middle of the sentence, but it is not clear from the documentation that this obligatory.
 
 Example #12
 Source: b:130
@@ -249,7 +283,6 @@ thing   this-num        who-ERG sell_link_aux_interr
 
 
 Choices: 
-
 We have not yet included negative examples or made choices with respsect to these yet.
 
 III. Testsuite instances not yet covered
@@ -259,26 +292,22 @@ We do not parse any of the testsuite instances dealing with:
 * Aspect & Tense
 * Auxiliary verbs  
 * Adjunct phrases (instrumental verbs)
+* Ditransitive verbs
 
 IV. Coverage and Overgeneration
 
-As of 12:00 on 2018-01-18, the numbers for our 45 items are as follows:
+As of 23:00 on 2018-01-19, the numbers for our 49 items are as follows:
 
-A. Coverage: 14 / 30 positive instances (47%)
+A. Coverage: 20 / 34 positive instances (62%) with 1 distinct analysis each
 B. Overgeneration: 0 / 15 (0%)
 
-For the 16 items in positive examples, we are missing tokens in our lexicon. 4 of the items dealing with pronouns do not parse because they use of auxiliary verbs such as:
+For some strange reason, the errors message shows 15 items which is 1 more than what coverage indicates.
 
-Source: b:178
-Vetted: s
-Judgment: g
-Phenomena: pn, wo
-nga 'gro dgosred
-nga 'gro-dgos_red
-I   go-LK_AUX
-'I  must go.'
+For the 14 items in positive examples, we are missing tokens in our lexicon. 
 
-The next group which does not parse includes auxiliary verbs which illustrate the tenses such as this:
+3 examples don't parse because we can't support instrumental and ditransitive arguments yet.
+
+Many of our tam examples don't parse because they include auxiliary verbs which illustrate the tenses such as this:
 
 #FUTURE TENSE
 Source: b:137
@@ -287,10 +316,10 @@ Judgment: g
 Phenomena: wo, c, tam
 sangnyin  ngas    laska  'di   byedkyiyin
 sangnyin  nga-s    laska  'di   byed-kyi-yin
-tomorrow  1ST-SBJ  work   this  do-LK-AUX
+tomorrow  1ST-ERG  work   this  do-LK-AUX
 'He is sure to do the work.'
 
-The final major group are questions which include question words
+The second major group are questions which include question words
 
 Source: b:130
 Vetted: s
@@ -307,10 +336,8 @@ V. Outside domain of customization
 
 One area where the customization system had challenges was creating multiple adopositions as clitics marking case. When we added two adpositions marking the same case, the system failed to parse either. Since we have simple exampels of nouns so far, we have used morphological rules.
 
-Another issue we have had, is that auxiliary verbs do not seem to be created with orthographic strings even when the stem is specified. 
+Another issue we have had is that auxiliary verbs do not seem to be created with orthographic strings even when the stem is specified. 
 
 Another issue is that it seems we cannot yet describe ditransitive verbs because there are only slots for subj and object. This is out of the scope of the class I gather.
-
-
 
 
