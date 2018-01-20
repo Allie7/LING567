@@ -69,7 +69,7 @@ c. Dative-Locative: la
 d. Ablative:  nas/na
 e. Genitive: gi/gyi/kyi
 
-Unmarked items fall into the absolutitive case and ergative cases can be marked with -s as in "Example #1". Here are two examples showing that most transitive verbs take the absolutitive as their object, verbs such as hit take the dative as their argument
+Unmarked items fall into the absolutitive case and ergative cases can be marked with -s as in "Example #1". Here are two examples showing that most transitive verbs take the absolutitive as their object, ditranstive verbs and verbs such as hit take the dative as their argument. 
 
 Example #3
 Source: c:274
@@ -91,10 +91,19 @@ thubbstan-gyis  blobzang-la   bsad-pa-red
 Thubten-ERG     Lobsang-DAT   kill_PRF
 'Thubten killed Lobsang'
 
+Example #5
+Source: b:215
+Vetted: s
+Judgment: g
+Phenomena: c
+ngas     khola     yige     btanggiyin
+nga-s    kho-la    yige     btang-gi-yin
+1SG-ERG  3SG-DAT   letter   send-LK-AUX
+'I will send him a letter."
 
 Although the ergative and instrumental cases fall into the same bucket under DeLancey's analysis; The instrumental case can appear alongside an item in the ergative case:
 
-Example #5
+Example #6
 Source: b:203
 Vetted: s
 Judgment: g
@@ -111,6 +120,7 @@ C. Pronouns
 
 There are pronouns for I, you and he/she in Tibetan. They do not have to agree with the verb in terms of number or gender, so it is nearly impossible to come up with ungrammatical examples at this point. We have illustrations of "I", "you", "he", and "she" as follows: 
 
+#Example 7
 Source: b:178
 Vetted: s
 Judgment: g
@@ -119,15 +129,32 @@ nga 'grodgosred
 nga 'gro-dgos-red
 I   go-LK-AUX
 'I  must go.'
+
+There's also an optional affix '-rang', which means "self" for pronouns. such as:
+
+nga               ngarang
+1st-SG            1st-SG  
+
+The plural forms of the pronouns add '-tsho' to the singular forms, such as:
+
+nga               ngatsho
+1ST-SG            1ST-PL
+
+khorang               khorangtsho
+3RD-masculine-SG  3RD-masculine-PL
+
+it should be noted that for the 3rd person feminine plurals the '-rang' morpheme is not optional: 'morangtsho'. Also, Tibetan has distinct honorific/ordinary forms for pronouns. And though we decided not to take honorific forms into account, the honorific form of 3rd person pronouns "khong", which means "he" or "she", appears very frequently in the examples we find.
+
+
  
 Choices: 
-To implement pronouns we just had to add them to our lexicon. At first we added them as distinct types, but it may be possible to collapse them into a single noun type since they aren't marked for agreement.  
+To implement pronouns we just had to add them to our lexicon. At first we added them as distinct types, but it may be possible to collapse them into a single noun type since they aren't marked for agreement. We add them according to their person, gender and number features.
 
 D. Rest of NP
 
 In source b, "determinants" are often refered to as noun particles. "cig" is one of the forms which contributes to the specificity of the noun it is joined with. They are not obligatory as illustrated in the following two examples:
 
-Example #6
+Example #8
 Source: d:100
 Vetted: s
 Judgment: g
@@ -137,7 +164,7 @@ Phenomena: wo, c,
 PeopleFiteenAbout num exist
 'There are about fiteeen people.'
 
-Example #7
+Example #9
 Source: d:100
 Vetted: s
 Judgment: g
