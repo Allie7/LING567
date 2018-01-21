@@ -1,0 +1,37 @@
+
+#Source b: "The Tibetan adjective may be classified as an 'adjectival verb'
+# whose combinatorial possiblities differ from, but overlap, those of 
+# lexical verbs and verbs of being. 
+
+Source: b:190
+Vetted: s
+Judgment: g
+Phenomena: adj
+mi	mangpo		zhepo	cig	'dug
+mi	mang-po		zhepo	cig	'dug
+person	many-nom	very	num	exist
+'There are a tremendous lot of people'
+
+
+Source: b:190
+Vetted: s
+Judgment: g
+Phenomena: adj
+gzugspo		bdepo		''a'utse	yod
+gzugspo		bde-po		''a'utse	yod
+body		well-nom	reasonably	exist
+"I'm reasonably well"
+
+#copular
+
+Source: b:190
+Vetted: s
+Judgment: g
+Phenomena: adj
+chu	tshapo	'drapo	'dug
+chu	tsha-po	'drapo	'dug
+water	hot-nom	sort-of	be
+'The water was sort of hot'
+
+
+
