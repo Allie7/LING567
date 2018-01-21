@@ -1,7 +1,29 @@
 
 
-#Here is an example of coordination 
+
+
+#
+# Source b, 220
+# "A bare lexical verb stem with no linker, auxiliary or subordinator
+# ... marks a very weak of subordination which in some cases might
+# better be called co-ordination"
+#
+
+
+Source: b:220
+Vetted: s
+Judgment: g
+Phenomena: crd, crdagr
+zhoggas	ngatshos	yige	bris	denas	khalag	bzas	denas	chamchamla	phyin	payin
+zhoggas	nga-tsho-s	yige	bris	denas	khalag	bzas	denas	chamcham-la	phyin	pa-yin
+morning	I-num-ERG	letter	write	then	meal	ate	then	walk-DAT	went	LK-AUX
+"In the morning we wrote letters, then we had a meal, then we went for a walk"
+
+
+#
+#Here is a second example of coordination with verbs showing this pattern 
 #but it uses two VPs
+#
 
 Source: b:277
 Vetted: s
