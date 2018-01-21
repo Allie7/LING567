@@ -1,0 +1,30 @@
+
+
+#Here is an example of coordination 
+#but it uses two VPs
+
+Source: b:277
+Vetted: s
+Judgment: g
+Phenomena: crd, crdagr
+grogspo	mi	dila		yar	khorangla	skyeddman	yogred	bugu	yogred
+grogspo	mi	di-la		yar	khorang-la	skyeddman	yog-red	bugu	yog-red
+friend	man	this-DAT	top.	he-DAT		wife		exist	child	exist
+'The friend had a wife and child'
+
+
+
+#The co-ordinating particle dang ... links two noun phrases 
+#which are of the same status as clause arguments (i.e. subject, object or adjunct)"
+Source: b:104
+Vetted: s
+Judgment: g
+Phenomena: crd, crdagr
+lcogtse	tshangma	'ditsho		dang	rkubkyag	thsong	giyin
+lcogtse	tshangma	'di-tsho	dang	rkubkyag	thsong	gi-yin
+table	all		this-num	all	chair		sell	LK-AUX
+"I shall sell all these tables and the chairs"
+
+
+
+
