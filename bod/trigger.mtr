@@ -1,2 +1,12 @@
 ;;; -*- Mode: TDL; Coding: utf-8 -*-
 ;;; Semantically Empty Lexical Entries
+
+byung_gr := arg0e_gtr &
+  [ CONTEXT.RELS <! [ ARG0.E [ TENSE past,
+                               ASPECT prf ] ] !>,
+    FLAGS.TRIGGER "byung" ].
+
+song_gr := arg0e_gtr &
+  [ CONTEXT.RELS <! [ ARG0.E [ TENSE past,
+                               ASPECT prf ] ] !>,
+    FLAGS.TRIGGER "song" ].

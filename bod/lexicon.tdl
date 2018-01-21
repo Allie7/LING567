@@ -73,8 +73,8 @@ medpa%27dra := intransitive-verb-lex-verb-lex &
   [ STEM < "medpa'dra" >,
     SYNSEM.LKEYS.KEYREL.PRED "_nothere_v_rel" ].
 
-bcagsong := transitive-verb-lex-verb-lex &
-  [ STEM < "bcagsong" >,
+bcag := transitive-verb-lex-verb-lex &
+  [ STEM < "bcag" >,
     SYNSEM.LKEYS.KEYREL.PRED "_break_v_rel" ].
 
 bsadpayin := transitive-verb-lex-verb-lex &
@@ -85,9 +85,9 @@ bsadpared := transitive-verb-lex-verb-lex &
   [ STEM < "bsadpared" >,
     SYNSEM.LKEYS.KEYREL.PRED "_kill_v_rel" ].
 
-brissong := transitive-verb-lex-verb-lex &
-  [ STEM < "brissong" >,
-    SYNSEM.LKEYS.KEYREL.PRED "_wrote_v_rel" ].
+bris := transitive-verb-lex-verb-lex &
+  [ STEM < "bris" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_write_v_rel" ].
 
 briskyiyod := transitive-verb-lex-verb-lex &
   [ STEM < "briskyiyod" >,
@@ -101,12 +101,12 @@ byedkyiyin := transitive-verb-lex-verb-lex &
   [ STEM < "byedkyiyin" >,
     SYNSEM.LKEYS.KEYREL.PRED "_do_v_rel" ].
 
-gzhussong := perfective-transitive-dative-verb-lex-verb-lex &
-  [ STEM < "gzhussong" >,
+gzhus := perfective-transitive-dative-verb-lex-verb-lex &
+  [ STEM < "gzhus" >,
     SYNSEM.LKEYS.KEYREL.PRED "_hit_v_rel" ].
 
-%27sibyung := perfective-intranstive-verb-lex-verb-lex &
-  [ STEM < "'sibyung" >,
+%27si := perfective-intranstive-verb-lex-verb-lex &
+  [ STEM < "'si" >,
     SYNSEM.LKEYS.KEYREL.PRED "_die_v_rel" ].
 
 byedkyired := future-transitive-lex-verb-lex &
@@ -124,6 +124,14 @@ nyoryguin := present-prospect-verb-lex-verb-lex &
 grosdgosred := modal-intransitive-lex-verb-lex &
   [ STEM < "grosdgosred" >,
     SYNSEM.LKEYS.KEYREL.PRED "_go_v_rel" ].
+
+;;; Auxiliaries
+
+byung := perfective-past-aux-verb-aux-lex &
+  [ STEM < "byung" > ].
+
+song := perfective-past-aux-verb-aux-lex &
+  [ STEM < "song" > ].
 
 ;;; Determiners
 

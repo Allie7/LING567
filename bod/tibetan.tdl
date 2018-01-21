@@ -2,7 +2,7 @@
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;;; Grammar of Tibetan
 ;;; created at:
-;;;     Sun Jan 21 00:46:33 UTC 2018
+;;;     Sun Jan 21 02:28:48 UTC 2018
 ;;; based on Matrix customization system version of:
 ;;;     Sat Jan 20 22:31:44 UTC 2018
 ;;;
@@ -20,17 +20,20 @@ non-mod-lex-item := lex-item &
 
 noun :+ [ CASE case ].
 
-inflected :+ [ SELF-MARKER-FLAG luk,
+head :+ [ AUX bool,
+    FORM form ].
+
+inflected :+ [ NOUN-FLAG luk,
+    PRON-NUM-MARKER-FLAG luk,
     3RD_PERSON_F_LEX-NOUN-FLAG luk,
     CASE-MARKER-FLAG luk,
-    NOUN-FLAG luk,
-    PRON-NUM-MARKER-FLAG luk ].
+    SELF-MARKER-FLAG luk ].
 
-infl-satisfied :+ [ SELF-MARKER-FLAG na-or-+,
+infl-satisfied :+ [ NOUN-FLAG na-or-+,
+    PRON-NUM-MARKER-FLAG na-or-+,
     3RD_PERSON_F_LEX-NOUN-FLAG na-or-+,
     CASE-MARKER-FLAG na-or-+,
-    NOUN-FLAG na-or-+,
-    PRON-NUM-MARKER-FLAG na-or-+ ].
+    SELF-MARKER-FLAG na-or-+ ].
 
 png :+ [ PER person,
     NUM number,
@@ -73,6 +76,12 @@ pl := number.
 gender := *top*.
 m := gender.
 f := gender.
+
+;;; Form
+
+form := *top*.
+nonfinite := form.
+finite := form.
 
 ;;; Tense
 
@@ -121,21 +130,21 @@ common_noun_lex-noun-lex := noun-lex &
 
 1st_person_lex-noun-lex := no-spr-noun-lex & pron-num-marker-rule-dtr & self-marker-rule-dtr &
   [ SYNSEM.LOCAL.CONT.HOOK.INDEX.PNG.PER 1st,
-    INFLECTED [ SELF-MARKER-FLAG -,
-                PRON-NUM-MARKER-FLAG -,
+    INFLECTED [ PRON-NUM-MARKER-FLAG -,
+                SELF-MARKER-FLAG -,
                 CASE-MARKER-FLAG - ] ].
 
 3rd_person_m_lex-noun-lex := no-spr-noun-lex & pron-num-marker-rule-dtr & self-marker-rule-dtr &
   [ SYNSEM.LOCAL.CONT.HOOK.INDEX.PNG [ GEND m,
                                        PER 3rd ],
-    INFLECTED [ SELF-MARKER-FLAG -,
-                PRON-NUM-MARKER-FLAG -,
+    INFLECTED [ PRON-NUM-MARKER-FLAG -,
+                SELF-MARKER-FLAG -,
                 CASE-MARKER-FLAG - ] ].
 
 2nd_person_lex-noun-lex := no-spr-noun-lex & pron-num-marker-rule-dtr & self-marker-rule-dtr &
   [ SYNSEM.LOCAL.CONT.HOOK.INDEX.PNG.PER 2nd,
-    INFLECTED [ SELF-MARKER-FLAG -,
-                PRON-NUM-MARKER-FLAG -,
+    INFLECTED [ PRON-NUM-MARKER-FLAG -,
+                SELF-MARKER-FLAG -,
                 CASE-MARKER-FLAG - ] ].
 
 proper_noun_lex-noun-lex := no-spr-noun-lex &
@@ -146,17 +155,22 @@ proper_noun_lex-noun-lex := no-spr-noun-lex &
 3rd_person_f_lex-noun-lex := no-spr-noun-lex & pron-num-marker-rule-dtr & self-marker-rule-dtr &
   [ SYNSEM.LOCAL.CONT.HOOK.INDEX.PNG [ PER 3rd,
                                        GEND f ],
-    INFLECTED [ 3RD_PERSON_F_LEX-NOUN-FLAG +,
+    INFLECTED [ PRON-NUM-MARKER-FLAG -,
                 SELF-MARKER-FLAG -,
-                PRON-NUM-MARKER-FLAG -,
+                3RD_PERSON_F_LEX-NOUN-FLAG +,
                 CASE-MARKER-FLAG - ] ].
 
 ;;; Verbs
 
-verb-lex := basic-verb-lex & non-mod-lex-item &
-  [ SYNSEM.LOCAL [ CAT.VAL [ SPR < >,
-                             SPEC < >,
-                             SUBJ < #subj > ],
+verb-lex := non-mod-lex-item &
+  [ SYNSEM.LOCAL.CAT [ HEAD verb,
+                       HC-LIGHT - ] ].
+
+main-verb-lex := verb-lex & basic-verb-lex &
+  [ SYNSEM.LOCAL [ CAT [ HEAD.AUX -,
+                         VAL [ SPR < >,
+                               SPEC < >,
+                               SUBJ < #subj > ] ],
                    CONT.HOOK.XARG #xarg ],
     ARG-ST.FIRST #subj &
                  [ LOCAL [ CAT cat-sat &
@@ -164,11 +178,14 @@ verb-lex := basic-verb-lex & non-mod-lex-item &
                                        COMPS < > ] ],
                            CONT.HOOK.INDEX #xarg ] ] ].
 
-intransitive-verb-lex := verb-lex & intransitive-lex-item &
+aux-lex := verb-lex &
+  [ SYNSEM.LOCAL.CAT.HEAD.AUX + ].
+
+intransitive-verb-lex := main-verb-lex & intransitive-lex-item &
   [ SYNSEM.LOCAL.CAT.VAL.COMPS < >,
     ARG-ST.FIRST.LOCAL.CAT.HEAD noun ].
 
-transitive-verb-lex := verb-lex & transitive-lex-item &
+transitive-verb-lex := main-verb-lex & transitive-lex-item &
   [ SYNSEM.LOCAL.CAT.VAL.COMPS < #comps >,
     ARG-ST < [ LOCAL.CAT.HEAD noun ],
              #comps &
@@ -190,15 +207,14 @@ erg-abs-transitive-verb-lex := transitive-verb-lex &
 intransitive-verb-lex-verb-lex := abs-intransitive-verb-lex &
   [ SYNSEM.LOCAL.CAT.VAL.SUBJ.FIRST.LOCAL.CAT.HEAD.CASE abs+erg ].
 
-transitive-verb-lex-verb-lex := transitive-verb-lex &
-  [ SYNSEM.LOCAL.CAT.VAL [ SUBJ.FIRST.LOCAL.CAT.HEAD.CASE erg,
-                           COMPS.FIRST.LOCAL.CAT.HEAD.CASE abs ] ].
+transitive-verb-lex-verb-lex := erg-abs-transitive-verb-lex.
 
 perfective-transitive-dative-verb-lex-verb-lex := perf-verb-lex-verb-lex & transitive-verb-lex &
   [ SYNSEM.LOCAL.CAT.VAL [ SUBJ.FIRST.LOCAL.CAT.HEAD.CASE erg,
                            COMPS.FIRST.LOCAL.CAT.HEAD.CASE dat ] ].
 
-perfective-intranstive-verb-lex-verb-lex := intransitive-verb-lex-verb-lex & perf-verb-lex-verb-lex.
+perfective-intranstive-verb-lex-verb-lex := intransitive-verb-lex-verb-lex &
+  [ SYNSEM.LOCAL.CAT.HEAD.FORM form ].
 
 perf-verb-lex-verb-lex := verb-lex &
   [ SYNSEM.LOCAL.CONT.HOOK.INDEX.E.ASPECT prf ].
@@ -215,6 +231,53 @@ present-prospect-verb-lex-verb-lex := transitive-verb-lex &
                                      ASPECT pros ] ].
 
 modal-intransitive-lex-verb-lex := abs-intransitive-verb-lex.
+
+;;; Auxiliaries
+
+arg-comp-aux := aux-lex & basic-two-arg &
+  [ SYNSEM.LOCAL [ CAT.VAL [ SPR < >,
+                             SPEC < >,
+                             COMPS < #comps . #vcomps >,
+                             SUBJ < #subj > ],
+                   CONT.HOOK.XARG #xarg ],
+    ARG-ST < #subj &
+             [ LOCAL [ CAT [ HEAD noun &
+                                  [ CASE #case ],
+                             VAL [ SUBJ < >,
+                                   SPR < >,
+                                   SPEC < >,
+                                   COMPS < > ] ],
+                       CONT.HOOK.INDEX #xarg ] ],
+             #comps &
+             [ LIGHT +,
+               LOCAL [ CONT.HOOK.XARG #xarg,
+                       CAT [ HEAD verb,
+                             VAL [ COMPS #vcomps,
+                                   SUBJ < [ LOCAL.CAT.HEAD.CASE #case ] > ] ] ] ] > ].
+
+; Somewhat surprisingly, this inherits from basic-two-arg, so
+; that the non-local features are amalgamated from subj, the
+; lexical verb complement, but not the other complements, if any.
+
+; Note that raise-sem-lex-item assumes the first complement is
+; where the HOOK comes from.  It's not clear to me how you'd
+; tell that you had an argument composition auxiliary if it
+; wasn't appearing adjacent to the verb.
+
+; To keep the semantically empty ones from spinning on
+; generation, require complement to be [AUX -].  The
+; FORM feature might be enough in the starter grammars,
+; but I don't want to rely on this.  Then again, [ AUX - ]
+; might not be true.
+
+arg-comp-aux-no-pred := arg-comp-aux & raise-sem-lex-item &
+  [ ARG-ST < [ ],
+             [ LOCAL.CAT.HEAD.AUX - ] > ].
+
+perfective-past-aux-verb-aux-lex := arg-comp-aux-no-pred &
+  [ SYNSEM.LOCAL [ CONT.HOOK.INDEX.E [ ASPECT prf,
+                                       TENSE past ],
+                   CAT.VAL.COMPS.FIRST.LOCAL.CAT.HEAD.FORM form ] ].
 
 ;;; Complementizers
 
@@ -248,23 +311,23 @@ adj_incorporation-lex-rule := add-only-rule &
 
 ;;; Intermediate rule types
 
-self-marker-rule-dtr := word-or-lexrule.
-case-marker-rule-dtr := word-or-lexrule.
 pron-num-marker-rule-dtr := word-or-lexrule.
+case-marker-rule-dtr := word-or-lexrule.
+self-marker-rule-dtr := word-or-lexrule.
 
 ;;; Lexical rule types
 
 case-marker-lex-rule-super := add-only-no-ccont-rule &
   [ INFLECTED [ CASE-MARKER-FLAG +,
-                3RD_PERSON_F_LEX-NOUN-FLAG #3rd_person_f_lex-noun,
-                NOUN-FLAG #noun,
+                PRON-NUM-MARKER-FLAG #pron-num-marker,
                 SELF-MARKER-FLAG #self-marker,
-                PRON-NUM-MARKER-FLAG #pron-num-marker ],
+                NOUN-FLAG #noun,
+                3RD_PERSON_F_LEX-NOUN-FLAG #3rd_person_f_lex-noun ],
     DTR case-marker-rule-dtr &
-        [ INFLECTED [ 3RD_PERSON_F_LEX-NOUN-FLAG #3rd_person_f_lex-noun,
-                      NOUN-FLAG #noun,
+        [ INFLECTED [ PRON-NUM-MARKER-FLAG #pron-num-marker,
                       SELF-MARKER-FLAG #self-marker,
-                      PRON-NUM-MARKER-FLAG #pron-num-marker ] ] ].
+                      NOUN-FLAG #noun,
+                      3RD_PERSON_F_LEX-NOUN-FLAG #3rd_person_f_lex-noun ] ] ].
 
 dative-lex-rule-lex-rule := case-marker-lex-rule-super & infl-lex-rule &
   [ DTR.INFLECTED.NOUN-FLAG +,
@@ -281,15 +344,15 @@ instrumental-lex-rule-lex-rule := case-marker-lex-rule-super & infl-lex-rule &
 
 self-marker-lex-rule-super := add-only-no-ccont-rule & case-marker-rule-dtr & pron-num-marker-rule-dtr &
   [ INFLECTED [ SELF-MARKER-FLAG +,
+                PRON-NUM-MARKER-FLAG #pron-num-marker,
                 NOUN-FLAG #noun,
                 3RD_PERSON_F_LEX-NOUN-FLAG #3rd_person_f_lex-noun,
-                CASE-MARKER-FLAG #case-marker,
-                PRON-NUM-MARKER-FLAG #pron-num-marker ],
+                CASE-MARKER-FLAG #case-marker ],
     DTR self-marker-rule-dtr &
-        [ INFLECTED [ NOUN-FLAG #noun,
+        [ INFLECTED [ PRON-NUM-MARKER-FLAG #pron-num-marker,
+                      NOUN-FLAG #noun,
                       3RD_PERSON_F_LEX-NOUN-FLAG #3rd_person_f_lex-noun,
-                      CASE-MARKER-FLAG #case-marker,
-                      PRON-NUM-MARKER-FLAG #pron-num-marker ] ] ].
+                      CASE-MARKER-FLAG #case-marker ] ] ].
 
 self-indicate-rule-lex-rule := infl-lex-rule & self-marker-lex-rule-super.
 
@@ -297,14 +360,14 @@ self-unindicated-rule-lex-rule := const-lex-rule & self-marker-lex-rule-super.
 
 pron-num-marker-lex-rule-super := add-only-no-ccont-rule & case-marker-rule-dtr &
   [ INFLECTED [ PRON-NUM-MARKER-FLAG +,
-                3RD_PERSON_F_LEX-NOUN-FLAG #3rd_person_f_lex-noun,
-                NOUN-FLAG #noun,
                 SELF-MARKER-FLAG #self-marker,
+                NOUN-FLAG #noun,
+                3RD_PERSON_F_LEX-NOUN-FLAG #3rd_person_f_lex-noun,
                 CASE-MARKER-FLAG #case-marker ],
     DTR pron-num-marker-rule-dtr &
-        [ INFLECTED [ 3RD_PERSON_F_LEX-NOUN-FLAG #3rd_person_f_lex-noun,
+        [ INFLECTED [ SELF-MARKER-FLAG #self-marker,
                       NOUN-FLAG #noun,
-                      SELF-MARKER-FLAG #self-marker,
+                      3RD_PERSON_F_LEX-NOUN-FLAG #3rd_person_f_lex-noun,
                       CASE-MARKER-FLAG #case-marker ] ] ].
 
 plural-pron-rule-lex-rule := infl-lex-rule & pron-num-marker-lex-rule-super &
