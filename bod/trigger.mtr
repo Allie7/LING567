@@ -2,11 +2,25 @@
 ;;; Semantically Empty Lexical Entries
 
 byung_gr := arg0e_gtr &
-  [ CONTEXT.RELS <! [ ARG0.E [ TENSE past,
-                               ASPECT prf ] ] !>,
+  [ CONTEXT.RELS <! [ ARG0.E.ASPECT prf ] !>,
     FLAGS.TRIGGER "byung" ].
 
 song_gr := arg0e_gtr &
-  [ CONTEXT.RELS <! [ ARG0.E [ TENSE past,
-                               ASPECT prf ] ] !>,
+  [ CONTEXT.RELS <! [ ARG0.E.ASPECT prf ] !>,
     FLAGS.TRIGGER "song" ].
+
+yin_gr := arg0e_gtr &
+  [ CONTEXT.RELS <! [ ARG0.E.ASPECT prf ] !>,
+    FLAGS.TRIGGER "yin" ].
+
+yod_gr := arg0e_gtr &
+  [ CONTEXT.RELS <! [ PRED "non_existing_rel" ] !>,
+    FLAGS.TRIGGER "yod" ].
+
+red_gr := arg0e_gtr &
+  [ CONTEXT.RELS <! [ PRED "non_existing_rel" ] !>,
+    FLAGS.TRIGGER "red" ].
+
+%27dra_gr := arg0e_gtr &
+  [ CONTEXT.RELS <! [ PRED "non_existing_rel" ] !>,
+    FLAGS.TRIGGER "%27dra" ].

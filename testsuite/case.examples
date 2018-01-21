@@ -7,9 +7,9 @@ Source: a:132
 Vetted: s
 Judgment: g
 Phenomena: wo, c, tam
-ngas	stag	bsadpayin
-nga-s	stag	bsad-pa-yin
-I-ERG	tiger	killed-LK-PRF
+ngas	stag	bsad payin
+nga-s	stag	bsad pa-yin
+I-ERG	tiger	killed LK-PRF
 'I killed the tiger.'
 
 #Missing ergative
@@ -20,9 +20,9 @@ Source: a:133
 Vetted: s
 Judgment: u
 Phenomena: c
-nga	stag	bsadpayin
-nga	stag	bsad-pa-yin
-I	tiger	killed-LK-PRF
+nga	stag	bsad payin
+nga	stag	bsad pa-yin
+I	tiger	killed LK-PRF
 'I killed the tiger.'
 
 #dative instead of ergative
@@ -31,9 +31,9 @@ Source: author
 Vetted: f
 Judgment: u
 Phenomena: c
-ngala   stag  bsadpayin
-nga-la	stag	bsad-pa-yin
-I-DAT	tiger	killed-pa-PRF
+ngala   stag  bsad	payin
+nga-la	stag	bsad	pa-yin
+I-DAT	tiger	killed	pa-AUX.PRF
 'I killed the tiger.'
 
 
@@ -42,9 +42,9 @@ Source: author
 Vetted: f
 Judgment: u
 Phenomena: c
-ngala	stagla		bsadpayin
-nga-la	stag-la		bsad-pa-yin
-I-DAT	tiger-	killed-LK-PRF
+ngala	stagla		bsad	payin
+nga-la	stag-la		bsad 	pa-yin
+I-DAT	tiger-DAT	killed	LK-PRF
 'I killed the tiger.'
 
 
@@ -58,9 +58,9 @@ Source: c:274
 Vetted: s
 Judgment: g
 Phenomena: wo, c, tam
-thubbstangyis	blobzangla	gzhussong
-thubbstan-gyis	blobzang-la	gzhus-song
-Thubten-ERG	Lobsang-DAT	hit-PRF
+thubbstangyis	blobzangla	gzhus	song
+thubbstan-gyis	blobzang-la	gzhus	song
+Thubten-ERG	Lobsang-DAT	hit	AUX.PRF
 'Thubten hit Lobsang'
 
 
@@ -72,9 +72,9 @@ Source: author
 Vetted: f
 Judgment: u
 Phenomena: c
-thubbstangyis	blobzang	gzhussong
-thubbstan-gyis	blobzang	gzhus-song
-Thubten-ERG	Lobsang		hit-PRF
+thubbstangyis	blobzang	gzhus	song
+thubbstan-gyis	blobzang	gzhus	song
+Thubten-ERG	Lobsang		hit	AUX.PRF
 'Thubten hit Lobsang'
 
 
@@ -83,9 +83,9 @@ Source: c:274
 Vetted: s
 Judgment: u
 Phenomena: c
-thubbstangyis  blobzangla     bsadpared
-thubbstan-gyis  blobzang-la     bsad-pa-red
-Thubten-ERG     Lobsang-DAT     kill-LK-PRF
+thubbstangyis  blobzangla     bsad pared
+thubbstan-gyis  blobzang-la     bsad pa-red
+Thubten-ERG     Lobsang-DAT     kill LK-AUX:PRF
 'Thubten killed Lobsang'
 
 
@@ -98,9 +98,9 @@ Source: b:203
 Vetted: s
 Judgment: g
 Phenomena: wo, c , tam
-khos		yige		brissong
-kho-s		yige		bris-song
-3sg-ERG		letter		wrote-AUX
+khos		yige		bris	song
+kho-s		yige		bris	song
+3sg-ERG		letter		wrote	PRF.AUX
 ‘He wrote the letter.’
 
 
@@ -110,9 +110,9 @@ Source: b:203
 Vetted: s
 Judgment: g
 Phenomena: wo, c, tam
-khos		  yige  		smyuggus	brissong
-kho-s		  yige      smyug-gus	bris-song
-3sg-ERG		letter		pen-INST	wrote-AUX
+khos		  yige  	smyuggus	bris	song
+kho-s		  yige      	smyug-gus	bris	song
+3sg-ERG		letter		pen-INST	wrote	PRF.AUX
 ‘He wrote the letter with a pen.’
 
 
@@ -125,16 +125,16 @@ Source: b:215
 Vetted: s
 Judgment: g
 Phenomena: c
-ngas     khola     yige     btanggiyin
-nga-s    kho-la    yige     btang-gi-yin
-1SG-ERG  3SG-DAT   letter   send-LK-AUX
+ngas     khola     yige     btang 	giyin
+nga-s    kho-la    yige     btang 	gi-yin
+1SG-ERG  3SG-DAT   letter   send 	LK-AUX
 'I will send him a letter."
 
 Source: author
 Vetted: f
 Judgement: u
 Phenomena: c
-ngas    kho   yige    btanggiyin
-nga-s   kho   yige    btang-gi-yin
-I-ERG   3SG   letter  send-LK-AUX
+ngas    kho   yige    btang	giyin
+nga-s   kho   yige    btang	gi-yin
+I-ERG   3SG   letter  send	LK-AUX
 'I will send him a letter.'

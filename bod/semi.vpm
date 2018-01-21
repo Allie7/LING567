@@ -66,4 +66,8 @@ E.ASPECT : E.ASPECT
   * <> *
 
 E.MOOD : E.MOOD
+  indic <> indic
+  interr <> interr
+  emph <> emph
+  corrob <> corrob
   * <> *

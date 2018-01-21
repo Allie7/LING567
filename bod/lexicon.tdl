@@ -73,45 +73,37 @@ medpa%27dra := intransitive-verb-lex-verb-lex &
   [ STEM < "medpa'dra" >,
     SYNSEM.LKEYS.KEYREL.PRED "_nothere_v_rel" ].
 
+%27si := intransitive-verb-lex-verb-lex &
+  [ STEM < "'si" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_die_v_rel" ].
+
+blebs := intransitive-verb-lex-verb-lex &
+  [ STEM < "blebs" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_arrive_v_rel" ].
+
 bcag := transitive-verb-lex-verb-lex &
   [ STEM < "bcag" >,
     SYNSEM.LKEYS.KEYREL.PRED "_break_v_rel" ].
 
-bsadpayin := transitive-verb-lex-verb-lex &
-  [ STEM < "bsadpayin" >,
-    SYNSEM.LKEYS.KEYREL.PRED "_kill_v_rel" ].
-
-bsadpared := transitive-verb-lex-verb-lex &
-  [ STEM < "bsadpared" >,
+bsad := transitive-verb-lex-verb-lex &
+  [ STEM < "bsad" >,
     SYNSEM.LKEYS.KEYREL.PRED "_kill_v_rel" ].
 
 bris := transitive-verb-lex-verb-lex &
   [ STEM < "bris" >,
     SYNSEM.LKEYS.KEYREL.PRED "_write_v_rel" ].
 
-briskyiyod := transitive-verb-lex-verb-lex &
-  [ STEM < "briskyiyod" >,
-    SYNSEM.LKEYS.KEYREL.PRED "_write_v_rel" ].
-
-klogbayin := transitive-verb-lex-verb-lex &
-  [ STEM < "klogbayin" >,
+klog := transitive-verb-lex-verb-lex &
+  [ STEM < "klog" >,
     SYNSEM.LKEYS.KEYREL.PRED "_read_v_rel" ].
 
-byedkyiyin := transitive-verb-lex-verb-lex &
-  [ STEM < "byedkyiyin" >,
+byed := transitive-verb-lex-verb-lex &
+  [ STEM < "byed" >,
     SYNSEM.LKEYS.KEYREL.PRED "_do_v_rel" ].
 
-gzhus := perfective-transitive-dative-verb-lex-verb-lex &
+gzhus := dat-trans-verb-lex-verb-lex &
   [ STEM < "gzhus" >,
     SYNSEM.LKEYS.KEYREL.PRED "_hit_v_rel" ].
-
-%27si := perfective-intranstive-verb-lex-verb-lex &
-  [ STEM < "'si" >,
-    SYNSEM.LKEYS.KEYREL.PRED "_die_v_rel" ].
-
-byedkyired := future-transitive-lex-verb-lex &
-  [ STEM < "byedkyired" >,
-    SYNSEM.LKEYS.KEYREL.PRED "_do_v_rel" ].
 
 blebsgroyin := past-recent-intransitive-verb-lex-verb-lex &
   [ STEM < "blebsgroyin" >,
@@ -121,17 +113,29 @@ nyoryguin := present-prospect-verb-lex-verb-lex &
   [ STEM < "nyoryguin" >,
     SYNSEM.LKEYS.KEYREL.PRED "_buy_v_rel" ].
 
-grosdgosred := modal-intransitive-lex-verb-lex &
-  [ STEM < "grosdgosred" >,
+gros := modal-intransitive-lex-verb-lex &
+  [ STEM < "gros" >,
     SYNSEM.LKEYS.KEYREL.PRED "_go_v_rel" ].
 
 ;;; Auxiliaries
 
-byung := perfective-past-aux-verb-aux-lex &
+byung := perfect-aux-verb-aux-lex &
   [ STEM < "byung" > ].
 
-song := perfective-past-aux-verb-aux-lex &
+song := perfect-aux-verb-aux-lex &
   [ STEM < "song" > ].
+
+yin := perfect-aux-verb-aux-lex &
+  [ STEM < "yin" > ].
+
+yod := unknown-aux-type-aux-lex &
+  [ STEM < "yod" > ].
+
+red := unknown-aux-type-aux-lex &
+  [ STEM < "red" > ].
+
+%27dra := unknown-aux-type-aux-lex &
+  [ STEM < "'dra" > ].
 
 ;;; Determiners
 

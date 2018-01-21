@@ -24,3 +24,27 @@ self-indicate-rule-lex-rule.
 plural-pron-rule-suffix :=
 %suffix (* tsho)
 plural-pron-rule-lex-rule.
+
+no-meaning-link-prefix1 :=
+%prefix (* pa)
+no-meaning-link-lex-rule.
+
+no-meaning-link-prefix2 :=
+%prefix (* kyi)
+no-meaning-link-lex-rule.
+
+no-meaning-link-prefix3 :=
+%prefix (* ba)
+no-meaning-link-lex-rule.
+
+no-meaning-link-prefix4 :=
+%prefix (* gro)
+no-meaning-link-lex-rule.
+
+no-meaning-link-prefix5 :=
+%prefix (* rygu)
+no-meaning-link-lex-rule.
+
+no-meaning-link-prefix6 :=
+%prefix (* dgos)
+no-meaning-link-lex-rule.

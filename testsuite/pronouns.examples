@@ -8,9 +8,9 @@ Source: d:279
 Vetted: s
 Judgment: g
 Phenomena: wo, c, pn 
-khos dkaryol bcagsong
-kho-s dkaryol bcag-song
-S/He-ERG cup broke-PERF
+khos dkaryol bcag	song
+kho-s dkaryol bcag	song
+S/He-ERG cup broke	AUX.PRF
 'He broke the cup'
 
 #
@@ -21,36 +21,36 @@ Source: b:178
 Vetted: s
 Judgment: g
 Phenomena: pn, wo
-nga 'grodgosred
-nga 'gro-dgos-red
-I   go-LK-AUX
+nga 'gro	dgosred
+nga 'gro	dgos-red
+I   go		LK-AUX
 'I  must go.'
 
 Source: b:107
 Vetted: s
 Judgment: g
 Phenomena: pn
-kyedrang 'gro  dgoskyired
-kyedrang 'gro  dgos-kyi-red
-you       go    should-LK-AUX
+kyedrang 'gro	dgos	kyired
+kyedrang 'gro	dgos	kyi-red
+you       go	should	LK-AUX
 'you  should go'
 
 Source: b:178
 Vetted: s
 Judgment: g
 Phenomena: pn
-khong 'grodgos    byedkyired
-khong 'gro-dgos   byed-kyi-red
-she    go-nom     do-LK-AUX
+khong 'grodgos    byed	kyired
+khong 'gro-dgos   byed	kyi-red
+she    go-nom     do	LK-AUX
 'she will have to go.'
 
 Source: b:178
 Vetted: s
 Judgment: g
 Phenomena: pn
-kho grosdgosred
-kho gros-dgos-red
-he  go-LK-AUX
+kho gros	dgosred
+kho gros	dgos-red
+he  go		LK-AUX
 'He must go.'
 
 #made-up examples, plural forms
@@ -58,17 +58,17 @@ Source: author
 Vetted: f
 Judgment: g
 Phenomena: pn
-khotsho grosdgosred
-khot-sho gros-dgos-red
-3RD-M_PL  go-LK-AUX
+khotsho gros	dgosred
+khot-sho gros	dgos-red
+3RD-M_PL  go	LK-AUX
 'They must go.'
 
 Source: b:178
 Vetted: s
 Judgment: g
 Phenomena: pn
-motsho  'grodgos    byedkyired
-morang-tsho 'gro-dgos   byed-kyi-red
-3RD-F_PL    go-nom     do-LK-AUX
+motsho  'grodgos    byed	kyired
+morang-tsho 'gro-dgos   byed	kyi-red
+3RD-F_PL    go-nom     do	LK-AUX
 'They will have to go.'
 

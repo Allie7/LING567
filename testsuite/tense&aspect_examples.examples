@@ -5,9 +5,9 @@ Source: b:137
 Vetted: s
 Judgment: g
 Phenomena: wo, c, tam
-ngas    yige    cig briskyiyod
-nga-s   yige    cig bris-kyi-yod
-1ST-AUX letter  num write-LK-AUX
+ngas    yige    cig bris	kyiyod
+nga-s   yige    cig bris	kyi-yod
+1ST-AUX letter  num write	LK-AUX
 'I am writing a letter.'
 
 #past tense
@@ -15,9 +15,9 @@ Source: b:137
 Vetted: s
 Judgment: g
 Phenomena: wo, c, tam
-ngas  yige    klogbayin
-nga-s  yige    klog-ba-yin
-1ST-ERG letter  read-LK-AUX
+ngas  yige    klog bayin
+nga-s  yige    klog ba-yin
+1ST-ERG letter  read LK-AUX
 'I read the letter.'
 
 #FUTURE TENSE
@@ -25,9 +25,9 @@ Source: b:137
 Vetted: s
 Judgment: g
 Phenomena: wo, c, tam
-sangnyin  ngas    laska  'di   byedkyiyin
-sangnyin  nga-s    laska  'di   byed-kyi-yin
-tomorrow  1ST-ERG  work   this  do-LK-AUX
+sangnyin  ngas    laska  'di   byed	kyiyin
+sangnyin  nga-s    laska  'di   byed	kyi-yin
+tomorrow  1ST-ERG  work   this  do	LK-AUX
 'He is sure to do the work.'
 
 #IMPERATIVE
@@ -50,7 +50,7 @@ Source: a:132
 Vetted: s
 Judgment: g
 Phenomena: wo, c, tam
-nga     'sibyung
+nga     'si byung
 nga     'si-byung
 I       die-PRF
 'I have died.'
@@ -67,9 +67,9 @@ Source: a:161
 Vetted: t
 Judgment: g
 Phenomena: wo, c, tam
-nga	blebsgroyin
-nga	blebs-gro-yin
-I	arrive-LK-AUX
+nga	blebs	groyin
+nga	blebs	gro-yin
+I	arrive	LK-AUX
 'I had just arrived'
 
 #(prospective) gerunditive aspect
@@ -79,9 +79,9 @@ Source: a:162
 Vetted: t
 Judgment: g
 Phenomena: wo, c, tam
-nga	nyocha		nyoryguin
-nga	nyocha		nyo-rygu-in
-I	shopping	buy-LK-AUX
+nga	nyocha		nyo ryguin
+nga	nyocha		nyo rygu-in
+I	shopping	buy LK-AUX
 'I have still to do the shopping'
 
 

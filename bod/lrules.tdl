@@ -4,3 +4,5 @@ bare-abs-rule-lex := bare-abs-rule-lex-rule.
 self-unindicated-rule-lex := self-unindicated-rule-lex-rule.
 
 singular-pron-rule-lex := singular-pron-rule-lex-rule.
+
+indic-irule-lex := indic-irule-lex-rule.
