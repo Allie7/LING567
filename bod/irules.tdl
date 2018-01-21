@@ -16,3 +16,11 @@ ergative-lex-rule-lex-rule.
 instrumental-lex-rule-suffix :=
 %suffix (* gus)
 instrumental-lex-rule-lex-rule.
+
+self-indicate-rule-suffix :=
+%suffix (* rang)
+self-indicate-rule-lex-rule.
+
+plural-pron-rule-suffix :=
+%suffix (* tsho)
+plural-pron-rule-lex-rule.

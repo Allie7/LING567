@@ -33,32 +33,20 @@ nyocha := common_noun_lex-noun-lex &
   [ STEM < "'grodgos" >,
     SYNSEM.LKEYS.KEYREL.PRED "_going_n_rel" ].
 
-nga := 1st_person_sg_lex-noun-lex &
+nga := 1st_person_lex-noun-lex &
   [ STEM < "nga" >,
     SYNSEM.LKEYS.KEYREL.PRED "pron_rel" ].
 
-ngarang := 1st_person_sg_lex-noun-lex &
-  [ STEM < "ngarang" >,
-    SYNSEM.LKEYS.KEYREL.PRED "pron_rel" ].
-
-kho := 3rd_person_m_sg_lex-noun-lex &
+kho := 3rd_person_m_lex-noun-lex &
   [ STEM < "kho" >,
     SYNSEM.LKEYS.KEYREL.PRED "pron_rel" ].
 
-khorang := 3rd_person_m_sg_lex-noun-lex &
-  [ STEM < "khorang" >,
-    SYNSEM.LKEYS.KEYREL.PRED "pron_rel" ].
-
-khong := 3rd_person_m_sg_lex-noun-lex &
+khong := 3rd_person_m_lex-noun-lex &
   [ STEM < "khong" >,
     SYNSEM.LKEYS.KEYREL.PRED "pron_rel" ].
 
-kyed := 2nd_person_sg_lex-noun-lex &
+kyed := 2nd_person_lex-noun-lex &
   [ STEM < "kyed" >,
-    SYNSEM.LKEYS.KEYREL.PRED "pron_rel" ].
-
-kyedrang := 2nd_person_sg_lex-noun-lex &
-  [ STEM < "kyedrang" >,
     SYNSEM.LKEYS.KEYREL.PRED "pron_rel" ].
 
 thubbstan := proper_noun_lex-noun-lex &
@@ -69,36 +57,8 @@ blobzang := proper_noun_lex-noun-lex &
   [ STEM < "blobzang" >,
     SYNSEM.LKEYS.KEYREL.PRED "_lobsang_n_rel" ].
 
-khyedrangs := 2nd_sg_erg_pron-noun-lex &
-  [ STEM < "khyedrangs" >,
-    SYNSEM.LKEYS.KEYREL.PRED "pron_rel" ].
-
-mo := 3rd_person_f_sg_lex-noun-lex &
+mo := 3rd_person_f_lex-noun-lex &
   [ STEM < "mo" >,
-    SYNSEM.LKEYS.KEYREL.PRED "pron_rel" ].
-
-ngatsho := 1st_pl_lex-noun-lex &
-  [ STEM < "ngatsho" >,
-    SYNSEM.LKEYS.KEYREL.PRED "pron_rel" ].
-
-khyedrangtsho := 2nd_pl_lex-noun-lex &
-  [ STEM < "khyedrangtsho" >,
-    SYNSEM.LKEYS.KEYREL.PRED "pron_rel" ].
-
-khyedtsho := 2nd_pl_lex-noun-lex &
-  [ STEM < "khyedtsho" >,
-    SYNSEM.LKEYS.KEYREL.PRED "pron_rel" ].
-
-khotsho := 3rd_pl_m_lex-noun-lex &
-  [ STEM < "khotsho" >,
-    SYNSEM.LKEYS.KEYREL.PRED "pron_rel" ].
-
-morangtsho := 3rd_pl_f_lex-noun-lex &
-  [ STEM < "morangtsho" >,
-    SYNSEM.LKEYS.KEYREL.PRED "pron_rel" ].
-
-motsho := 3rd_pl_f_lex-noun-lex &
-  [ STEM < "motsho" >,
     SYNSEM.LKEYS.KEYREL.PRED "pron_rel" ].
 
 ;;; Adjectives

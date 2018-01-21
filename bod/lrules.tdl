@@ -1,2 +1,6 @@
 ;;; -*- Mode: TDL; Coding: utf-8 -*-
 bare-abs-rule-lex := bare-abs-rule-lex-rule.
+
+self-unindicated-rule-lex := self-unindicated-rule-lex-rule.
+
+singular-pron-rule-lex := singular-pron-rule-lex-rule.

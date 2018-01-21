@@ -2,9 +2,9 @@
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;;; Grammar of Tibetan
 ;;; created at:
-;;;     Sat Jan 20 05:14:52 UTC 2018
+;;;     Sun Jan 21 00:46:33 UTC 2018
 ;;; based on Matrix customization system version of:
-;;;     Fri Jan 19 17:19:40 UTC 2018
+;;;     Sat Jan 20 22:31:44 UTC 2018
 ;;;
 ;;; This is a basic grammar of Lhasa Tibetan
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
@@ -20,11 +20,17 @@ non-mod-lex-item := lex-item &
 
 noun :+ [ CASE case ].
 
-inflected :+ [ CASE-MARKER-FLAG luk,
-    NOUN-FLAG luk ].
+inflected :+ [ SELF-MARKER-FLAG luk,
+    3RD_PERSON_F_LEX-NOUN-FLAG luk,
+    CASE-MARKER-FLAG luk,
+    NOUN-FLAG luk,
+    PRON-NUM-MARKER-FLAG luk ].
 
-infl-satisfied :+ [ CASE-MARKER-FLAG na-or-+,
-    NOUN-FLAG na-or-+ ].
+infl-satisfied :+ [ SELF-MARKER-FLAG na-or-+,
+    3RD_PERSON_F_LEX-NOUN-FLAG na-or-+,
+    CASE-MARKER-FLAG na-or-+,
+    NOUN-FLAG na-or-+,
+    PRON-NUM-MARKER-FLAG na-or-+ ].
 
 png :+ [ PER person,
     NUM number,
@@ -86,15 +92,14 @@ pros := aspect.
 
 ;;; Nouns
 
-noun-lex := basic-noun-lex & basic-one-arg & no-hcons-lex-item & non-mod-lex-item &
+noun-lex := basic-noun-lex & basic-one-arg & no-hcons-lex-item & non-mod-lex-item & case-marker-rule-dtr &
   [ SYNSEM.LOCAL.CAT.VAL [ SPR < #spr &
                                  [ LOCAL.CAT.HEAD det ] >,
                            COMPS < >,
                            SUBJ < >,
                            SPEC < > ],
     ARG-ST < #spr >,
-    INFLECTED [ NOUN-FLAG +,
-                CASE-MARKER-FLAG - ] ].
+    INFLECTED.NOUN-FLAG + ].
 
 no-spr-noun-lex := noun-lex &
   [ SYNSEM.LOCAL.CAT.VAL.SPR < [ OPT + ] > ].
@@ -111,59 +116,40 @@ head-spec-phrase := basic-head-spec-phrase & head-initial &
 
 common_noun_lex-noun-lex := noun-lex &
   [ SYNSEM.LOCAL.CONT.HOOK.INDEX.PNG [ PER 3rd,
-                                       NUM sg ] ].
+                                       NUM sg ],
+    INFLECTED.CASE-MARKER-FLAG - ].
 
-1st_person_sg_lex-noun-lex := no-spr-noun-lex &
-  [ SYNSEM.LOCAL.CONT.HOOK.INDEX.PNG [ PER 1st,
-                                       NUM sg ] ].
+1st_person_lex-noun-lex := no-spr-noun-lex & pron-num-marker-rule-dtr & self-marker-rule-dtr &
+  [ SYNSEM.LOCAL.CONT.HOOK.INDEX.PNG.PER 1st,
+    INFLECTED [ SELF-MARKER-FLAG -,
+                PRON-NUM-MARKER-FLAG -,
+                CASE-MARKER-FLAG - ] ].
 
-3rd_person_m_sg_lex-noun-lex := no-spr-noun-lex &
-  [ SYNSEM.LOCAL.CONT.HOOK.INDEX.PNG [ NUM sg,
-                                       GEND m,
-                                       PER 3rd ] ].
+3rd_person_m_lex-noun-lex := no-spr-noun-lex & pron-num-marker-rule-dtr & self-marker-rule-dtr &
+  [ SYNSEM.LOCAL.CONT.HOOK.INDEX.PNG [ GEND m,
+                                       PER 3rd ],
+    INFLECTED [ SELF-MARKER-FLAG -,
+                PRON-NUM-MARKER-FLAG -,
+                CASE-MARKER-FLAG - ] ].
 
-2nd_person_sg_lex-noun-lex := no-spr-noun-lex &
-  [ SYNSEM.LOCAL.CONT.HOOK.INDEX.PNG [ PER 2nd,
-                                       NUM sg ] ].
+2nd_person_lex-noun-lex := no-spr-noun-lex & pron-num-marker-rule-dtr & self-marker-rule-dtr &
+  [ SYNSEM.LOCAL.CONT.HOOK.INDEX.PNG.PER 2nd,
+    INFLECTED [ SELF-MARKER-FLAG -,
+                PRON-NUM-MARKER-FLAG -,
+                CASE-MARKER-FLAG - ] ].
 
 proper_noun_lex-noun-lex := no-spr-noun-lex &
   [ SYNSEM.LOCAL.CONT.HOOK.INDEX.PNG [ PER 3rd,
-                                       NUM sg ] ].
+                                       NUM sg ],
+    INFLECTED.CASE-MARKER-FLAG - ].
 
-2nd_sg_erg_pron-noun-lex := no-spr-noun-lex &
-  [ SYNSEM.LOCAL [ CAT.HEAD.CASE erg,
-                   CONT.HOOK.INDEX.PNG [ PER 2nd,
-                                         NUM sg ] ] ].
-
-3rd_person_f_sg_lex-noun-lex := no-spr-noun-lex &
+3rd_person_f_lex-noun-lex := no-spr-noun-lex & pron-num-marker-rule-dtr & self-marker-rule-dtr &
   [ SYNSEM.LOCAL.CONT.HOOK.INDEX.PNG [ PER 3rd,
-                                       NUM sg,
-                                       GEND f ] ].
-
-1st_pl_lex-noun-lex := no-spr-noun-lex &
-  [ SYNSEM.LOCAL.CONT.HOOK.INDEX.PNG [ PER 1st,
-                                       NUM pl ] ].
-
-2nd_pl_lex-noun-lex := no-spr-noun-lex &
-  [ SYNSEM.LOCAL.CONT.HOOK.INDEX.PNG [ PER 2nd,
-                                       NUM pl ] ].
-
-3rd_pl_m_lex-noun-lex := no-spr-noun-lex &
-  [ SYNSEM.LOCAL.CONT.HOOK.INDEX.PNG [ PER 3rd,
-                                       NUM pl,
-                                       GEND m ] ].
-
-3rd_pl_f_lex-noun-lex := no-spr-noun-lex &
-  [ SYNSEM.LOCAL [ CONT.HOOK.INDEX.PNG [ NUM pl,
-                                         PER 3rd,
-                                         GEND f ],
-                   CAT.HEAD.CASE abs ] ].
-
-3rd_sg_f_erg_pron-noun-lex := no-spr-noun-lex &
-  [ SYNSEM.LOCAL [ CAT.HEAD.CASE erg,
-                   CONT.HOOK.INDEX.PNG [ NUM sg,
-                                         PER 3rd,
-                                         GEND f ] ] ].
+                                       GEND f ],
+    INFLECTED [ 3RD_PERSON_F_LEX-NOUN-FLAG +,
+                SELF-MARKER-FLAG -,
+                PRON-NUM-MARKER-FLAG -,
+                CASE-MARKER-FLAG - ] ].
 
 ;;; Verbs
 
@@ -260,13 +246,25 @@ adj_incorporation-lex-rule := add-only-rule &
                                  [ LTOP #ltop,
                                    INDEX #index ] ] ].
 
+;;; Intermediate rule types
+
+self-marker-rule-dtr := word-or-lexrule.
+case-marker-rule-dtr := word-or-lexrule.
+pron-num-marker-rule-dtr := word-or-lexrule.
+
 ;;; Lexical rule types
 
 case-marker-lex-rule-super := add-only-no-ccont-rule &
   [ INFLECTED [ CASE-MARKER-FLAG +,
-                NOUN-FLAG #noun ],
-    DTR noun-lex &
-        [ INFLECTED.NOUN-FLAG #noun ] ].
+                3RD_PERSON_F_LEX-NOUN-FLAG #3rd_person_f_lex-noun,
+                NOUN-FLAG #noun,
+                SELF-MARKER-FLAG #self-marker,
+                PRON-NUM-MARKER-FLAG #pron-num-marker ],
+    DTR case-marker-rule-dtr &
+        [ INFLECTED [ 3RD_PERSON_F_LEX-NOUN-FLAG #3rd_person_f_lex-noun,
+                      NOUN-FLAG #noun,
+                      SELF-MARKER-FLAG #self-marker,
+                      PRON-NUM-MARKER-FLAG #pron-num-marker ] ] ].
 
 dative-lex-rule-lex-rule := case-marker-lex-rule-super & infl-lex-rule &
   [ DTR.INFLECTED.NOUN-FLAG +,
@@ -280,6 +278,39 @@ ergative-lex-rule-lex-rule := case-marker-lex-rule-super & infl-lex-rule &
 
 instrumental-lex-rule-lex-rule := case-marker-lex-rule-super & infl-lex-rule &
   [ SYNSEM.LOCAL.CAT.HEAD.CASE ins ].
+
+self-marker-lex-rule-super := add-only-no-ccont-rule & case-marker-rule-dtr & pron-num-marker-rule-dtr &
+  [ INFLECTED [ SELF-MARKER-FLAG +,
+                NOUN-FLAG #noun,
+                3RD_PERSON_F_LEX-NOUN-FLAG #3rd_person_f_lex-noun,
+                CASE-MARKER-FLAG #case-marker,
+                PRON-NUM-MARKER-FLAG #pron-num-marker ],
+    DTR self-marker-rule-dtr &
+        [ INFLECTED [ NOUN-FLAG #noun,
+                      3RD_PERSON_F_LEX-NOUN-FLAG #3rd_person_f_lex-noun,
+                      CASE-MARKER-FLAG #case-marker,
+                      PRON-NUM-MARKER-FLAG #pron-num-marker ] ] ].
+
+self-indicate-rule-lex-rule := infl-lex-rule & self-marker-lex-rule-super.
+
+self-unindicated-rule-lex-rule := const-lex-rule & self-marker-lex-rule-super.
+
+pron-num-marker-lex-rule-super := add-only-no-ccont-rule & case-marker-rule-dtr &
+  [ INFLECTED [ PRON-NUM-MARKER-FLAG +,
+                3RD_PERSON_F_LEX-NOUN-FLAG #3rd_person_f_lex-noun,
+                NOUN-FLAG #noun,
+                SELF-MARKER-FLAG #self-marker,
+                CASE-MARKER-FLAG #case-marker ],
+    DTR pron-num-marker-rule-dtr &
+        [ INFLECTED [ 3RD_PERSON_F_LEX-NOUN-FLAG #3rd_person_f_lex-noun,
+                      NOUN-FLAG #noun,
+                      SELF-MARKER-FLAG #self-marker,
+                      CASE-MARKER-FLAG #case-marker ] ] ].
+
+plural-pron-rule-lex-rule := infl-lex-rule & pron-num-marker-lex-rule-super &
+  [ DTR.INFLECTED.3RD_PERSON_F_LEX-NOUN-FLAG na ].
+
+singular-pron-rule-lex-rule := const-lex-rule & pron-num-marker-lex-rule-super.
 
 ;;;;;;;;;;;;;;;;;;;
 ;;; Phrasal Types
