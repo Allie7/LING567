@@ -1,0 +1,52 @@
+
+#Source B (116), 
+#It seems that the negative particles attach to the left of stem or aux verbs
+Source: b:116
+Vetted: s
+Judgment: g
+Phenomena: wo, neg
+maphyinparedda
+ma-phyin        pa-red-da
+not-went        LK-AUX-EMPH
+'Certainly he didn't go.'
+
+#derived negative example 
+Source: author
+Vetted: f
+Judgment: u
+Phenomena: neg
+phyinmaparedda
+phyin-ma        pa-red-da
+went-ma        LK-AUX-EMPH
+'Certainly he didn't go.'
+
+# Ex. 2
+# Here is an example of a
+# neg attaching to the aux verb
+Source: b:116
+Vetted: s
+Judgment: g
+Phenomena: wo, neg
+'grogimi'dugga
+'gro	gi-mi-'dug-ga
+Go	LK-NEG-AUX-EMPH
+"Certainly he's not going"
+
+#Here is a derived example
+#with negation after the AUX
+Source: author
+Vetted: f
+Judgment: u
+Phenomena: neg
+'grogi'dugmiga
+'gro	gi-'dug-mi-ga
+Go	LK-AUX-NEG-EMPH
+"Certainly he's not going"
+
+
+
+
+
+
+
+
