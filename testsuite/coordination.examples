@@ -22,8 +22,30 @@ Judgment: g
 Phenomena: crd, crdagr
 lcogtse	tshangma	'ditsho		dang	rkubkyag	thsong	giyin
 lcogtse	tshangma	'di-tsho	dang	rkubkyag	thsong	gi-yin
-table	all		this-num	all	chair		sell	LK-AUX
+table	all		this-num	CRD	chair		sell	LK-AUX
 "I shall sell all these tables and the chairs"
+
+
+#This is an example of coordination with more than one noun
+Source: b:277
+Vetted: s
+Judgment: g
+Phenomena: crd, crdagr
+denas	khothso		gangkha		mar	dang	phyurba	sha	pagspa	dopo	brgyabnas	lhasala		tshonggag	yong	gired
+de-nas	kho-tsho	gangkha		mar	dang	phyurba	sha	pagspa	dopo	brgyab-nas	lhasa-la	tshong-gag	yong	gi-red
+de-ABL	3sg-num		all		butter	CRD	cheese	meat	hide	load	make_up-SUB	Lhasa-DAT	sell-SUB	come	LK-AUX
+"Then they all make up loads of butter, cheese, meats and hides and come to Lhasa to sell them"
+
+#this example is a made up example based on the above
+Source: author
+Vetted: f
+Judgment: g
+Phenomena: crd, crdagr
+mar	dang	phyurba	sha	pagspa	'dug	
+mar	dang	phyurba	sha	pagspa	'dug
+butter	CRD	cheese	meat	hide	exist
+"There are butter, cheese, meats and hides."
+
 
 
 
