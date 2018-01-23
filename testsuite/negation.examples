@@ -44,9 +44,45 @@ Go	LK-AUX-NEG-EMPH
 "Certainly he's not going"
 
 
+#Negation Example 3
+#Past tense negation
+Source: b:145
+Vetted: s
+Judgment: g
+Phenomena: wo, neg, tam
+khos    yige btang masong
+kho-s   yige btang ma-song
+he-ERG  yige send  NEG-AUX
+"He didn't send a letter."
 
+#wrong NEG affixes for AUX song
+Source: author
+Vetted: f
+Judgment: u
+Phenomena: neg
+khos    yige btang misong
+kho-s   yige btang mi-song
+he-ERG  yige send  NEG-AUX
+"He didn't send a letter."
 
+#negation examples on transtive verbs
+Source: b:146
+Vetted: s
+Judgment: g
+Phenomena: wo, neg, tam
+ngas    sprad med
+ngas    sprad med
+1ST-ERG give NEG_AUX
+"I didn't give."
 
-
+#Lexical verb minority negation form
+Source: b:146
+Vetted: s
+Judgment: g
+Phenomena: wo, neg, tam
+khonggis   magnang  pared
+khong-gis  ma-gnang pa-red
+3SG-ERG    NEG-give LK-AUX
+"He didn't give it."
 
 
