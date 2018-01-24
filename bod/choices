@@ -416,7 +416,6 @@ section=morphology
       verb-pc2_lrt1_lri5_inflecting=yes
       verb-pc2_lrt1_lri5_orth=ra
     verb-pc2_lrt2_name=present-tense-rule
-    verb-pc2_lrt2_supertypes=verb-pc2_lrt1
       verb-pc2_lrt2_lri1_inflecting=yes
       verb-pc2_lrt2_lri1_orth=gi
       verb-pc2_lrt2_lri2_inflecting=yes
