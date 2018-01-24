@@ -65,77 +65,74 @@ mo := 3rd_person_f_lex-noun-lex &
 
 ;;; Verbs
 
-yogred := intransitive-verb-lex-verb-lex &
-  [ STEM < "yogred" >,
-    SYNSEM.LKEYS.KEYREL.PRED "_exist_v_rel" ].
-
-medpa%27dra := intransitive-verb-lex-verb-lex &
-  [ STEM < "medpa'dra" >,
-    SYNSEM.LKEYS.KEYREL.PRED "_nothere_v_rel" ].
-
-%27si := intransitive-verb-lex-verb-lex &
-  [ STEM < "'si" >,
-    SYNSEM.LKEYS.KEYREL.PRED "_die_v_rel" ].
-
 blebs := intransitive-verb-lex-verb-lex &
   [ STEM < "blebs" >,
     SYNSEM.LKEYS.KEYREL.PRED "_arrive_v_rel" ].
 
-bcag := transitive-verb-lex-verb-lex &
+bcag := transitive-erg-verb-lex-verb-lex &
   [ STEM < "bcag" >,
     SYNSEM.LKEYS.KEYREL.PRED "_break_v_rel" ].
 
-bsad := transitive-verb-lex-verb-lex &
+bsad := transitive-erg-verb-lex-verb-lex &
   [ STEM < "bsad" >,
     SYNSEM.LKEYS.KEYREL.PRED "_kill_v_rel" ].
 
-bris := transitive-verb-lex-verb-lex &
+bris := transitive-erg-verb-lex-verb-lex &
   [ STEM < "bris" >,
     SYNSEM.LKEYS.KEYREL.PRED "_write_v_rel" ].
 
-klog := transitive-verb-lex-verb-lex &
+klog := transitive-erg-verb-lex-verb-lex &
   [ STEM < "klog" >,
     SYNSEM.LKEYS.KEYREL.PRED "_read_v_rel" ].
 
-byed := transitive-verb-lex-verb-lex &
+byed := transitive-erg-verb-lex-verb-lex &
   [ STEM < "byed" >,
     SYNSEM.LKEYS.KEYREL.PRED "_do_v_rel" ].
 
-gzhus := dat-trans-verb-lex-verb-lex &
+gzhus := obj-dat-trans-verb-lex-verb-lex &
   [ STEM < "gzhus" >,
     SYNSEM.LKEYS.KEYREL.PRED "_hit_v_rel" ].
 
-blebsgroyin := past-recent-intransitive-verb-lex-verb-lex &
-  [ STEM < "blebsgroyin" >,
-    SYNSEM.LKEYS.KEYREL.PRED "_arrive_v_rel" ].
-
-nyoryguin := present-prospect-verb-lex-verb-lex &
-  [ STEM < "nyoryguin" >,
-    SYNSEM.LKEYS.KEYREL.PRED "_buy_v_rel" ].
-
-gros := modal-intransitive-lex-verb-lex &
-  [ STEM < "gros" >,
-    SYNSEM.LKEYS.KEYREL.PRED "_go_v_rel" ].
-
 ;;; Auxiliaries
 
-byung := perfect-aux-verb-aux-lex &
-  [ STEM < "byung" > ].
-
-song := perfect-aux-verb-aux-lex &
-  [ STEM < "song" > ].
-
-yin := perfect-aux-verb-aux-lex &
+yin := yin-aux-lex &
   [ STEM < "yin" > ].
 
-yod := unknown-aux-type-aux-lex &
-  [ STEM < "yod" > ].
-
-red := unknown-aux-type-aux-lex &
+red := red-aux-lex &
   [ STEM < "red" > ].
 
-%27dra := unknown-aux-type-aux-lex &
-  [ STEM < "'dra" > ].
+yod := yod-aux-lex &
+  [ STEM < "yod" > ].
+
+yogred := yogred-aux-lex &
+  [ STEM < "yogred" > ].
+
+1dug := 1dug-aux-lex &
+  [ STEM < "1dug" > ].
+
+1dra := 1dra-aux-lex &
+  [ STEM < "1dra" > ].
+
+byung := byung-aux-lex &
+  [ STEM < "byung" > ].
+
+song := song-aux-lex &
+  [ STEM < "song" > ].
+
+yong := yong-aux-lex &
+  [ STEM < "yong" > ].
+
+med := med-aux-lex &
+  [ STEM < "med" >,
+    SYNSEM.LKEYS.KEYREL.PRED "neg_rel" ].
+
+man := man-aux-lex &
+  [ STEM < "man" >,
+    SYNSEM.LKEYS.KEYREL.PRED "neg_rel" ].
+
+yogmared := yogmared-aux-lex &
+  [ STEM < "yogmared" >,
+    SYNSEM.LKEYS.KEYREL.PRED "neg_rel" ].
 
 ;;; Determiners
 

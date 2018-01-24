@@ -25,26 +25,50 @@ plural-pron-rule-suffix :=
 %suffix (* tsho)
 plural-pron-rule-lex-rule.
 
-no-meaning-link-prefix1 :=
+negation-marker-rule1-prefix :=
+%prefix (* ma)
+negation-marker-rule1-lex-rule.
+
+negation-marker-rule2-prefix :=
+%prefix (* mi)
+negation-marker-rule2-lex-rule.
+
+past-tense-rule-prefix1 :=
 %prefix (* pa)
-no-meaning-link-lex-rule.
+past-tense-rule-lex-rule.
 
-no-meaning-link-prefix2 :=
-%prefix (* kyi)
-no-meaning-link-lex-rule.
-
-no-meaning-link-prefix3 :=
+past-tense-rule-prefix2 :=
 %prefix (* ba)
-no-meaning-link-lex-rule.
+past-tense-rule-lex-rule.
 
-no-meaning-link-prefix4 :=
-%prefix (* gro)
-no-meaning-link-lex-rule.
+past-tense-rule-prefix3 :=
+%prefix (* nga)
+past-tense-rule-lex-rule.
 
-no-meaning-link-prefix5 :=
-%prefix (* rygu)
-no-meaning-link-lex-rule.
+past-tense-rule-prefix4 :=
+%prefix (* ga)
+past-tense-rule-lex-rule.
 
-no-meaning-link-prefix6 :=
-%prefix (* dgos)
-no-meaning-link-lex-rule.
+past-tense-rule-prefix5 :=
+%prefix (* ra)
+past-tense-rule-lex-rule.
+
+present-tense-rule-prefix1 :=
+%prefix (* gi)
+present-tense-rule-lex-rule.
+
+present-tense-rule-prefix2 :=
+%prefix (* kyi)
+present-tense-rule-lex-rule.
+
+present-tense-rule-prefix3 :=
+%prefix (* gyi)
+present-tense-rule-lex-rule.
+
+gi-fut-prefix :=
+%prefix (* gi)
+gi-fut-lex-rule.
+
+pa-fut-prefix :=
+%prefix (* pa)
+pa-fut-lex-rule.

@@ -1,26 +1,38 @@
 ;;; -*- Mode: TDL; Coding: utf-8 -*-
 ;;; Semantically Empty Lexical Entries
 
-byung_gr := arg0e_gtr &
-  [ CONTEXT.RELS <! [ ARG0.E.ASPECT prf ] !>,
-    FLAGS.TRIGGER "byung" ].
-
-song_gr := arg0e_gtr &
-  [ CONTEXT.RELS <! [ ARG0.E.ASPECT prf ] !>,
-    FLAGS.TRIGGER "song" ].
-
 yin_gr := arg0e_gtr &
-  [ CONTEXT.RELS <! [ ARG0.E.ASPECT prf ] !>,
-    FLAGS.TRIGGER "yin" ].
-
-yod_gr := arg0e_gtr &
   [ CONTEXT.RELS <! [ PRED "non_existing_rel" ] !>,
-    FLAGS.TRIGGER "yod" ].
+    FLAGS.TRIGGER "yin" ].
 
 red_gr := arg0e_gtr &
   [ CONTEXT.RELS <! [ PRED "non_existing_rel" ] !>,
     FLAGS.TRIGGER "red" ].
 
-%27dra_gr := arg0e_gtr &
+yod_gr := arg0e_gtr &
   [ CONTEXT.RELS <! [ PRED "non_existing_rel" ] !>,
-    FLAGS.TRIGGER "%27dra" ].
+    FLAGS.TRIGGER "yod" ].
+
+yogred_gr := arg0e_gtr &
+  [ CONTEXT.RELS <! [ PRED "non_existing_rel" ] !>,
+    FLAGS.TRIGGER "yogred" ].
+
+1dug_gr := arg0e_gtr &
+  [ CONTEXT.RELS <! [ PRED "non_existing_rel" ] !>,
+    FLAGS.TRIGGER "1dug" ].
+
+1dra_gr := arg0e_gtr &
+  [ CONTEXT.RELS <! [ PRED "non_existing_rel" ] !>,
+    FLAGS.TRIGGER "1dra" ].
+
+byung_gr := arg0e_gtr &
+  [ CONTEXT.RELS <! [ ARG0.E.TENSE past ] !>,
+    FLAGS.TRIGGER "byung" ].
+
+song_gr := arg0e_gtr &
+  [ CONTEXT.RELS <! [ ARG0.E.TENSE past ] !>,
+    FLAGS.TRIGGER "song" ].
+
+yong_gr := arg0e_gtr &
+  [ CONTEXT.RELS <! [ ARG0.E.TENSE future ] !>,
+    FLAGS.TRIGGER "yong" ].
