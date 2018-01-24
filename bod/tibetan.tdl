@@ -2,7 +2,7 @@
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;;; Grammar of Tibetan
 ;;; created at:
-;;;     Wed Jan 24 08:31:23 UTC 2018
+;;;     Wed Jan 24 09:19:20 UTC 2018
 ;;; based on Matrix customization system version of:
 ;;;     Wed Jan 24 01:09:00 UTC 2018
 ;;;
@@ -28,33 +28,33 @@ noun :+ [ CASE case ].
 head :+ [ AUX bool,
     FORM form ].
 
-inflected :+ [ 3RD_PERSON_F_LEX-NOUN-FLAG luk,
+inflected :+ [ YOGMARED-AUX-OR-YOGRED-AUX-FLAG luk,
+    MAN-AUX-OR-MED-AUX-OR-YOGMARED-AUX-FLAG luk,
+    1DUG-AUX-OR-MED-AUX-OR-YOD-AUX-OR-YOGMARED-AUX-OR-YOGRED-AUX-FLAG luk,
+    NOUN-FLAG luk,
+    1DRA-AUX-OR-BYUNG-AUX-OR-SONG-AUX-OR-YONG-AUX-FLAG luk,
+    1DUG-AUX-OR-MAN-AUX-OR-RED-AUX-OR-YIN-AUX-FLAG luk,
+    PRON-NUM-MARKER-FLAG luk,
     MAN-AUX-OR-RED-AUX-OR-YIN-AUX-FLAG luk,
     SELF-MARKER-FLAG luk,
-    1DRA-AUX-OR-BYUNG-AUX-OR-SONG-AUX-OR-YONG-AUX-FLAG luk,
-    PRON-NUM-MARKER-FLAG luk,
-    MED-AUX-OR-YOD-AUX-FLAG luk,
-    YOGMARED-AUX-OR-YOGRED-AUX-FLAG luk,
-    MAN-AUX-OR-MED-AUX-OR-YOGMARED-AUX-FLAG luk,
-    NOUN-FLAG luk,
     CASE-MARKER-FLAG luk,
-    1DUG-AUX-OR-MED-AUX-OR-YOD-AUX-OR-YOGMARED-AUX-OR-YOGRED-AUX-FLAG luk,
+    MED-AUX-OR-YOD-AUX-FLAG luk,
     1DRA-AUX-OR-YIN-AUX-OR-YOD-AUX-OR-YOGRED-AUX-FLAG luk,
-    1DUG-AUX-OR-MAN-AUX-OR-RED-AUX-OR-YIN-AUX-FLAG luk ].
+    3RD_PERSON_F_LEX-NOUN-FLAG luk ].
 
-infl-satisfied :+ [ 3RD_PERSON_F_LEX-NOUN-FLAG na-or-+,
+infl-satisfied :+ [ YOGMARED-AUX-OR-YOGRED-AUX-FLAG na-or-+,
+    MAN-AUX-OR-MED-AUX-OR-YOGMARED-AUX-FLAG na-or-+,
+    1DUG-AUX-OR-MED-AUX-OR-YOD-AUX-OR-YOGMARED-AUX-OR-YOGRED-AUX-FLAG na-or-+,
+    NOUN-FLAG na-or-+,
+    1DRA-AUX-OR-BYUNG-AUX-OR-SONG-AUX-OR-YONG-AUX-FLAG na-or-+,
+    1DUG-AUX-OR-MAN-AUX-OR-RED-AUX-OR-YIN-AUX-FLAG na-or-+,
+    PRON-NUM-MARKER-FLAG na-or-+,
     MAN-AUX-OR-RED-AUX-OR-YIN-AUX-FLAG na-or-+,
     SELF-MARKER-FLAG na-or-+,
-    1DRA-AUX-OR-BYUNG-AUX-OR-SONG-AUX-OR-YONG-AUX-FLAG na-or-+,
-    PRON-NUM-MARKER-FLAG na-or-+,
-    MED-AUX-OR-YOD-AUX-FLAG na-or-+,
-    YOGMARED-AUX-OR-YOGRED-AUX-FLAG na-or-+,
-    MAN-AUX-OR-MED-AUX-OR-YOGMARED-AUX-FLAG na-or-+,
-    NOUN-FLAG na-or-+,
     CASE-MARKER-FLAG na-or-+,
-    1DUG-AUX-OR-MED-AUX-OR-YOD-AUX-OR-YOGMARED-AUX-OR-YOGRED-AUX-FLAG na-or-+,
+    MED-AUX-OR-YOD-AUX-FLAG na-or-+,
     1DRA-AUX-OR-YIN-AUX-OR-YOD-AUX-OR-YOGRED-AUX-FLAG na-or-+,
-    1DUG-AUX-OR-MAN-AUX-OR-RED-AUX-OR-YIN-AUX-FLAG na-or-+ ].
+    3RD_PERSON_F_LEX-NOUN-FLAG na-or-+ ].
 
 basic-head-comp-phrase :+ [ SYNSEM.LOCAL.CAT.MC #mc,
     HEAD-DTR.SYNSEM.LOCAL.CAT.MC #mc ].
@@ -117,6 +117,7 @@ future := tense.
 prf := aspect.
 rec := aspect.
 pros := aspect.
+prog := aspect.
 
 ;;; Mood
 
@@ -180,9 +181,9 @@ proper_noun_lex-noun-lex := no-spr-noun-lex & case-marker-rule-dtr &
     INFLECTED.3RD_PERSON_F_LEX-NOUN-FLAG + ].
 
 pron_lex-noun-lex := no-spr-noun-lex & case-marker-rule-dtr & pron-num-marker-rule-dtr &
-  [ INFLECTED [ PRON-NUM-MARKER-FLAG -,
-                CASE-MARKER-FLAG -,
-                SELF-MARKER-FLAG - ] ].
+  [ INFLECTED [ SELF-MARKER-FLAG -,
+                PRON-NUM-MARKER-FLAG -,
+                CASE-MARKER-FLAG - ] ].
 
 ;;; Verbs
 
@@ -273,7 +274,7 @@ subj-raise-aux-no-pred := subj-raise-aux & raise-sem-lex-item &
   [ ARG-ST < [ ],
              [ LOCAL.CAT.HEAD.AUX - ] > ].
 
-yin-aux-lex := subj-raise-aux-no-pred &
+yin-aux-lex := subj-raise-aux-no-pred & aspect-marker-prefixes-rule-dtr &
   [ SYNSEM.LOCAL.CAT.VAL.COMPS.FIRST.LOCAL.CAT.HEAD.FORM form,
     INFLECTED [ 1DRA-AUX-OR-YIN-AUX-OR-YOD-AUX-OR-YOGRED-AUX-FLAG +,
                 MAN-AUX-OR-RED-AUX-OR-YIN-AUX-FLAG +,
@@ -285,9 +286,8 @@ yin-aux-lex := subj-raise-aux-no-pred &
 ; but I don't want to rely on this.  Then again, [ AUX - ]
 ; might not be true.
 
-red-aux-lex := subj-raise-aux-no-pred &
-  [ SYNSEM.LOCAL.CAT [ HEAD.FORM other-centered,
-                       VAL.COMPS.FIRST.LOCAL.CAT.HEAD.FORM form ],
+red-aux-lex := subj-raise-aux-no-pred & aspect-marker-prefixes-rule-dtr &
+  [ SYNSEM.LOCAL.CAT.VAL.COMPS.FIRST.LOCAL.CAT.HEAD.FORM form,
     INFLECTED [ MAN-AUX-OR-RED-AUX-OR-YIN-AUX-FLAG +,
                 1DUG-AUX-OR-MAN-AUX-OR-RED-AUX-OR-YIN-AUX-FLAG + ] ].
 
@@ -298,7 +298,8 @@ red-aux-lex := subj-raise-aux-no-pred &
 ; might not be true.
 
 yod-aux-lex := subj-raise-aux-no-pred &
-  [ SYNSEM.LOCAL.CAT.VAL.COMPS.FIRST.LOCAL.CAT.HEAD.FORM form,
+  [ SYNSEM.LOCAL [ CONT.HOOK.INDEX.E.ASPECT prf,
+                   CAT.VAL.COMPS.FIRST.LOCAL.CAT.HEAD.FORM form ],
     INFLECTED [ 1DRA-AUX-OR-YIN-AUX-OR-YOD-AUX-OR-YOGRED-AUX-FLAG +,
                 MED-AUX-OR-YOD-AUX-FLAG +,
                 1DUG-AUX-OR-MED-AUX-OR-YOD-AUX-OR-YOGMARED-AUX-OR-YOGRED-AUX-FLAG + ] ].
@@ -310,7 +311,8 @@ yod-aux-lex := subj-raise-aux-no-pred &
 ; might not be true.
 
 yogred-aux-lex := subj-raise-aux-no-pred &
-  [ SYNSEM.LOCAL.CAT.VAL.COMPS.FIRST.LOCAL.CAT.HEAD.FORM form,
+  [ SYNSEM.LOCAL [ CONT.HOOK.INDEX.E.ASPECT prf,
+                   CAT.VAL.COMPS.FIRST.LOCAL.CAT.HEAD.FORM form ],
     INFLECTED [ 1DRA-AUX-OR-YIN-AUX-OR-YOD-AUX-OR-YOGRED-AUX-FLAG +,
                 YOGMARED-AUX-OR-YOGRED-AUX-FLAG +,
                 1DUG-AUX-OR-MED-AUX-OR-YOD-AUX-OR-YOGMARED-AUX-OR-YOGRED-AUX-FLAG + ] ].
@@ -322,7 +324,8 @@ yogred-aux-lex := subj-raise-aux-no-pred &
 ; might not be true.
 
 1dug-aux-lex := subj-raise-aux-no-pred &
-  [ SYNSEM.LOCAL.CAT.VAL.COMPS.FIRST.LOCAL.CAT.HEAD.FORM form,
+  [ SYNSEM.LOCAL [ CONT.HOOK.INDEX.E.ASPECT prf,
+                   CAT.VAL.COMPS.FIRST.LOCAL.CAT.HEAD.FORM form ],
     INFLECTED [ 1DUG-AUX-OR-MAN-AUX-OR-RED-AUX-OR-YIN-AUX-FLAG +,
                 1DUG-AUX-OR-MED-AUX-OR-YOD-AUX-OR-YOGMARED-AUX-OR-YOGRED-AUX-FLAG + ] ].
 
@@ -373,19 +376,21 @@ yong-aux-lex := subj-raise-aux-no-pred &
 subj-raise-aux-with-pred := subj-raise-aux & norm-sem-lex-item & trans-first-arg-raising-lex-item-1.
 
 med-aux-lex := subj-raise-aux-with-pred &
-  [ SYNSEM.LOCAL.CAT.VAL.COMPS.FIRST.LOCAL.CAT.HEAD.FORM form,
+  [ SYNSEM.LOCAL [ CONT.HOOK.INDEX.E.ASPECT prf,
+                   CAT.VAL.COMPS.FIRST.LOCAL.CAT.HEAD.FORM form ],
     INFLECTED [ MED-AUX-OR-YOD-AUX-FLAG +,
                 MAN-AUX-OR-MED-AUX-OR-YOGMARED-AUX-FLAG +,
                 1DUG-AUX-OR-MED-AUX-OR-YOD-AUX-OR-YOGMARED-AUX-OR-YOGRED-AUX-FLAG + ] ].
 
-man-aux-lex := subj-raise-aux-with-pred &
+man-aux-lex := subj-raise-aux-with-pred & aspect-marker-prefixes-rule-dtr &
   [ SYNSEM.LOCAL.CAT.VAL.COMPS.FIRST.LOCAL.CAT.HEAD.FORM form,
     INFLECTED [ MAN-AUX-OR-RED-AUX-OR-YIN-AUX-FLAG +,
-                1DUG-AUX-OR-MAN-AUX-OR-RED-AUX-OR-YIN-AUX-FLAG +,
-                MAN-AUX-OR-MED-AUX-OR-YOGMARED-AUX-FLAG + ] ].
+                MAN-AUX-OR-MED-AUX-OR-YOGMARED-AUX-FLAG +,
+                1DUG-AUX-OR-MAN-AUX-OR-RED-AUX-OR-YIN-AUX-FLAG + ] ].
 
 yogmared-aux-lex := subj-raise-aux-with-pred &
-  [ SYNSEM.LOCAL.CAT.VAL.COMPS.FIRST.LOCAL.CAT.HEAD.FORM form,
+  [ SYNSEM.LOCAL [ CONT.HOOK.INDEX.E.ASPECT prf,
+                   CAT.VAL.COMPS.FIRST.LOCAL.CAT.HEAD.FORM form ],
     INFLECTED [ MAN-AUX-OR-MED-AUX-OR-YOGMARED-AUX-FLAG +,
                 YOGMARED-AUX-OR-YOGRED-AUX-FLAG +,
                 1DUG-AUX-OR-MED-AUX-OR-YOD-AUX-OR-YOGMARED-AUX-OR-YOGRED-AUX-FLAG + ] ].
@@ -422,38 +427,39 @@ adj_incorporation-lex-rule := add-only-rule &
 
 ;;; Intermediate rule types
 
-pron-num-marker-rule-dtr := word-or-lexrule.
+aspect-marker-prefixes-rule-dtr := word-or-lexrule.
 polarity-marker-rule-dtr := word-or-lexrule.
 case-marker-rule-dtr := word-or-lexrule.
+pron-num-marker-rule-dtr := word-or-lexrule.
 
 ;;; Lexical rule types
 
 case-marker-lex-rule-super := add-only-no-ccont-rule &
   [ INFLECTED [ CASE-MARKER-FLAG +,
-                MED-AUX-OR-YOD-AUX-FLAG #med-aux-or-yod-aux,
-                3RD_PERSON_F_LEX-NOUN-FLAG #3rd_person_f_lex-noun,
-                MAN-AUX-OR-RED-AUX-OR-YIN-AUX-FLAG #man-aux-or-red-aux-or-yin-aux,
-                SELF-MARKER-FLAG #self-marker,
-                1DRA-AUX-OR-BYUNG-AUX-OR-SONG-AUX-OR-YONG-AUX-FLAG #1dra-aux-or-byung-aux-or-song-aux-or-yong-aux,
-                MAN-AUX-OR-MED-AUX-OR-YOGMARED-AUX-FLAG #man-aux-or-med-aux-or-yogmared-aux,
-                NOUN-FLAG #noun,
-                PRON-NUM-MARKER-FLAG #pron-num-marker,
-                1DUG-AUX-OR-MED-AUX-OR-YOD-AUX-OR-YOGMARED-AUX-OR-YOGRED-AUX-FLAG #1dug-aux-or-med-aux-or-yod-aux-or-yogmared-aux-or-yogred-aux,
-                1DRA-AUX-OR-YIN-AUX-OR-YOD-AUX-OR-YOGRED-AUX-FLAG #1dra-aux-or-yin-aux-or-yod-aux-or-yogred-aux,
                 YOGMARED-AUX-OR-YOGRED-AUX-FLAG #yogmared-aux-or-yogred-aux,
+                MAN-AUX-OR-MED-AUX-OR-YOGMARED-AUX-FLAG #man-aux-or-med-aux-or-yogmared-aux,
+                SELF-MARKER-FLAG #self-marker,
+                PRON-NUM-MARKER-FLAG #pron-num-marker,
+                MAN-AUX-OR-RED-AUX-OR-YIN-AUX-FLAG #man-aux-or-red-aux-or-yin-aux,
+                1DRA-AUX-OR-BYUNG-AUX-OR-SONG-AUX-OR-YONG-AUX-FLAG #1dra-aux-or-byung-aux-or-song-aux-or-yong-aux,
+                1DUG-AUX-OR-MED-AUX-OR-YOD-AUX-OR-YOGMARED-AUX-OR-YOGRED-AUX-FLAG #1dug-aux-or-med-aux-or-yod-aux-or-yogmared-aux-or-yogred-aux,
+                NOUN-FLAG #noun,
+                MED-AUX-OR-YOD-AUX-FLAG #med-aux-or-yod-aux,
+                1DRA-AUX-OR-YIN-AUX-OR-YOD-AUX-OR-YOGRED-AUX-FLAG #1dra-aux-or-yin-aux-or-yod-aux-or-yogred-aux,
+                3RD_PERSON_F_LEX-NOUN-FLAG #3rd_person_f_lex-noun,
                 1DUG-AUX-OR-MAN-AUX-OR-RED-AUX-OR-YIN-AUX-FLAG #1dug-aux-or-man-aux-or-red-aux-or-yin-aux ],
     DTR case-marker-rule-dtr &
-        [ INFLECTED [ MED-AUX-OR-YOD-AUX-FLAG #med-aux-or-yod-aux,
-                      3RD_PERSON_F_LEX-NOUN-FLAG #3rd_person_f_lex-noun,
-                      MAN-AUX-OR-RED-AUX-OR-YIN-AUX-FLAG #man-aux-or-red-aux-or-yin-aux,
-                      SELF-MARKER-FLAG #self-marker,
-                      1DRA-AUX-OR-BYUNG-AUX-OR-SONG-AUX-OR-YONG-AUX-FLAG #1dra-aux-or-byung-aux-or-song-aux-or-yong-aux,
+        [ INFLECTED [ YOGMARED-AUX-OR-YOGRED-AUX-FLAG #yogmared-aux-or-yogred-aux,
                       MAN-AUX-OR-MED-AUX-OR-YOGMARED-AUX-FLAG #man-aux-or-med-aux-or-yogmared-aux,
-                      NOUN-FLAG #noun,
+                      SELF-MARKER-FLAG #self-marker,
                       PRON-NUM-MARKER-FLAG #pron-num-marker,
+                      MAN-AUX-OR-RED-AUX-OR-YIN-AUX-FLAG #man-aux-or-red-aux-or-yin-aux,
+                      1DRA-AUX-OR-BYUNG-AUX-OR-SONG-AUX-OR-YONG-AUX-FLAG #1dra-aux-or-byung-aux-or-song-aux-or-yong-aux,
                       1DUG-AUX-OR-MED-AUX-OR-YOD-AUX-OR-YOGMARED-AUX-OR-YOGRED-AUX-FLAG #1dug-aux-or-med-aux-or-yod-aux-or-yogmared-aux-or-yogred-aux,
+                      NOUN-FLAG #noun,
+                      MED-AUX-OR-YOD-AUX-FLAG #med-aux-or-yod-aux,
                       1DRA-AUX-OR-YIN-AUX-OR-YOD-AUX-OR-YOGRED-AUX-FLAG #1dra-aux-or-yin-aux-or-yod-aux-or-yogred-aux,
-                      YOGMARED-AUX-OR-YOGRED-AUX-FLAG #yogmared-aux-or-yogred-aux,
+                      3RD_PERSON_F_LEX-NOUN-FLAG #3rd_person_f_lex-noun,
                       1DUG-AUX-OR-MAN-AUX-OR-RED-AUX-OR-YIN-AUX-FLAG #1dug-aux-or-man-aux-or-red-aux-or-yin-aux ] ] ].
 
 dative-lex-rule-lex-rule := case-marker-lex-rule-super & infl-lex-rule &
@@ -471,30 +477,30 @@ instrumental-lex-rule-lex-rule := case-marker-lex-rule-super & infl-lex-rule &
 
 self-marker-lex-rule-super := add-only-no-ccont-rule & case-marker-rule-dtr & pron-num-marker-rule-dtr &
   [ INFLECTED [ SELF-MARKER-FLAG +,
-                MED-AUX-OR-YOD-AUX-FLAG #med-aux-or-yod-aux,
-                3RD_PERSON_F_LEX-NOUN-FLAG #3rd_person_f_lex-noun,
-                MAN-AUX-OR-RED-AUX-OR-YIN-AUX-FLAG #man-aux-or-red-aux-or-yin-aux,
-                1DRA-AUX-OR-BYUNG-AUX-OR-SONG-AUX-OR-YONG-AUX-FLAG #1dra-aux-or-byung-aux-or-song-aux-or-yong-aux,
-                MAN-AUX-OR-MED-AUX-OR-YOGMARED-AUX-FLAG #man-aux-or-med-aux-or-yogmared-aux,
-                1DRA-AUX-OR-YIN-AUX-OR-YOD-AUX-OR-YOGRED-AUX-FLAG #1dra-aux-or-yin-aux-or-yod-aux-or-yogred-aux,
-                NOUN-FLAG #noun,
-                PRON-NUM-MARKER-FLAG #pron-num-marker,
-                1DUG-AUX-OR-MED-AUX-OR-YOD-AUX-OR-YOGMARED-AUX-OR-YOGRED-AUX-FLAG #1dug-aux-or-med-aux-or-yod-aux-or-yogmared-aux-or-yogred-aux,
-                CASE-MARKER-FLAG #case-marker,
                 YOGMARED-AUX-OR-YOGRED-AUX-FLAG #yogmared-aux-or-yogred-aux,
+                MAN-AUX-OR-MED-AUX-OR-YOGMARED-AUX-FLAG #man-aux-or-med-aux-or-yogmared-aux,
+                PRON-NUM-MARKER-FLAG #pron-num-marker,
+                MAN-AUX-OR-RED-AUX-OR-YIN-AUX-FLAG #man-aux-or-red-aux-or-yin-aux,
+                CASE-MARKER-FLAG #case-marker,
+                1DRA-AUX-OR-BYUNG-AUX-OR-SONG-AUX-OR-YONG-AUX-FLAG #1dra-aux-or-byung-aux-or-song-aux-or-yong-aux,
+                1DUG-AUX-OR-MED-AUX-OR-YOD-AUX-OR-YOGMARED-AUX-OR-YOGRED-AUX-FLAG #1dug-aux-or-med-aux-or-yod-aux-or-yogmared-aux-or-yogred-aux,
+                NOUN-FLAG #noun,
+                MED-AUX-OR-YOD-AUX-FLAG #med-aux-or-yod-aux,
+                1DRA-AUX-OR-YIN-AUX-OR-YOD-AUX-OR-YOGRED-AUX-FLAG #1dra-aux-or-yin-aux-or-yod-aux-or-yogred-aux,
+                3RD_PERSON_F_LEX-NOUN-FLAG #3rd_person_f_lex-noun,
                 1DUG-AUX-OR-MAN-AUX-OR-RED-AUX-OR-YIN-AUX-FLAG #1dug-aux-or-man-aux-or-red-aux-or-yin-aux ],
     DTR pron_lex-noun-lex &
-        [ INFLECTED [ MED-AUX-OR-YOD-AUX-FLAG #med-aux-or-yod-aux,
-                      3RD_PERSON_F_LEX-NOUN-FLAG #3rd_person_f_lex-noun,
-                      MAN-AUX-OR-RED-AUX-OR-YIN-AUX-FLAG #man-aux-or-red-aux-or-yin-aux,
-                      1DRA-AUX-OR-BYUNG-AUX-OR-SONG-AUX-OR-YONG-AUX-FLAG #1dra-aux-or-byung-aux-or-song-aux-or-yong-aux,
+        [ INFLECTED [ YOGMARED-AUX-OR-YOGRED-AUX-FLAG #yogmared-aux-or-yogred-aux,
                       MAN-AUX-OR-MED-AUX-OR-YOGMARED-AUX-FLAG #man-aux-or-med-aux-or-yogmared-aux,
-                      1DRA-AUX-OR-YIN-AUX-OR-YOD-AUX-OR-YOGRED-AUX-FLAG #1dra-aux-or-yin-aux-or-yod-aux-or-yogred-aux,
-                      NOUN-FLAG #noun,
                       PRON-NUM-MARKER-FLAG #pron-num-marker,
-                      1DUG-AUX-OR-MED-AUX-OR-YOD-AUX-OR-YOGMARED-AUX-OR-YOGRED-AUX-FLAG #1dug-aux-or-med-aux-or-yod-aux-or-yogmared-aux-or-yogred-aux,
+                      MAN-AUX-OR-RED-AUX-OR-YIN-AUX-FLAG #man-aux-or-red-aux-or-yin-aux,
                       CASE-MARKER-FLAG #case-marker,
-                      YOGMARED-AUX-OR-YOGRED-AUX-FLAG #yogmared-aux-or-yogred-aux,
+                      1DRA-AUX-OR-BYUNG-AUX-OR-SONG-AUX-OR-YONG-AUX-FLAG #1dra-aux-or-byung-aux-or-song-aux-or-yong-aux,
+                      1DUG-AUX-OR-MED-AUX-OR-YOD-AUX-OR-YOGMARED-AUX-OR-YOGRED-AUX-FLAG #1dug-aux-or-med-aux-or-yod-aux-or-yogmared-aux-or-yogred-aux,
+                      NOUN-FLAG #noun,
+                      MED-AUX-OR-YOD-AUX-FLAG #med-aux-or-yod-aux,
+                      1DRA-AUX-OR-YIN-AUX-OR-YOD-AUX-OR-YOGRED-AUX-FLAG #1dra-aux-or-yin-aux-or-yod-aux-or-yogred-aux,
+                      3RD_PERSON_F_LEX-NOUN-FLAG #3rd_person_f_lex-noun,
                       1DUG-AUX-OR-MAN-AUX-OR-RED-AUX-OR-YIN-AUX-FLAG #1dug-aux-or-man-aux-or-red-aux-or-yin-aux ] ] ].
 
 self-indicate-rule-lex-rule := infl-lex-rule & self-marker-lex-rule-super.
@@ -503,30 +509,30 @@ self-unindicated-rule-lex-rule := const-lex-rule & self-marker-lex-rule-super.
 
 pron-num-marker-lex-rule-super := add-only-no-ccont-rule & case-marker-rule-dtr &
   [ INFLECTED [ PRON-NUM-MARKER-FLAG +,
-                MED-AUX-OR-YOD-AUX-FLAG #med-aux-or-yod-aux,
-                MAN-AUX-OR-RED-AUX-OR-YIN-AUX-FLAG #man-aux-or-red-aux-or-yin-aux,
-                SELF-MARKER-FLAG #self-marker,
-                1DRA-AUX-OR-BYUNG-AUX-OR-SONG-AUX-OR-YONG-AUX-FLAG #1dra-aux-or-byung-aux-or-song-aux-or-yong-aux,
-                MAN-AUX-OR-MED-AUX-OR-YOGMARED-AUX-FLAG #man-aux-or-med-aux-or-yogmared-aux,
-                1DRA-AUX-OR-YIN-AUX-OR-YOD-AUX-OR-YOGRED-AUX-FLAG #1dra-aux-or-yin-aux-or-yod-aux-or-yogred-aux,
-                NOUN-FLAG #noun,
-                3RD_PERSON_F_LEX-NOUN-FLAG #3rd_person_f_lex-noun,
-                1DUG-AUX-OR-MED-AUX-OR-YOD-AUX-OR-YOGMARED-AUX-OR-YOGRED-AUX-FLAG #1dug-aux-or-med-aux-or-yod-aux-or-yogmared-aux-or-yogred-aux,
-                CASE-MARKER-FLAG #case-marker,
                 YOGMARED-AUX-OR-YOGRED-AUX-FLAG #yogmared-aux-or-yogred-aux,
+                MAN-AUX-OR-MED-AUX-OR-YOGMARED-AUX-FLAG #man-aux-or-med-aux-or-yogmared-aux,
+                SELF-MARKER-FLAG #self-marker,
+                MAN-AUX-OR-RED-AUX-OR-YIN-AUX-FLAG #man-aux-or-red-aux-or-yin-aux,
+                CASE-MARKER-FLAG #case-marker,
+                1DRA-AUX-OR-BYUNG-AUX-OR-SONG-AUX-OR-YONG-AUX-FLAG #1dra-aux-or-byung-aux-or-song-aux-or-yong-aux,
+                1DUG-AUX-OR-MED-AUX-OR-YOD-AUX-OR-YOGMARED-AUX-OR-YOGRED-AUX-FLAG #1dug-aux-or-med-aux-or-yod-aux-or-yogmared-aux-or-yogred-aux,
+                NOUN-FLAG #noun,
+                MED-AUX-OR-YOD-AUX-FLAG #med-aux-or-yod-aux,
+                1DRA-AUX-OR-YIN-AUX-OR-YOD-AUX-OR-YOGRED-AUX-FLAG #1dra-aux-or-yin-aux-or-yod-aux-or-yogred-aux,
+                3RD_PERSON_F_LEX-NOUN-FLAG #3rd_person_f_lex-noun,
                 1DUG-AUX-OR-MAN-AUX-OR-RED-AUX-OR-YIN-AUX-FLAG #1dug-aux-or-man-aux-or-red-aux-or-yin-aux ],
     DTR pron-num-marker-rule-dtr &
-        [ INFLECTED [ MED-AUX-OR-YOD-AUX-FLAG #med-aux-or-yod-aux,
-                      MAN-AUX-OR-RED-AUX-OR-YIN-AUX-FLAG #man-aux-or-red-aux-or-yin-aux,
-                      SELF-MARKER-FLAG #self-marker,
-                      1DRA-AUX-OR-BYUNG-AUX-OR-SONG-AUX-OR-YONG-AUX-FLAG #1dra-aux-or-byung-aux-or-song-aux-or-yong-aux,
+        [ INFLECTED [ YOGMARED-AUX-OR-YOGRED-AUX-FLAG #yogmared-aux-or-yogred-aux,
                       MAN-AUX-OR-MED-AUX-OR-YOGMARED-AUX-FLAG #man-aux-or-med-aux-or-yogmared-aux,
-                      1DRA-AUX-OR-YIN-AUX-OR-YOD-AUX-OR-YOGRED-AUX-FLAG #1dra-aux-or-yin-aux-or-yod-aux-or-yogred-aux,
-                      NOUN-FLAG #noun,
-                      3RD_PERSON_F_LEX-NOUN-FLAG #3rd_person_f_lex-noun,
-                      1DUG-AUX-OR-MED-AUX-OR-YOD-AUX-OR-YOGMARED-AUX-OR-YOGRED-AUX-FLAG #1dug-aux-or-med-aux-or-yod-aux-or-yogmared-aux-or-yogred-aux,
+                      SELF-MARKER-FLAG #self-marker,
+                      MAN-AUX-OR-RED-AUX-OR-YIN-AUX-FLAG #man-aux-or-red-aux-or-yin-aux,
                       CASE-MARKER-FLAG #case-marker,
-                      YOGMARED-AUX-OR-YOGRED-AUX-FLAG #yogmared-aux-or-yogred-aux,
+                      1DRA-AUX-OR-BYUNG-AUX-OR-SONG-AUX-OR-YONG-AUX-FLAG #1dra-aux-or-byung-aux-or-song-aux-or-yong-aux,
+                      1DUG-AUX-OR-MED-AUX-OR-YOD-AUX-OR-YOGMARED-AUX-OR-YOGRED-AUX-FLAG #1dug-aux-or-med-aux-or-yod-aux-or-yogmared-aux-or-yogred-aux,
+                      NOUN-FLAG #noun,
+                      MED-AUX-OR-YOD-AUX-FLAG #med-aux-or-yod-aux,
+                      1DRA-AUX-OR-YIN-AUX-OR-YOD-AUX-OR-YOGRED-AUX-FLAG #1dra-aux-or-yin-aux-or-yod-aux-or-yogred-aux,
+                      3RD_PERSON_F_LEX-NOUN-FLAG #3rd_person_f_lex-noun,
                       1DUG-AUX-OR-MAN-AUX-OR-RED-AUX-OR-YIN-AUX-FLAG #1dug-aux-or-man-aux-or-red-aux-or-yin-aux ] ] ].
 
 plural-pron-rule-lex-rule := infl-lex-rule & pron-num-marker-lex-rule-super &
@@ -588,6 +594,36 @@ gi-fut-lex-rule := future-tense-rule-lex-rule &
 
 present-tense-rule-lex-rule := tense-marker-lex-rule-super &
   [ DTR.INFLECTED.MAN-AUX-OR-RED-AUX-OR-YIN-AUX-FLAG na ].
+
+mood-marker-lex-rule-super := add-only-no-ccont-rule & infl-lex-rule &
+  [ INFLECTED #infl,
+    DTR aux-lex &
+        [ INFLECTED #infl ] ].
+
+mood-lex-rule := mood-marker-lex-rule-super &
+  [ SYNSEM.LOCAL.CONT.HOOK.INDEX.E.MOOD mood ].
+
+aspect-marker-suffixes-lex-rule-super := add-only-no-ccont-rule & infl-lex-rule &
+  [ INFLECTED #infl,
+    DTR verb-lex &
+        [ INFLECTED #infl ] ].
+
+simple-perfect-lex-rule := aspect-marker-suffixes-lex-rule-super &
+  [ SYNSEM.LOCAL.CONT.HOOK.INDEX.E.ASPECT prf ].
+
+aspect-marker-prefixes-lex-rule-super := add-only-no-ccont-rule & infl-lex-rule &
+  [ INFLECTED #infl,
+    DTR aspect-marker-prefixes-rule-dtr &
+        [ INFLECTED #infl ] ].
+
+recent-aspect-lex-rule := aspect-marker-prefixes-lex-rule-super &
+  [ SYNSEM.LOCAL.CONT.HOOK.INDEX.E.ASPECT rec ].
+
+prog-aspect-lex-rule := aspect-marker-prefixes-lex-rule-super &
+  [ SYNSEM.LOCAL.CONT.HOOK.INDEX.E.ASPECT prog ].
+
+pros-lex-rule := aspect-marker-prefixes-lex-rule-super &
+  [ SYNSEM.LOCAL.CONT.HOOK.INDEX.E.ASPECT pros ].
 
 ;;;;;;;;;;;;;;;;;;;
 ;;; Phrasal Types

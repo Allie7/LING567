@@ -63,6 +63,7 @@ E.ASPECT : E.ASPECT
   prf <> prf
   rec <> rec
   pros <> pros
+  prog <> prog
   * <> *
 
 E.MOOD : E.MOOD

@@ -10,15 +10,15 @@ red_gr := arg0e_gtr &
     FLAGS.TRIGGER "red" ].
 
 yod_gr := arg0e_gtr &
-  [ CONTEXT.RELS <! [ PRED "non_existing_rel" ] !>,
+  [ CONTEXT.RELS <! [ ARG0.E.ASPECT prf ] !>,
     FLAGS.TRIGGER "yod" ].
 
 yogred_gr := arg0e_gtr &
-  [ CONTEXT.RELS <! [ PRED "non_existing_rel" ] !>,
+  [ CONTEXT.RELS <! [ ARG0.E.ASPECT prf ] !>,
     FLAGS.TRIGGER "yogred" ].
 
 1dug_gr := arg0e_gtr &
-  [ CONTEXT.RELS <! [ PRED "non_existing_rel" ] !>,
+  [ CONTEXT.RELS <! [ ARG0.E.ASPECT prf ] !>,
     FLAGS.TRIGGER "1dug" ].
 
 1dra_gr := arg0e_gtr &

@@ -72,3 +72,75 @@ gi-fut-lex-rule.
 pa-fut-prefix :=
 %prefix (* pa)
 pa-fut-lex-rule.
+
+mood-suffix1 :=
+%suffix (* da)
+mood-lex-rule.
+
+mood-suffix2 :=
+%suffix (* pas)
+mood-lex-rule.
+
+mood-suffix3 :=
+%suffix (* gro)
+mood-lex-rule.
+
+mood-suffix4 :=
+%suffix (* ngas)
+mood-lex-rule.
+
+mood-suffix5 :=
+%suffix (* gro1s)
+mood-lex-rule.
+
+mood-suffix6 :=
+%suffix (* ga)
+mood-lex-rule.
+
+mood-suffix7 :=
+%suffix (* pa1dra)
+mood-lex-rule.
+
+simple-perfect-suffix1 :=
+%suffix (* shag)
+simple-perfect-lex-rule.
+
+simple-perfect-suffix2 :=
+%suffix (* bzhag)
+simple-perfect-lex-rule.
+
+simple-perfect-suffix3 :=
+%suffix (* gzha1)
+simple-perfect-lex-rule.
+
+recent-aspect-prefix1 :=
+%prefix (* gro)
+recent-aspect-lex-rule.
+
+recent-aspect-prefix2 :=
+%prefix (* padaga)
+recent-aspect-lex-rule.
+
+recent-aspect-prefix3 :=
+%prefix (* tsam)
+recent-aspect-lex-rule.
+
+prog-aspect-prefix :=
+%prefix (* mus)
+prog-aspect-lex-rule.
+
+pros-prefix1 :=
+%prefix (* rgyu)
+pros-lex-rule.
+
+pros-prefix2 :=
+%prefix (* yag)
+pros-lex-rule.
+
+pros-prefix3 :=
+%prefix (* chog)
+pros-lex-rule.
+
+pros-prefix4 :=
+%prefix (* grabs)
+pros-lex-rule.
