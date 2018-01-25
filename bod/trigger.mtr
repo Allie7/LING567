@@ -17,9 +17,9 @@ yogred_gr := arg0e_gtr &
   [ CONTEXT.RELS <! [ ARG0.E.ASPECT prf ] !>,
     FLAGS.TRIGGER "yogred" ].
 
-1dug_gr := arg0e_gtr &
+1dug_2_gr := arg0e_gtr &
   [ CONTEXT.RELS <! [ ARG0.E.ASPECT prf ] !>,
-    FLAGS.TRIGGER "1dug" ].
+    FLAGS.TRIGGER "1dug_2" ].
 
 1dra_gr := arg0e_gtr &
   [ CONTEXT.RELS <! [ PRED "non_existing_rel" ] !>,

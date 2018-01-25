@@ -1,0 +1,186 @@
+
+
+Lab 3 Writeup
+
+
+I & II. Test suite instances and choices
+
+A. Negation
+
+Choices:
+
+B. Agreement
+
+C&D. Coordination & Agreement in coordinated NPs
+
+By searching through the realworld text at the end of the source B, we found examples of NP coordination and so-called "weak" VP coordination.
+Because the examples were complex, we started working with simplified ones but also kept the originals.
+
+NPs are coordinated by the word "dang" which means roughtly "with" under the monosyndeton paradigm. This coordinating particle falls between the first NP and the rest.
+
+Source: author
+Vetted: f
+Judgment: g
+Phenomena: crd, crdagr
+ngas    lcogtse dang    rkubkyag        thsong  giyin
+nga-s   lcogtse dang    rkubkyag        thsong  gi-yin
+I-ERG   table   CRD     chair           sell    LK-AUX
+"I shall sell the tables and chairs"
+
+According to source B, the coordinated NPs must all be the subject or object of the verb; hence, this example should fail to parse:
+
+Source: author
+Vetted: f
+Judgment: u
+Phenomena: crdagr
+ngas    lcogtses        dang    rkubkyag        thsong  giyin
+nga-s   lcogtse-s       dang    rkubkyag        thsong  gi-yin
+I-ERG   table-ERG       CRD     chair           sell    LK-AUX
+"I shall sell the tables and chairs"
+
+By contrast, VP coordination involves joining clauses without a coordinating word:
+
+Source: b:220
+Vetted: s
+Judgment: g
+Phenomena: crd, crdagr
+zhoggas ngatshos        yige    bris    denas   khalag  bzas    denas   chamchamla      phyin   payin
+zhoggas nga-tsho-s      yige    bris    denas   khalag  bzas    denas   chamcham-la     phyin   pa-yin
+morning I-num-ERG       letter  write   then    meal    ate     then    walk-DAT        went    LK-AUX
+"In the morning we wrote letters, then we had a meal, then we went for a walk"
+
+One may think that denas coordinates the VPs, but there was an example from real text without it:
+
+Source: b:277
+Vetted: s
+Judgment: g
+Phenomena: crd, crdagr
+grogspo mi      dila            yar     khorangla       skyeddman       yogred  bugu    yogred
+grogspo mi      di-la           yar     khorang-la      skyeddman       yogred  bugu    yogred
+friend  man     this-DAT        top.    he-DAT          wife            exist   child   exist
+'The friend had a wife and child'
+
+Because we don't have adjuncts, we made a simpler version:
+
+#simplified VP  coordination
+Source: author
+Vetted: f
+Judgment: g
+Phenomena: crd, crdagr
+ngatshos        yige    bris    khalag  bzas
+nga-tsho-s      yige    bris    khalag  bzas
+I-num-ERG       letter  write   meal    ate
+"We wrote letters and ate a meal"
+
+And a corresponding incorrectly coordinated example; we know that dang can only be used with verbs which have been nominalized:
+
+#simplified VP  coordination
+Source: author
+Vetted: f
+Judgment: u
+Phenomena: crd
+ngatshos        yige    bris	dang    khalag  bzas
+nga-tsho-s      yige    bris    dang	khalag  bzas
+I-num-ERG       letter  write   and	meal    ate
+"We wrote letters and ate a meal"
+
+Choices: To implement this, we chose the monosyndeton coordination pattern for NPs and nouns and selected "dang" as the coordinating word. We also created a feature resolution pattern for nouns, noun_res, which states that they have to match in case.  For verbs we selected the asydenton pattern without any other specifications.  
+
+E. Attributive Adjectives
+
+In Tibetan, there are adjectival verbs rather than adjectives; to become attributive, they undergo nominalization:
+
+#Derived
+Source: author
+Vetted: f
+Judgment: g
+Phenomena: adj
+mi      mangpo          cig     1dug
+mi      mang-po         cig     1dug
+person  many-nom        num     exist
+"There are a many people"
+
+The adjective must be to the right of the noun phrase
+
+Source: author
+Vetted: f
+Judgment: u
+Phenomena: adj
+mangpo          mi              cig     1dug
+mang-po         mi              cig     1dug
+many-nom        people  num     exist
+"There are a many people
+
+
+Although this is out of scope, we did include several examples of
+predicational use of adjectives; source D notes that the attributional
+and predicative use of verbs are nearly identical; without the determiner
+in its position, both of these sentences would mean the same thing:
+
+Source: d:95
+Vetted: s
+Judgment: g
+Phenomena: adj
+nyuku   ti      nakpo           re
+nyuku   ti      nak-po          re
+pen     this    black-nom       be
+"This pen is black"
+
+Source: d:95
+Vetted: s
+Judgment: g
+Phenomena: adj
+nyuku   nakpo           ti      re
+nyuku   nak-po          ti      re
+pen     black-nom       this    be
+'This is a black pen'
+
+
+Choices: To implement this, we had to pretend that Tibetan had adjectives. We specified that the nominalized
+adjectival verbs were both attributive and predicative based on the example above. We specified that adjectives
+modify the items before them. Finally we said that adjectives impossibly appear as the complement of a copula 
+because stating optionally seemed to require a morphological rule and predicative adjectives are out of scope.
+
+F. Adverbs
+
+Adverbs also appear as nominalized adjectival verbs:
+
+Source: b:209
+Vetted: s
+Judgment: g
+Phenomena: adv
+khong   bodskad yagpo           mkhyen  gyi1dug
+khong   bodskad yag-po          mkhyen  gyi-1dug
+He      Tibetan good-nom        know    LK-AUX
+'He knows Tibetan well'
+
+
+Choices: we have made no choices for this yet
+
+G. Tense/Aspect
+
+Morphology:
+
+Choices:
+
+H. Sentential Negation
+
+III. Testsuite instances not yet covered
+
+We do not parse any of the testsuite instances dealing with:
+* Wh-Questions
+* Aspect & Tense
+* Auxiliary verbs  
+* Adjunct phrases (instrumental verbs)
+
+IV. Coverage and Overgeneration
+
+
+V. Outside domain of customization
+
+We were not able to model adverbs and adjectives as the verbs they truly are based on the customization system.
+
+
+
+
+

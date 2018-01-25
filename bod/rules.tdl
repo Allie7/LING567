@@ -8,3 +8,19 @@ subj-head := subj-head-phrase.
 head-spec := head-spec-phrase.
 
 bare-np := bare-np-phrase.
+
+n1-same-same-same-top-coord := n1-same-same-same-top-coord-rule.
+
+n1-same-same-same-mid-coord := n1-same-same-same-mid-coord-rule.
+
+n1-bottom-coord := n1-bottom-coord-rule.
+
+np1-same-same-same-top-coord := np1-same-same-same-top-coord-rule.
+
+np1-same-same-same-mid-coord := np1-same-same-same-mid-coord-rule.
+
+np1-bottom-coord := np1-bottom-coord-rule.
+
+vp2-top-coord := vp2-top-coord-rule.
+
+vp2-bottom-coord := vp2-bottom-coord-rule.

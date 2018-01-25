@@ -12,8 +12,6 @@ person	many-nom	very	num	exist
 "There are a tremendous lot of people"
 
 #Derived
-
-
 Source: author
 Vetted: f
 Judgment: g
@@ -22,6 +20,18 @@ mi	mangpo		cig	1dug
 mi	mang-po		cig	1dug
 person	many-nom	num	exist
 "There are a many people"
+
+#incorrect order
+Source: author
+Vetted: f
+Judgment: u
+Phenomena: adj
+mangpo		mi		cig	1dug
+mang-po		mi		cig	1dug
+many-nom	people	num	exist
+"There are a many people"
+
+
 
 
 

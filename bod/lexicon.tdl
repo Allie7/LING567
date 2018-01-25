@@ -45,6 +45,42 @@ mi := common_noun_lex-noun-lex &
   [ STEM < "mi" >,
     SYNSEM.LKEYS.KEYREL.PRED "_people_n_rel" ].
 
+lcogtse := common_noun_lex-noun-lex &
+  [ STEM < "lcogtse" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_table_n_rel" ].
+
+rkubkyag := common_noun_lex-noun-lex &
+  [ STEM < "rkubkyag" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_chair_n_rel" ].
+
+mar := common_noun_lex-noun-lex &
+  [ STEM < "mar" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_butter_n_rel" ].
+
+phyurba := common_noun_lex-noun-lex &
+  [ STEM < "phyurba" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_cheese_n_rel" ].
+
+sha := common_noun_lex-noun-lex &
+  [ STEM < "sha" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_meat_n_rel" ].
+
+pagspa := common_noun_lex-noun-lex &
+  [ STEM < "pagspa" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_hide_n_rel" ].
+
+skyeddman := common_noun_lex-noun-lex &
+  [ STEM < "skyeddman" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_wife_n_rel" ].
+
+bugu := common_noun_lex-noun-lex &
+  [ STEM < "bugu" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_child_n_rel" ].
+
+khalag := common_noun_lex-noun-lex &
+  [ STEM < "khalag" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_meal_n_rel" ].
+
 nga := 1st_person_lex-noun-lex &
   [ STEM < "nga" >,
     SYNSEM.LKEYS.KEYREL.PRED "pron_rel" ].
@@ -109,6 +145,10 @@ gros := intransitive-verb-lex-verb-lex &
   [ STEM < "gros" >,
     SYNSEM.LKEYS.KEYREL.PRED "_go_v_rel" ].
 
+1dug_1 := intransitive-verb-lex-verb-lex &
+  [ STEM < "1dug" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_exist_v_rel" ].
+
 bcag := transitive-erg-verb-lex-verb-lex &
   [ STEM < "bcag" >,
     SYNSEM.LKEYS.KEYREL.PRED "_break_v_rel" ].
@@ -145,6 +185,14 @@ nyo := transitive-erg-verb-lex-verb-lex &
   [ STEM < "nyo" >,
     SYNSEM.LKEYS.KEYREL.PRED "_buy_v_rel" ].
 
+thsong := transitive-erg-verb-lex-verb-lex &
+  [ STEM < "thsong" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_sell_v_rel" ].
+
+bzas := transitive-erg-verb-lex-verb-lex &
+  [ STEM < "bzas" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_eat_v_rel" ].
+
 gzhus := obj-dat-trans-verb-lex-verb-lex &
   [ STEM < "gzhus" >,
     SYNSEM.LKEYS.KEYREL.PRED "_hit_v_rel" ].
@@ -163,7 +211,7 @@ yod := yod-aux-lex &
 yogred := yogred-aux-lex &
   [ STEM < "yogred" > ].
 
-1dug := 1dug-aux-lex &
+1dug_2 := 1dug-aux-lex &
   [ STEM < "1dug" > ].
 
 1dra := 1dra-aux-lex &
@@ -222,3 +270,8 @@ rogspa := determinant-adj-lex-determiner-lex &
 ti := determinant-adj-lex-determiner-lex &
   [ STEM < "ti" >,
     SYNSEM.LKEYS.KEYREL.PRED "_this_q_rel" ].
+
+dang1 := conj-lex &
+  [ STEM < "dang" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_and_coord_rel",
+    CFORM "1" ].
