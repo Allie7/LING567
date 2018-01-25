@@ -25,8 +25,8 @@ Source: author
 Vetted: f
 Judgment: u
 Phenomena: det
-cig `mibculngatsam yogred
-cig `mi-bculngatsam yog_red
+cig 1mibculngatsam yogred
+cig 1mi-bculngatsam yog_red
 num People-FiteenAbout exist
 'There are about fiteeen people.'
 
@@ -37,8 +37,8 @@ Source: d:100
 Vetted: s
 Judgment: g
 Phenomena: wo, c, det
-`mibculngatsam  yogred
-`mi-bculngatsam  yog_red
+1mibculngatsam  yogred
+1mi-bculngatsam  yog_red
 People-FiteenAbout exist
 'There are about fiteeen people.'
 

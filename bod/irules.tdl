@@ -73,6 +73,10 @@ pa-fut-prefix :=
 %prefix (* pa)
 pa-fut-lex-rule.
 
+dgos-lex-prefix :=
+%prefix (* dgos)
+dgos-lex-lex-rule.
+
 mood-suffix1 :=
 %suffix (* da)
 mood-lex-rule.

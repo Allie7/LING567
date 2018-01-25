@@ -9,8 +9,8 @@ stag := common_noun_lex-noun-lex &
   [ STEM < "stag" >,
     SYNSEM.LKEYS.KEYREL.PRED "_tiger_n_rel" ].
 
-%60mibculngatsam := common_noun_lex-noun-lex &
-  [ STEM < "`mibculngatsam" >,
+1mibculngatsam := common_noun_lex-noun-lex &
+  [ STEM < "1mibculngatsam" >,
     SYNSEM.LKEYS.KEYREL.PRED "_fifteen_people_n_rel" ].
 
 smyug := common_noun_lex-noun-lex &
@@ -29,9 +29,21 @@ nyocha := common_noun_lex-noun-lex &
   [ STEM < "nyocha" >,
     SYNSEM.LKEYS.KEYREL.PRED "_shopping_n_rel" ].
 
-%27grodgos := common_noun_lex-noun-lex &
-  [ STEM < "'grodgos" >,
+1grodgos := common_noun_lex-noun-lex &
+  [ STEM < "1grodgos" >,
     SYNSEM.LKEYS.KEYREL.PRED "_going_n_rel" ].
+
+gzugspo := common_noun_lex-noun-lex &
+  [ STEM < "gzugspo" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_body_n_rel" ].
+
+nyuku := common_noun_lex-noun-lex &
+  [ STEM < "nyuku" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_pen_n_rel" ].
+
+mi := common_noun_lex-noun-lex &
+  [ STEM < "mi" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_people_n_rel" ].
 
 nga := 1st_person_lex-noun-lex &
   [ STEM < "nga" >,
@@ -63,11 +75,39 @@ mo := 3rd_person_f_lex-noun-lex &
 
 ;;; Adjectives
 
+mangpo := nom-adj-verb-lex-adj-lex &
+  [ STEM < "mangpo" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_many_a_rel" ].
+
+bdepo := nom-adj-verb-lex-adj-lex &
+  [ STEM < "bdepo" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_well_a_rel" ].
+
+nakpo := nom-adj-verb-lex-adj-lex &
+  [ STEM < "nakpo" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_black_a_rel" ].
+
+mangse := nom-adj-verb-lex-adj-lex &
+  [ STEM < "mangse" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_many_a_rel" ].
+
 ;;; Verbs
 
 blebs := intransitive-verb-lex-verb-lex &
   [ STEM < "blebs" >,
     SYNSEM.LKEYS.KEYREL.PRED "_arrive_v_rel" ].
+
+1si := intransitive-verb-lex-verb-lex &
+  [ STEM < "1si" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_die_v_rel" ].
+
+1gro := intransitive-verb-lex-verb-lex &
+  [ STEM < "1gro" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_go_v_rel" ].
+
+gros := intransitive-verb-lex-verb-lex &
+  [ STEM < "gros" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_go_v_rel" ].
 
 bcag := transitive-erg-verb-lex-verb-lex &
   [ STEM < "bcag" >,
@@ -88,6 +128,22 @@ klog := transitive-erg-verb-lex-verb-lex &
 byed := transitive-erg-verb-lex-verb-lex &
   [ STEM < "byed" >,
     SYNSEM.LKEYS.KEYREL.PRED "_do_v_rel" ].
+
+btang := transitive-erg-verb-lex-verb-lex &
+  [ STEM < "btang" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_write_v_rel" ].
+
+sprad := transitive-erg-verb-lex-verb-lex &
+  [ STEM < "sprad" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_give_v_rel" ].
+
+gnang := transitive-erg-verb-lex-verb-lex &
+  [ STEM < "gnang" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_give_v_rel" ].
+
+nyo := transitive-erg-verb-lex-verb-lex &
+  [ STEM < "nyo" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_buy_v_rel" ].
 
 gzhus := obj-dat-trans-verb-lex-verb-lex &
   [ STEM < "gzhus" >,
@@ -134,6 +190,17 @@ yogmared := yogmared-aux-lex &
   [ STEM < "yogmared" >,
     SYNSEM.LKEYS.KEYREL.PRED "neg_rel" ].
 
+ryguin := ryguin-aux-lex &
+  [ STEM < "ryguin" > ].
+
+;;; Copulas
+
+re := copula-verb-lex-cop-lex &
+  [ STEM < "re" > ].
+
+pa := copula-verb-lex-cop-lex &
+  [ STEM < "pa" > ].
+
 ;;; Determiners
 
 cig := determinant-adj-lex-determiner-lex &
@@ -144,10 +211,14 @@ de := determinant-adj-lex-determiner-lex &
   [ STEM < "de" >,
     SYNSEM.LKEYS.KEYREL.PRED "_that_q_rel" ].
 
-%27di := determinant-adj-lex-determiner-lex &
-  [ STEM < "'di" >,
+1di := determinant-adj-lex-determiner-lex &
+  [ STEM < "1di" >,
     SYNSEM.LKEYS.KEYREL.PRED "_this_q_rel" ].
 
 rogspa := determinant-adj-lex-determiner-lex &
   [ STEM < "rogspa" >,
     SYNSEM.LKEYS.KEYREL.PRED "_many_q_rel" ].
+
+ti := determinant-adj-lex-determiner-lex &
+  [ STEM < "ti" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_this_q_rel" ].

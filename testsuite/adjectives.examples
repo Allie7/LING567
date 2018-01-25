@@ -1,5 +1,4 @@
-
-#Source b: "The Tibetan adjective may be classified as an 'adjectival verb'
+# Source b: The Tibetan adjective may be classified as an adjectival verb
 # whose combinatorial possiblities differ from, but overlap, those of 
 # lexical verbs and verbs of being. 
 
@@ -7,20 +6,59 @@ Source: b:190
 Vetted: s
 Judgment: g
 Phenomena: adj
-mi	mangpo		zhepo	cig	'dug
-mi	mang-po		zhepo	cig	'dug
+mi	mangpo		zhepo	cig	1dug
+mi	mang-po		zhepo	cig	1dug
 person	many-nom	very	num	exist
-'There are a tremendous lot of people'
+"There are a tremendous lot of people"
+
+#Derived
+
+
+Source: author
+Vetted: f
+Judgment: g
+Phenomena: adj
+mi	mangpo		cig	1dug
+mi	mang-po		cig	1dug
+person	many-nom	num	exist
+"There are a many people"
+
 
 
 Source: b:190
 Vetted: s
 Judgment: g
 Phenomena: adj
-gzugspo		bdepo		''a'utse	yod
-gzugspo		bde-po		''a'utse	yod
+gzugspo		bdepo		11a1utse	yod
+gzugspo		bde-po		11a1utse	yod
 body		well-nom	reasonably	exist
 "I'm reasonably well"
+
+#
+# Predicative/Attributive ambiguity
+#
+# Source D, Constructions involving an attributive adjective
+# bear a superficial resemblance to constructions with a predicate
+# adjective
+
+Source: d:95
+Vetted: s
+Judgment: g
+Phenomena: adj
+nyuku	ti	nakpo		re	
+nyuku	ti	nak-po		re
+pen	this	black-nom	be
+"This pen is black"
+
+Source: d:95
+Vetted: s
+Judgment: g
+Phenomena: adj
+nyuku	nakpo		ti	re	
+nyuku	nak-po		ti	re
+pen	black-nom	this	be
+'This is a black pen'
+
 
 #copular
 
@@ -28,10 +66,10 @@ Source: b:190
 Vetted: s
 Judgment: g
 Phenomena: adj
-chu	tshapo	'drapo	'dug
-chu	tsha-po	'drapo	'dug
+chu	tshapo	1drapo	1dug
+chu	tsha-po	1drapo	1dug
 water	hot-nom	sort_of	be
-'The water was sort of hot'
+"The water was sort of hot"
 
 ########
 
@@ -39,30 +77,26 @@ Source: b:183
 Vetted: s
 Judgement: g
 Phenomena: adj
-mi  mangse  'dug
-mi  mang-se 'dug
+mi  mangse  1dug
+mi  mang-se 1dug
 people many-nom be
 "There are rather a lot of People."
+
 
 Source: b:184
 Vetted: s
 Judgement: g
-Phenonmena: adj, tam
-khangpa che drags  kyi'dug
-khangpa che drags  kyi-'dug
+Phenomena: adj, tam
+khangpa che drags  kyi1dug
+khangpa che drags  kyi-1dug
 house   big exceed LK-AUX
 "The house is too big."
-
 
 Source: b:124
 Vetted: s
 Judgement: g
-Phenonmena: adj, tam
-ja 'di zhimpo yin
-ja 'di zhim-po yin
+Phenomena: adj
+ja 1di zhimpo yin
+ja 1di zhim-po yin
 tea this tasty-nom  be
 "This tea is tasty."
-
-
-
-

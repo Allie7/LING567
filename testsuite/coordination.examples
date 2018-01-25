@@ -42,8 +42,8 @@ Source: b:104
 Vetted: s
 Judgment: g
 Phenomena: crd, crdagr
-lcogtse	tshangma	'ditsho		dang	rkubkyag	thsong	giyin
-lcogtse	tshangma	'di-tsho	dang	rkubkyag	thsong	gi-yin
+lcogtse	tshangma	1ditsho		dang	rkubkyag	thsong	giyin
+lcogtse	tshangma	1di-tsho	dang	rkubkyag	thsong	gi-yin
 table	all		this-num	CRD	chair		sell	LK-AUX
 "I shall sell all these tables and the chairs"
 
@@ -63,8 +63,8 @@ Source: author
 Vetted: f
 Judgment: g
 Phenomena: crd, crdagr
-mar	dang	phyurba	sha	pagspa	'dug	
-mar	dang	phyurba	sha	pagspa	'dug
+mar	dang	phyurba	sha	pagspa	1dug	
+mar	dang	phyurba	sha	pagspa	1dug
 butter	CRD	cheese	meat	hide	exist
 "There are butter, cheese, meats and hides."
 

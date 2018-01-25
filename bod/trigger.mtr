@@ -26,13 +26,20 @@ yogred_gr := arg0e_gtr &
     FLAGS.TRIGGER "1dra" ].
 
 byung_gr := arg0e_gtr &
-  [ CONTEXT.RELS <! [ ARG0.E.TENSE past ] !>,
+  [ CONTEXT.RELS <! [ ARG0.E [ TENSE past,
+                               ASPECT prf ] ] !>,
     FLAGS.TRIGGER "byung" ].
 
 song_gr := arg0e_gtr &
-  [ CONTEXT.RELS <! [ ARG0.E.TENSE past ] !>,
+  [ CONTEXT.RELS <! [ ARG0.E [ TENSE past,
+                               ASPECT prf ] ] !>,
     FLAGS.TRIGGER "song" ].
 
 yong_gr := arg0e_gtr &
   [ CONTEXT.RELS <! [ ARG0.E.TENSE future ] !>,
     FLAGS.TRIGGER "yong" ].
+
+ryguin_gr := arg0e_gtr &
+  [ CONTEXT.RELS <! [ ARG0.E [ TENSE present,
+                               ASPECT pros ] ] !>,
+    FLAGS.TRIGGER "ryguin" ].

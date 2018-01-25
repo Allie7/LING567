@@ -25,18 +25,18 @@ Source: b:137
 Vetted: s
 Judgment: g
 Phenomena: wo, c, tam
-sangnyin  ngas    laska  'di   byed	kyiyin
-sangnyin  nga-s    laska  'di   byed	kyi-yin
+sangnyin  ngas    laska  1di   byed	kyiyin
+sangnyin  nga-s    laska  1di   byed	kyi-yin
 tomorrow  1ST-ERG  work   this  do	LK-AUX
-'He is sure to do the work.'
+'He is sure to do the work tomorrow.'
 
 #IMPERATIVE
 Source: b:227
 Vetted: s
 Judgment: g
 Phenomena: wo, c, tam
-laska	'di	tsharba		byed	''a
-lask	'di	tsharba		byed	''a	
+laska	1di	tsharba		byed	11a
+lask	1di	tsharba		byed	11a	
 work	this	finish_nom	do	IMP
 'Try to finish the work'
 
@@ -50,14 +50,13 @@ Source: a:132
 Vetted: s
 Judgment: g
 Phenomena: wo, c, tam
-nga     'si byung
-nga     'si-byung
+nga     1si byung
+nga     1si-byung
 I       die-PRF
 'I have died.'
 
 #habitual is formed with tense
 #and markers
-
 
 #recent aspect
 #reference time immediately follows event time
