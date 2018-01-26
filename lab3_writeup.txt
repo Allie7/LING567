@@ -1,17 +1,60 @@
+Lab3 writeup
+
+We have added coordination, negation, attributed adjectives in our test suite:	
+	
+	a. Negation
+
+	In Tibetan, negation is generally marked on the auxiliary verbs with the prefixes mi- or ma-. Lexical verbs can be marked too as a minority pattern. Each auxiliary verb has specific requirements on which prefix it can be added to.
+
+#Examples for Negation 
+
+Source: b:145
+Vetted: s
+Judgment: g
+Phenomena: wo, neg, tam
+khos    yige btang masong
+kho-s   yige btang ma-song
+he-ERG  yige send  NEG-PAST
+"He didn't send a letter.”
+
+Source: b:145
+Vetted: s
+Judgment: u
+Phenomena: neg
+khos    yige btang misong
+kho-s   yige btang mi-song
+he-ERG  yige send  NEG-PAST
+"He didn't send a letter.”
+
+Source: author
+Vetted: f
+Judgment: g
+Phenomena: neg
+khos    yige mabtang
+kho-s   yige ma-btang
+he-ERG  yige NEG-send
+"He didn't send a letter."
+
+	
+	There’s obligatory contraction for certain auxiliary verbs, namely “yin”, “yod”, and “yogred”. When negated, “yin” became “man”, “yod” became “med”, “yogred” became “yogmared”.
+
+#Examples for negation contraction
+	
+Source: b:146
+Vetted: s
+Judgment: g
+Phenomena: wo, neg, tam
+ngas    sprad med
+nga-s    sprad med
+1ST-ERG give NEG_AUX
+"I didn't give.”
+
+Choices: Since Tibetan has three polarity types, though we are only required to do negation for lab3, we created a general polarity-marker inflection type in the morphology page. Under it we created a polarity-marker super type that has negation feature specified on the verb, and then we created two separate subtypes for “mi” and “ma”. 
+for the non-contracted forms, since each auxiliary verb stem has requirement on which affix can be added(not only for negation-marking, but for all inflections), we decide to give each auxiliary verb stem an independent entry. for each verb, we specify the morphological constraints to forbid it to undergo the morphology rule type that adds the wrong affix to it.
+for “yin”, “yod” and “yogred”, we forbid the whole negation marking rule super type, and create separate lexicon types for their negated forms. for the negated forms, we specify their predicate to be “neg_rel”, and forbid the whole polarity marker inflection. 
 
 
-Lab 3 Writeup
-
-
-I & II. Test suite instances and choices
-
-A. Negation
-
-Choices:
-
-B. Agreement
-
-C&D. Coordination & Agreement in coordinated NPs
+B. Coordination & Agreement in coordinated NPs
 
 By searching through the realworld text at the end of the source B, we found examples of NP coordination and so-called "weak" VP coordination.
 Because the examples were complex, we started working with simplified ones but also kept the originals.
@@ -135,7 +178,6 @@ nyuku   nak-po          ti      re
 pen     black-nom       this    be
 'This is a black pen'
 
-
 Choices: To implement this, we had to pretend that Tibetan had adjectives. We specified that the nominalized
 adjectival verbs were both attributive and predicative based on the example above. We specified that adjectives
 modify the items before them. Finally we said that adjectives impossibly appear as the complement of a copula 
@@ -157,29 +199,80 @@ He      Tibetan good-nom        know    LK-AUX
 
 Choices: we have made no choices for this yet
 
-G. Tense/Aspect
 
-Morphology:
+A. Negation, see part 1.
+      B. Tense
+	In Tibetan, tense is indicated by a combination of the auxiliary verb(negated or not) and a prefix. The auxiliaries “song”, “yong” and “byung” already carry tense information by themselves, thus do not allow additional affixes.
+	
+#Example1 for tense
+Source: a:132
+Vetted: s
+Judgment: g
+Phenomena: wo, c, tam
+nga     1si byung
+nga     1si-byung
+I       die-PAST
+'I have died.’
 
-Choices:
+Source: author
+Vetted: f
+Judgment: u
+Phenomena: wo, c, tam
+nga     1si pa-byung
+nga     1si pa-byung
+I       die PAST-PAST
+'I have died.’
+Choices: Specify the tense feature in their lexicon type.
 
-H. Sentential Negation
+	The auxiliaries “yin”, “yod”, “red”, “1dug” and “yogred” combine with particular prefixes to indicate tense. different combinations will have different indications. For example, “pa+yin” indicates Past Tense, “gi+yin” indicates Future Tense, “gi+yod” indicates Present Tense and “pa+yod” indicates Future Tense. The prefixes are: gi-, gyi-, kyi-, pa-, ba-, ga-, nga- and ra-
 
-III. Testsuite instances not yet covered
 
-We do not parse any of the testsuite instances dealing with:
+#past tense
+Source: b:137
+Vetted: s
+Judgment: g
+Phenomena: wo, c, tam
+ngas  yige    klog bayin
+nga-s  yige    klog ba-yin
+1ST-ERG letter  read LK-AUX
+'I read the letter.'
+
+
+Choices: We first added lexical rule types for each tense and specify the tense on the verb, for Future Tense which have two different affixes as markers, we construct two subtypes. Then under the lexicon type for each auxiliary, we specify the morphological constraints to forbid the auxiliary to undergo certain rules.
+
+
+          Aspect
+	Tibetan has four aspects, Perfect, Recent, Progressive and Prospective. The simple perfect aspect is indicated by either the auxiliary verbs or adding the affixes. The simple perfect form takes suffixes as markers and the rest uses prefixes.
+
+#
+#Space for the examples
+#
+
+Choices: We create two inflection types for aspect, one for suffixes and one for prefixes. For the auxiliary verbs that indicates aspect by themselves, specify the tense feature in their lexicon type.
+
+
+      C. Noun Inflections
+	1. case marker
+	2. plurals for pronoun
+	3. self-marking
+      *D. Mood markers. 
+	Tibetan mood markers are affixes (prefix or suffix, depending on the mood value) attached to the auxiliary verbs. Though lab3 doesn’t require us to do mood, many of the examples we can find for our test suite include this phenomenon. In order to get those examples parsed, we added two temporary mood-marker rule to allow the mood-marking suffixes to attach to the verbs.
+	
+
+Testsuite instances not yet covered:
 * Wh-Questions
-* Aspect & Tense
-* Auxiliary verbs  
 * Adjunct phrases (instrumental verbs)
+* Adverbs
 
-IV. Coverage and Overgeneration
+Coverage & others:
 
+unsolved problems:
 
-V. Outside domain of customization
+Outside domain of customization system:
 
 We were not able to model adverbs and adjectives as the verbs they truly are based on the customization system.
 
+We were not able to implement coordination with the monosydeton paradigm for A, AND, B, C, but our analysis may change.
 
 
 
