@@ -6,6 +6,157 @@ Date: January 13, 2018
 Source a:DeLancey, Scott. "Transitivity and ergative case in Lhasa Tibetan." Annual Meeting of the Berkeley Linguistics Society. Vol. 10. 1984.
 Source b:Denwood, Philip. Tibetan. Vol. 3. John Benjamins Publishing, 1999.
 Source c:LaPolla, Randy J., and Graham Thurgood, eds. The Sino-Tibetan Languages. Routledge, 2006.
+Source d:Tournadre, Nicolas. Manual of standard Tibetan: language and civilization: introduction to standard Tibetan (spoken and written) followed by an appendix on classical literary Tibetan. Snow Lion Publications, Incorporated, 2003.
+
+
+
+
+
+#testsuite//adjectives.examples
+
+
+# Source b: The Tibetan adjective may be classified as an adjectival verb
+# whose combinatorial possiblities differ from, but overlap, those of 
+# lexical verbs and verbs of being. 
+
+Source: b:190
+Vetted: s
+Judgment: g
+Phenomena: adj
+mi	mangpo		zhepo	cig	1dug
+mi	mang-po		zhepo	cig	1dug
+person	many-nom	very	num	exist
+"There are a tremendous lot of people"
+
+#Derived
+Source: author
+Vetted: f
+Judgment: g
+Phenomena: adj
+mi	mangpo		cig	1dug
+mi	mang-po		cig	1dug
+person	many-nom	num	exist
+"There are a many people"
+
+#incorrect order
+Source: author
+Vetted: f
+Judgment: u
+Phenomena: adj
+mangpo		mi		cig	1dug
+mang-po		mi		cig	1dug
+many-nom	people	num	exist
+"There are a many people"
+
+
+
+
+
+Source: b:190
+Vetted: s
+Judgment: g
+Phenomena: adj
+gzugspo		bdepo		11a1utse	yod
+gzugspo		bde-po		11a1utse	yod
+body		well-nom	reasonably	exist
+"I'm reasonably well"
+
+#
+# Predicative/Attributive ambiguity
+#
+# Source D, Constructions involving an attributive adjective
+# bear a superficial resemblance to constructions with a predicate
+# adjective
+
+Source: d:95
+Vetted: s
+Judgment: g
+Phenomena: adj
+nyuku	ti	nakpo		re	
+nyuku	ti	nak-po		re
+pen	this	black-nom	be
+"This pen is black"
+
+Source: d:95
+Vetted: s
+Judgment: g
+Phenomena: adj
+nyuku	nakpo		ti	re	
+nyuku	nak-po		ti	re
+pen	black-nom	this	be
+'This is a black pen'
+
+
+#copular
+
+Source: b:190
+Vetted: s
+Judgment: g
+Phenomena: adj
+chu	tshapo	1drapo	1dug
+chu	tsha-po	1drapo	1dug
+water	hot-nom	sort_of	be
+"The water was sort of hot"
+
+########
+
+Source: b:183
+Vetted: s
+Judgement: g
+Phenomena: adj
+mi  mangse  1dug
+mi  mang-se 1dug
+people many-nom be
+"There are rather a lot of People."
+
+
+Source: b:184
+Vetted: s
+Judgement: g
+Phenomena: adj, tam
+khangpa che drags  kyi1dug
+khangpa che drags  kyi-1dug
+house   big exceed LK-AUX
+"The house is too big."
+
+Source: b:124
+Vetted: s
+Judgement: g
+Phenomena: adj
+ja 1di zhimpo yin
+ja 1di zhim-po yin
+tea this tasty-nom  be
+"This tea is tasty."
+
+#testsuite//adverbs.examples
+
+
+
+#Source B (209), 
+#Nominalised adjectives are frequenly used as adjuncts "adverbially"
+#without any adjunct-marking particle
+
+Source: b:209
+Vetted: s
+Judgment: g
+Phenomena: adv
+khong	bodskad	yagpo		mkhyen	gyi1dug
+khong	bodskad	yag-po		mkhyen	gyi-'dug
+He	Tibetan	good-nom	know	LK-AUX
+'He knows Tibetan well'
+
+#Source B (186)
+#Alternatively, the "adverbial" particle byas or byasnas may follow
+#the nominalised adjective
+
+Source: b:186
+Vetted: s
+Judgment: g
+Phenomena: adv
+khyedranggis	laska	hurpo		byasnas		mgo	tshugsshag
+kyedrang-gis	laska	hur-po		byas-nas	mgo	thugsshag
+you-ERG		work	active-nom	did-sub		begin	AUX
+"You evidently started the work engergetically"
 
 
 
@@ -155,6 +306,171 @@ nga-s   kho   yige    btang	gi-yin
 I-ERG   3SG   letter  send	LK-AUX
 'I will send him a letter.'
 
+#testsuite//coordination.examples
+
+
+#
+# Source b, 220
+# "A bare lexical verb stem with no linker, auxiliary or subordinator
+# ... marks a very weak of subordination which in some cases might
+# better be called co-ordination"
+#
+
+
+Source: b:220
+Vetted: s
+Judgment: g
+Phenomena: crd, crdagr
+zhoggas	ngatshos	yige	bris	denas	khalag	bzas	denas	chamchamla	phyin	payin
+zhoggas	nga-tsho-s	yige	bris	denas	khalag	bzas	denas	chamcham-la	phyin	pa-yin
+morning	I-num-ERG	letter	write	then	meal	ate	then	walk-DAT	went	LK-AUX
+"In the morning we wrote letters, then we had a meal, then we went for a walk"
+
+#simplified VP  coordination
+Source: author
+Vetted: f
+Judgment: g
+Phenomena: crd, crdagr
+ngatshos	yige	bris	khalag	bzas
+nga-tsho-s	yige	bris	khalag	bzas
+I-num-ERG	letter	write	meal	ate
+"We wrote letters and ate a meal"
+
+#simplified VP  coordination with wrong coordination
+Source: author
+Vetted: f
+Judgment: u
+Phenomena: crd
+ngatshos        yige    bris    dang    khalag  bzas
+nga-tsho-s      yige    bris    dang    khalag  bzas
+I-num-ERG       letter  write   and     meal    ate
+"We wrote letters and ate a meal"
+
+
+#
+#Here is a second example of coordination with verbs showing this pattern 
+#but it uses two VPs
+#
+
+Source: b:277
+Vetted: s
+Judgment: g
+Phenomena: crd, crdagr
+grogspo	mi	dila		yar	khorangla	skyeddman	yogred	bugu	yogred
+grogspo	mi	di-la		yar	khorang-la	skyeddman	yogred	bugu	yogred
+friend	man	this-DAT	top.	he-DAT		wife		exist	child	exist
+'The friend had a wife and child'
+
+#Simplified true example
+Source: author
+Vetted: f
+Judgment: g
+Phenomena: crd, crdagr
+khorangla	skyeddman	yogred	bugu	yogred
+khorang-la	skyeddman	yogred	bugu	yogred
+he-DAT		wife		exist	child	exist
+'He had a wife and child'
+
+
+#The co-ordinating particle dang ... links two noun phrases 
+#which are of the same status as clause arguments (i.e. subject, object or adjunct)"
+Source: b:104
+Vetted: s
+Judgment: g
+Phenomena: crd, crdagr
+lcogtse	tshangma	1ditsho		dang	rkubkyag	thsong	giyin
+lcogtse	tshangma	1di-tsho	dang	rkubkyag	thsong	gi-yin
+table	all		this-num	CRD	chair		sell	LK-AUX
+"I shall sell all these tables and the chairs"
+
+#simplified version of the above
+Source: author
+Vetted: f
+Judgment: g
+Phenomena: crd, crdagr
+ngas	lcogtse	dang	rkubkyag	thsong	giyin
+nga-s	lcogtse	dang	rkubkyag	thsong	gi-yin
+I-ERG	table	CRD	chair		sell	LK-AUX
+"I shall sell the tables and chairs"
+
+#this example is a made up example based on the above
+#assumed to be incorrect
+#missing coordinator
+Source: author
+Vetted: f
+Judgment: g
+Phenomena: crd, crdagr
+ngas	lcogtse rkubkyag	thsong	giyin
+nga-s	lcogtse	rkubkyag	thsong	gi-yin
+I-ERG	table	chair		sell	LK-AUX
+"I shall sell the tables and chairs"
+
+
+
+#
+# Wrong case agreement
+#
+Source: author
+Vetted: f
+Judgment: u
+Phenomena: crdagr
+ngas	lcogtsela	dang	rkubkyag	thsong	giyin
+nga-s	lcogtse-la	dang	rkubkyag	thsong	gi-yin
+I-ERG	table-DAT	CRD	chair		sell	LK-AUX
+"I shall sell the tables and chairs"
+
+#
+# Mixed subject object marking
+#
+Source: author
+Vetted: f
+Judgment: u
+Phenomena: crdagr
+ngas	lcogtses	dang	rkubkyag	thsong	giyin
+nga-s	lcogtse-s	dang	rkubkyag	thsong	gi-yin
+I-ERG	table-ERG	CRD	chair		sell	LK-AUX
+"I shall sell the tables and chairs"
+
+
+
+
+#This is an example of coordination with more than one noun
+Source: b:277
+Vetted: s
+Judgment: g
+Phenomena: crd, crdagr
+denas	khothso		gangkha		mar	dang	phyurba	sha	pagspa	dopo	brgyabnas	lhasala		tshonggag	yong	gired
+de-nas	kho-tsho	gangkha		mar	dang	phyurba	sha	pagspa	dopo	brgyab-nas	lhasa-la	tshong-gag	yong	gi-red
+de-ABL	3sg-num		all		butter	CRD	cheese	meat	hide	load	make_up-SUB	Lhasa-DAT	sell-SUB	come	LK-AUX
+"Then they all make up loads of butter, cheese, meats and hides and come to Lhasa to sell them"
+
+#this example is a made up example based on the above
+Source: author
+Vetted: f
+Judgment: g
+Phenomena: crd, crdagr
+mar	dang	phyurba	sha	pagspa	1dug	
+mar	dang	phyurba	sha	pagspa	1dug
+butter	CRD	cheese	meat	hide	exist
+"There are butter, cheese, meats and hides."
+
+#this example is a made up example based on the above
+#assumed to be incorrect
+#missing coordinator
+Source: author
+Vetted: f
+Judgment: u
+Phenomena: crd
+mar	phyurba	sha	pagspa	1dug	
+mar	phyurba	sha	pagspa	1dug
+butter	cheese	meat	hide	exist
+"There are butter, cheese, meats and hides."
+
+
+
+
+
+
 #testsuite//determiner.examples
 
 
@@ -185,8 +501,8 @@ Source: author
 Vetted: f
 Judgment: u
 Phenomena: det
-cig `mibculngatsam yogred
-cig `mi-bculngatsam yog_red
+cig 1mibculngatsam yogred
+cig 1mi-bculngatsam yog_red
 num People-FiteenAbout exist
 'There are about fiteeen people.'
 
@@ -197,12 +513,104 @@ Source: d:100
 Vetted: s
 Judgment: g
 Phenomena: wo, c, det
-`mibculngatsam  yogred
-`mi-bculngatsam  yog_red
+1mibculngatsam  yogred
+1mi-bculngatsam  yog_red
 People-FiteenAbout exist
 'There are about fiteeen people.'
 
 
+
+
+
+#testsuite//negation.examples
+
+
+
+#Source B (116), 
+#It seems that the negative particles attach to the left of stem or aux verbs
+Source: b:116
+Vetted: s
+Judgment: g
+Phenomena: wo, neg
+maphyinparedda
+ma-phyin        pa-red-da
+not-went        LK-AUX-EMPH
+'Certainly he didn't go.'
+
+#derived negative example 
+Source: author
+Vetted: f
+Judgment: u
+Phenomena: neg
+phyinmaparedda
+phyin-ma        pa-red-da
+went-ma        LK-AUX-EMPH
+'Certainly he didn't go.'
+
+# Ex. 2
+# Here is an example of a
+# neg attaching to the aux verb
+Source: b:116
+Vetted: s
+Judgment: g
+Phenomena: wo, neg
+1grogimi1dugga
+1gro	gi-mi-1dug-ga
+Go	LK-NEG-AUX-EMPH
+"Certainly he's not going"
+
+#Here is a derived example
+#with negation after the AUX
+Source: author
+Vetted: f
+Judgment: u
+Phenomena: neg
+1grogi1dugmiga
+1gro	gi-1dug-mi-ga
+Go	LK-AUX-NEG-EMPH
+"Certainly he's not going"
+
+
+#Negation Example 3
+#Past tense negation
+Source: b:145
+Vetted: s
+Judgment: g
+Phenomena: wo, neg, tam
+khos    yige btang masong
+kho-s   yige btang ma-song
+he-ERG  yige send  NEG-AUX
+"He didn't send a letter."
+
+#wrong NEG affixes for AUX song
+Source: author
+Vetted: f
+Judgment: u
+Phenomena: neg
+khos    yige btang misong
+kho-s   yige btang mi-song
+he-ERG  yige send  NEG-AUX
+"He didn't send a letter."
+
+#negation examples on transtive verbs
+Source: b:146
+Vetted: s
+Judgment: g
+Phenomena: wo, neg, tam
+ngas    sprad med
+nga-s    sprad med
+1ST-ERG give NEG_AUX
+"I didn't give."
+
+#Lexical verb minority negation form
+Source: b:146
+Vetted: s
+Judgment: g
+Phenomena: wo, neg, tam
+khonggis   magnang  pared
+khong-gis  ma-gnang pa-red
+3SG-ERG    NEG-give LK-AUX
+"He didn't give it."
 
 
 
@@ -232,8 +640,8 @@ Source: b:178
 Vetted: s
 Judgment: g
 Phenomena: pn, wo
-nga 'gro	dgosred
-nga 'gro	dgos-red
+nga 1gro	dgosred
+nga 1gro	dgos-red
 I   go		LK-AUX
 'I  must go.'
 
@@ -241,8 +649,8 @@ Source: b:107
 Vetted: s
 Judgment: g
 Phenomena: pn
-kyedrang 'gro	dgos	kyired
-kyedrang 'gro	dgos	kyi-red
+kyedrang 1gro	dgos	kyired
+kyedrang 1gro	dgos	kyi-red
 you       go	should	LK-AUX
 'you  should go'
 
@@ -250,8 +658,8 @@ Source: b:178
 Vetted: s
 Judgment: g
 Phenomena: pn
-khong 'grodgos    byed	kyired
-khong 'gro-dgos   byed	kyi-red
+khong 1grodgos    byed	kyired
+khong 1gro-dgos   byed	kyi-red
 she    go-nom     do	LK-AUX
 'she will have to go.'
 
@@ -278,8 +686,8 @@ Source: b:178
 Vetted: s
 Judgment: g
 Phenomena: pn
-motsho  'grodgos    byed	kyired
-morang-tsho 'gro-dgos   byed	kyi-red
+motsho  1grodgos    byed	kyired
+morang-tsho 1gro-dgos   byed	kyi-red
 3RD-F_PL    go-nom     do	LK-AUX
 'They will have to go.'
 
@@ -314,18 +722,18 @@ Source: b:137
 Vetted: s
 Judgment: g
 Phenomena: wo, c, tam
-sangnyin  ngas    laska  'di   byed	kyiyin
-sangnyin  nga-s    laska  'di   byed	kyi-yin
+sangnyin  ngas    laska  1di   byed	kyiyin
+sangnyin  nga-s    laska  1di   byed	kyi-yin
 tomorrow  1ST-ERG  work   this  do	LK-AUX
-'He is sure to do the work.'
+'He is sure to do the work tomorrow.'
 
 #IMPERATIVE
 Source: b:227
 Vetted: s
 Judgment: g
 Phenomena: wo, c, tam
-laska	'di	tsharba		byed	''a
-lask	'di	tsharba		byed	''a	
+laska	1di	tsharba		byed	11a
+lask	1di	tsharba		byed	11a	
 work	this	finish_nom	do	IMP
 'Try to finish the work'
 
@@ -339,14 +747,13 @@ Source: a:132
 Vetted: s
 Judgment: g
 Phenomena: wo, c, tam
-nga     'si byung
-nga     'si-byung
+nga     1si byung
+nga     1si-byung
 I       die-PRF
 'I have died.'
 
 #habitual is formed with tense
 #and markers
-
 
 #recent aspect
 #reference time immediately follows event time
@@ -383,8 +790,8 @@ Source: author
 Vetted: f
 Judgment: g
 Phenomena: det, tam, neg
-yige    de    medpa	'dra
-yige    de    med-pa	'dra
+yige    de    medpa	1dra
+yige    de    med-pa	1dra
 letter  that  neg-EXIST	AUX 
 'That letter does not seem to be here'
 
@@ -392,8 +799,8 @@ Source: author
 Vetted: f
 Judgment: g
 Phenomena: det, tam, neg
-yige    medpa		'dra
-yige    med-pa		'dra
+yige    medpa		1dra
+yige    med-pa		1dra
 letter  neg-EXIST	AUX
 'The letter does not seem to be here.'
 
@@ -486,8 +893,8 @@ Source: a:132
 Vetted: s
 Judgment: g
 Phenomena: wo, c, 
-nga	'si	byung
-nga	'si	byung
+nga	1si	byung
+nga	1si	byung
 I	die	AUX.PRF
 'I have died.'
 
@@ -496,8 +903,8 @@ Source: author
 Vetted: f
 Judgment: u
 Phenomena: wo 
-'si	byung	nga
-'si	byung	nga
+1si	byung	nga
+1si	byung	nga
 die	PRF	nga
 'I have died.'
 
