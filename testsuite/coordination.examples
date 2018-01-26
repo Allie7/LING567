@@ -3,13 +3,13 @@
 # "A bare lexical verb stem with no linker, auxiliary or subordinator
 # ... marks a very weak of subordination which in some cases might
 # better be called co-ordination"
-#
+# These are also considered serial verb constructions
 
 
 Source: b:220
 Vetted: s
 Judgment: g
-Phenomena: crd, crdagr
+Phenomena: crd, crdagr, svc
 zhoggas	ngatshos	yige	bris	denas	khalag	bzas	denas	chamchamla	phyin	payin
 zhoggas	nga-tsho-s	yige	bris	denas	khalag	bzas	denas	chamcham-la	phyin	pa-yin
 morning	I-num-ERG	letter	write	then	meal	ate	then	walk-DAT	went	LK-AUX
@@ -19,7 +19,7 @@ morning	I-num-ERG	letter	write	then	meal	ate	then	walk-DAT	went	LK-AUX
 Source: author
 Vetted: f
 Judgment: g
-Phenomena: crd, crdagr
+Phenomena: crd, crdagr, svc
 ngatshos	yige	bris	khalag	bzas
 nga-tsho-s	yige	bris	khalag	bzas
 I-num-ERG	letter	write	meal	ate
@@ -44,7 +44,7 @@ I-num-ERG       letter  write   and     meal    ate
 Source: b:277
 Vetted: s
 Judgment: g
-Phenomena: crd, crdagr
+Phenomena: crd, crdagr, svc
 grogspo	mi	dila		yar	khorangla	skyeddman	yogred	bugu	yogred
 grogspo	mi	di-la		yar	khorang-la	skyeddman	yogred	bugu	yogred
 friend	man	this-DAT	top.	he-DAT		wife		exist	child	exist
@@ -54,7 +54,7 @@ friend	man	this-DAT	top.	he-DAT		wife		exist	child	exist
 Source: author
 Vetted: f
 Judgment: g
-Phenomena: crd, crdagr
+Phenomena: crd, crdagr, svc
 khorangla	skyeddman	yogred	bugu	yogred
 khorang-la	skyeddman	yogred	bugu	yogred
 he-DAT		wife		exist	child	exist

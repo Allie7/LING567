@@ -17,6 +17,8 @@ kho-s   yige btang ma-song
 he-ERG  yige send  NEG-PAST
 "He didn't send a letter.”
 
+This example is ungrammatical because mi- inflect "song," but rather "ma" does:
+
 Source: b:145
 Vetted: s
 Judgment: u
@@ -25,6 +27,8 @@ khos    yige btang misong
 kho-s   yige btang mi-song
 he-ERG  yige send  NEG-PAST
 "He didn't send a letter.”
+
+This is an example of the minority pattern in which the stem verb is modified directly:
 
 Source: author
 Vetted: f
@@ -57,9 +61,23 @@ for “yin”, “yod” and “yogred”, we forbid the whole negation marking 
 B. Coordination & Agreement in coordinated NPs
 
 By searching through the realworld text at the end of the source B, we found examples of NP coordination and so-called "weak" VP coordination.
-Because the examples were complex, we started working with simplified ones but also kept the originals.
+Because the examples were complex, we started working with simplified ones but also kept the originals which can be seen in our testsuite examples.
 
 NPs are coordinated by the word "dang" which means roughtly "with" under the monosyndeton paradigm. This coordinating particle falls between the first NP and the rest.
+
+This is an example of coordination with more than one noun:
+
+Source: b:277
+Vetted: s
+Judgment: g
+Phenomena: crd, crdagr
+denas   khothso         gangkha         mar     dang    phyurba sha     pagspa  dopo    brgyabnas       lhasala         tshonggag       yong    gired
+de-nas  kho-tsho        gangkha         mar     dang    phyurba sha     pagspa  dopo    brgyab-nas      lhasa-la        tshong-gag      yong    gi-red
+de-ABL  3sg-num         all             butter  CRD     cheese  meat    hide    load    make_up-SUB     Lhasa-DAT       sell-SUB        come    LK-AUX
+"Then they all make up loads of butter, cheese, meats and hides and come to Lhasa to sell them"
+
+
+Here is a simplified version of another example we found:
 
 Source: author
 Vetted: f
@@ -81,12 +99,12 @@ nga-s   lcogtse-s       dang    rkubkyag        thsong  gi-yin
 I-ERG   table-ERG       CRD     chair           sell    LK-AUX
 "I shall sell the tables and chairs"
 
-By contrast, VP coordination involves joining clauses without a coordinating word:
+By contrast, VP coordination--serial verb constructions, in truth--involves joining clauses without a coordinating word:
 
 Source: b:220
 Vetted: s
 Judgment: g
-Phenomena: crd, crdagr
+Phenomena: crd, crdagr, svc
 zhoggas ngatshos        yige    bris    denas   khalag  bzas    denas   chamchamla      phyin   payin
 zhoggas nga-tsho-s      yige    bris    denas   khalag  bzas    denas   chamcham-la     phyin   pa-yin
 morning I-num-ERG       letter  write   then    meal    ate     then    walk-DAT        went    LK-AUX
@@ -97,25 +115,25 @@ One may think that denas coordinates the VPs, but there was an example from real
 Source: b:277
 Vetted: s
 Judgment: g
-Phenomena: crd, crdagr
+Phenomena: crd, crdagr, svc
 grogspo mi      dila            yar     khorangla       skyeddman       yogred  bugu    yogred
 grogspo mi      di-la           yar     khorang-la      skyeddman       yogred  bugu    yogred
 friend  man     this-DAT        top.    he-DAT          wife            exist   child   exist
 'The friend had a wife and child'
 
-Because we don't have adjuncts, we made a simpler version:
+Because we don't have support for adjuncts, we made a simpler version:
 
 #simplified VP  coordination
 Source: author
 Vetted: f
 Judgment: g
-Phenomena: crd, crdagr
+Phenomena: crd, crdagr, svc
 ngatshos        yige    bris    khalag  bzas
 nga-tsho-s      yige    bris    khalag  bzas
 I-num-ERG       letter  write   meal    ate
 "We wrote letters and ate a meal"
 
-And a corresponding incorrectly coordinated example; we know that dang can only be used with verbs which have been nominalized:
+And a corresponding incorrectly coordinated example; we know that dang can only be used with verbs which have been nominalized and it means something other than coordination:
 
 #simplified VP  coordination
 Source: author
@@ -158,7 +176,7 @@ many-nom        people  num     exist
 Although this is out of scope, we did include several examples of
 predicational use of adjectives; source D notes that the attributional
 and predicative use of verbs are nearly identical; without the determiner
-in its position, both of these sentences would mean the same thing:
+in its position, both example would become the same sentence and potentially mean either thing:
 
 Source: d:95
 Vetted: s
@@ -196,6 +214,8 @@ khong   bodskad yag-po          mkhyen  gyi-1dug
 He      Tibetan good-nom        know    LK-AUX
 'He knows Tibetan well'
 
+For negative examples, we couldn't find any and suppose that it would
+be hard to do so. 
 
 Choices: we have made no choices for this yet
 
@@ -213,6 +233,8 @@ nga     1si byung
 nga     1si-byung
 I       die-PAST
 'I have died.’
+
+This is ungrammatical because it is inflecting a verb which already is in the past tense:
 
 Source: author
 Vetted: f
@@ -242,7 +264,7 @@ Choices: We first added lexical rule types for each tense and specify the tense 
 
 
           Aspect
-	Tibetan has four aspects, Perfect, Recent, Progressive and Prospective. The simple perfect aspect is indicated by either the auxiliary verbs or adding the affixes. The simple perfect form takes suffixes as markers and the rest uses prefixes.
+	Tibetan has many forms of aspect, but we are focusing on 4:  Perfect, Recent, Progressive and Prospective. The simple perfect aspect is indicated by either the auxiliary verbs or adding the affixes. The simple perfect form takes suffixes as markers and the rest uses prefixes.
 
 #
 #Space for the examples
@@ -250,9 +272,11 @@ Choices: We first added lexical rule types for each tense and specify the tense 
 
 Choices: We create two inflection types for aspect, one for suffixes and one for prefixes. For the auxiliary verbs that indicates aspect by themselves, specify the tense feature in their lexicon type.
 
-
       C. Noun Inflections
 	1. case marker
+
+Case marking has remained unchanged from lab 2. We have a zero-size suffix for absolutive case and various lexical rules for ergative, dative and instrumental cases. 
+ 
 	2. plurals for pronoun
 	3. self-marking
       *D. Mood markers. 
