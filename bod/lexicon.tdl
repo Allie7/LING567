@@ -149,6 +149,14 @@ gros := intransitive-verb-lex-verb-lex &
   [ STEM < "1dug" >,
     SYNSEM.LKEYS.KEYREL.PRED "_exist_v_rel" ].
 
+re_1 := intransitive-verb-lex-verb-lex &
+  [ STEM < "re" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_exist_v_rel" ].
+
+yogred_1 := intransitive-verb-lex-verb-lex &
+  [ STEM < "yogred" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_exist_v_rel" ].
+
 bcag := transitive-erg-verb-lex-verb-lex &
   [ STEM < "bcag" >,
     SYNSEM.LKEYS.KEYREL.PRED "_break_v_rel" ].
@@ -208,7 +216,7 @@ red := red-aux-lex &
 yod := yod-aux-lex &
   [ STEM < "yod" > ].
 
-yogred := yogred-aux-lex &
+yogred_2 := yogred-aux-lex &
   [ STEM < "yogred" > ].
 
 1dug_2 := 1dug-aux-lex &
@@ -243,7 +251,7 @@ ryguin := ryguin-aux-lex &
 
 ;;; Copulas
 
-re := copula-verb-lex-cop-lex &
+re_2 := copula-verb-lex-cop-lex &
   [ STEM < "re" > ].
 
 pa := copula-verb-lex-cop-lex &

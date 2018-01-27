@@ -21,11 +21,11 @@
 21@b:203@@@1@wo,c,tam@khos		  yige  	smyuggus	bris	song@@@@1@5@3sg-ERG		letter		pen-INST	wrote	PRF.AUX‘He wrote the letter with a pen.’@john cadigan and xinyi ji@january 13, 2018
 22@b:215@@@1@c@ngas     khola     yige     btang 	giyin@@@@1@5@1SG-ERG  3SG-DAT   letter   send 	LK-AUX'I will send him a letter."@john cadigan and xinyi ji@january 13, 2018
 23@author@@@1@c@ngas    kho   yige    btang	giyin@@@@0@5@I-ERG   3SG   letter  send	LK-AUX'I will send him a letter.'@john cadigan and xinyi ji@january 13, 2018
-24@b:220@@@1@crd,crdagr@zhoggas	ngatshos	yige	bris	denas	khalag	bzas	denas	chamchamla	phyin	payin@@@@1@11@morning	I-num-ERG	letter	write	then	meal	ate	then	walk-DAT	went	LK-AUX"In the morning we wrote letters, then we had a meal, then we went for a walk"@john cadigan and xinyi ji@january 13, 2018
-25@author@@@1@crd,crdagr@ngatshos	yige	bris	khalag	bzas@@@@1@5@I-num-ERG	letter	write	meal	ate"We wrote letters and ate a meal"@john cadigan and xinyi ji@january 13, 2018
+24@b:220@@@1@crd,crdagr,svc@zhoggas	ngatshos	yige	bris	denas	khalag	bzas	denas	chamchamla	phyin	payin@@@@1@11@morning	I-num-ERG	letter	write	then	meal	ate	then	walk-DAT	went	LK-AUX"In the morning we wrote letters, then we had a meal, then we went for a walk"@john cadigan and xinyi ji@january 13, 2018
+25@author@@@1@crd,crdagr,svc@ngatshos	yige	bris	khalag	bzas@@@@1@5@I-num-ERG	letter	write	meal	ate"We wrote letters and ate a meal"@john cadigan and xinyi ji@january 13, 2018
 26@author@@@1@crd@ngatshos        yige    bris    dang    khalag  bzas@@@@0@6@I-num-ERG       letter  write   and     meal    ate"We wrote letters and ate a meal"@john cadigan and xinyi ji@january 13, 2018
-27@b:277@@@1@crd,crdagr@grogspo	mi	dila		yar	khorangla	skyeddman	yogred	bugu	yogred@@@@1@9@friend	man	this-DAT	top.	he-DAT		wife		exist	child	exist'The friend had a wife and child'@john cadigan and xinyi ji@january 13, 2018
-28@author@@@1@crd,crdagr@khorangla	skyeddman	yogred	bugu	yogred@@@@1@5@he-DAT		wife		exist	child	exist'He had a wife and child'@john cadigan and xinyi ji@january 13, 2018
+27@b:277@@@1@crd,crdagr,svc@grogspo	mi	dila		yar	khorangla	skyeddman	yogred	bugu	yogred@@@@1@9@friend	man	this-DAT	top.	he-DAT		wife		exist	child	exist'The friend had a wife and child'@john cadigan and xinyi ji@january 13, 2018
+28@author@@@1@crd,crdagr,svc@khorangla	skyeddman	yogred	bugu	yogred@@@@1@5@he-DAT		wife		exist	child	exist'He had a wife and child'@john cadigan and xinyi ji@january 13, 2018
 29@b:104@@@1@crd,crdagr@lcogtse	tshangma	1ditsho		dang	rkubkyag	thsong	giyin@@@@1@7@table	all		this-num	CRD	chair		sell	LK-AUX"I shall sell all these tables and the chairs"@john cadigan and xinyi ji@january 13, 2018
 30@author@@@1@crd,crdagr@ngas	lcogtse	dang	rkubkyag	thsong	giyin@@@@1@6@I-ERG	table	CRD	chair		sell	LK-AUX"I shall sell the tables and chairs"@john cadigan and xinyi ji@january 13, 2018
 31@author@@@1@crd,crdagr@ngas	lcogtse rkubkyag	thsong	giyin@@@@1@5@I-ERG	table	chair		sell	LK-AUX"I shall sell the tables and chairs"@john cadigan and xinyi ji@january 13, 2018
@@ -34,9 +34,9 @@
 34@b:277@@@1@crd,crdagr@denas	khothso		gangkha		mar	dang	phyurba	sha	pagspa	dopo	brgyabnas	lhasala		tshonggag	yong	gired@@@@1@14@de-ABL	3sg-num		all		butter	CRD	cheese	meat	hide	load	make_up-SUB	Lhasa-DAT	sell-SUB	come	LK-AUX"Then they all make up loads of butter, cheese, meats and hides and come to Lhasa to sell them"@john cadigan and xinyi ji@january 13, 2018
 35@author@@@1@crd,crdagr@mar	dang	phyurba	sha	pagspa	1dug@@@@1@6@butter	CRD	cheese	meat	hide	exist"There are butter, cheese, meats and hides."@john cadigan and xinyi ji@january 13, 2018
 36@author@@@1@crd@mar	phyurba	sha	pagspa	1dug@@@@0@5@butter	cheese	meat	hide	exist"There are butter, cheese, meats and hides."@john cadigan and xinyi ji@january 13, 2018
-37@d:100@@@1@wo,c,det@`mibculngatsam    cig yogred@@@@1@3@People-FiteenAbout num exist'There are about fiteeen people.'@john cadigan and xinyi ji@january 13, 2018
-38@author@@@1@det@cig 1mibculngatsam yogred@@@@0@3@num People-FiteenAbout exist'There are about fiteeen people.'@john cadigan and xinyi ji@january 13, 2018
-39@d:100@@@1@wo,c,det@1mibculngatsam  yogred@@@@1@2@People-FiteenAbout exist'There are about fiteeen people.'@john cadigan and xinyi ji@january 13, 2018
+37@d:100@@@1@wo,c,det@1mibculngatsam    cig yogred@@@@1@3@people-fiteen-about num exist'There are about fiteeen people.'@john cadigan and xinyi ji@january 13, 2018
+38@author@@@1@det@cig 1mibculngatsam yogred@@@@0@3@num people-fiteen-about exist'There are about fiteeen people.'@john cadigan and xinyi ji@january 13, 2018
+39@d:100@@@1@wo,c,det@1mibculngatsam  yogred@@@@1@2@people-fiteen-about exist'There are about fiteeen people.'@john cadigan and xinyi ji@january 13, 2018
 40@b:116@@@1@wo,neg@maphyinparedda@@@@1@1@not-went        LK-AUX-EMPH'Certainly he didn't go.'@john cadigan and xinyi ji@january 13, 2018
 41@author@@@1@neg@phyinmaparedda@@@@0@1@went-ma        LK-AUX-EMPH'Certainly he didn't go.'@john cadigan and xinyi ji@january 13, 2018
 42@b:116@@@1@wo,neg@1grogimi1dugga@@@@1@1@Go	LK-NEG-AUX-EMPH"Certainly he's not going"@john cadigan and xinyi ji@january 13, 2018

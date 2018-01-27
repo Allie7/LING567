@@ -145,7 +145,7 @@ nga-tsho-s      yige    bris    dang	khalag  bzas
 I-num-ERG       letter  write   and	meal    ate
 "We wrote letters and ate a meal"
 
-Choices: To implement this, we chose the monosyndeton coordination pattern for NPs and nouns and selected "dang" as the coordinating word. We also created a feature resolution pattern for nouns, noun_res, which states that they have to match in case.  For verbs we selected the asydenton pattern without any other specifications.  
+Choices: To implement this, we chose the monosyndeton coordination pattern for NPs and nouns and selected "dang" as the coordinating word. We also created a feature resolution pattern for nouns, noun_res, which states that they have to match in case. We specified that the coordinating word has to precede the coordinand. We have thought about asyndetonic coordination for NPs, but haven't found a steadfast example of it. For verbs we selected the asydenton pattern without any other specifications.  
 
 E. Attributive Adjectives
 
@@ -283,14 +283,31 @@ Case marking has remained unchanged from lab 2. We have a zero-size suffix for a
 	Tibetan mood markers are affixes (prefix or suffix, depending on the mood value) attached to the auxiliary verbs. Though lab3 doesn’t require us to do mood, many of the examples we can find for our test suite include this phenomenon. In order to get those examples parsed, we added two temporary mood-marker rule to allow the mood-marking suffixes to attach to the verbs.
 	
 
-Testsuite instances not yet covered:
+Testsuite types not yet covered:
 * Wh-Questions
 * Adjunct phrases (instrumental verbs)
 * Adverbs
-
+* Ditransitives
+* Dropping objects (maybe subjects)
+* Mood markers
 Coverage & others:
 
+
+Overgeneration:
+
+We overgenerate for the following sentence because we don't adequately restrain the morphological negation inflection:
+
+
+
+
+
+
 unsolved problems:
+
+Many of the unsparsed sentences persist into this week such as wh-Questions, missing adjunct phrases and ditransitives. 
+
+
+
 
 Outside domain of customization system:
 
