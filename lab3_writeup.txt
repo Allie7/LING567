@@ -145,7 +145,7 @@ nga-tsho-s      yige    bris    dang	khalag  bzas
 I-num-ERG       letter  write   and	meal    ate
 "We wrote letters and ate a meal"
 
-Choices: To implement this, we chose the monosyndeton coordination pattern for NPs and nouns and selected "dang" as the coordinating word. We also created a feature resolution pattern for nouns, noun_res, which states that they have to match in case.  For verbs we selected the asydenton pattern without any other specifications.  
+Choices: To implement this, we chose the monosyndeton coordination pattern for NPs and nouns and selected "dang" as the coordinating word which comes before the coordinand. We also created a feature resolution pattern for nouns, noun_res, which states that they have to match in case.  For verbs we selected the asydenton pattern without any other specifications.  
 
 E. Attributive Adjectives
 
