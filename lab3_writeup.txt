@@ -398,9 +398,19 @@ Testsuite instances not yet covered:
 * Adverbs
 
 4. Coverage & Overgeneration
-Coverage:25/59
-Overgeneration:0.
+Change:
+Coverage: 20/30 ->  25/59
+Overgeneration: 0/15 -> 0/24
 
+29 of the unparsed examples, positive and negative, don't parse because of vocabulary and/or morphological rules. Part of the issue is that
+there are still many word types like adverbs and constructions such as topicality or subordination 
+which we do not cover which come the authoriative text. We have started the practice of placing the full real sentences we find alongside simpler ones we create from them to get rid of the vocabulary issues. 
+
+This leaves about 29 examples which don't parse because of effective rules.
+
+Ambiguity has started to appear in the parses, especially with coordination and adjectival phrases such as the "black pen" examples mentioned earlier.
+
+Nonetheless, we have a few examples for each phenomenon which are correctly parsed as grammatical or ungrammatical.
 
 unsolved problems:
 1. The problems with the 3rd-person-female-plural pronouns, as stated above.
