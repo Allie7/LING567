@@ -1,0 +1,431 @@
+Lab3 writeup
+
+We have added coordination, negation, attributed adjectives in our test suite:	
+	
+	a. Negation
+
+	In Tibetan, negation is generally marked on the auxiliary verbs with the prefixes mi- or ma-. Lexical verbs can be marked too as a minority pattern. Each auxiliary verb has specific requirements on which prefix it can be added to.
+
+#Examples for Negation 
+
+Source: b:145
+Vetted: s
+Judgment: g
+Phenomena: wo, neg, tam
+khos    yige btang masong
+kho-s   yige btang ma-song
+he-ERG  yige send  NEG-PAST
+"He didn't send a letter.”
+
+This example is ungrammatical because mi- inflect "song," but rather "ma" does:
+
+Source: b:145
+Vetted: s
+Judgment: u
+Phenomena: neg
+khos    yige btang misong
+kho-s   yige btang mi-song
+he-ERG  yige send  NEG-PAST
+"He didn't send a letter.”
+
+This is an example of the minority pattern in which the stem verb is modified directly:
+
+Source: author
+Vetted: f
+Judgment: g
+Phenomena: neg
+khos    yige mabtang
+kho-s   yige ma-btang
+he-ERG  yige NEG-send
+"He didn't send a letter."
+
+	
+	There’s obligatory contraction for certain auxiliary verbs, namely “yin”, “yod”, and “yogred”. When negated, “yin” became “man”, “yod” became “med”, “yogred” became “yogmared”.
+
+#Examples for negation contraction
+	
+Source: b:146
+Vetted: s
+Judgment: g
+Phenomena: wo, neg, tam
+ngas    sprad med
+nga-s    sprad med
+1ST-ERG give NEG_AUX
+"I didn't give.”
+
+Choices: Since Tibetan has three polarity types, though we are only required to do negation for lab3, we created a general polarity-marker inflection type in the morphology page. Under it we created a polarity-marker super type that has negation feature specified on the verb, and then we created two separate subtypes for “mi” and “ma”. 
+for the non-contracted forms, since each auxiliary verb stem has requirement on which affix can be added(not only for negation-marking, but for all inflections), we decide to give each auxiliary verb stem an independent entry. for each verb, we specify the morphological constraints to forbid it to undergo the morphology rule type that adds the wrong affix to it.
+for “yin”, “yod” and “yogred”, we forbid the whole negation marking rule super type, and create separate lexicon types for their negated forms. for the negated forms, we specify their predicate to be “neg_rel”, and forbid the whole polarity marker inflection. 
+
+
+B. Coordination & Agreement in coordinated NPs
+
+By searching through the realworld text at the end of the source B, we found examples of NP coordination and so-called "weak" VP coordination.
+Because the examples were complex, we started working with simplified ones but also kept the originals which can be seen in our testsuite examples.
+
+NPs are coordinated by the word "dang" which means roughtly "with" under the monosyndeton paradigm. This coordinating particle falls between the first NP and the rest.
+
+This is an example of coordination with more than one noun:
+
+Source: b:277
+Vetted: s
+Judgment: g
+Phenomena: crd, crdagr
+denas   khothso         gangkha         mar     dang    phyurba sha     pagspa  dopo    brgyabnas       lhasala         tshonggag       yong    gired
+de-nas  kho-tsho        gangkha         mar     dang    phyurba sha     pagspa  dopo    brgyab-nas      lhasa-la        tshong-gag      yong    gi-red
+de-ABL  3sg-num         all             butter  CRD     cheese  meat    hide    load    make_up-SUB     Lhasa-DAT       sell-SUB        come    LK-AUX
+"Then they all make up loads of butter, cheese, meats and hides and come to Lhasa to sell them"
+
+
+Here is a simplified version of another example we found:
+
+Source: author
+Vetted: f
+Judgment: g
+Phenomena: crd, crdagr
+ngas    lcogtse dang    rkubkyag        thsong  giyin
+nga-s   lcogtse dang    rkubkyag        thsong  gi-yin
+I-ERG   table   CRD     chair           sell    LK-AUX
+"I shall sell the tables and chairs"
+
+According to source B, the coordinated NPs must all be the subject or object of the verb; hence, this example should fail to parse:
+
+Source: author
+Vetted: f
+Judgment: u
+Phenomena: crdagr
+ngas    lcogtses        dang    rkubkyag        thsong  giyin
+nga-s   lcogtse-s       dang    rkubkyag        thsong  gi-yin
+I-ERG   table-ERG       CRD     chair           sell    LK-AUX
+"I shall sell the tables and chairs"
+
+By contrast, VP coordination--serial verb constructions, in truth--involves joining clauses without a coordinating word:
+
+Source: b:220
+Vetted: s
+Judgment: g
+Phenomena: crd, crdagr, svc
+zhoggas ngatshos        yige    bris    denas   khalag  bzas    denas   chamchamla      phyin   payin
+zhoggas nga-tsho-s      yige    bris    denas   khalag  bzas    denas   chamcham-la     phyin   pa-yin
+morning I-num-ERG       letter  write   then    meal    ate     then    walk-DAT        went    LK-AUX
+"In the morning we wrote letters, then we had a meal, then we went for a walk"
+
+One may think that denas coordinates the VPs, but there was an example from real text without it:
+
+Source: b:277
+Vetted: s
+Judgment: g
+Phenomena: crd, crdagr, svc
+grogspo mi      dila            yar     khorangla       skyeddman       yogred  bugu    yogred
+grogspo mi      di-la           yar     khorang-la      skyeddman       yogred  bugu    yogred
+friend  man     this-DAT        top.    he-DAT          wife            exist   child   exist
+'The friend had a wife and child'
+
+Because we don't have support for adjuncts, we made a simpler version:
+
+#simplified VP  coordination
+Source: author
+Vetted: f
+Judgment: g
+Phenomena: crd, crdagr, svc
+ngatshos        yige    bris    khalag  bzas
+nga-tsho-s      yige    bris    khalag  bzas
+I-num-ERG       letter  write   meal    ate
+"We wrote letters and ate a meal"
+
+And a corresponding incorrectly coordinated example; we know that dang can only be used with verbs which have been nominalized and it means something other than coordination:
+
+#simplified VP  coordination
+Source: author
+Vetted: f
+Judgment: u
+Phenomena: crd
+ngatshos        yige    bris	dang    khalag  bzas
+nga-tsho-s      yige    bris    dang	khalag  bzas
+I-num-ERG       letter  write   and	meal    ate
+"We wrote letters and ate a meal"
+
+Choices: To implement this, we chose the monosyndeton coordination pattern for NPs and nouns and selected "dang" as the coordinating word which comes before the coordinand. We also created a feature resolution pattern for nouns, noun_res, which states that they have to match in case.  For verbs we selected the asydenton pattern without any other specifications.  
+
+E. Attributive Adjectives
+
+In Tibetan, there are adjectival verbs rather than adjectives; to become attributive, they undergo nominalization:
+
+#Derived
+Source: author
+Vetted: f
+Judgment: g
+Phenomena: adj
+mi      mangpo          cig     1dug
+mi      mang-po         cig     1dug
+person  many-nom        num     exist
+"There are a many people"
+
+The adjective must be to the right of the noun phrase
+
+Source: author
+Vetted: f
+Judgment: u
+Phenomena: adj
+mangpo          mi              cig     1dug
+mang-po         mi              cig     1dug
+many-nom        people  	num     exist
+"There are a many people
+
+
+Although this is out of scope, we did include several examples of
+predicational use of adjectives; source D notes that the attributional
+and predicative use of verbs are nearly identical; without the determiner
+in its position, both example would become the same sentence and potentially mean either thing:
+
+Source: d:95
+Vetted: s
+Judgment: g
+Phenomena: adj
+nyuku   ti      nakpo           re
+nyuku   ti      nak-po          re
+pen     this    black-nom       be
+"This pen is black"
+
+Source: d:95
+Vetted: s
+Judgment: g
+Phenomena: adj
+nyuku   nakpo           ti      re
+nyuku   nak-po          ti      re
+pen     black-nom       this    be
+'This is a black pen'
+
+We happened to make the copular and non-copular sentences parse because this was one of the easier examples.
+
+Choices: To implement this, we had to pretend that Tibetan had adjectives. We specified that the nominalized
+adjectival verbs were both attributive and predicative based on the example above. We specified that adjectives
+modify the items before them. Finally we said that adjectives impossibly appear as the complement of a copula 
+because stating optionally seemed to require a morphological rule and predicative adjectives are out of scope.
+
+F. Adverbs
+
+Adverbs also appear as nominalized adjectival verbs:
+
+Source: b:209
+Vetted: s
+Judgment: g
+Phenomena: adv
+khong   bodskad yagpo           mkhyen  gyi1dug
+khong   bodskad yag-po          mkhyen  gyi-1dug
+He      Tibetan good-nom        know    LK-AUX
+'He knows Tibetan well'
+
+For negative examples, we couldn't find any and suppose that it would
+be hard to do so. 
+
+Choices: we have made no choices for this yet, but should we make adjectives and adverbs both productive through morphological rules, ambiguity would increase substantially. This is because we wouldn't know if he knew Tibetan well or knew good Tibetan.
+
+
+G. Tense
+	In Tibetan, tense is indicated by a combination of the auxiliary verb(negated or not) and a prefix. The auxiliaries “song”, “yong” and “byung” already carry tense information by themselves, thus do not allow additional affixes.
+	
+#Example1 for tense
+Source: a:132
+Vetted: s
+Judgment: g
+Phenomena: wo, c, tam
+nga     1si byung
+nga     1si-byung
+I       die-PAST
+'I have died.’
+
+This is ungrammatical because it is inflecting a verb which already is in the past tense:
+
+Source: author
+Vetted: f
+Judgment: u
+Phenomena: wo, c, tam
+nga     1si pa-byung
+nga     1si pa-byung
+I       die PAST-PAST
+'I have died.’
+Choices: Specify the tense feature in their lexicon type.
+
+	The auxiliaries “yin”, “yod”, “red”, “1dug” and “yogred” combine with particular prefixes to indicate tense. different combinations will have different indications. For example, “pa+yin” indicates Past Tense, “gi+yin” indicates Future Tense, “gi+yod” indicates Present Tense and “pa+yod” indicates Future Tense. The prefixes are: gi-, gyi-, kyi-, pa-, ba-, ga-, nga- and ra-
+
+
+#past tense
+Source: b:137
+Vetted: s
+Judgment: g
+Phenomena: wo, c, tam
+ngas  yige    klog bayin
+nga-s  yige    klog ba-yin
+1ST-ERG letter  read LK-AUX
+'I read the letter.'
+
+
+Choices: We first added lexical rule types for each tense and specify the tense on the verb, for Future Tense which have two different affixes as markers, we construct two subtypes. Then under the lexicon type for each auxiliary, we specify the morphological constraints to forbid the auxiliary to undergo certain rules.
+
+
+H. Aspect
+	Tibetan has many forms of aspect, but we are focusing on 4:  Perfect, Recent, Progressive and Prospective. The simple perfect aspect is indicated by either the auxiliary verbs or adding the affixes. The simple perfect form takes suffixes as markers and the rest uses prefixes.
+
+#Aspect Examples 
+#perfect
+Source: a:132
+Vetted: s
+Judgment: g
+Phenomena: wo, c, tam
+nga     1si byung
+nga     1si-byung
+I       die-PRF
+'I have died.'
+
+#perfect
+Source: a:132
+Vetted: s
+Judgment: g
+Phenomena: wo, c, tam
+nga     1si byung
+nga     1si-byung
+I       die-PRF
+'I have died.'
+
+Source: b:160
+Vetted: s
+Judgment: g
+Phenomena: wo, c, tam
+khong 	nangla 		bzhugsshag
+khong	nang-la		bzhugs-shag
+3SG	inside-DAT	fall
+'She is at home.'
+
+#recent aspect
+#reference time immediately follows event time
+#may be used with past or present
+#lexical past or present stem + linking particle
+Source: a:161
+Vetted: s
+Judgment: g
+Phenomena: wo, c, tam
+nga	blebs	groyin
+nga	blebs	gro-yin
+I	arrive	LK-AUX
+'I had just arrived'
+
+#habitual is formed with tense
+#and markers
+
+#recent aspect
+#reference time immediately follows event time
+#may be used with past or present
+#lexical past or present stem + linking particle
+Source: a:161
+Vetted: s
+Judgment: g
+Phenomena: wo, c, tam
+nga	blebs	groyin
+nga	blebs	gro-yin
+I	arrive	LK-AUX
+'I had just arrived'
+
+Choices: We create two inflection types for aspect, one for suffixes and one for prefixes, and added the lexical types accordingly. For the auxiliary verbs that indicates aspect by themselves, specify the aspect feature in their lexicon type.
+
+I. Noun Inflections
+	1. case marker
+
+Case marking has remained unchanged from lab 2. We have a zero-size suffix for absolutive case and various lexical rules for ergative, dative and instrumental cases. 
+	
+	choices: for lab3, we deleted all the inflected noun forms in our lexicon leaving only the stems of the nouns, and added an inflection type for case marking. We added rules for each case: dative, ergative, absolutive and instrumental and specify their case features accordingly. the case marker is the last suffix to add on a noun, thus we specify the possible inputs to be common-noun-lex, proper-names-lex(in Tibetan, nouns beside pronouns do not have other inflections besides case marking), and plural-markers.
+ 
+	2. plurals for pronoun
+	The plurals for pronouns are marked by a suffix -tsho after the self-marked or unmarked form of the pronoun. The singular forms stay unchanged.
+
+#Example for plural nouns
+Source: author
+Vetted: f
+Judgment: g
+Phenomena: wo, c, tam
+ngatshos  yige    klog bayin
+nga-tsho-s  yige    klog ba-yin
+1ST-PL-ERG letter  read LK-AUX
+'We read the letter.'
+	
+	choices: Add an inflection type for number indication, set the input to be the self-marker rule, add th plural lexical rule and singular lexical rule, specify the affix and number feature accordingly.
+	
+	3. self-marking
+	The Tibetan has an optional "self" marker suffix "-rang" that attaches to the pronoun stems.The affix does not affect any of the words' syntactic and semantic properties and is not required. However, for 3rd-person-female-plurals, the marking is required.
+	
+#Example for self-marking
+Source: author
+Vetted: f
+Judgment: g
+Phenomena: wo, c, tam
+ngarangs  yige    klog bayin
+nga-rang-tsho-s  yige    klog ba-yin
+1ST-SELF-PL-ERG letter  read LK-AUX
+'We read the letter.'
+	
+#Example for plural nouns
+Source: author
+Vetted: f
+Judgment: g
+Phenomena: wo, c, tam
+morangtshos  yige    bris song
+mo-rang-tsho-s  yige    bris song
+3RD_F-SELF-PL-ERG letter  send AUX
+'They(f) did not write the letter.'
+	
+	choices: We added one inflection type for self-marking and added the unself-marked rule and self-marked rule under it and set the inflection obligatary. Doing so is to help solving the special case of 3rd-fem-plural, but it does not work. We try to add the forbidden constraint on the plural-marker rule to eliminate the unself-indicated 3rd-fem pronoun, but that would eliminate the indicated one too.
+	
+*J. Mood markers. 
+	Tibetan mood markers are affixes (prefix or suffix, depending on the mood value) attached to the auxiliary verbs. Though lab3 doesn’t require us to do mood, many of the examples we can find for our test suite include this phenomenon. In order to get those examples parsed, we added two temporary mood-marker rule to allow the mood-marking suffixes to attach to the verbs.
+	
+K. Non-ergative subject for transtive/serial verbs.
+	We came across the following idiom example where in a transtive verb sentence the subject is not marked as ergative case:
+
+Source: a:162 
+Vetted: t 
+Judgment: g 
+Phenomena: wo, c, tam 
+nga nyocha nyo ryguin 
+nga nyocha nyo rygu-in 
+I shopping buy LK-AUX 
+'I have still to do the shopping'
+
+	Choices: We set the idiom "nyocha nyo" as one intranstive verb instead of a whole VP.
+
+L. Agreement
+	Tibetan do not have typical agreement system for verbs, though it has a view point system that places some constraints on the auxiliary verbs and the subjects in certain special occasions.  
+
+Testsuite instances not yet covered:
+* Wh-Questions
+* Adjunct phrases (instrumental verbs)
+* Adverbs
+* Ditransitive
+* 
+
+4. Coverage & Overgeneration
+Change:
+Coverage: 20/30 ->  25/59
+Overgeneration: 0/15 -> 0/24
+
+29 of the unparsed examples, positive and negative, don't parse because of vocabulary and/or morphological rules. Part of the issue is that
+there are still many word types like adverbs and constructions such as topicality or subordination 
+which we do not cover which come the authoriative text. We have started the practice of placing the full real sentences we find alongside simpler ones we create from them to get rid of the vocabulary issues. 
+
+This leaves about 29 examples which don't parse because of effective rules.
+
+Ambiguity has started to appear in the parses, especially with coordination and adjectival phrases such as the "black pen" examples mentioned earlier. We currently have 1.08 distinct analysis for each positive type.
+
+Nonetheless, we have a few examples for each phenomenon which are correctly parsed as grammatical or ungrammatical.
+
+unsolved problems:
+1. The problems with the 3rd-person-female-plural pronouns, as stated above.
+
+Outside domain of customization system:
+
+We were not able to model adverbs and adjectives as the verbs they truly are based on the customization system.
+
+We were not able to implement coordination with the monosydeton paradigm for A, AND, B, C, but our analysis may change.
+
+
+
+
