@@ -1,5 +1,5 @@
 
-version=30
+version=31
 
 section=general
 language=Tibetan
@@ -526,7 +526,7 @@ section=morphology
       verb-pc1_lrt3_lri1_orth=mi
   verb-pc2_name=tense-marker
   verb-pc2_order=prefix
-  verb-pc2_inputs=aux
+  verb-pc2_inputs=aux, verb-pc1
     verb-pc2_lrt1_name=past-tense-rule
       verb-pc2_lrt1_feat1_name=tense
       verb-pc2_lrt1_feat1_value=past
@@ -589,7 +589,7 @@ section=morphology
       verb-pc3_lrt2_lri8_orth=pa1dra
   verb-pc4_name=aspect-marker-suffixes
   verb-pc4_order=suffix
-  verb-pc4_inputs=verb
+  verb-pc4_inputs=verb, verb-pc1, verb-pc2
     verb-pc4_lrt1_name=simple-perfect
       verb-pc4_lrt1_feat1_name=aspect
       verb-pc4_lrt1_feat1_value=prf
@@ -604,7 +604,6 @@ section=morphology
   verb-pc5_order=prefix
   verb-pc5_inputs=aux1, aux2, aux11
     verb-pc5_forbid1_others=verb-pc4
-    verb-pc5_forbid2_others=verb-pc5
     verb-pc5_lrt1_name=recent-aspect
       verb-pc5_lrt1_feat1_name=aspect
       verb-pc5_lrt1_feat1_value=rec
