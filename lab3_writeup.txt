@@ -220,8 +220,7 @@ be hard to do so.
 Choices: we have made no choices for this yet
 
 
-A. Negation, see part 1.
-      B. Tense
+G. Tense
 	In Tibetan, tense is indicated by a combination of the auxiliary verb(negated or not) and a prefix. The auxiliaries “song”, “yong” and “byung” already carry tense information by themselves, thus do not allow additional affixes.
 	
 #Example1 for tense
@@ -263,7 +262,7 @@ nga-s  yige    klog ba-yin
 Choices: We first added lexical rule types for each tense and specify the tense on the verb, for Future Tense which have two different affixes as markers, we construct two subtypes. Then under the lexicon type for each auxiliary, we specify the morphological constraints to forbid the auxiliary to undergo certain rules.
 
 
-          Aspect
+H. Aspect
 	Tibetan has many forms of aspect, but we are focusing on 4:  Perfect, Recent, Progressive and Prospective. The simple perfect aspect is indicated by either the auxiliary verbs or adding the affixes. The simple perfect form takes suffixes as markers and the rest uses prefixes.
 
 #Aspect Examples 
@@ -327,7 +326,7 @@ I	arrive	LK-AUX
 
 Choices: We create two inflection types for aspect, one for suffixes and one for prefixes, and added the lexical types accordingly. For the auxiliary verbs that indicates aspect by themselves, specify the aspect feature in their lexicon type.
 
-      C. Noun Inflections
+I. Noun Inflections
 	1. case marker
 
 Case marking has remained unchanged from lab 2. We have a zero-size suffix for absolutive case and various lexical rules for ergative, dative and instrumental cases. 
@@ -374,10 +373,10 @@ mo-rang-tsho-s  yige    bris song
 	
 	choices: We added one inflection type for self-marking and added the unself-marked rule and self-marked rule under it and set the inflection obligatary. Doing so is to help solving the special case of 3rd-fem-plural, but it does not work. We try to add the forbidden constraint on the plural-marker rule to eliminate the unself-indicated 3rd-fem pronoun, but that would eliminate the indicated one too.
 	
-      *D. Mood markers. 
+*J. Mood markers. 
 	Tibetan mood markers are affixes (prefix or suffix, depending on the mood value) attached to the auxiliary verbs. Though lab3 doesn’t require us to do mood, many of the examples we can find for our test suite include this phenomenon. In order to get those examples parsed, we added two temporary mood-marker rule to allow the mood-marking suffixes to attach to the verbs.
 	
-	E. Non-ergative subject for transtive/serial verbs.
+K. Non-ergative subject for transtive/serial verbs.
 	We came across the following idiom example where in a transtive verb sentence the subject is not marked as ergative case:
 
 Source: a:162 
@@ -391,6 +390,8 @@ I shopping buy LK-AUX
 
 	Choices: We set the idiom "nyocha nyo" as one intranstive verb instead of a whole VP.
 
+L. Agreement
+	Tibetan do not have typical agreement system for verbs, though it has a view point system that places some constraints on the auxiliary verbs and the subjects in certain special occasions.  
 
 Testsuite instances not yet covered:
 * Wh-Questions
