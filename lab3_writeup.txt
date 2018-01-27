@@ -145,7 +145,7 @@ nga-tsho-s      yige    bris    dang	khalag  bzas
 I-num-ERG       letter  write   and	meal    ate
 "We wrote letters and ate a meal"
 
-Choices: To implement this, we chose the monosyndeton coordination pattern for NPs and nouns and selected "dang" as the coordinating word. We also created a feature resolution pattern for nouns, noun_res, which states that they have to match in case. We specified that the coordinating word has to precede the coordinand. We have thought about asyndetonic coordination for NPs, but haven't found a steadfast example of it. For verbs we selected the asydenton pattern without any other specifications.  
+Choices: To implement this, we chose the monosyndeton coordination pattern for NPs and nouns and selected "dang" as the coordinating word. We also created a feature resolution pattern for nouns, noun_res, which states that they have to match in case.  For verbs we selected the asydenton pattern without any other specifications.  
 
 E. Attributive Adjectives
 
@@ -266,48 +266,144 @@ Choices: We first added lexical rule types for each tense and specify the tense 
           Aspect
 	Tibetan has many forms of aspect, but we are focusing on 4:  Perfect, Recent, Progressive and Prospective. The simple perfect aspect is indicated by either the auxiliary verbs or adding the affixes. The simple perfect form takes suffixes as markers and the rest uses prefixes.
 
-#
-#Space for the examples
-#
+#Aspect Examples 
+#perfect
+Source: a:132
+Vetted: s
+Judgment: g
+Phenomena: wo, c, tam
+nga     1si byung
+nga     1si-byung
+I       die-PRF
+'I have died.'
 
-Choices: We create two inflection types for aspect, one for suffixes and one for prefixes. For the auxiliary verbs that indicates aspect by themselves, specify the tense feature in their lexicon type.
+#perfect
+Source: a:132
+Vetted: s
+Judgment: g
+Phenomena: wo, c, tam
+nga     1si byung
+nga     1si-byung
+I       die-PRF
+'I have died.'
+
+Source: b:160
+Vetted: s
+Judgment: g
+Phenomena: wo, c, tam
+khong 	nangla 		bzhugsshag
+khong	nang-la		bzhugs-shag
+3SG	inside-DAT	fall
+'She is at home.'
+
+#recent aspect
+#reference time immediately follows event time
+#may be used with past or present
+#lexical past or present stem + linking particle
+Source: a:161
+Vetted: t
+Judgment: g
+Phenomena: wo, c, tam
+nga	blebs	groyin
+nga	blebs	gro-yin
+I	arrive	LK-AUX
+'I had just arrived'
+
+#habitual is formed with tense
+#and markers
+
+#recent aspect
+#reference time immediately follows event time
+#may be used with past or present
+#lexical past or present stem + linking particle
+Source: a:161
+Vetted: t
+Judgment: g
+Phenomena: wo, c, tam
+nga	blebs	groyin
+nga	blebs	gro-yin
+I	arrive	LK-AUX
+'I had just arrived'
+
+Choices: We create two inflection types for aspect, one for suffixes and one for prefixes, and added the lexical types accordingly. For the auxiliary verbs that indicates aspect by themselves, specify the aspect feature in their lexicon type.
 
       C. Noun Inflections
 	1. case marker
 
 Case marking has remained unchanged from lab 2. We have a zero-size suffix for absolutive case and various lexical rules for ergative, dative and instrumental cases. 
+	
+	choices: for lab3, we deleted all the inflected noun forms in our lexicon leaving only the stems of the nouns, and added an inflection type for case marking. We added rules for each case: dative, ergative, absolutive and instrumental and specify their case features accordingly. the case marker is the last suffix to add on a noun, thus we specify the possible inputs to be common-noun-lex, proper-names-lex(in Tibetan, nouns beside pronouns do not have other inflections besides case marking), and plural-markers.
  
 	2. plurals for pronoun
+	The plurals for pronouns are marked by a suffix -tsho after the self-marked or unmarked form of the pronoun. The singular forms stay unchanged.
+
+#Example for plural nouns
+Source: author
+Vetted: f
+Judgment: g
+Phenomena: wo, c, tam
+ngatshos  yige    klog bayin
+nga-tsho-s  yige    klog ba-yin
+1ST-PL-ERG letter  read LK-AUX
+'We read the letter.'
+	
+	choices: Add an inflection type for number indication, set the input to be the self-marker rule, add th plural lexical rule and singular lexical rule, specify the affix and number feature accordingly.
+	
 	3. self-marking
+	The Tibetan has an optional "self" marker suffix "-rang" that attaches to the pronoun stems.The affix does not affect any of the words' syntactic and semantic properties and is not required. However, for 3rd-person-female-plurals, the marking is required.
+	
+#Example for self-marking
+Source: author
+Vetted: f
+Judgment: g
+Phenomena: wo, c, tam
+ngarangs  yige    klog bayin
+nga-rang-tsho-s  yige    klog ba-yin
+1ST-SELF-PL-ERG letter  read LK-AUX
+'We read the letter.'
+	
+#Example for plural nouns
+Source: author
+Vetted: f
+Judgment: g
+Phenomena: wo, c, tam
+morangtshos  yige    bris song
+mo-rang-tsho-s  yige    bris song
+3RD_F-SELF-PL-ERG letter  send AUX
+'They(f) did not write the letter.'
+	
+	choices: We added one inflection type for self-marking and added the unself-marked rule and self-marked rule under it and set the inflection obligatary. Doing so is to help solving the special case of 3rd-fem-plural, but it does not work. We try to add the forbidden constraint on the plural-marker rule to eliminate the unself-indicated 3rd-fem pronoun, but that would eliminate the indicated one too.
+	
       *D. Mood markers. 
 	Tibetan mood markers are affixes (prefix or suffix, depending on the mood value) attached to the auxiliary verbs. Though lab3 doesn’t require us to do mood, many of the examples we can find for our test suite include this phenomenon. In order to get those examples parsed, we added two temporary mood-marker rule to allow the mood-marking suffixes to attach to the verbs.
 	
+	E. Non-ergative subject for transtive/serial verbs.
+	We came across the following idiom example where in a transtive verb sentence the subject is not marked as ergative case:
 
-Testsuite types not yet covered:
+Source: a:162 
+Vetted: t 
+Judgment: g 
+Phenomena: wo, c, tam 
+nga nyocha nyo ryguin 
+nga nyocha nyo rygu-in 
+I shopping buy LK-AUX 
+'I have still to do the shopping'
+
+	Choices: We set the idiom "nyocha nyo" as one intranstive verb instead of a whole VP.
+
+
+Testsuite instances not yet covered:
 * Wh-Questions
 * Adjunct phrases (instrumental verbs)
 * Adverbs
-* Ditransitives
-* Dropping objects (maybe subjects)
-* Mood markers
-Coverage & others:
 
-
-Overgeneration:
-
-We overgenerate for the following sentence because we don't adequately restrain the morphological negation inflection:
-
-
-
-
+4. Coverage & Overgeneration
+Coverage:25/59
+Overgeneration:0.
 
 
 unsolved problems:
-
-Many of the unsparsed sentences persist into this week such as wh-Questions, missing adjunct phrases and ditransitives. 
-
-
-
+1. The problems with the 3rd-person-female-plural pronouns, as stated above.
 
 Outside domain of customization system:
 
