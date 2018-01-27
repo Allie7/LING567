@@ -28,7 +28,7 @@
 28@author@@@1@crd,crdagr,svc@khorangla	skyeddman	yogred	bugu	yogred@@@@1@5@he-DAT		wife		exist	child	exist'He had a wife and child'@john cadigan and xinyi ji@january 13, 2018
 29@b:104@@@1@crd,crdagr@lcogtse	tshangma	1ditsho		dang	rkubkyag	thsong	giyin@@@@1@7@table	all		this-num	CRD	chair		sell	LK-AUX"I shall sell all these tables and the chairs"@john cadigan and xinyi ji@january 13, 2018
 30@author@@@1@crd,crdagr@ngas	lcogtse	dang	rkubkyag	thsong	giyin@@@@1@6@I-ERG	table	CRD	chair		sell	LK-AUX"I shall sell the tables and chairs"@john cadigan and xinyi ji@january 13, 2018
-31@author@@@1@crd,crdagr@ngas	lcogtse rkubkyag	thsong	giyin@@@@1@5@I-ERG	table	chair		sell	LK-AUX"I shall sell the tables and chairs"@john cadigan and xinyi ji@january 13, 2018
+31@author@@@1@crd,crdagr@ngas	lcogtse rkubkyag	thsong	giyin@@@@0@5@I-ERG	table	chair		sell	LK-AUX"I shall sell the tables and chairs"@john cadigan and xinyi ji@january 13, 2018
 32@author@@@1@crdagr@ngas	lcogtsela	dang	rkubkyag	thsong	giyin@@@@0@6@I-ERG	table-DAT	CRD	chair		sell	LK-AUX"I shall sell the tables and chairs"@john cadigan and xinyi ji@january 13, 2018
 33@author@@@1@crdagr@ngas	lcogtses	dang	rkubkyag	thsong	giyin@@@@0@6@I-ERG	table-ERG	CRD	chair		sell	LK-AUX"I shall sell the tables and chairs"@john cadigan and xinyi ji@january 13, 2018
 34@b:277@@@1@crd,crdagr@denas	khothso		gangkha		mar	dang	phyurba	sha	pagspa	dopo	brgyabnas	lhasala		tshonggag	yong	gired@@@@1@14@de-ABL	3sg-num		all		butter	CRD	cheese	meat	hide	load	make_up-SUB	Lhasa-DAT	sell-SUB	come	LK-AUX"Then they all make up loads of butter, cheese, meats and hides and come to Lhasa to sell them"@john cadigan and xinyi ji@january 13, 2018
@@ -59,24 +59,25 @@
 59@a:132@@@1@wo,c,tam@nga     1si byung@@@@1@3@I       die-PRF'I have died.'@john cadigan and xinyi ji@january 13, 2018
 60@a:161@@@1@wo,c,tam@nga	blebs	groyin@@@@1@3@I	arrive	LK-AUX'I had just arrived'@john cadigan and xinyi ji@january 13, 2018
 61@a:162@@@1@wo,c,tam@nga	nyocha		nyo ryguin@@@@1@4@I	shopping	buy LK-AUX'I have still to do the shopping'@john cadigan and xinyi ji@january 13, 2018
-62@author@@@1@det,tam,neg@yige    de    medpa	1dra@@@@1@4@letter  that  neg-EXIST	AUX'That letter does not seem to be here'@john cadigan and xinyi ji@january 13, 2018
-63@author@@@1@det,tam,neg@yige    medpa		1dra@@@@1@3@letter  neg-EXIST	AUX'The letter does not seem to be here.'@john cadigan and xinyi ji@january 13, 2018
-64@b:108@@@1@c,wh@gare  zerba@@@@1@2@what say_wh.INTERR'What's it called?'@john cadigan and xinyi ji@january 13, 2018
-65@b:130@@@1@c,wh@khongla rogspa    su  yogredpa@@@@1@4@3SG-DAT many-NOM  who exist_wh-INTERR'Who was with him?'@john cadigan and xinyi ji@january 13, 2018
-66@b:130@@@1@wh,c@kyedrang   su    yinpa@@@@1@3@you         who   be_wh-INTERR'Who are you?'@john cadigan and xinyi ji@january 13, 2018
-67@b:130@@@1@wh@gare  yin-am@@@@1@2@what  be-alt'Why?'@john cadigan and xinyi ji@january 13, 2018
-68@b:165@@@1@c,wh@kyedrang	ganas		phebspa@@@@1@3@you		what-ABL	come-INTERR'Where did you come from?'@john cadigan and xinyi ji@january 13, 2018
-69@b:198@@@1@c,wh@chalag  digyad sus tshongparedpa@@@@1@4@thing	this-num 	who-ERG	sell-link-aux-interr'Who sold the things?'@john cadigan and xinyi ji@january 13, 2018
-70@b:203@@@1@wo@khos      yige    bris	song@@@@1@4@3SG-ERG   letter  wrote	PRF.AUX‘He wrote the letter.’@john cadigan and xinyi ji@january 13, 2018
-71@author@@@1@wo@khos    bris	song    yige@@@@0@4@3SG-ERG wrote	PRF.AUX   letter'He wrote the letter.'@john cadigan and xinyi ji@january 13, 2018
-72@a:132@@@1@wo,c,@nga	1si	byung@@@@1@3@I	die	AUX.PRF'I have died.'@john cadigan and xinyi ji@january 13, 2018
-73@author@@@1@wo@1si	byung	nga@@@@0@3@die	PRF	nga'I have died.'@john cadigan and xinyi ji@january 13, 2018
-74@a:132@@@1@wo,c,@ngas	stag    bsad	payin@@@@1@4@I-ERG	tiger	killed	LK-AUX.PRF'I killed the tiger.'@john cadigan and xinyi ji@january 13, 2018
-75@author@@@1@wo@ngas	bsad	payin		stag@@@@0@4@I-ERG	killed	LK-AUX.PRF	tiger'I killed the tiger.'@john cadigan and xinyi ji@january 13, 2018
-76@author@@@1@wo@stag	ngas	bsad	payin@@@@0@4@tiger	I-ERG	killed	LK-AUX.PRF'I killed the tiger.'@john cadigan and xinyi ji@january 13, 2018
-77@author@@@1@wo@stag	bsad	payin		ngas@@@@0@4@tiger	killed	LK-AUX.PRF	I-ERG'I killed the tiger.'@john cadigan and xinyi ji@january 13, 2018
-78@author@@@1@wo@bsad	payin		stag	ngas@@@@0@4@killed	LK-AUX.PRF	tiger	I-ERG'I killed the tiger.'@john cadigan and xinyi ji@january 13, 2018
-79@author@@@1@wo@bsad	payin		ngas	stag@@@@0@4@killed	LK-AUX.PRF	I-ERG	tiger'I killed the tiger.'@john cadigan and xinyi ji@january 13, 2018
-80@b:132@@@1@wo@maphyinparedda@@@@1@1@not-went	LK-AUX-emph'Certainly he didn't go.'@john cadigan and xinyi ji@january 13, 2018
-81@author@@@1@wo@paredmaphyinda@@@@0@1@not_went-link_aux-emph'Certainly he didn't go.'@john cadigan and xinyi ji@january 13, 2018
-82@b:166@@@1@tam,wo,c@khonggis        slobsbyong      gnang	musyingired@@@@1@4@She-ERG         study           do	LK-AUX-LK-AUX"She's probably at her studies"@john cadigan and xinyi ji@january 13, 2018
+62@b:160@@@1@wo,c,tam@khong  nangla   bzhugsshag@@@@1@3@3SG inside-DAT fall-PRF'She is at home.'@john cadigan and xinyi ji@january 13, 2018
+63@author@@@1@det,tam,neg@yige    de    medpa	1dra@@@@1@4@letter  that  neg-EXIST	AUX'That letter does not seem to be here'@john cadigan and xinyi ji@january 13, 2018
+64@author@@@1@det,tam,neg@yige    medpa		1dra@@@@1@3@letter  neg-EXIST	AUX'The letter does not seem to be here.'@john cadigan and xinyi ji@january 13, 2018
+65@b:108@@@1@c,wh@gare  zerba@@@@1@2@what say_wh.INTERR'What's it called?'@john cadigan and xinyi ji@january 13, 2018
+66@b:130@@@1@c,wh@khongla rogspa    su  yogredpa@@@@1@4@3SG-DAT many-NOM  who exist_wh-INTERR'Who was with him?'@john cadigan and xinyi ji@january 13, 2018
+67@b:130@@@1@wh,c@kyedrang   su    yinpa@@@@1@3@you         who   be_wh-INTERR'Who are you?'@john cadigan and xinyi ji@january 13, 2018
+68@b:130@@@1@wh@gare  yin-am@@@@1@2@what  be-alt'Why?'@john cadigan and xinyi ji@january 13, 2018
+69@b:165@@@1@c,wh@kyedrang	ganas		phebspa@@@@1@3@you		what-ABL	come-INTERR'Where did you come from?'@john cadigan and xinyi ji@january 13, 2018
+70@b:198@@@1@c,wh@chalag  digyad sus tshongparedpa@@@@1@4@thing	this-num 	who-ERG	sell-link-aux-interr'Who sold the things?'@john cadigan and xinyi ji@january 13, 2018
+71@b:203@@@1@wo@khos      yige    bris	song@@@@1@4@3SG-ERG   letter  wrote	PRF.AUX‘He wrote the letter.’@john cadigan and xinyi ji@january 13, 2018
+72@author@@@1@wo@khos    bris	song    yige@@@@0@4@3SG-ERG wrote	PRF.AUX   letter'He wrote the letter.'@john cadigan and xinyi ji@january 13, 2018
+73@a:132@@@1@wo,c,@nga	1si	byung@@@@1@3@I	die	AUX.PRF'I have died.'@john cadigan and xinyi ji@january 13, 2018
+74@author@@@1@wo@1si	byung	nga@@@@0@3@die	PRF	nga'I have died.'@john cadigan and xinyi ji@january 13, 2018
+75@a:132@@@1@wo,c,@ngas	stag    bsad	payin@@@@1@4@I-ERG	tiger	killed	LK-AUX.PRF'I killed the tiger.'@john cadigan and xinyi ji@january 13, 2018
+76@author@@@1@wo@ngas	bsad	payin		stag@@@@0@4@I-ERG	killed	LK-AUX.PRF	tiger'I killed the tiger.'@john cadigan and xinyi ji@january 13, 2018
+77@author@@@1@wo@stag	ngas	bsad	payin@@@@0@4@tiger	I-ERG	killed	LK-AUX.PRF'I killed the tiger.'@john cadigan and xinyi ji@january 13, 2018
+78@author@@@1@wo@stag	bsad	payin		ngas@@@@0@4@tiger	killed	LK-AUX.PRF	I-ERG'I killed the tiger.'@john cadigan and xinyi ji@january 13, 2018
+79@author@@@1@wo@bsad	payin		stag	ngas@@@@0@4@killed	LK-AUX.PRF	tiger	I-ERG'I killed the tiger.'@john cadigan and xinyi ji@january 13, 2018
+80@author@@@1@wo@bsad	payin		ngas	stag@@@@0@4@killed	LK-AUX.PRF	I-ERG	tiger'I killed the tiger.'@john cadigan and xinyi ji@january 13, 2018
+81@b:132@@@1@wo@maphyinparedda@@@@1@1@not-went	LK-AUX-emph'Certainly he didn't go.'@john cadigan and xinyi ji@january 13, 2018
+82@author@@@1@wo@paredmaphyinda@@@@0@1@not_went-link_aux-emph'Certainly he didn't go.'@john cadigan and xinyi ji@january 13, 2018
+83@b:166@@@1@tam,wo,c@khonggis        slobsbyong      gnang	musyingired@@@@1@4@She-ERG         study           do	LK-AUX-LK-AUX"She's probably at her studies"@john cadigan and xinyi ji@january 13, 2018
