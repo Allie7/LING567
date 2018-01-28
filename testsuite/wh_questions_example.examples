@@ -43,12 +43,30 @@ kyedrang	ga-nas		phebs-pa
 you		what-ABL	come-INTERR
 'Where did you come from?'
 
-Source: b:198
+#
+# This example likely has its order due to fronting
+#
+Source: b:197
 Vetted: s
 Judgement: g
-Phenomena: c,wh
-chalag  digyad sus tshongparedpa
-chalag	di-gyad		su-s	tshong-pa-red-pa
-thing	this-num 	who-ERG	sell-link-aux-interr
+Phenomena: c, wh
+chalag  digyad 		sus 		tshong	paredpa
+chalag	di-gyad		su-s		tshong	pa-red-pa
+thing	this-num 	who-ERG		sell	LK-AUX-Q
 'Who sold the things?'
+
+# Source C 285
+#
+# Information questions have the interrogative word in its expected sentence position.
+# The interrogative words are su 'who' and a series based on ga: gare "what", gapa-r "where"
+# gadus "when", ga1dra 'how'. These questions may optionally be marked with the final particle ga
+
+Source: c:285
+Vetted: s
+Judgement: g
+Phenomena: wh, cl-mod 
+slobgra	tsharna		khyedrang	gare	gnangga
+slobgra	tshar-na	khyedrang	gare	gnang-ga
+school	finish-when	you		what	do-Q
+'What will you do when you finish school'
 

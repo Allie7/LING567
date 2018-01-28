@@ -1,0 +1,47 @@
+
+
+
+#
+#Shows yes-no questions
+#
+
+# Source C(285):
+# Yes-no questions are marked by the final particle pas which assimilates to a preceding underlying velar
+
+Source: c:285
+Vetted: s
+Judgment: g
+Phenomena: q
+kho	bodpa		redpas
+kho	bod-pa		red-pas
+He	Tibetan		be-Q
+"Is he a Tibetan"
+
+
+#ngas should be pas but is assimilated
+Source: c:285
+Vetted: s
+Judgment: g
+Phenomena: q
+khyedrang	bodla		phebs	myongngas
+khyedrang	bod-la		phebs	myong-ngas
+you		Tibet-DAT	go.HON	experiential-Q
+"Have you ever been to Tibet"
+
+#Made up example with Q marker on wrong verb
+Source: author
+Vetted: f
+Judgment: u
+Phenomena: q
+khyedrang	bodla		phebspas	myongngas
+khyedrang	bod-la		phebs-pas	myong-ngas
+you		Tibet-DAT	go.HON-Q	experiential-Q
+"Have you ever been to Tibet"
+
+
+
+
+
+
+
+

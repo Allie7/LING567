@@ -1,0 +1,46 @@
+
+
+
+#
+#Shows yes-no questions
+#
+
+#
+# Most examples use the genitive
+#
+
+Source: b:160
+Vetted: s
+Judgment: g
+Phenomena: poss
+nga1i	nyigdugs	lus	1dug
+nga-1i	nyigdugs	lus	1dug
+I-GEN	umbrella	leave	AUX
+"I've left my umbrella behind (I remember doing so)"
+
+#Derived example; be careful that it should not parse!
+Source: author
+Vetted: f
+Judgment: u
+Phenomena: poss
+nga	nyigdugs	lus	1dug
+nga	nyigdugs	lus	1dug
+I	umbrella	leave	AUX
+"I've left my umbrella behind (I remember doing so)"
+
+
+Source: b:160
+Vetted: s
+Judgment: g
+Phenomena: poss
+khonggi		mtshan	brjed	shag
+khong-gi	mtshan	brjed	shag
+3sg-GEN		name	forget	AUX
+"I've forgotten his name (I must have because I can't call it to mind)"
+
+
+
+
+
+
+

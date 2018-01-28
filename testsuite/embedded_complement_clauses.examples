@@ -1,0 +1,50 @@
+
+
+
+#
+#Shows complementation for declaritive clauses
+#
+
+# Source C 284
+# Most complement clauses are nominalizations. The nominalizers most commonly used
+# as complementizers are pa, yag rgyu and gag. The complement of a verb of perception
+# or cognition can be a finite clause nominalized with -pa
+#
+
+Source: c:284
+Vetted: s
+Judgment: g
+Phenomena: emb-d
+ngas	kho	laska	byed	kyi	yodpa		mthong	byung
+nga-s	kho	laska	byed	kyi	yod-pa		mthong	byung
+I-ERG	he	work	do	AUX	exist-NOM	see	PRF
+"I see he is working"
+
+
+#
+# Example missing nominalization
+#
+Source: author
+Vetted: f
+Judgment: u
+Phenomena: emb-d
+ngas	kho	laska	byed	kyi	yod		mthong	byung
+nga-s	kho	laska	byed	kyi	yod		mthong	byung
+I-ERG	he	work	do	AUX	exist		see	PRF
+"I see he is working"
+
+Source: c:284
+Vetted: s
+Judgment: g
+Phenomena: emb-d
+nga	bodla		phyinpa		khos	shes	kyi
+nga	bod-la		phyin-pa	kho-s	shes	kyi
+I	Tibet-DAT	went-NOM	he-ERG	know	AUX
+"He knows I went to Tibet"
+
+
+
+
+
+
+

@@ -1,0 +1,80 @@
+
+
+#Source C subordinator list on page 283
+#
+#The simplest subordinating construction consists of the bare verb stem
+#with a clitic subordinating particle
+#
+# na = if
+# tsang = because
+# nas and byas = non-final
+#
+# There are also subordinators similar in structure to relator noun constructions
+# which likewise follow a bare stem
+#
+# bar.du and ring.la = while
+# rjes.la = after
+# khong.la = before with a negated verb
+
+
+Source: b:283
+Vetted: s
+Judgment: g
+Phenomena: cl-mod
+kho	rgyagarla	ma1gro	khongla		dngul	mangpo	bsags	pared
+kho	rgyagar-la	ma-1gro	khong-la	dngul	mangpo	bsags	pa-red
+he	India-DAT	NEG-go	before		money	much	save	LK-AUX
+"Before he went to India, he saved a lot of money"
+
+
+#Shows that there can be two different
+#subjects in the subordinated clause
+
+Source: b:173
+Vetted: s
+Judgment: g
+Phenomena: cl-mod
+kho	khalag	bzas	byas	ngas	khor	khapar		btang	payin
+kho	khalag	bzas	byas	nga-s	kho-r	khapar		btang	pa-yin
+3sg	work	ate	did	nga-ERG	3sg-DAT	telephone	send	LK-AUX
+"When he had eaten, I telephoned him"
+
+
+#shows an example which could be a serial-verb construction or subordination
+Source: b:173
+Vetted: s
+Judgment: g
+Phenomena: cl-mod
+kho	laska	byas	byas	nangla		bsad	pared
+kho	laska	byas	byas	nang-la		bsad	pared
+3sg	work	did	did	home-DAT	stay	LK-AUX
+"He worked and then stayed home"
+
+
+Source: b:173
+Vetted: s
+Judgment: g
+Phenomena: svc
+kho	laska	byas	nangla		bsad	pared
+kho	laska	byas	nang-la		bsad	pared
+3sg	work	did	home-DAT	stay	LK-AUX
+"He worked and stayed home"
+
+
+#Derived incorrect example
+#byas is not in the right place for the clause
+Source: author
+Vetted: f
+Judgment: u
+Phenomena: cl-mod
+byas	kho	laska	byas	nangla		bsad	pared
+byas	kho	laska	byas	nang-la		bsad	pared
+byas	3sg	work	did	home-DAT	stay	LK-AUX
+"He worked and then stayed home"
+
+
+
+
+
+
+
