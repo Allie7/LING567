@@ -109,6 +109,10 @@ mood-suffix7 :=
 %suffix (* pa1dra)
 mood-lex-rule.
 
+interr-marker-suffix :=
+%suffix (* bas)
+interr-marker-lex-rule.
+
 simple-perfect-suffix1 :=
 %suffix (* shag)
 simple-perfect-lex-rule.
