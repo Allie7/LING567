@@ -81,10 +81,6 @@ khalag := common_noun_lex-noun-lex &
   [ STEM < "khalag" >,
     SYNSEM.LKEYS.KEYREL.PRED "_meal_n_rel" ].
 
-nang := common_noun_lex-noun-lex &
-  [ STEM < "nang" >,
-    SYNSEM.LKEYS.KEYREL.PRED "_inside_n_rel" ].
-
 nga := 1st_person_lex-noun-lex &
   [ STEM < "nga" >,
     SYNSEM.LKEYS.KEYREL.PRED "pron_rel" ].
@@ -161,11 +157,6 @@ yogred_1 := intransitive-verb-lex-verb-lex &
   [ STEM < "yogred" >,
     SYNSEM.LKEYS.KEYREL.PRED "_exist_v_rel" ].
 
-nyocha%20nyo := intransitive-verb-lex-verb-lex &
-  [ STEM < "nyocha",
-           "nyo" >,
-    SYNSEM.LKEYS.KEYREL.PRED "_go_shopping_v_rel" ].
-
 bcag := transitive-erg-verb-lex-verb-lex &
   [ STEM < "bcag" >,
     SYNSEM.LKEYS.KEYREL.PRED "_break_v_rel" ].
@@ -213,10 +204,6 @@ bzas := transitive-erg-verb-lex-verb-lex &
 gzhus := obj-dat-trans-verb-lex-verb-lex &
   [ STEM < "gzhus" >,
     SYNSEM.LKEYS.KEYREL.PRED "_hit_v_rel" ].
-
-bzhugs := obj-dat-trans-verb-lex-verb-lex &
-  [ STEM < "bzhugs" >,
-    SYNSEM.LKEYS.KEYREL.PRED "_fall_v_rel" ].
 
 ;;; Auxiliaries
 
