@@ -81,6 +81,14 @@ khalag := common_noun_lex-noun-lex &
   [ STEM < "khalag" >,
     SYNSEM.LKEYS.KEYREL.PRED "_meal_n_rel" ].
 
+nyigdugs := common_noun_lex-noun-lex &
+  [ STEM < "nyigdugs" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_umbrella_n_rel" ].
+
+mtshan := common_noun_lex-noun-lex &
+  [ STEM < "mtshan" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_name_n_rel" ].
+
 nga := 1st_person_lex-noun-lex &
   [ STEM < "nga" >,
     SYNSEM.LKEYS.KEYREL.PRED "pron_rel" ].
@@ -200,6 +208,14 @@ thsong := transitive-erg-verb-lex-verb-lex &
 bzas := transitive-erg-verb-lex-verb-lex &
   [ STEM < "bzas" >,
     SYNSEM.LKEYS.KEYREL.PRED "_eat_v_rel" ].
+
+lus := transitive-erg-verb-lex-verb-lex &
+  [ STEM < "lus" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_leave_v_rel" ].
+
+brjed := transitive-erg-verb-lex-verb-lex &
+  [ STEM < "brjed" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_forget_v_rel" ].
 
 gzhus := obj-dat-trans-verb-lex-verb-lex &
   [ STEM < "gzhus" >,

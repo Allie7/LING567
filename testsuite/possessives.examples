@@ -2,10 +2,6 @@
 
 
 #
-#Shows yes-no questions
-#
-
-#
 # Most examples use the genitive
 #
 
@@ -13,10 +9,22 @@ Source: b:160
 Vetted: s
 Judgment: g
 Phenomena: poss
-nga1i	nyigdugs	lus	1dug
-nga-1i	nyigdugs	lus	1dug
+ngali	nyigdugs	lus	1dug
+nga-li	nyigdugs	lus	1dug
 I-GEN	umbrella	leave	AUX
 "I've left my umbrella behind (I remember doing so)"
+
+#no missing subject
+Source: author
+Vetted: f
+Judgment: g
+Phenomena: poss
+ngas	ngali	nyigdugs	lus	1dug
+nga-s	nga-li	nyigdugs	lus	1dug
+I-ERG	I-GEN	umbrella	leave	AUX
+"I've left my umbrella behind (I remember doing so)"
+
+
 
 #Derived example; be careful that it should not parse!
 Source: author

@@ -21,6 +21,10 @@ instrumental-lex-rule-suffix :=
 %suffix (* gus)
 instrumental-lex-rule-lex-rule.
 
+genitive-lex-suffix :=
+%suffix (* li)
+genitive-lex-lex-rule.
+
 self-indicate-rule-suffix :=
 %suffix (* rang)
 self-indicate-rule-lex-rule.
