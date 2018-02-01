@@ -36,7 +36,7 @@ Judgment: g
 Phenomena: cl-mod
 kho	khalag	bzas	byas	ngas	khor	khapar		btang	payin
 kho	khalag	bzas	byas	nga-s	kho-r	khapar		btang	pa-yin
-3sg	work	ate	did	nga-ERG	3sg-DAT	telephone	send	LK-AUX
+3sg	meal	ate	did	nga-ERG	3sg-DAT	telephone	send	LK-AUX
 "When he had eaten, I telephoned him"
 
 
@@ -45,8 +45,8 @@ Source: b:173
 Vetted: s
 Judgment: g
 Phenomena: cl-mod
-kho	laska	byas	byas	nangla		bsad	pared
-kho	laska	byas	byas	nang-la		bsad	pa-red
+kho	laska	byas	byas	nangla		bsdad	pared
+kho	laska	byas	byas	nang-la		bsdad	pa-red
 3sg	work	did	did	home-DAT	stay	LK-AUX
 "He worked and then stayed home"
 
@@ -55,8 +55,8 @@ Source: b:173
 Vetted: s
 Judgment: g
 Phenomena: svc
-kho	laska	byas	nangla		bsad	pared
-kho	laska	byas	nang-la		bsad	pa-red
+kho	laska	byas	nangla		bsdad	pared
+kho	laska	byas	nang-la		bsdad	pa-red
 3sg	work	did	home-DAT	stay	LK-AUX
 "He worked and stayed home"
 
