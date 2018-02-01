@@ -205,7 +205,7 @@ thsong := transitive-erg-verb-lex-verb-lex &
   [ STEM < "thsong" >,
     SYNSEM.LKEYS.KEYREL.PRED "_sell_v_rel" ].
 
-bzas := transitive-erg-verb-lex-verb-lex &
+bzas_1 := transitive-erg-verb-lex-verb-lex &
   [ STEM < "bzas" >,
     SYNSEM.LKEYS.KEYREL.PRED "_eat_v_rel" ].
 
@@ -225,6 +225,11 @@ bsdad := obj-dat-trans-verb-lex-verb-lex &
   [ STEM < "bsdad" >,
     SYNSEM.LKEYS.KEYREL.PRED "_stay_v_rel" ].
 
+khapar%20btang := obj-dat-trans-verb-lex-verb-lex &
+  [ STEM < "khapar",
+           "btang" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_telephone_v_rel" ].
+
 byas_1 := transtive-verb-lex-verb-lex &
   [ STEM < "byas" >,
     SYNSEM.LKEYS.KEYREL.PRED "_do_v_rel" ].
@@ -233,9 +238,17 @@ shes := transtive-verb-lex-verb-lex &
   [ STEM < "shes" >,
     SYNSEM.LKEYS.KEYREL.PRED "_shes_v_rel" ].
 
+bzas_2 := transtive-verb-lex-verb-lex &
+  [ STEM < "bzas" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_eat_v_rel" ].
+
 phebs := abs-dat-transitive-verb-lex &
   [ STEM < "phebs" >,
     SYNSEM.LKEYS.KEYREL.PRED "_go_v_rel" ].
+
+bsdad := abs-dat-transitive-verb-lex &
+  [ STEM < "bsdad" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_stay_v_rel" ].
 
 yin_1 := yin-verb-lex &
   [ STEM < "yin" >,
@@ -248,6 +261,11 @@ red_1 := red-verb-lex &
 yod_1 := yod-verb-lex &
   [ STEM < "yod" >,
     SYNSEM.LKEYS.KEYREL.PRED "_exist_v_rel" ].
+
+nyocha%20nyo := yod-verb-lex &
+  [ STEM < "nyocha",
+           "nyo" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_go_shopping_v_rel" ].
 
 1dug_1 := 1dug-verb-lex &
   [ STEM < "1dug" >,
