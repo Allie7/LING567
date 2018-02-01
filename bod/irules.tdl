@@ -117,13 +117,21 @@ mood-suffix6 :=
 %suffix (* pa1dra)
 mood-lex-rule.
 
-interr-marker-suffix1 :=
-%suffix (* bas)
-interr-marker-lex-rule.
-
-interr-marker-suffix2 :=
+pas-interr-suffix :=
 %suffix (* pas)
-interr-marker-lex-rule.
+pas-interr-lex-rule.
+
+gas-interr-suffix :=
+%suffix (* gas)
+gas-interr-lex-rule.
+
+bas-interr-suffix :=
+%suffix (* bas)
+bas-interr-lex-rule.
+
+ngas-interr-suffix :=
+%suffix (* ngas)
+ngas-interr-lex-rule.
 
 simple-perfect-suffix1 :=
 %suffix (* shag)
@@ -168,3 +176,55 @@ pros-lex-rule.
 pros-prefix4 :=
 %prefix (* grabs)
 pros-lex-rule.
+
+nominalization-suffix1 :=
+%suffix (* po)
+nominalization-lex-rule.
+
+nominalization-suffix2 :=
+%suffix (* pa)
+nominalization-lex-rule.
+
+nominalization-suffix3 :=
+%suffix (* ba)
+nominalization-lex-rule.
+
+nominalization-suffix4 :=
+%suffix (* mkhan)
+nominalization-lex-rule.
+
+nominalization-suffix5 :=
+%suffix (* yag)
+nominalization-lex-rule.
+
+nominalization-suffix6 :=
+%suffix (* rgyu)
+nominalization-lex-rule.
+
+nominalization-suffix7 :=
+%suffix (* rtsis)
+nominalization-lex-rule.
+
+nominalization-suffix8 :=
+%suffix (* 1dod)
+nominalization-lex-rule.
+
+nominalization-suffix9 :=
+%suffix (* long)
+nominalization-lex-rule.
+
+nominalization-suffix10 :=
+%suffix (* thabs)
+nominalization-lex-rule.
+
+nominalization-suffix11 :=
+%suffix (* re)
+nominalization-lex-rule.
+
+nominalization-suffix12 :=
+%suffix (* mdog)
+nominalization-lex-rule.
+
+nominalization-suffix13 :=
+%suffix (* rogs)
+nominalization-lex-rule.

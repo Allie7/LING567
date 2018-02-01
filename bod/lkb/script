@@ -130,5 +130,5 @@
 ;;;
 
 (if (eq (length *last-parses*) 1)
-(setf *last-parses* '("ngas stag bsadpayin" "nga	stag bsadpayin" "ngala  stag bsadpayin" "ngala	stagla		bsadpayin" "thubbstangyis	blobzangla	gzhussong" "thubbstangyis	blobzang	gzhussong" "thubbstangyis  blobzangla     bsadpared" "khos		yige		brissong" "`mibculngatsam    cig yogred" "cig `mibculngatsam yogred" "`mibculngatsam  yogred" "khos dkaryol bcagsong" "nga 'gro dgosred" "kyedrang 'gro  dgoskyired" "khong 'grodgos    byedkyired" "kho grosdgosred" "ngas    yige    cig briskyiyod" "ngas  yige    klogbayin" "nga     'sibyung" "nga	blebsgroyin" "nga	nyocha		nyoryguin" "yige    de    medpa'dra" "yige    medpa'dra" "khos brissong yige" )))
+(setf *last-parses* '("kho 	laska	byas	byas	nangla		bsad	pared" )))
 

@@ -5,6 +5,8 @@ decl-head-opt-subj := decl-head-opt-subj-phrase.
 
 basic-head-opt-comp := basic-head-opt-comp-phrase.
 
+non-event-subj-head := non-event-subj-head-phrase.
+
 comp-head := comp-head-phrase.
 
 subj-head := subj-head-phrase.
@@ -33,24 +35,4 @@ vp2-bottom-coord := vp2-bottom-coord-rule.
 
 adj-head-scop := adj-head-scop-phrase.
 
-after-modifying-clause := after-modifying-clause-phrase.
-
-inorderto-modifying-clause := inorderto-modifying-clause-phrase.
-
-while-modifying-clause := while-modifying-clause-phrase.
-
-if-modifying-clause := if-modifying-clause-phrase.
-
-unless-modifying-clause := unless-modifying-clause-phrase.
-
-eventhough-modifying-clause := eventhough-modifying-clause-phrase.
-
-but-modifying-clause := but-modifying-clause-phrase.
-
-because-modifying-clause := because-modifying-clause-phrase.
-
-adj-head-int := adj-head-int-phrase.
-
-morning-modifying-clause := morning-modifying-clause-phrase.
-
-then-modifying-clause := then-modifying-clause-phrase.
+did-modifying-clause := did-modifying-clause-phrase.
