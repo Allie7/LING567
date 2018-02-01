@@ -181,6 +181,11 @@ yogred_1 := intransitive-verb-lex-verb-lex &
   [ STEM < "yogred" >,
     SYNSEM.LKEYS.KEYREL.PRED "_exist_v_rel" ].
 
+nyocha%20nyo := intransitive-verb-lex-verb-lex &
+  [ STEM < "nyocha",
+           "nyo" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_go_shopping_v_rel" ].
+
 bcag := transitive-erg-verb-lex-verb-lex &
   [ STEM < "bcag" >,
     SYNSEM.LKEYS.KEYREL.PRED "_break_v_rel" ].
@@ -221,7 +226,7 @@ thsong := transitive-erg-verb-lex-verb-lex &
   [ STEM < "thsong" >,
     SYNSEM.LKEYS.KEYREL.PRED "_sell_v_rel" ].
 
-bzas := transitive-erg-verb-lex-verb-lex &
+bzas_1 := transitive-erg-verb-lex-verb-lex &
   [ STEM < "bzas" >,
     SYNSEM.LKEYS.KEYREL.PRED "_eat_v_rel" ].
 
@@ -233,10 +238,6 @@ brjed := transitive-erg-verb-lex-verb-lex &
   [ STEM < "brjed" >,
     SYNSEM.LKEYS.KEYREL.PRED "_forget_v_rel" ].
 
-byas := transitive-erg-verb-lex-verb-lex &
-  [ STEM < "byas" >,
-    SYNSEM.LKEYS.KEYREL.PRED "_do_v_rel" ].
-
 gzhus := obj-dat-trans-verb-lex-verb-lex &
   [ STEM < "gzhus" >,
     SYNSEM.LKEYS.KEYREL.PRED "_hit_v_rel" ].
@@ -246,6 +247,14 @@ khapar%20btang := obj-dat-trans-verb-lex-verb-lex &
            "btang" >,
     SYNSEM.LKEYS.KEYREL.PRED "_telephone_v_rel" ].
 
+byas := transtive-verb-lex-verb-lex &
+  [ STEM < "byas" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_do_v_rel" ].
+
+bzas_2 := transtive-verb-lex-verb-lex &
+  [ STEM < "bzas" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_eat_v_rel" ].
+
 phebs := abs-dat-transitive-verb-lex &
   [ STEM < "phebs" >,
     SYNSEM.LKEYS.KEYREL.PRED "_go_v_rel" ].
@@ -253,6 +262,10 @@ phebs := abs-dat-transitive-verb-lex &
 bsdad := abs-dat-transitive-verb-lex &
   [ STEM < "bsdad" >,
     SYNSEM.LKEYS.KEYREL.PRED "_stay_v_rel" ].
+
+bzhugs := abs-dat-transitive-verb-lex &
+  [ STEM < "bzhugs" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_fall_v_rel" ].
 
 ;;; Auxiliaries
 
