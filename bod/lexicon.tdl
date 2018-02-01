@@ -169,7 +169,7 @@ bcag := transitive-erg-verb-lex-verb-lex &
   [ STEM < "bcag" >,
     SYNSEM.LKEYS.KEYREL.PRED "_break_v_rel" ].
 
-bsad_1 := transitive-erg-verb-lex-verb-lex &
+bsad := transitive-erg-verb-lex-verb-lex &
   [ STEM < "bsad" >,
     SYNSEM.LKEYS.KEYREL.PRED "_kill_v_rel" ].
 
@@ -221,8 +221,8 @@ gzhus := obj-dat-trans-verb-lex-verb-lex &
   [ STEM < "gzhus" >,
     SYNSEM.LKEYS.KEYREL.PRED "_hit_v_rel" ].
 
-bsad_2 := obj-dat-trans-verb-lex-verb-lex &
-  [ STEM < "bsad" >,
+bsdad_1 := obj-dat-trans-verb-lex-verb-lex &
+  [ STEM < "bsdad" >,
     SYNSEM.LKEYS.KEYREL.PRED "_stay_v_rel" ].
 
 khapar%20btang := obj-dat-trans-verb-lex-verb-lex &
@@ -246,7 +246,7 @@ phebs := abs-dat-transitive-verb-lex &
   [ STEM < "phebs" >,
     SYNSEM.LKEYS.KEYREL.PRED "_go_v_rel" ].
 
-bsdad := abs-dat-transitive-verb-lex &
+bsdad_2 := abs-dat-transitive-verb-lex &
   [ STEM < "bsdad" >,
     SYNSEM.LKEYS.KEYREL.PRED "_stay_v_rel" ].
 
