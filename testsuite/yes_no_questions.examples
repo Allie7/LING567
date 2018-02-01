@@ -11,11 +11,11 @@
 Source: c:285
 Vetted: s
 Judgment: g
-Phenomena: q
+Phenomena: q, cop
 kho	bodpa		redpas
 kho	bodpa		red-pas
 He	Tibetan		be-Q
-"Is he a Tibetan"
+"Is he a Tibetan?"
 
 
 #ngas should be pas but is assimilated
@@ -25,7 +25,7 @@ Judgment: g
 Phenomena: q
 khyedrang	bodla		phebs	myongngas
 khyedrang	bod-la		phebs	myong-ngas
-you		Tibet-DAT	go.HON	experiential-Q
+you		Tibet-DAT	go.HON	experiential.AUX-Q
 "Have you ever been to Tibet?"
 
 #Made up example with Q marker on wrong verb

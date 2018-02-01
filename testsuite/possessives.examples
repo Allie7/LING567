@@ -8,7 +8,7 @@
 Source: b:160
 Vetted: s
 Judgment: g
-Phenomena: poss
+Phenomena: poss, pro-d
 ngali	nyigdugs	lus	1dug
 nga-li	nyigdugs	lus	1dug
 I-GEN	umbrella	leave	AUX
@@ -24,31 +24,39 @@ nga-s	nga-li	nyigdugs	lus	1dug
 I-ERG	I-GEN	umbrella	leave	AUX
 "I've left my umbrella behind (I remember doing so)"
 
-
-
 #Derived example; be careful that it should not parse!
 Source: author
 Vetted: f
 Judgment: u
 Phenomena: poss
-nga	nyigdugs	lus	1dug
-nga	nyigdugs	lus	1dug
-I	umbrella	leave	AUX
+ngas	nyigdugs	ngali	lus	1dug
+nga-s	nyigdugs	nga-li	lus	1dug
+I-ERG	umbrella	I-GEN	leave	AUX
 "I've left my umbrella behind (I remember doing so)"
 
 
 Source: b:160
 Vetted: s
 Judgment: g
-Phenomena: poss
+Phenomena: poss, pro-d
 khonggi		mtshan	brjed	shag
 khong-gi	mtshan	brjed	shag
 3sg-GEN		name	forget	AUX
 "I've forgotten his name (I must have because I can't call it to mind)"
 
 
-
-
+#Derived example
+#
+# From B:102
+#
+Source: author
+Vetted: f
+Judgment: g
+Phenomena: poss
+khonggi		11awa1i		pheb1gro	nakpo		re
+khong-gi	11awa-1i	pheb1gro	nak-po		re
+He-GEN		child-GEN	car.ABS		black-NMZ	be
+"His child's car is black"
 
 
 

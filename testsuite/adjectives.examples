@@ -8,7 +8,7 @@ Judgment: g
 Phenomena: adj
 mi	mangpo		zhepo	cig	1dug
 mi	mang-po		zhepo	cig	1dug
-person	many-nom	very	num	exist
+person	many-NMZ	very	num	exist
 "There are a tremendous lot of people"
 
 #Derived
@@ -18,7 +18,7 @@ Judgment: g
 Phenomena: adj
 mi	mangpo		cig	1dug
 mi	mang-po		cig	1dug
-person	many-nom	num	exist
+person	many-NMZ	num	exist
 "There are a many people"
 
 #incorrect order
@@ -28,7 +28,7 @@ Judgment: u
 Phenomena: adj
 mangpo		mi		cig	1dug
 mang-po		mi		cig	1dug
-many-nom	people	num	exist
+many-NMZ	people	num	exist
 "There are a many people"
 
 
@@ -41,7 +41,7 @@ Judgment: g
 Phenomena: adj
 gzugspo		bdepo		11a1utse	yod
 gzugspo		bde-po		11a1utse	yod
-body		well-nom	reasonably	exist
+body		well-NMZ	reasonably	exist
 "I'm reasonably well"
 
 #
@@ -57,7 +57,7 @@ Judgment: g
 Phenomena: adj
 nyuku	ti	nakpo		re	
 nyuku	ti	nak-po		re
-pen	this	black-nom	be
+pen	this	black-NMZ	be
 "This pen is black"
 
 Source: d:95
@@ -66,7 +66,7 @@ Judgment: g
 Phenomena: adj
 nyuku	nakpo		ti	re	
 nyuku	nak-po		ti	re
-pen	black-nom	this	be
+pen	black-NMZ	this	be
 'This is a black pen'
 
 
@@ -78,7 +78,7 @@ Judgment: g
 Phenomena: adj
 chu	tshapo	1drapo	1dug
 chu	tsha-po	1drapo	1dug
-water	hot-nom	sort_of	be
+water	hot-NMZ	sort_of	be
 "The water was sort of hot"
 
 ########
@@ -89,7 +89,7 @@ Judgement: g
 Phenomena: adj
 mi  mangse  1dug
 mi  mang-se 1dug
-people many-nom be
+people many-NMZ be
 "There are rather a lot of People."
 
 
@@ -108,5 +108,5 @@ Judgement: g
 Phenomena: adj
 ja 1di zhimpo yin
 ja 1di zhim-po yin
-tea this tasty-nom  be
+tea this tasty-NMZ  be
 "This tea is tasty."
