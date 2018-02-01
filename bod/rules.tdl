@@ -5,6 +5,8 @@ decl-head-opt-subj := decl-head-opt-subj-phrase.
 
 basic-head-opt-comp := basic-head-opt-comp-phrase.
 
+non-event-subj-head := non-event-subj-head-phrase.
+
 comp-head := comp-head-phrase.
 
 subj-head := subj-head-phrase.

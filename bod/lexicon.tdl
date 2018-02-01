@@ -269,6 +269,10 @@ song_1 := song-verb-lex &
   [ STEM < "1dra" >,
     SYNSEM.LKEYS.KEYREL.PRED "_seem_v_rel" ].
 
+shes := clausal-compliment-clausal-verb-lex &
+  [ STEM < "shes" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_understand_v_rel" ].
+
 ;;; Auxiliaries
 
 yin_2 := yin-aux-lex &
@@ -390,3 +394,8 @@ zhoggas := prehead-morning-clause-init-adv-subord-lex-item &
 
 denas := prehead-then-clause-init-adv-subord-lex-item &
   [ STEM < "denas" > ].
+
+;;; Complementizers
+
+po := comps1-comp-lex-item &
+  [ STEM < "po" > ].
