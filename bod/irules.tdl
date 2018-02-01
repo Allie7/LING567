@@ -1,8 +1,12 @@
 ;;; -*- Mode: TDL; Coding: utf-8 -*-
 ;;; Inflecting Lexical Rule Instances
 
-dative-lex-rule-suffix :=
+dative-lex-rule-suffix1 :=
 %suffix (* la)
+dative-lex-rule-lex-rule.
+
+dative-lex-rule-suffix2 :=
+%suffix (* r)
 dative-lex-rule-lex-rule.
 
 ergative-lex-rule-suffix1 :=

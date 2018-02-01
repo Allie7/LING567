@@ -89,6 +89,10 @@ mtshan := common_noun_lex-noun-lex &
   [ STEM < "mtshan" >,
     SYNSEM.LKEYS.KEYREL.PRED "_name_n_rel" ].
 
+nang := common_noun_lex-noun-lex &
+  [ STEM < "nang" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_home_n_rel" ].
+
 nga := 1st_person_lex-noun-lex &
   [ STEM < "nga" >,
     SYNSEM.LKEYS.KEYREL.PRED "pron_rel" ].
@@ -165,7 +169,7 @@ bcag := transitive-erg-verb-lex-verb-lex &
   [ STEM < "bcag" >,
     SYNSEM.LKEYS.KEYREL.PRED "_break_v_rel" ].
 
-bsad := transitive-erg-verb-lex-verb-lex &
+bsad_1 := transitive-erg-verb-lex-verb-lex &
   [ STEM < "bsad" >,
     SYNSEM.LKEYS.KEYREL.PRED "_kill_v_rel" ].
 
@@ -216,6 +220,18 @@ brjed := transitive-erg-verb-lex-verb-lex &
 gzhus := obj-dat-trans-verb-lex-verb-lex &
   [ STEM < "gzhus" >,
     SYNSEM.LKEYS.KEYREL.PRED "_hit_v_rel" ].
+
+bsad_2 := obj-dat-trans-verb-lex-verb-lex &
+  [ STEM < "bsad" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_stay_v_rel" ].
+
+byas_1 := transtive-verb-lex-verb-lex &
+  [ STEM < "byas" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_do_v_rel" ].
+
+shes := transtive-verb-lex-verb-lex &
+  [ STEM < "shes" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_shes_v_rel" ].
 
 phebs := abs-dat-transitive-verb-lex &
   [ STEM < "phebs" >,
@@ -268,10 +284,6 @@ song_1 := song-verb-lex &
 1dra_1 := 1dra-verb-lex &
   [ STEM < "1dra" >,
     SYNSEM.LKEYS.KEYREL.PRED "_seem_v_rel" ].
-
-shes := clausal-compliment-clausal-verb-lex &
-  [ STEM < "shes" >,
-    SYNSEM.LKEYS.KEYREL.PRED "_understand_v_rel" ].
 
 ;;; Auxiliaries
 
@@ -338,7 +350,7 @@ cig := determinant-adj-lex-determiner-lex &
   [ STEM < "cig" >,
     SYNSEM.LKEYS.KEYREL.PRED "_a_q_rel" ].
 
-de_1 := determinant-adj-lex-determiner-lex &
+de := determinant-adj-lex-determiner-lex &
   [ STEM < "de" >,
     SYNSEM.LKEYS.KEYREL.PRED "_that_q_rel" ].
 
@@ -359,43 +371,5 @@ dang1 := conj-lex &
     SYNSEM.LKEYS.KEYREL.PRED "_and_coord_rel",
     CFORM "1" ].
 
-nas := prehead-after-clause-final-adv-subord-lex-item &
-  [ STEM < "nas" > ].
-
-gag := prehead-inorderto-clause-final-adv-subord-lex-item &
-  [ STEM < "gag" > ].
-
-dus := prehead-while-clause-final-adv-subord-lex-item &
-  [ STEM < "dus" > ].
-
-na := prehead-if-clause-final-adv-subord-lex-item &
-  [ STEM < "na" > ].
-
-pamagtogs := prehead-unless-clause-final-adv-subord-lex-item &
-  [ STEM < "pamagtogs" > ].
-
-namagtogs := prehead-unless-clause-final-adv-subord-lex-item &
-  [ STEM < "namagtogs" > ].
-
-nayang := prehead-eventhough-clause-final-adv-subord-lex-item &
-  [ STEM < "nayang" > ].
-
-te := prehead-but-clause-final-adv-subord-lex-item &
-  [ STEM < "te" > ].
-
-de_2 := prehead-but-clause-final-adv-subord-lex-item &
-  [ STEM < "de" > ].
-
-tsang := prehead-because-clause-final-adv-subord-lex-item &
-  [ STEM < "tsang" > ].
-
-zhoggas := prehead-morning-clause-init-adv-subord-lex-item &
-  [ STEM < "zhoggas" > ].
-
-denas := prehead-then-clause-init-adv-subord-lex-item &
-  [ STEM < "denas" > ].
-
-;;; Complementizers
-
-po := comps1-comp-lex-item &
-  [ STEM < "po" > ].
+byas_2 := prehead-did-clause-final-adv-subord-lex-item &
+  [ STEM < "byas" > ].
