@@ -221,7 +221,7 @@ gzhus := obj-dat-trans-verb-lex-verb-lex &
   [ STEM < "gzhus" >,
     SYNSEM.LKEYS.KEYREL.PRED "_hit_v_rel" ].
 
-bsdad := obj-dat-trans-verb-lex-verb-lex &
+bsdad_1 := obj-dat-trans-verb-lex-verb-lex &
   [ STEM < "bsdad" >,
     SYNSEM.LKEYS.KEYREL.PRED "_stay_v_rel" ].
 
@@ -246,7 +246,7 @@ phebs := abs-dat-transitive-verb-lex &
   [ STEM < "phebs" >,
     SYNSEM.LKEYS.KEYREL.PRED "_go_v_rel" ].
 
-bsdad := abs-dat-transitive-verb-lex &
+bsdad_2 := abs-dat-transitive-verb-lex &
   [ STEM < "bsdad" >,
     SYNSEM.LKEYS.KEYREL.PRED "_stay_v_rel" ].
 

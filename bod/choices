@@ -315,12 +315,9 @@ section=lexicon
     verb12_stem1_pred=_do_v_rel
     verb12_stem2_orth=shes
     verb12_stem2_pred=_shes_v_rel
-<<<<<<< HEAD
     verb12_forbid1_others=verb-pc2
-=======
     verb12_stem3_orth=bzas
     verb12_stem3_pred=_eat_v_rel
->>>>>>> 2aea70667b405acf39b586db1cd9b4607611e18e
   verb13_name=abs-dat-transitive
   verb13_supertypes=verb12
     verb13_feat1_name=case
