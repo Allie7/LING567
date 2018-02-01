@@ -157,16 +157,8 @@ gros := intransitive-verb-lex-verb-lex &
   [ STEM < "gros" >,
     SYNSEM.LKEYS.KEYREL.PRED "_go_v_rel" ].
 
-1dug_1 := intransitive-verb-lex-verb-lex &
-  [ STEM < "1dug" >,
-    SYNSEM.LKEYS.KEYREL.PRED "_exist_v_rel" ].
-
 re_1 := intransitive-verb-lex-verb-lex &
   [ STEM < "re" >,
-    SYNSEM.LKEYS.KEYREL.PRED "_exist_v_rel" ].
-
-yogred_1 := intransitive-verb-lex-verb-lex &
-  [ STEM < "yogred" >,
     SYNSEM.LKEYS.KEYREL.PRED "_exist_v_rel" ].
 
 bcag := transitive-erg-verb-lex-verb-lex &
@@ -229,15 +221,63 @@ phebs := abs-dat-transitive-verb-lex &
   [ STEM < "phebs" >,
     SYNSEM.LKEYS.KEYREL.PRED "_go_v_rel" ].
 
+yin_1 := yin-verb-lex &
+  [ STEM < "yin" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_be_v_rel" ].
+
+red_1 := red-verb-lex &
+  [ STEM < "red" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_be_v_rel" ].
+
+yod_1 := yod-verb-lex &
+  [ STEM < "yod" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_exist_v_rel" ].
+
+1dug_1 := 1dug-verb-lex &
+  [ STEM < "1dug" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_exist_v_rel" ].
+
+yogred_1 := yogred-verb-lex &
+  [ STEM < "yogred" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_exist_v_rel" ].
+
+man_1 := man-verb-lex &
+  [ STEM < "man" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_not_be_v_rel" ].
+
+med_1 := med-verb-lex &
+  [ STEM < "med" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_nonexist_v_rel" ].
+
+yogmared_1 := yogmared-verb-lex &
+  [ STEM < "yogmared" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_nonexist_v_rel" ].
+
+byung_1 := byung-verb-lex &
+  [ STEM < "byung" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_happened_v_rel" ].
+
+yong_1 := yong-verb-lex &
+  [ STEM < "yong" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_come_v_rel" ].
+
+song_1 := song-verb-lex &
+  [ STEM < "song" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_went_v_rel" ].
+
+1dra_1 := 1dra-verb-lex &
+  [ STEM < "1dra" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_seem_v_rel" ].
+
 ;;; Auxiliaries
 
-yin := yin-aux-lex &
+yin_2 := yin-aux-lex &
   [ STEM < "yin" > ].
 
-red_1 := red-aux-lex &
+red_2 := red-aux-lex &
   [ STEM < "red" > ].
 
-yod := yod-aux-lex &
+yod_2 := yod-aux-lex &
   [ STEM < "yod" > ].
 
 yogred_2 := yogred-aux-lex &
@@ -246,27 +286,27 @@ yogred_2 := yogred-aux-lex &
 1dug_2 := 1dug-aux-lex &
   [ STEM < "1dug" > ].
 
-1dra := 1dra-aux-lex &
+1dra_2 := 1dra-aux-lex &
   [ STEM < "1dra" > ].
 
-byung := byung-aux-lex &
+byung_2 := byung-aux-lex &
   [ STEM < "byung" > ].
 
-song := song-aux-lex &
+song_2 := song-aux-lex &
   [ STEM < "song" > ].
 
-yong := yong-aux-lex &
+yong_2 := yong-aux-lex &
   [ STEM < "yong" > ].
 
-med := med-aux-lex &
+med_2 := med-aux-lex &
   [ STEM < "med" >,
     SYNSEM.LKEYS.KEYREL.PRED "neg_rel" ].
 
-man := man-aux-lex &
+man_2 := man-aux-lex &
   [ STEM < "man" >,
     SYNSEM.LKEYS.KEYREL.PRED "neg_rel" ].
 
-yogmared := yogmared-aux-lex &
+yogmared_2 := yogmared-aux-lex &
   [ STEM < "yogmared" >,
     SYNSEM.LKEYS.KEYREL.PRED "neg_rel" ].
 
@@ -285,11 +325,8 @@ re_2 := copula-verb-lex-cop-lex &
 pa := copula-verb-lex-cop-lex &
   [ STEM < "pa" > ].
 
-red_2 := copula-verb-lex-cop-lex &
+red_3 := copula-verb-lex-cop-lex &
   [ STEM < "red" > ].
-
-redpas := interr-copula-verb-lex-cop-lex &
-  [ STEM < "redpas" > ].
 
 ;;; Determiners
 

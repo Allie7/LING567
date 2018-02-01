@@ -113,13 +113,21 @@ mood-suffix6 :=
 %suffix (* pa1dra)
 mood-lex-rule.
 
-interr-marker-suffix1 :=
-%suffix (* bas)
-interr-marker-lex-rule.
-
-interr-marker-suffix2 :=
+pas-interr-suffix :=
 %suffix (* pas)
-interr-marker-lex-rule.
+pas-interr-lex-rule.
+
+gas-interr-suffix :=
+%suffix (* gas)
+gas-interr-lex-rule.
+
+bas-interr-suffix :=
+%suffix (* bas)
+bas-interr-lex-rule.
+
+ngas-interr-suffix :=
+%suffix (* ngas)
+ngas-interr-lex-rule.
 
 simple-perfect-suffix1 :=
 %suffix (* shag)
