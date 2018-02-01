@@ -126,6 +126,13 @@ q-infl=on
 section=info-str
 
 section=arg-opt
+subj-drop=subj-drop-all
+subj-mark-drop=subj-mark-drop-not
+subj-mark-no-drop=subj-mark-no-drop-not
+subj-con=subj-con-always
+obj-drop=obj-drop-all
+obj-mark-drop=obj-mark-drop-not
+obj-mark-no-drop=obj-mark-no-drop-not
 
 section=nominalclause
 
@@ -550,6 +557,8 @@ section=morphology
       noun-pc1_lrt5_feat1_head=itself
       noun-pc1_lrt5_lri1_inflecting=yes
       noun-pc1_lrt5_lri1_orth=i
+      noun-pc1_lrt5_lri2_inflecting=yes
+      noun-pc1_lrt5_lri2_orth=li
   noun-pc2_name=self-marker
   noun-pc2_obligatory=on
   noun-pc2_order=suffix
@@ -566,6 +575,9 @@ section=morphology
     noun-pc3_lrt1_name=singular-pron-rule
       noun-pc3_lrt1_lri1_inflecting=no
     noun-pc3_lrt2_name=plural-pron-rule
+      noun-pc3_lrt2_feat1_name=number
+      noun-pc3_lrt2_feat1_value=pl
+      noun-pc3_lrt2_feat1_head=itself
       noun-pc3_lrt2_forbid1_others=noun14
       noun-pc3_lrt2_lri1_inflecting=yes
       noun-pc3_lrt2_lri1_orth=tsho

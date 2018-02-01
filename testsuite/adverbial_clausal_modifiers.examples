@@ -22,7 +22,7 @@ Vetted: s
 Judgment: g
 Phenomena: cl-mod
 kho	rgyagarla	ma1gro	khongla		dngul	mangpo	bsags	pared
-kho	rgyagar-la	ma-1gro	khong-la	dngul	mangpo	bsags	pa-red
+kho	rgyagar-la	ma-1gro	khongla		dngul	mangpo	bsags	pa-red
 he	India-DAT	NEG-go	before		money	much	save	LK-AUX
 "Before he went to India, he saved a lot of money"
 
@@ -46,7 +46,7 @@ Vetted: s
 Judgment: g
 Phenomena: cl-mod
 kho	laska	byas	byas	nangla		bsad	pared
-kho	laska	byas	byas	nang-la		bsad	pared
+kho	laska	byas	byas	nang-la		bsad	pa-red
 3sg	work	did	did	home-DAT	stay	LK-AUX
 "He worked and then stayed home"
 
@@ -56,7 +56,7 @@ Vetted: s
 Judgment: g
 Phenomena: svc
 kho	laska	byas	nangla		bsad	pared
-kho	laska	byas	nang-la		bsad	pared
+kho	laska	byas	nang-la		bsad	pa-red
 3sg	work	did	home-DAT	stay	LK-AUX
 "He worked and stayed home"
 
@@ -68,7 +68,7 @@ Vetted: f
 Judgment: u
 Phenomena: cl-mod
 byas	kho	laska	byas	nangla		bsad	pared
-byas	kho	laska	byas	nang-la		bsad	pared
+byas	kho	laska	byas	nang-la		bsad	pa-red
 byas	3sg	work	did	home-DAT	stay	LK-AUX
 "He worked and then stayed home"
 
