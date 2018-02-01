@@ -1,0 +1,304 @@
+John Cadigan
+Ling 567
+Winter 2018
+February 1, 2018
+
+
+Lab 2 Writeup
+
+I & II. Test suite instances and choices for starter grammar
+
+A. Possessives
+
+Possession in Tibetan is indicated by the genitive case on the possessor which precedes the possessum:
+
+Unfortunately, the only full examples we found with pronominal possession also involved subject dropping:
+
+Source: b:160
+Vetted: s
+Judgment: g
+Phenomena: poss, pro-d
+ngali   nyigdugs        lus     1dug
+nga-li  nyigdugs        lus     1dug
+I-GEN   umbrella        leave   AUX
+"I've left my umbrella behind (I remember doing so)"
+
+We made a coresponding ungrammatical example with incorrect order and an added subject:
+
+Source: author
+Vetted: f
+Judgment: u
+Phenomena: poss
+ngas    nyigdugs        ngali   lus     1dug
+nga-s   nyigdugs	nga-li  lus     1dug
+I-ERG   umbrella.ABS	I-GEN   leave   AUX
+"I've left my umbrella behind (I remember doing so)"
+
+
+Reading the text, we have not found evidence of inalienable possession being any different from alienable possession. Furthermore, we found a fragment for my hand which we haven't put in the testsuite since it is a fragment
+
+Source: b:102
+Vetted: s
+Judgment: g
+Phenomena: poss
+nga1i   lagpa
+nga-1i  lagpa
+I-GEN   hand
+"My hand"
+
+We found possessive noun phrases fragments which we made into a full sentence:
+
+#Derived example
+#
+# From B:102
+#
+Source: author
+Vetted: f
+Judgment: g
+Phenomena: poss
+khonggi         11awa1i         pheb1gro        nakpo           re
+khong-gi        11awa-1i        pheb1gro        nak-po          re
+He-GEN          child-GEN       car.ABS         black-NMZ       be
+"His child's car is black"
+
+
+Choices: 
+
+B. Matrix yes-no questions
+
+Yes-no questions involve putting the INTERR mood marker on the end of the last verb in the sentence as all mood markers do in Tibetan.
+
+Unfortunately, the simplest examples involved copular verbs; since we couldn't get copular constructions to work with NPs, we interpreted Tibetan as an adjective:
+
+# Source C(285):
+# Yes-no questions are marked by the final particle pas which assimilates to a preceding underlying velar
+
+Source: c:285
+Vetted: s
+Judgment: g
+Phenomena: q, cop
+kho     bodpa           redpas
+kho     bodpa           red-pas
+He      Tibetan         be-Q
+"Is he a Tibetan?"
+
+For yes-no questions involving other types of verbs, we have this example; this demonstrates that the question morpheme pas is assimilated to velar sounds it is near:
+
+#ngas should be pas but is assimilated
+Source: c:285
+Vetted: s
+Judgment: g
+Phenomena: q
+khyedrang       bodla           phebs   myongngas
+khyedrang       bod-la          phebs   myong-ngas
+you             Tibet-DAT       go.HON  experiential.AUX-Q
+"Have you ever been to Tibet?"
+
+We have a corresponding ungrammatical example with the morpheme on the wrong verb:
+
+#Made up example with Q marker on wrong verb
+Source: author
+Vetted: f
+Judgment: u
+Phenomena: q
+khyedrang       bodla           phebspas        myongngas
+khyedrang       bod-la          phebs-pas       myong-ngas
+you             Tibet-DAT       go.HON-Q        experiential-Q
+"Have you ever been to Tibet"
+
+Choices:
+
+C. Declarative clausal complements and yes-no questions as clausal complements
+
+In Tibetan, declarative clausal complements appear as full clauses with  nominalized verbs at the end. 
+
+For embedded complement clauses, we were only able to find examples of declarative embedded clauses:
+
+# Source C 284
+# "Most complement clauses are nominalizations. The nominalizers most commonly used
+# as complementizers are pa, yag rgyu and gag. The complement of a verb of perception
+# or cognition can be a finite clause nominalized with -pa"
+#
+
+Source: c:284
+Vetted: s
+Judgment: g
+Phenomena: emb-d
+ngas    kho     laska   byed    kyi     yodpa           mthong  byung
+nga-s   kho     laska   byed    kyi     yod-pa          mthong  byung
+I-ERG   he      work    do      AUX     exist-NMZ       see     PRF
+"I see he is working"
+
+We have a corresponding ungrammatical example without the nominalization
+
+Source: author
+Vetted: f
+Judgment: u
+Phenomena: emb-d
+ngas    kho     laska   byed    kyi     yod             mthong  byung
+nga-s   kho     laska   byed    kyi     yod             mthong  byung
+I-ERG   he      work    do      AUX     exist           see     PRF
+"I see he is working"
+
+For embedded interrogative clausal complements, we were not able to find any examples. One reason is that according to source d, indirect and direct speech are represented in the same way in morphology and are distinguished by :
+
+"Reported speech is indicated by the marker /s/ which corresponds to closing quotation marks. This marker /s/, derived from the verb /ser/ to say, is used for both direct and indirect speech [...] The distinguishing feature of reported speech in Tibetan is that it is inserted between the author of the quotation and the verb of speech[...] If it happens that the source of a quotation is the same person as someone who is mentioned in it, or else is the actual speaker, Tibetans prefer to substitute 'hybrid' reported speech for direct speech " (Source D 214-215)
+
+Source C states that the 's' marker is optional and  does not even refer to the sentences as indirect or direct speech but rather "finite" verbal complements: "Finite complements occur with verbs of speech. These may be unmarked or marked with the complementizer ze, usually pronounced as the semi-syllabic [s]" (284). 
+
+
+Another lead for possible embedded interrogative clausal complements was the dubatative mood marker because it corresponds with 'whether', but by following all of its uses in Source B, we found no sentences which contained complements; we added an example to tense, aspect and mood:
+
+Source: b:128
+Vetted: s
+Judgment: g
+Phenomena: tam
+gsar1gyur       11eyod
+gsar1gyur       11e-yod
+news            DUB-exist
+"I wonder whether there's any news"
+
+A final lead was looking for question words in sentences. This yielded the altnerative marker on verbs which can appear at the end of a clause or at the end of the sentence. This makes it an impossible marker for complementation.
+
+# Source B desc p. 120: There are also 'alternative' forms yin.nam yod.dam and 'dug.gam [...] These forms can also be used with or without an interrogative noun to express a more tentative inquiry than the interrogative or wh-interrogative forms
+
+Source: c:131
+Vetted: s
+Judgment: g
+Phenomena: ???
+khong   su      yinnam  ngas    hago    mabyung 
+khong   su      yin-nam nga-s   hago    ma-byung
+she.ABS who     be-alt  I-ERG   know    NEG-PRF
+"I don't know who she might be."
+
+Source: c:226
+Vetted: s
+Judgment: g
+Phenomena: ???
+khyedrang      ngangla         maphyinpa       gare    yinnam
+khyedrang      ngang-la        ma-phyin-pa     gare    yin-nam
+you            home-DAT        NEG-went-NMZ    why     be-ALT
+"Why didn't you go home?"
+
+As we couldn't classify the phenomenon, we did not include these examples in our testsuite. We commented them out in our emb-d section. Rather than complementation, the second example is likely some sort of serial verb construction: "Who is she? I don't know"
+
+Choices:
+
+D. Clausal Modifiers
+
+Clausal modifiers appear as words which follow the subordinated clause. One with many examples is "byas" which implies a series of events.
+
+Source: b:173
+Vetted: s
+Judgment: g
+Phenomena: cl-mod
+kho     laska   byas    byas    nangla          bsdad   pared
+kho     laska   byas    byas    nang-la         bsdad   pa-red
+3sg     work    did     did     home-DAT        stay    LK-AUX
+"He worked and then stayed home" 
+
+Without the second byas, the sentence becomes a serial verb construction / coordination:
+
+Source: b:173
+Vetted: s
+Judgment: g
+Phenomena: svc, crd
+kho     laska   byas    nangla          bsdad   pared
+kho     laska   byas    nang-la         bsdad   pa-red
+3sg     work    did     home-DAT        stay    LK-AUX
+"He worked and stayed home"
+
+Some of the requirements for these clausal modifiers are more involved; for "before," the verb of the subordinated clause must be negated. 
+
+Source: b:283
+Vetted: s
+Judgment: g
+Phenomena: cl-mod
+kho     rgyagarla       ma1gro  khongla         dngul   mangpo  bsags   pared
+kho     rgyagar-la      ma-1gro khongla         dngul   mangpo  bsags   pa-red
+he      India-DAT       NEG-go  before          money   much    save    LK-AUX
+"Before he went to India, he saved a lot of money"
+
+Choices:
+
+E. Argument Optionality
+
+In examples we have collected so far, there are many examples of pronoun dropping. As shown in the negation section, there are examples of dropped subjects. 
+
+Here is an example of a dropped object:
+
+Source: b:146
+Vetted: s
+Judgment: g
+Phenomena: wo, neg, tam, pro-d
+khonggis   magnang  pared
+khong-gis  ma-gnang pa-red
+3SG-ERG    NEG-give LK-AUX
+"He didn't give it."
+
+Choices:
+
+F. Nominalization
+
+III. Testsuite instances not yet covered
+
+We do not parse any of the testsuite instances dealing with:
+* Wh-Questions
+* Aspect & Tense
+* Auxiliary verbs  
+* Adjunct phrases (instrumental verbs)
+
+IV. Coverage and Overgeneration
+
+As of 12:00 on 2018-01-18, the numbers for our 45 items are as follows:
+
+A. Coverage: 14 / 30 positive instances (47%)
+B. Overgeneration: 0 / 15 (0%)
+
+For the 16 items in positive examples, we are missing tokens in our lexicon. 4 of the items dealing with pronouns do not parse because they use of auxiliary verbs such as:
+
+Source: b:178
+Vetted: s
+Judgment: g
+Phenomena: pn, wo
+nga 'gro dgosred
+nga 'gro-dgos_red
+I   go-LK_AUX
+'I  must go.'
+
+The next group which does not parse includes auxiliary verbs which illustrate the tenses such as this:
+
+#FUTURE TENSE
+Source: b:137
+Vetted: s
+Judgment: g
+Phenomena: wo, c, tam
+sangnyin  ngas    laska  'di   byedkyiyin
+sangnyin  nga-s    laska  'di   byed-kyi-yin
+tomorrow  1ST-SBJ  work   this  do-LK-AUX
+'He is sure to do the work.'
+
+The final major group are questions which include question words
+
+Source: b:130
+Vetted: s
+Judgment: g
+Phenomena: c,
+kyedrang   su    yin-pa
+kyedrang   su    yin-pa
+2ND         who   be-wh.interr
+'Who are you?'
+
+There were no incorrectly parsed sentences.
+
+V. Outside domain of customization
+
+One area where the customization system had challenges was creating multiple adopositions as clitics marking case. When we added two adpositions marking the same case, the system failed to parse either. Since we have simple exampels of nouns so far, we have used morphological rules.
+
+Another issue we have had, is that auxiliary verbs do not seem to be created with orthographic strings even when the stem is specified. 
+
+Another issue is that it seems we cannot yet describe ditransitive verbs because there are only slots for subj and object. This is out of the scope of the class I gather.
+
+
+
+

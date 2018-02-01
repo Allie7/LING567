@@ -1,6 +1,4 @@
 
-
-
 #
 #Shows complementation for declaritive clauses
 #
@@ -15,9 +13,9 @@ Source: c:284
 Vetted: s
 Judgment: g
 Phenomena: emb-d
-ngas	kho	laska	byed	kyi	yodpa		mthong	byung
-nga-s	kho	laska	byed	kyi	yod-pa		mthong	byung
-I-ERG	he	work	do	AUX	exist-NMZ	see	PRF
+ngas	kho	laska		byed	kyi	yodpa		mthong	byung
+nga-s	kho	laska		byed	kyi	yod-pa		mthong	byung
+I-ERG	he.ABS	work.ABS	do	AUX	exist-NMZ	see	PRF
 "I see he is working"
 
 
@@ -28,9 +26,9 @@ Source: author
 Vetted: f
 Judgment: u
 Phenomena: emb-d
-ngas	kho	laska	byed	kyi	yod		mthong	byung
-nga-s	kho	laska	byed	kyi	yod		mthong	byung
-I-ERG	he	work	do	AUX	exist		see	PRF
+ngas	kho	laska		byed	kyi	yod		mthong	byung
+nga-s	kho	laska		byed	kyi	yod		mthong	byung
+I-ERG	he.ABS	work.ABS	do	AUX	exist		see	PRF
 "I see he is working"
 
 Source: c:284
@@ -39,11 +37,34 @@ Judgment: g
 Phenomena: emb-d
 nga	bodla		phyinpa		khos	shes	kyi
 nga	bod-la		phyin-pa	kho-s	shes	kyi
-I	Tibet-DAT	went-NMZ	he-ERG	know	AUX
+I.ABS	Tibet-DAT	went-NMZ	he-ERG	know	AUX
 "He knows I went to Tibet"
 
+#
+# Search for embedded interrogative clausal complements
+# Not related to DUB polarity
 
+# Search for question words
+# gam, ngam, dam, nam, bam, mam, ram, sam: 129, 248, 257, 248, 226, 258, 261
+# Source B desc p. 120: There are also 'alternative' forms yin.nam yod.dam and 'dug.gam [...] These forms can also be used with or without an interrogative noun to express a more tentative inquiry than the interrogative or wh-interrogative forms
 
+#Source: c:131
+#Vetted: s
+#Judgment: g
+#Phenomena: ???
+#khong		su	yinnam	ngas	hago	mabyung
+#khong		su	yin-nam	nga-s	hago	ma-byung
+#she.ABS	who	be-ALT	I-ERG	know	NEG-PRF
+#"I don't know who she might be."
+
+#Source: c:226
+#Vetted: s
+#Judgment: g
+#Phenomena: ???
+#khyedrang	ngangla		maphyinpa	gare	yinnam
+#khyedrang	ngang-la	ma-phyin-pa	gare	yin-nam
+#you.ABS	home-DAT	NEG-went-NMZ	why	be-ALT
+#"Why didn't you go home?"
 
 
 
