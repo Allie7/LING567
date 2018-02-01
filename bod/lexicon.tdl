@@ -135,6 +135,10 @@ mangse := nom-adj-verb-lex-adj-lex &
   [ STEM < "mangse" >,
     SYNSEM.LKEYS.KEYREL.PRED "_many_a_rel" ].
 
+bodpa := nom-adj-verb-lex-adj-lex &
+  [ STEM < "bodpa" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_Tibetan_a_rel" ].
+
 ;;; Verbs
 
 blebs := intransitive-verb-lex-verb-lex &
@@ -221,12 +225,16 @@ gzhus := obj-dat-trans-verb-lex-verb-lex &
   [ STEM < "gzhus" >,
     SYNSEM.LKEYS.KEYREL.PRED "_hit_v_rel" ].
 
+phebs := abs-dat-transitive-verb-lex &
+  [ STEM < "phebs" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_go_v_rel" ].
+
 ;;; Auxiliaries
 
 yin := yin-aux-lex &
   [ STEM < "yin" > ].
 
-red := red-aux-lex &
+red_1 := red-aux-lex &
   [ STEM < "red" > ].
 
 yod := yod-aux-lex &
@@ -265,6 +273,10 @@ yogmared := yogmared-aux-lex &
 ryguin := ryguin-aux-lex &
   [ STEM < "ryguin" > ].
 
+myong := myong-aux-lex &
+  [ STEM < "myong" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_experience_v_rel" ].
+
 ;;; Copulas
 
 re_2 := copula-verb-lex-cop-lex &
@@ -272,6 +284,12 @@ re_2 := copula-verb-lex-cop-lex &
 
 pa := copula-verb-lex-cop-lex &
   [ STEM < "pa" > ].
+
+red_2 := copula-verb-lex-cop-lex &
+  [ STEM < "red" > ].
+
+redpas := interr-copula-verb-lex-cop-lex &
+  [ STEM < "redpas" > ].
 
 ;;; Determiners
 

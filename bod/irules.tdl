@@ -94,31 +94,31 @@ mood-suffix1 :=
 mood-lex-rule.
 
 mood-suffix2 :=
-%suffix (* pas)
-mood-lex-rule.
-
-mood-suffix3 :=
 %suffix (* gro)
 mood-lex-rule.
 
-mood-suffix4 :=
+mood-suffix3 :=
 %suffix (* ngas)
 mood-lex-rule.
 
-mood-suffix5 :=
+mood-suffix4 :=
 %suffix (* gro1s)
 mood-lex-rule.
 
-mood-suffix6 :=
+mood-suffix5 :=
 %suffix (* ga)
 mood-lex-rule.
 
-mood-suffix7 :=
+mood-suffix6 :=
 %suffix (* pa1dra)
 mood-lex-rule.
 
-interr-marker-suffix :=
+interr-marker-suffix1 :=
 %suffix (* bas)
+interr-marker-lex-rule.
+
+interr-marker-suffix2 :=
+%suffix (* pas)
 interr-marker-lex-rule.
 
 simple-perfect-suffix1 :=
