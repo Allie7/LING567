@@ -279,7 +279,7 @@ cig := determinant-adj-lex-determiner-lex &
   [ STEM < "cig" >,
     SYNSEM.LKEYS.KEYREL.PRED "_a_q_rel" ].
 
-de := determinant-adj-lex-determiner-lex &
+de_1 := determinant-adj-lex-determiner-lex &
   [ STEM < "de" >,
     SYNSEM.LKEYS.KEYREL.PRED "_that_q_rel" ].
 
@@ -299,3 +299,39 @@ dang1 := conj-lex &
   [ STEM < "dang" >,
     SYNSEM.LKEYS.KEYREL.PRED "_and_coord_rel",
     CFORM "1" ].
+
+nas := prehead-after-clause-final-adv-subord-lex-item &
+  [ STEM < "nas" > ].
+
+gag := prehead-inorderto-clause-final-adv-subord-lex-item &
+  [ STEM < "gag" > ].
+
+dus := prehead-while-clause-final-adv-subord-lex-item &
+  [ STEM < "dus" > ].
+
+na := prehead-if-clause-final-adv-subord-lex-item &
+  [ STEM < "na" > ].
+
+pamagtogs := prehead-unless-clause-final-adv-subord-lex-item &
+  [ STEM < "pamagtogs" > ].
+
+namagtogs := prehead-unless-clause-final-adv-subord-lex-item &
+  [ STEM < "namagtogs" > ].
+
+nayang := prehead-eventhough-clause-final-adv-subord-lex-item &
+  [ STEM < "nayang" > ].
+
+te := prehead-but-clause-final-adv-subord-lex-item &
+  [ STEM < "te" > ].
+
+de_2 := prehead-but-clause-final-adv-subord-lex-item &
+  [ STEM < "de" > ].
+
+tsang := prehead-because-clause-final-adv-subord-lex-item &
+  [ STEM < "tsang" > ].
+
+zhoggas := prehead-morning-clause-init-adv-subord-lex-item &
+  [ STEM < "zhoggas" > ].
+
+denas := prehead-then-clause-init-adv-subord-lex-item &
+  [ STEM < "denas" > ].

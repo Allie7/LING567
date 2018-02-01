@@ -7,7 +7,8 @@
 ; `*start-symbol*' (see `lkb/user-fns.lsp').
 
 root := sign &
-  [ SYNSEM [ NON-LOCAL non-local-none,
+  [ SYNSEM [ SUBORDINATED none,
+             NON-LOCAL non-local-none,
              LOCAL [ COORD -,
                      CAT [ VAL [ SUBJ < >,
                                  COMPS < > ],
