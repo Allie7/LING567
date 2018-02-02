@@ -185,10 +185,6 @@ klog := transitive-erg-verb-lex-verb-lex &
   [ STEM < "klog" >,
     SYNSEM.LKEYS.KEYREL.PRED "_read_v_rel" ].
 
-byed_1 := transitive-erg-verb-lex-verb-lex &
-  [ STEM < "byed" >,
-    SYNSEM.LKEYS.KEYREL.PRED "_do_v_rel" ].
-
 btang := transitive-erg-verb-lex-verb-lex &
   [ STEM < "btang" >,
     SYNSEM.LKEYS.KEYREL.PRED "_write_v_rel" ].
@@ -238,8 +234,12 @@ bzas_2 := transtive-verb-lex-verb-lex &
   [ STEM < "bzas" >,
     SYNSEM.LKEYS.KEYREL.PRED "_eat_v_rel" ].
 
-byed_2 := transtive-verb-lex-verb-lex &
+byed := transtive-verb-lex-verb-lex &
   [ STEM < "byed" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_do_v_rel" ].
+
+byas_1 := transtive-verb-lex-verb-lex &
+  [ STEM < "byas" >,
     SYNSEM.LKEYS.KEYREL.PRED "_do_v_rel" ].
 
 phebs := abs-dat-transitive-verb-lex &
@@ -250,54 +250,9 @@ bsdad_2 := abs-dat-transitive-verb-lex &
   [ STEM < "bsdad" >,
     SYNSEM.LKEYS.KEYREL.PRED "_stay_v_rel" ].
 
-byas_1 := abs-dat-transitive-verb-lex &
-  [ STEM < "byas" >,
-    SYNSEM.LKEYS.KEYREL.PRED "_do_v_rel" ].
-
 phyin := abs-dat-transitive-verb-lex &
   [ STEM < "phyin" >,
     SYNSEM.LKEYS.KEYREL.PRED "_go_v_rel" ].
-
-yin_1 := yin-verb-lex &
-  [ STEM < "yin" >,
-    SYNSEM.LKEYS.KEYREL.PRED "_be_v_rel" ].
-
-red_1 := red-verb-lex &
-  [ STEM < "red" >,
-    SYNSEM.LKEYS.KEYREL.PRED "_be_v_rel" ].
-
-yod_1 := yod-verb-lex &
-  [ STEM < "yod" >,
-    SYNSEM.LKEYS.KEYREL.PRED "_exist_v_rel" ].
-
-nyocha%20nyo := yod-verb-lex &
-  [ STEM < "nyocha",
-           "nyo" >,
-    SYNSEM.LKEYS.KEYREL.PRED "_go_shopping_v_rel" ].
-
-1dug_1 := 1dug-verb-lex &
-  [ STEM < "1dug" >,
-    SYNSEM.LKEYS.KEYREL.PRED "_exist_v_rel" ].
-
-yogred_1 := yogred-verb-lex &
-  [ STEM < "yogred" >,
-    SYNSEM.LKEYS.KEYREL.PRED "_exist_v_rel" ].
-
-man_1 := man-verb-lex &
-  [ STEM < "man" >,
-    SYNSEM.LKEYS.KEYREL.PRED "_not_be_v_rel" ].
-
-med_1 := med-verb-lex &
-  [ STEM < "med" >,
-    SYNSEM.LKEYS.KEYREL.PRED "_nonexist_v_rel" ].
-
-yogmared_1 := yogmared-verb-lex &
-  [ STEM < "yogmared" >,
-    SYNSEM.LKEYS.KEYREL.PRED "_nonexist_v_rel" ].
-
-song_1 := song-verb-lex &
-  [ STEM < "song" >,
-    SYNSEM.LKEYS.KEYREL.PRED "_went_v_rel" ].
 
 mthong := comp-accept-verb-lex &
   [ STEM < "mthong" >,
@@ -309,19 +264,19 @@ shes := comp-accept-verb-lex &
 
 ;;; Auxiliaries
 
-yin_2 := yin-aux-lex &
+yin := yin-aux-lex &
   [ STEM < "yin" > ].
 
-red_2 := red-aux-lex &
+red_1 := red-aux-lex &
   [ STEM < "red" > ].
 
-yod_2 := yod-aux-lex &
+yod := yod-aux-lex &
   [ STEM < "yod" > ].
 
-yogred_2 := yogred-aux-lex &
+yogred := yogred-aux-lex &
   [ STEM < "yogred" > ].
 
-1dug_2 := 1dug-aux-lex &
+1dug := 1dug-aux-lex &
   [ STEM < "1dug" > ].
 
 1dra := 1dra-aux-lex &
@@ -330,21 +285,21 @@ yogred_2 := yogred-aux-lex &
 byung := byung-aux-lex &
   [ STEM < "byung" > ].
 
-song_2 := song-aux-lex &
+song := song-aux-lex &
   [ STEM < "song" > ].
 
 yong := yong-aux-lex &
   [ STEM < "yong" > ].
 
-med_2 := med-aux-lex &
+med := med-aux-lex &
   [ STEM < "med" >,
     SYNSEM.LKEYS.KEYREL.PRED "neg_rel" ].
 
-man_2 := man-aux-lex &
+man := man-aux-lex &
   [ STEM < "man" >,
     SYNSEM.LKEYS.KEYREL.PRED "neg_rel" ].
 
-yogmared_2 := yogmared-aux-lex &
+yogmared := yogmared-aux-lex &
   [ STEM < "yogmared" >,
     SYNSEM.LKEYS.KEYREL.PRED "neg_rel" ].
 
@@ -355,9 +310,6 @@ myong := myong-aux-lex &
   [ STEM < "myong" >,
     SYNSEM.LKEYS.KEYREL.PRED "_experience_v_rel" ].
 
-kyi := kyi-aux-lex &
-  [ STEM < "kyi" > ].
-
 ;;; Copulas
 
 re_2 := copula-verb-lex-cop-lex &
@@ -366,7 +318,7 @@ re_2 := copula-verb-lex-cop-lex &
 pa := copula-verb-lex-cop-lex &
   [ STEM < "pa" > ].
 
-red_3 := copula-verb-lex-cop-lex &
+red_2 := copula-verb-lex-cop-lex &
   [ STEM < "red" > ].
 
 ;;; Determiners
@@ -398,6 +350,10 @@ dang1 := conj-lex &
 
 byas_2 := s-attach-clause-final-prehead-subord-lex-item &
   [ STEM < "byas" >,
-    SYNSEM.LKEYS.KEYREL.PRED "_did_subord_rel" ].
+    SYNSEM.LKEYS.KEYREL.PRED "_after_subord_rel" ].
+
+khongla := s-attach-clause-final-prehead-subord-lex-item &
+  [ STEM < "khongla" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_before_subord_rel" ].
 
 ;;; Complementizers
