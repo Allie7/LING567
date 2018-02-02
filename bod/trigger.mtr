@@ -21,25 +21,29 @@ yogred_2_gr := arg0e_gtr &
   [ CONTEXT.RELS <! [ ARG0.E.ASPECT prf ] !>,
     FLAGS.TRIGGER "1dug_2" ].
 
-1dra_2_gr := arg0e_gtr &
+1dra_gr := arg0e_gtr &
   [ CONTEXT.RELS <! [ PRED "non_existing_rel" ] !>,
-    FLAGS.TRIGGER "1dra_2" ].
+    FLAGS.TRIGGER "1dra" ].
 
-byung_2_gr := arg0e_gtr &
+byung_gr := arg0e_gtr &
   [ CONTEXT.RELS <! [ ARG0.E [ TENSE past,
                                ASPECT prf ] ] !>,
-    FLAGS.TRIGGER "byung_2" ].
+    FLAGS.TRIGGER "byung" ].
 
 song_2_gr := arg0e_gtr &
   [ CONTEXT.RELS <! [ ARG0.E [ TENSE past,
                                ASPECT prf ] ] !>,
     FLAGS.TRIGGER "song_2" ].
 
-yong_2_gr := arg0e_gtr &
+yong_gr := arg0e_gtr &
   [ CONTEXT.RELS <! [ ARG0.E.TENSE future ] !>,
-    FLAGS.TRIGGER "yong_2" ].
+    FLAGS.TRIGGER "yong" ].
 
 ryguin_gr := arg0e_gtr &
   [ CONTEXT.RELS <! [ ARG0.E [ TENSE present,
                                ASPECT pros ] ] !>,
     FLAGS.TRIGGER "ryguin" ].
+
+kyi_gr := arg0e_gtr &
+  [ CONTEXT.RELS <! [ ARG0.E.ASPECT prog ] !>,
+    FLAGS.TRIGGER "kyi" ].
