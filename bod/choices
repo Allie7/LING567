@@ -129,6 +129,13 @@ q-infl=on
 section=info-str
 
 section=arg-opt
+subj-drop=subj-drop-lex
+subj-mark-drop=subj-mark-drop-not
+subj-mark-no-drop=subj-mark-no-drop-not
+subj-con=subj-con-always
+obj-drop=obj-drop-lex
+obj-mark-drop=obj-mark-drop-not
+obj-mark-no-drop=obj-mark-no-drop-not
 
 section=nominalclause
   ns1_name=nom

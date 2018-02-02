@@ -1,6 +1,10 @@
 ;;; -*- Mode: TDL; Coding: utf-8 -*-
 head-adj-int := head-adj-int-phrase.
 
+decl-head-opt-subj := decl-head-opt-subj-phrase.
+
+basic-head-opt-comp := basic-head-opt-comp-phrase.
+
 high-no-rel-nominalized-clause := high-no-rel-nominalized-clause-phrase.
 
 comp-head := comp-head-phrase.
