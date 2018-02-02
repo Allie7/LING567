@@ -33,9 +33,9 @@ genitive-lex-rule-suffix2 :=
 %suffix (* li)
 genitive-lex-rule-lex-rule.
 
-self-indicate-rule-suffix :=
-%suffix (* rang)
-self-indicate-rule-lex-rule.
+genitive-lex-rule-suffix3 :=
+%suffix (* 1i)
+genitive-lex-rule-lex-rule.
 
 plural-pron-rule-suffix :=
 %suffix (* tsho)

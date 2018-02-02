@@ -1,11 +1,7 @@
 ;;; -*- Mode: TDL; Coding: utf-8 -*-
 head-adj-int := head-adj-int-phrase.
 
-decl-head-opt-subj := decl-head-opt-subj-phrase.
-
-basic-head-opt-comp := basic-head-opt-comp-phrase.
-
-non-event-subj-head := non-event-subj-head-phrase.
+high-no-rel-nominalized-clause := high-no-rel-nominalized-clause-phrase.
 
 comp-head := comp-head-phrase.
 
@@ -34,5 +30,3 @@ vp2-top-coord := vp2-top-coord-rule.
 vp2-bottom-coord := vp2-bottom-coord-rule.
 
 adj-head-scop := adj-head-scop-phrase.
-
-did-modifying-clause := did-modifying-clause-phrase.

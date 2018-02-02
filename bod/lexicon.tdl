@@ -230,10 +230,6 @@ khapar%20btang := obj-dat-trans-verb-lex-verb-lex &
            "btang" >,
     SYNSEM.LKEYS.KEYREL.PRED "_telephone_v_rel" ].
 
-byas_1 := transtive-verb-lex-verb-lex &
-  [ STEM < "byas" >,
-    SYNSEM.LKEYS.KEYREL.PRED "_do_v_rel" ].
-
 shes := transtive-verb-lex-verb-lex &
   [ STEM < "shes" >,
     SYNSEM.LKEYS.KEYREL.PRED "_shes_v_rel" ].
@@ -249,6 +245,10 @@ phebs := abs-dat-transitive-verb-lex &
 bsdad_2 := abs-dat-transitive-verb-lex &
   [ STEM < "bsdad" >,
     SYNSEM.LKEYS.KEYREL.PRED "_stay_v_rel" ].
+
+byas_1 := abs-dat-transitive-verb-lex &
+  [ STEM < "byas" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_do_v_rel" ].
 
 yin_1 := yin-verb-lex &
   [ STEM < "yin" >,
@@ -389,5 +389,6 @@ dang1 := conj-lex &
     SYNSEM.LKEYS.KEYREL.PRED "_and_coord_rel",
     CFORM "1" ].
 
-byas_2 := prehead-did-clause-final-adv-subord-lex-item &
-  [ STEM < "byas" > ].
+byas_2 := s-attach-clause-final-prehead-subord-lex-item &
+  [ STEM < "byas" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_did_subord_rel" ].
