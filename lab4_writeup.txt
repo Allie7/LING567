@@ -313,7 +313,7 @@ Overgeneration: 0/24 -> 4/29 distinct analyses 2.75
 28 of the unparsed examples, positive and negative, don't parse because of vocabulary and/or morphological rules. Part of the issue is that
 there are still many word types like adverbs, intensifiers, and constructions such as topicality which we do not cover which come the authoritative text. 
 
-We manage to reject 25 of the negative example parses. Most of the incorrect parses cropped up due to complex interactions between coordination, the possession library and perhaps the new complement library.
+We manage to reject 25 of the negative example parses. Most of the incorrect parses cropped up due to complex interactions between coordination, argument optionality, the possession library and perhaps the new complement library.
 
 One of the overgenerated examples is due to our lack of restrictions on the input to AUX verbs--this is due to multiple consecutive AUX verbs; new restrictions need to be put into place to mark verbs with mood as finite in order to prevent examples such as this from parsing:
 
