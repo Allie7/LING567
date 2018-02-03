@@ -12,30 +12,29 @@ A. Possessives
 
 Possession in Tibetan is indicated by the genitive case on the possessor which precedes the possessum:
 
-Unfortunately, the only full examples we found with pronominal possession also involved subject dropping:
+Unfortunately, the only full examples we found with pronominal possession also involved subject dropping and evidentiality through the AUX verb which we aren't covering:
 
 Source: b:160
 Vetted: s
 Judgment: g
 Phenomena: poss, pro-d
-ngali   nyigdugs        lus     1dug
-nga-li  nyigdugs        lus     1dug
-I-GEN   umbrella        leave   AUX
+ngali   nyigdugs        lus		1dug
+nga-li  nyigdugs        lus		1dug
+I-GEN   umbrella.ABS	leave.PST	AUX
 "I've left my umbrella behind (I remember doing so)"
 
-We made an example with I added. We then made a coresponding ungrammatical example with incorrect order and an added subject:
+We made an example with the subject added. We then made a coresponding ungrammatical example with incorrect order of possessor and possessum:
 
 Source: author
 Vetted: f
 Judgment: u
 Phenomena: poss
-ngas    nyigdugs        ngali   lus     1dug
-nga-s   nyigdugs	nga-li  lus     1dug
-I-ERG   umbrella.ABS	I-GEN   leave   AUX
+ngas    nyigdugs        ngali   lus		1dug
+nga-s   nyigdugs	nga-li  lus		1dug
+I-ERG   umbrella.ABS	I-GEN   leave.PST	AUX
 "I've left my umbrella behind (I remember doing so)"
 
-
-Reading the text, we have not found evidence of inalienable possession being any different from alienable possession. Furthermore, we found a fragment for "my hand" which we haven't put in the testsuite since it is a fragment; in the languages I know, body parts are usually the most common to be inalienable possessions.
+Reading and searching through the text, we have not found evidence of inalienable possession being any different from alienable possession. Furthermore, we found a fragment for "my hand"; in the languages I know, body parts are usually the most common to be inalienable possessions. This is some evidence against it.
 
 Source: b:102
 Vetted: s
@@ -43,12 +42,11 @@ Judgment: g
 Phenomena: poss
 nga1i   lagpa
 nga-1i  lagpa
-I-GEN   hand
+I-GEN   hand.ABS
 "My hand"
 
 We found possessive noun phrases fragments which we made into a full sentence:
 
-#Derived example
 #
 # From B:102
 #
@@ -61,27 +59,24 @@ khong-gi        11awa-1i        pheb1gro        nak-po          re
 He-GEN          child-GEN       car.ABS         black-NMZ       be
 "His child's car is black"
 
-Choices: To implement these in the grammar, we created a new lexical rule which applies after case which adds either possessive or non-possessive to the word with our possession strategy. The possession strategy is that the possessor appears first, it operates as a modifier, and the morpheme appears on the possessor as an affix which does not agree with the noun in terms of PNG. The reason we have decided on the modification strategy is that possessums can still appear with determiners. 
+Choices: To implement these in the grammar, we created a new position class, possessive-rule-lex, which applies after case which adds either possessive,poss-gen-lex , or non-possessive, nonposs-lex, to the word with our possession strategy without appending an affix. The possession strategy is that the possessor appears first, it operates as a modifier, and the morpheme appears on the possessor as an affix which does not agree with the noun in terms of PNG. The reason we have decided on the modification strategy is that possessums can still appear with determiners.
 
 B. Matrix yes-no questions
 
 Yes-no questions involve putting the INTERR mood marker on the end of the last verb in the sentence as all mood markers do in Tibetan.
 
-Unfortunately, the simplest examples involved copular verbs; since we couldn't get copular constructions to work with NPs, we interpreted Tibetan as an adjective:
+The simplest yes-no questions involved copulas. One which we have needed an NP complement which can't be done through the questionaire. Here is a working example with an AP-accepting copula which also includes negation:
 
-# Source C(285):
-# Yes-no questions are marked by the final particle pas which assimilates to a preceding underlying velar
-
-Source: c:285
+Source: c:128
 Vetted: s
 Judgment: g
-Phenomena: q, cop
-kho     bodpa           redpas
-kho     bodpa           red-pas
-He      Tibetan         be-Q
-"Is he a Tibetan?"
+Phenomena: q
+deb		mangpo          miyongngas
+deb		mang-po         mi-yong-ngas
+book.ABS	many-NMZ        NEG-be-INTERR
+"I wonder if there are many books. (Note polarity in English)"
 
-For yes-no questions involving other types of verbs, we have this example; this demonstrates that the question morpheme pas is assimilated to velar sounds it is near:
+For yes-no questions involving other types of verbs, we have this example; this demonstrates that the question morpheme "pas" is assimilated to velar sounds it is near:
 
 #ngas should be pas but is assimilated
 Source: c:285
@@ -90,10 +85,10 @@ Judgment: g
 Phenomena: q
 khyedrang       bodla           phebs   myongngas
 khyedrang       bod-la          phebs   myong-ngas
-you             Tibet-DAT       go.HON  experiential.AUX-Q
+you.ABS         Tibet-DAT       go.HON  experiential.AUX-Q
 "Have you ever been to Tibet?"
 
-We have a corresponding ungrammatical example with the morpheme on the wrong verb, but it parses:
+We have a corresponding ungrammatical example with the morpheme on the wrong verb, but it parses--we will return to this:
 
 #Made up example with Q marker on wrong verb
 Source: author
@@ -102,14 +97,14 @@ Judgment: u
 Phenomena: q
 khyedrang       bodla           phebspas        myongngas
 khyedrang       bod-la          phebs-pas       myong-ngas
-you             Tibet-DAT       go.HON-Q        experiential-Q
+you.ABS         Tibet-DAT       go.HON-Q        experiential-Q
 "Have you ever been to Tibet"
 
-Choices: To implement yes-no questions, we had to add question + to verbs marked in the INTERR mood. We implemented a series of variants of pas which go with their respective verb based on the assimilation patterns. They are instances of the mood marker position class--in particular subtypes of the interr-marker-rule. 
+Choices: To implement yes-no questions, we had to add question + to verbs marked in the INTERR mood. We implemented a series of variants of pas which go with their respective verb based on the assimilation patterns; each of the major auxliary verbs prevents affixation by all of them except one. They are instances of the mood marker position class--in particular subtypes of the interr-marker-rule. 
 
 C. Declarative clausal complements, yes-no questions as clausal complements and nominalization
 
-In Tibetan, declarative clausal complements appear as full clauses with  nominalized verbs at the end. They are accepted as complements for the verbs which follow. There is some evidence that certain types of verbs accept certain nominalizations, but we decided to start with just the most common: -pa.  
+In Tibetan, declarative clausal complements appear as full clauses with nominalized verbs at the end. They are accepted as complements for the verbs which follow. There is some evidence that certain types of verbs accept certain nominalizations in some analyses, but we decided to just present two nominalizations as the same -pa and -yag.  
 
 For embedded complement clauses, we were only able to find examples of declarative embedded clauses:
 
@@ -122,20 +117,20 @@ Source: c:284
 Vetted: s
 Judgment: g
 Phenomena: emb-d
-ngas    kho     laska   byed    kyi     yodpa           mthong  byung
-nga-s   kho     laska   byed    kyi     yod-pa          mthong  byung
-I-ERG   he      work    do      AUX     exist-NMZ       see     PRF
+ngas    kho     laska		byed	kyi     yodpa           mthong  byung
+nga-s   kho     laska		byed	kyi     yod-pa          mthong  byung
+I-ERG   he.ABS  work.ABS 	do.PST	AUX	exist-NMZ       see     PRF
 "I see he is working"
 
-We have a corresponding ungrammatical example without the nominalization
+We have a corresponding ungrammatical example without the nominalization--which unfortunately still fires the nominalization rule which makes it parse:
 
 Source: author
 Vetted: f
 Judgment: u
 Phenomena: emb-d
-ngas    kho     laska   byed    kyi     yod             mthong  byung
-nga-s   kho     laska   byed    kyi     yod             mthong  byung
-I-ERG   he      work    do      AUX     exist           see     PRF
+ngas    kho     laska		byed    kyi     yod            mthong  byung
+nga-s   kho     laska		byed    kyi     yod            mthong  byung
+I-ERG   he.ABS  work.ABS 	do.PST	AUX	exist	       see     PRF
 "I see he is working"
 
 Here is another example with a different nominalization particle, yag:
@@ -156,7 +151,7 @@ Vetted: f
 Judgment: u
 Phenomena: emb-d
 khos    laska           byedyagpa               1gobtsugs       song
-kho-s   laska           byed-yag-pa     1gobtsugs       song
+kho-s   laska           byed-yag-pa  	        1gobtsugs       song
 He-ERG  work.ABS        do.NMZ-NMZ              start           PRF
 "He started to work"
 
@@ -174,14 +169,10 @@ Judgment: g
 Phenomena: tam
 gsar1gyur       11eyod
 gsar1gyur       11e-yod
-news            DUB-exist
+news.ABS        DUB-exist
 "I wonder whether there's any news"
 
-A final lead was looking for question words in sentences. This yielded the altnerative marker on verbs which can appear at the end of a clause or at the end of the sentence. This makes it an impossible marker for complementation.
-
-# Source B desc p. 120: There are also 'alternative' forms yin.nam yod.dam and 'dug.gam [...] These forms can also be used with or without an interrogative noun to express a more tentative inquiry than the interrogative or wh-interrogative forms
-
-Unfortunately, this alternative marker can appear at the end of a sentence or a clause which indicates it is not some sort of nominalization marker:
+A final lead was looking for question words in sentences. This yielded the alternative marker on verbs, "nam" which can appear at the end of a clause or at the end of the sentence. This makes it an impossible marker for complementation:
 
 Source: c:131
 Vetted: s
@@ -189,7 +180,7 @@ Judgment: g
 Phenomena: ???
 khong   su      yinnam  ngas    hago    mabyung 
 khong   su      yin-nam nga-s   hago    ma-byung
-she.ABS who     be-alt  I-ERG   know    NEG-PRF
+she.ABS who     be-ALT  I-ERG   know    NEG-PRF
 "I don't know who she might be."
 
 Source: c:226
@@ -198,12 +189,12 @@ Judgment: g
 Phenomena: ???
 khyedrang      ngangla         maphyinpa       gare    yinnam
 khyedrang      ngang-la        ma-phyin-pa     gare    yin-nam
-you            home-DAT        NEG-went-NMZ    why     be-ALT
+you.ABS        home-DAT        NEG-went-NMZ    why     be-ALT
 "Why didn't you go home?"
 
-As we couldn't classify the phenomenon, we did not include these examples in our testsuite. We commented them out in our emb-d section. Rather than complementation, the second example is likely some sort of serial verb construction: "Who is she? I don't know"
+As we couldn't classify the phenomenon, we did not include these examples in our official testsuite. We commented them out in our emb-d section. Rather than complementation, the second example is likely some sort of serial verb construction: "Who is she? I don't know"
 
-Choices: To implement embedded declarative complement clauses, we answered questions about clausal complements and nominalized clauses. We specified that they appear in the same position as regular noun complements and that we had nominalization. We further specified that nominalization happens at the S level because there can be distinct subjects and that nominalization is syntactic only. We then created a morphological rule "nominalization" with the various forms we found in our sources, including "-pa". They add the nominalization value to the verbs. Finally, to reduce the amount of parsing ambiguity we created a special group of transitive verbs "comp-accept-verb-lex," see and know, which accept nominalized verbs as their objects to prevent overgeneration.  
+Choices: To implement embedded declarative complement clauses, we specified that they appear in the same position as regular noun complements and that we had nominalization. We further specified that nominalization happens at the S level because there can be distinct subjects and that nominalization is syntactic only. We then created a morphological rule "nominalization" with the various forms we found in our sources, including "-pa". They add the nominalization value to the verbs. Finally, to reduce the amount of parsing ambiguity we created a special group of transitive verbs "comp-accept-verb-lex," see and know, which accept nominalized verbs as their objects to prevent overgeneration.  
 
 D. Clausal Modifiers
 
@@ -213,9 +204,9 @@ Source: b:173
 Vetted: s
 Judgment: g
 Phenomena: cl-mod
-kho     laska   byas	byas    nangla          bsdad   pared
-kho     laska   byas	byas    nang-la         bsdad   pa-red
-3sg     work    do.PST	SUB     home-DAT        stay    LK-AUX
+kho     laska		byas	byas    nangla          bsdad		pared
+kho	laska		byas	byas    nang-la         bsdad		pa-red
+3sg.ABS work.ABS	do.PST	SUB     home-DAT        stay.PST	LK-AUX
 "He worked and then stayed home" 
 
 Without the second byas, the sentence becomes a serial verb construction / coordination:
@@ -224,9 +215,9 @@ Source: b:173
 Vetted: s
 Judgment: g
 Phenomena: svc, crd
-kho     laska   byas    nangla          bsdad   pared
-kho     laska   byas    nang-la         bsdad   pa-red
-3sg     work    do.PST  home-DAT        stay    LK-AUX
+kho     laska           byas    nangla          bsdad		pared
+kho	laska		byas    nang-la         bsdad		pa-red
+3sg.ABS work.ABS	do.PST  home-DAT        stay.PST	LK-AUX
 "He worked and stayed home"
 
 We created one ungrammatical example with the subordinator in the wrong place, before the subordinate clause, but it still seems to parse due to a head-opt rule:
@@ -252,7 +243,7 @@ kho     khalag  bzas    byas    nga-s   kho-r   khapar          btang		pa-yin
 3sg     meal    ate     SUB     nga-ERG 3sg-DAT telephone       send.PST	LK-AUX
 "When he had eaten, I telephoned him"
 
-Some of the requirements for these clausal modifiers are more involved; for "before," the verb of the subordinated clause must be negated. Specifying this seems outside the scope of what the customization system can handle. However, our grammar is able to license this sentence:
+Some of the requirements for these clausal modifiers are more involved; for "before," the verb of the subordinated clause must be negated. We currently license this sentence, but we need more control to prevent ungrammatical examples.
 
 Source: b:283
 Vetted: s
@@ -263,7 +254,7 @@ kho     rgyagar-la      ma-1gro khongla         dngul   mangpo  bsags		pa-red
 he      India-DAT       NEG-go  before          money   much    save.PST	LK-AUX
 "Before he went to India, he saved a lot of money"
 
-Choices: To implement this,  we answered a few questions in the clausal modifiers section. We specified that the clausal modifier comes before the matrix clauses. Because the two clauses can either share a subject or have distinct ones, we specified that the the clausal modifier can modify either a VP or S in two different strategies. For VP subordination, we specified that the subjects were shared while S's were subordinated by a version which does not share subjects. Both of these strategies share the word byas and the first also has "khongla" (before).
+Choices: To implement this,  we answered a few questions in the clausal modifiers section. We specified that the clausal modifier comes before the matrix clauses. Because the two clauses can either share a subject or have distinct ones, we specified that the the clausal modifier can modify either a VP or S in two different strategies. For VP subordination, we specified that the subjects were shared while S's were subordinated by a version which does not share subjects. Both of these strategies have the suborinator "byas" and the VP subordination also has "khongla" (before).
 
 E. Argument Optionality
 
@@ -277,7 +268,7 @@ Judgment: g
 Phenomena: poss, pro-d
 ngali   nyigdugs        lus     1dug
 nga-li  nyigdugs        lus     1dug
-I-GEN   umbrella        leave   AUX
+I-GEN   umbrella.ABS    leave   AUX
 "I've left my umbrella behind (I remember doing so)"
  
 Here is an example of a dropped object:
@@ -291,7 +282,9 @@ khong-gis  ma-gnang pa-red
 3SG-ERG    NEG-give LK-AUX
 "He didn't give it."
 
-Choices: The first choices for this implementation was to designate that subject and object dropping happen with any verb and that there were not subject or object markers on the verb. We also specified that subject dropping happens in all contexts. This led to some overgeneration, so we specified that subject dropping happens only happens with certain words. Unfortunately, it appears that this underspecifies though because we can parse sentences with S/O-dropping without any further specification on the verbs. We did specify that the verb "byas" do.PST must have a subject and an object due to overgeneration due to its appearance as a subordinating word which also could be parsed as a verb without S/O in a serial verb construction / coordianted VPs. Argument optionality seems to have interefered with all of the new libraries this week, especially possession and clausal modifiers. 
+We have yet to see an ungrammatical example of subject or object dropping. 
+
+Choices: The first choices for this implementation was to designate that subject and object dropping happen with any verb and that there were not subject or object markers on the verb. We also specified that subject dropping happens in all contexts. This led to some overgeneration, so we specified that subject dropping happens only happens with certain words. Unfortunately, it appears that this underspecifies behavior though because we can parse sentences with S/O-dropping without any further specification on the verbs. We did specify that the verb "byas" do.PST must have a subject and an object because it overgenerates; it  appears as a subordinating word which also could be parsed as a verb without S/O in a serial verb construction / coordianted VPs. Argument optionality seems to have interefered with all of the new libraries this week, especially possession and clausal modifiers. 
 
 III. Testsuite instances not yet covered
 
@@ -304,18 +297,18 @@ We do not parse any of the testsuite instances dealing with:
 
 IV. Coverage and Overgeneration
 
-As of 4:00 on 2018-02-2, the numbers are as follows:
+As of 21:00 on 2018-02-2, the numbers are as follows:
 
 Change:
-Coverage: 25/59 -> 40/74; distinct analyses 2.25
-Overgeneration: 0/24 -> 4/29 distinct analyses 2.75
+Coverage: 25/59 -> 42/75; distinct analyses 3.62
+Overgeneration: 0/24 -> 3/30 distinct analyses 3.33
 
 28 of the unparsed examples, positive and negative, don't parse because of vocabulary and/or morphological rules. Part of the issue is that
 there are still many word types like adverbs, intensifiers, and constructions such as topicality which we do not cover which come the authoritative text. 
 
-We manage to reject 25 of the negative example parses. Most of the incorrect parses cropped up due to complex interactions between coordination, the possession library and perhaps the new complement library.
+We manage to reject 27 of the negative example parses. Most of the incorrect parses cropped up due to complex interactions between coordination, argument optionality, and the possession library and perhaps the complement library.
 
-One of the overgenerated examples is due to our lack of restrictions on the input to AUX verbs--this is due to multiple consecutive AUX verbs; new restrictions need to be put into place to mark verbs with mood as finite in order to prevent examples such as this from parsing:
+One of the 3 parsed negative examples is due to our lack of restrictions on the input to AUX verbs--this is due to possible multiple consecutive AUX verbs; new restrictions need to be put into place to mark verbs with mood as finite in order to prevent examples such as this from parsing:
 
 #Made up example with Q marker on wrong verb
 Source: author
@@ -329,18 +322,6 @@ you             Tibet-DAT       go.HON-Q        experiential-Q
 
 This highlights the need for a considerable overhaul of the verb morphology.
 
-Here is an example which results in the errant application of the head-mod-poss-1 rule; this is an example of an adjective in the wrong position:
-
-#incorrect order
-Source: author
-Vetted: f
-Judgment: u
-Phenomena: adj
-mangpo          mi              cig     1dug
-mang-po         mi              cig     1dug
-many-NMZ        people.ABS	NUM     exist
-"There are a many people"
-
 Here is an example of the new cl-mod rule taking an optional argument which results in another negative example parsing through the basic-head-opt-comp rule; this is also an example of incorrect word order with the complement marker appearing before both clauses:
 
 #byas is not in the right place for the clause
@@ -348,16 +329,38 @@ Source: author
 Vetted: f
 Judgment: u
 Phenomena: cl-mod
-byas    kho     laska   byas    nangla          bsdad   pared
-byas    kho     laska   byas    nang-la         bsdad   pa-red
-byas    3sg     work    did     home-DAT        stay    LK-AUX
+byas    kho     laska      byas    nangla          bsdad   pared
+byas    kho     laska	   byas    nang-la         bsdad   pa-red
+byas    3sg.ABS work.ABS   did     home-DAT        stay    LK-AUX
 "He worked and then stayed home"
+
+The third parsed negative example is due to an issue with the embedded clauses library; in all 5 parses of this sentence, nominalizations appear even though there is no nominalization particle on any of the verbs:
+
+Source: author
+Vetted: f
+Judgment: u
+Phenomena: emb-d
+ngas    kho     laska           byed    kyi     yod             mthong  byung
+nga-s   kho     laska           byed    kyi     yod             mthong  byung
+I-ERG   he.ABS  work.ABS        do      AUX     exist           see     PRF
+"I see he is working"
 
 Many of the overgenerated examples are due to interractions such as these between argument optionality, cl-mod, possession and asydentonic coordinated vps.
 
-
 V. Outside domain of customization
 
-As mention previously, there appears to be no way to specify attributes of the subordinated clause such as how the argument of before must be negated. This is OK for parsing, but will lead to problems in generation. One work-around could be to make a negated FORM value and specify that as a requirement.
+As mention previously, there appears to be no way to specify attributes of the subordinated clause such as how the argument of "before" must be negated. This is OK for parsing, but will lead to problems in generation. One work-around could be to make a negated FORM value and specify that as a requirement.
 
-While we can make copular verbs which take AP's, we cannot seem to make them take NP's. I imagine that this is due to some practical reason. 
+
+While we can make copular verbs which take AP's, we cannot seem to make them take NP's. I imagine that this is due to some practical reason. Xinyi tried to implement sentences like "He is a student" with transitive verbs while I tried to encourage her to wait for true copular verbs. Here is an example of one we cannot parse with copular verbs:
+
+Source: c:285
+Vetted: s
+Judgment: g
+Phenomena: q, cop
+kho     bodpa           redpas
+kho     bodpa           red-pas
+He      Tibetan         be-Q
+"Is he a Tibetan?"
+
+Another issue with copular verbs is that it appears that they can't go through the same morphological rules as other verbs, so they have to be written out in long form for any inflection. 

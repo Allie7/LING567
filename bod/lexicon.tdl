@@ -117,6 +117,14 @@ khangpa := common_noun_lex-noun-lex &
   [ STEM < "khangpa" >,
     SYNSEM.LKEYS.KEYREL.PRED "_house_n_rel" ].
 
+deb := common_noun_lex-noun-lex &
+  [ STEM < "deb" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_book_n_rel" ].
+
+bodpa := common_noun_lex-noun-lex &
+  [ STEM < "bodpa" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_Tibetan_n_rel" ].
+
 nga := 1st_person_lex-noun-lex &
   [ STEM < "nga" >,
     SYNSEM.LKEYS.KEYREL.PRED "pron_rel" ].
@@ -167,7 +175,7 @@ rgyagar := proper_noun_lex-noun-lex &
 
 bodskad := proper_noun_lex-noun-lex &
   [ STEM < "bodskad" >,
-    SYNSEM.LKEYS.KEYREL.PRED "_Tibetan_n_rel" ].
+    SYNSEM.LKEYS.KEYREL.PRED "_Tibetan_lang_n_rel" ].
 
 mo := 3rd_person_f_lex-noun-lex &
   [ STEM < "mo" >,
@@ -190,10 +198,6 @@ nakpo := nom-adj-verb-lex-adj-lex &
 mangse := nom-adj-verb-lex-adj-lex &
   [ STEM < "mangse" >,
     SYNSEM.LKEYS.KEYREL.PRED "_many_a_rel" ].
-
-bodpa := nom-adj-verb-lex-adj-lex &
-  [ STEM < "bodpa" >,
-    SYNSEM.LKEYS.KEYREL.PRED "_Tibetan_a_rel" ].
 
 yagpo := nom-adj-verb-lex-adj-lex &
   [ STEM < "yagpo" >,
@@ -466,6 +470,12 @@ red_3 := copula-verb-lex-cop-lex &
 
 yin_3 := copula-verb-lex-cop-lex &
   [ STEM < "yin" > ].
+
+redpas := question-copula-cop-lex &
+  [ STEM < "redpas" > ].
+
+miyongngas := neg-question-copula-cop-lex &
+  [ STEM < "miyongngas" > ].
 
 ;;; Determiners
 
