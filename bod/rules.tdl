@@ -33,4 +33,6 @@ vp2-top-coord := vp2-top-coord-rule.
 
 vp2-bottom-coord := vp2-bottom-coord-rule.
 
+adp-head-comp := adp-head-comp-phrase.
+
 adj-head-scop := adj-head-scop-phrase.

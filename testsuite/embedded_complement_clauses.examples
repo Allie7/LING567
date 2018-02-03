@@ -37,8 +37,17 @@ Judgment: g
 Phenomena: emb-d
 nga	bodla		phyinpa		khos	shes	kyi
 nga	bod-la		phyin-pa	kho-s	shes	kyi
-I.ABS	Tibet-DAT	went-NMZ	he-ERG	know	AUX
+I.ABS	Tibet-DAT	go.PST-NMZ	he-ERG	know	AUX
 "He knows I went to Tibet"
+
+Source: c:284
+Vetted: s
+Judgment: g
+Phenomena: emb-d
+khos	laska		byedyag			1gobtsugs 		song
+kho-s	laska		byed-yag		1gobtsugs	 	song
+He-ERG	work.ABS	do.PST-NMZ		start.PST		PRF
+"He started to work"
 
 #
 # Example missing nominalization
@@ -52,6 +61,20 @@ nga	bodla		phyin	khos	shes	kyi
 nga	bod-la		phyin	kho-s	shes	kyi
 I.ABS	Tibet-DAT	went	he-ERG	know	AUX
 "He knows I went to Tibet"
+
+
+#
+# Example with two nominalizations
+#
+
+Source: author
+Vetted: f
+Judgment: u
+Phenomena: emb-d
+khos	laska		byedyagpa		1gobtsugs 	song
+kho-s	laska		byed-yag-pa	1gobtsugs 	song
+He-ERG	work.ABS	do.PST-NMZ-NMZ		start		PRF
+"He started to work"
 
 
 

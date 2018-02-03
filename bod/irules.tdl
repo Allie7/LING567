@@ -97,6 +97,10 @@ dgos-lex-prefix :=
 %prefix (* dgos)
 dgos-lex-lex-rule.
 
+gis-prefix :=
+%prefix (* gis)
+gis-lex-rule.
+
 mood-suffix1 :=
 %suffix (* da)
 mood-lex-rule.

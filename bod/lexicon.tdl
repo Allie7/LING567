@@ -93,10 +93,6 @@ nang := common_noun_lex-noun-lex &
   [ STEM < "nang" >,
     SYNSEM.LKEYS.KEYREL.PRED "_home_n_rel" ].
 
-bod := common_noun_lex-noun-lex &
-  [ STEM < "bod" >,
-    SYNSEM.LKEYS.KEYREL.PRED "_Tibet_n_rel" ].
-
 11awa := common_noun_lex-noun-lex &
   [ STEM < "11awa" >,
     SYNSEM.LKEYS.KEYREL.PRED "_child_n_rel" ].
@@ -104,6 +100,22 @@ bod := common_noun_lex-noun-lex &
 pheb1gro := common_noun_lex-noun-lex &
   [ STEM < "pheb1gro" >,
     SYNSEM.LKEYS.KEYREL.PRED "_car_n_rel" ].
+
+dngul := common_noun_lex-noun-lex &
+  [ STEM < "dngul" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_money_n_rel" ].
+
+ja := common_noun_lex-noun-lex &
+  [ STEM < "ja" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_tea_n_rel" ].
+
+chu := common_noun_lex-noun-lex &
+  [ STEM < "chu" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_water_n_rel" ].
+
+khangpa := common_noun_lex-noun-lex &
+  [ STEM < "khangpa" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_house_n_rel" ].
 
 nga := 1st_person_lex-noun-lex &
   [ STEM < "nga" >,
@@ -116,6 +128,10 @@ kho := 3rd_person_m_lex-noun-lex &
 khong := 3rd_person_m_lex-noun-lex &
   [ STEM < "khong" >,
     SYNSEM.LKEYS.KEYREL.PRED "pron_rel" ].
+
+khorang := 3rd_person_m_lex-noun-lex &
+  [ STEM < "khorang" >,
+    SYNSEM.LKEYS.KEYREL.PRED "pron_n_rel" ].
 
 kyed := 2nd_person_lex-noun-lex &
   [ STEM < "kyed" >,
@@ -140,6 +156,18 @@ thubbstan := proper_noun_lex-noun-lex &
 blobzang := proper_noun_lex-noun-lex &
   [ STEM < "blobzang" >,
     SYNSEM.LKEYS.KEYREL.PRED "_lobsang_n_rel" ].
+
+bod := proper_noun_lex-noun-lex &
+  [ STEM < "bod" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_Tibet_n_rel" ].
+
+rgyagar := proper_noun_lex-noun-lex &
+  [ STEM < "rgyagar" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_India_n_rel" ].
+
+bodskad := proper_noun_lex-noun-lex &
+  [ STEM < "bodskad" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_Tibetan_n_rel" ].
 
 mo := 3rd_person_f_lex-noun-lex &
   [ STEM < "mo" >,
@@ -167,6 +195,22 @@ bodpa := nom-adj-verb-lex-adj-lex &
   [ STEM < "bodpa" >,
     SYNSEM.LKEYS.KEYREL.PRED "_Tibetan_a_rel" ].
 
+yagpo := nom-adj-verb-lex-adj-lex &
+  [ STEM < "yagpo" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_well_a_rel" ].
+
+hurpo := nom-adj-verb-lex-adj-lex &
+  [ STEM < "hurpo" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_actively_a_rel" ].
+
+zhimpo := nom-adj-verb-lex-adj-lex &
+  [ STEM < "zhimpo" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_tasty_a_rel" ].
+
+tshapo := nom-adj-verb-lex-adj-lex &
+  [ STEM < "tshapo" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_hot_a_rel" ].
+
 ;;; Verbs
 
 blebs := intransitive-verb-lex-verb-lex &
@@ -177,7 +221,7 @@ blebs := intransitive-verb-lex-verb-lex &
   [ STEM < "1si" >,
     SYNSEM.LKEYS.KEYREL.PRED "_die_v_rel" ].
 
-1gro := intransitive-verb-lex-verb-lex &
+1gro_1 := intransitive-verb-lex-verb-lex &
   [ STEM < "1gro" >,
     SYNSEM.LKEYS.KEYREL.PRED "_go_v_rel" ].
 
@@ -241,6 +285,22 @@ brjed := transitive-erg-verb-lex-verb-lex &
   [ STEM < "brjed" >,
     SYNSEM.LKEYS.KEYREL.PRED "_forget_v_rel" ].
 
+mthong_1 := transitive-erg-verb-lex-verb-lex &
+  [ STEM < "mthong" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_see_v_rel" ].
+
+1gobtsugs_1 := transitive-erg-verb-lex-verb-lex &
+  [ STEM < "1gobtsugs" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_start_v_rel" ].
+
+bsags_1 := transitive-erg-verb-lex-verb-lex &
+  [ STEM < "bsags" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_save_v_rel" ].
+
+mkhyen := transitive-erg-verb-lex-verb-lex &
+  [ STEM < "mkhyen" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_know_v_rel" ].
+
 gzhus := obj-dat-trans-verb-lex-verb-lex &
   [ STEM < "gzhus" >,
     SYNSEM.LKEYS.KEYREL.PRED "_hit_v_rel" ].
@@ -262,6 +322,10 @@ byed_2 := transtive-verb-lex-verb-lex &
   [ STEM < "byed" >,
     SYNSEM.LKEYS.KEYREL.PRED "_do_v_rel" ].
 
+bsags_2 := transtive-verb-lex-verb-lex &
+  [ STEM < "bsags" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_save_v_rel" ].
+
 phebs := abs-dat-transitive-verb-lex &
   [ STEM < "phebs" >,
     SYNSEM.LKEYS.KEYREL.PRED "_go_v_rel" ].
@@ -270,12 +334,12 @@ bsdad_2 := abs-dat-transitive-verb-lex &
   [ STEM < "bsdad" >,
     SYNSEM.LKEYS.KEYREL.PRED "_stay_v_rel" ].
 
-byas_1 := abs-dat-transitive-verb-lex &
-  [ STEM < "byas" >,
-    SYNSEM.LKEYS.KEYREL.PRED "_do_v_rel" ].
-
 phyin := abs-dat-transitive-verb-lex &
   [ STEM < "phyin" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_go_v_rel" ].
+
+1gro_2 := abs-dat-transitive-verb-lex &
+  [ STEM < "1gro" >,
     SYNSEM.LKEYS.KEYREL.PRED "_go_v_rel" ].
 
 yin_1 := yin-verb-lex &
@@ -319,7 +383,7 @@ song_1 := song-verb-lex &
   [ STEM < "song" >,
     SYNSEM.LKEYS.KEYREL.PRED "_went_v_rel" ].
 
-mthong := comp-accept-verb-lex &
+mthong_2 := comp-accept-verb-lex &
   [ STEM < "mthong" >,
     SYNSEM.LKEYS.KEYREL.PRED "_see_v_rel" ].
 
@@ -327,7 +391,11 @@ shes := comp-accept-verb-lex &
   [ STEM < "shes" >,
     SYNSEM.LKEYS.KEYREL.PRED "_know_v_rel" ].
 
-byas_2 := unspec-trans-verb-lex &
+1gobtsugs_2 := comp-accept-verb-lex &
+  [ STEM < "1gobtsugs" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_start_v_rel" ].
+
+byas_1 := unspec-trans-verb-lex &
   [ STEM < "byas" >,
     SYNSEM.LKEYS.KEYREL.PRED "_do_v_rel" ].
 
@@ -353,6 +421,9 @@ yogred_2 := yogred-aux-lex &
 
 byung := byung-aux-lex &
   [ STEM < "byung" > ].
+
+shag := byung-aux-lex &
+  [ STEM < "shag" > ].
 
 song_2 := song-aux-lex &
   [ STEM < "song" > ].
@@ -393,6 +464,9 @@ pa := copula-verb-lex-cop-lex &
 red_3 := copula-verb-lex-cop-lex &
   [ STEM < "red" > ].
 
+yin_3 := copula-verb-lex-cop-lex &
+  [ STEM < "yin" > ].
+
 ;;; Determiners
 
 cig := determinant-adj-lex-determiner-lex &
@@ -420,8 +494,16 @@ dang1 := conj-lex &
     SYNSEM.LKEYS.KEYREL.PRED "_and_coord_rel",
     CFORM "1" ].
 
-byas_3 := s-attach-clause-final-prehead-subord-lex-item &
+byas_2 := s-attach-clause-final-prehead-subord-lex-item &
   [ STEM < "byas" >,
     SYNSEM.LKEYS.KEYREL.PRED "_did_subord_rel" ].
+
+byas_3 := shared-subject-clause-init-prehead-vp-attach-subord-lex-item &
+  [ STEM < "byas" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_did_subord2_rel" ].
+
+khongla := shared-subject-clause-init-prehead-vp-attach-subord-lex-item &
+  [ STEM < "khongla" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_before_subord_rel" ].
 
 ;;; Complementizers

@@ -30,6 +30,11 @@ byung_gr := arg0e_gtr &
                                ASPECT prf ] ] !>,
     FLAGS.TRIGGER "byung" ].
 
+shag_gr := arg0e_gtr &
+  [ CONTEXT.RELS <! [ ARG0.E [ TENSE past,
+                               ASPECT prf ] ] !>,
+    FLAGS.TRIGGER "shag" ].
+
 song_2_gr := arg0e_gtr &
   [ CONTEXT.RELS <! [ ARG0.E [ TENSE past,
                                ASPECT prf ] ] !>,
