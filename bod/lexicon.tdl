@@ -297,11 +297,7 @@ mthong_1 := transitive-erg-verb-lex-verb-lex &
   [ STEM < "1gobtsugs" >,
     SYNSEM.LKEYS.KEYREL.PRED "_start_v_rel" ].
 
-bsags_1 := transitive-erg-verb-lex-verb-lex &
-  [ STEM < "bsags" >,
-    SYNSEM.LKEYS.KEYREL.PRED "_save_v_rel" ].
-
-mkhyen := transitive-erg-verb-lex-verb-lex &
+mkhyen_1 := transitive-erg-verb-lex-verb-lex &
   [ STEM < "mkhyen" >,
     SYNSEM.LKEYS.KEYREL.PRED "_know_v_rel" ].
 
@@ -326,9 +322,13 @@ byed_2 := transtive-verb-lex-verb-lex &
   [ STEM < "byed" >,
     SYNSEM.LKEYS.KEYREL.PRED "_do_v_rel" ].
 
-bsags_2 := transtive-verb-lex-verb-lex &
+bsags := transtive-verb-lex-verb-lex &
   [ STEM < "bsags" >,
     SYNSEM.LKEYS.KEYREL.PRED "_save_v_rel" ].
+
+mkhyen_2 := transtive-verb-lex-verb-lex &
+  [ STEM < "mkhyen" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_know_v_rel" ].
 
 phebs := abs-dat-transitive-verb-lex &
   [ STEM < "phebs" >,
