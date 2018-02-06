@@ -1,0 +1,105 @@
+1@b:190@@@1@adj@mi	mangpo		zhepo	cig	1dug@@@@1@5@person	many-NMZ	very	num	exist"There are a tremendous lot of people"@john cadigan and xinyi ji@january 13, 2018
+2@author@@@1@adj@mi	mangpo		cig	1dug@@@@1@4@person	many-NMZ	num	exist"There are a many people"@john cadigan and xinyi ji@january 13, 2018
+3@author@@@1@adj@mangpo		mi		cig	1dug@@@@0@4@many-NMZ	people	num	exist"There are a many people"@john cadigan and xinyi ji@january 13, 2018
+4@b:190@@@1@adj@gzugspo		bdepo		11a1utse	yod@@@@1@4@body		well-NMZ	reasonably	exist"I'm reasonably well"@john cadigan and xinyi ji@january 13, 2018
+5@d:95@@@1@adj@nyuku	ti	nakpo		re@@@@1@4@pen	this	black-NMZ	be"This pen is black"@john cadigan and xinyi ji@january 13, 2018
+6@d:95@@@1@adj@nyuku	nakpo		ti	re@@@@1@4@pen	black-NMZ	this	be'This is a black pen'@john cadigan and xinyi ji@january 13, 2018
+7@b:190@@@1@adj@chu	tshapo	1drapo	1dug@@@@1@4@water	hot-NMZ	sort_of	be"The water was sort of hot"@john cadigan and xinyi ji@january 13, 2018
+8@b:183@@@1@adj@mi  mangse  1dug@@@@1@3@people many-NMZ be"There are rather a lot of People."@john cadigan and xinyi ji@january 13, 2018
+9@b:184@@@1@adj,tam@khangpa che drags  kyi1dug@@@@1@4@house   big exceed LK-AUX"The house is too big."@john cadigan and xinyi ji@january 13, 2018
+10@b:124@@@1@adj@ja 1di zhimpo yin@@@@1@4@tea this tasty-NMZ  be"This tea is tasty."@john cadigan and xinyi ji@january 13, 2018
+11@b:283@@@1@cl-mod@kho	rgyagarla	ma1gro	khongla		dngul	mangpo	bsags	pared@@@@1@8@he	India-DAT	NEG-go	before		money	much	save	LK-AUX"Before he went to India, he saved a lot of money"@john cadigan and xinyi ji@january 13, 2018
+12@b:173@@@1@cl-mod@kho	khalag	bzas	byas	ngas	khor	khapar		btang	payin@@@@1@9@3sg	meal	ate	did	nga-ERG	3sg-DAT	telephone	send	LK-AUX"When he had eaten, I telephoned him"@john cadigan and xinyi ji@january 13, 2018
+13@b:173@@@1@cl-mod@kho	laska	byas	byas	nangla		bsdad	pared@@@@1@7@3sg	work	did	did	home-DAT	stay	LK-AUX"He worked and then stayed home"@john cadigan and xinyi ji@january 13, 2018
+14@b:173@@@1@svc@kho	laska	byas	nangla		bsdad	pared@@@@1@6@3sg	work	did	home-DAT	stay	LK-AUX"He worked and stayed home"@john cadigan and xinyi ji@january 13, 2018
+15@author@@@1@cl-mod@byas	kho	laska	byas	nangla		bsdad	pared@@@@0@7@byas	3sg	work	did	home-DAT	stay	LK-AUX"He worked and then stayed home"@john cadigan and xinyi ji@january 13, 2018
+16@b:209@@@1@adv@khong	bodskad	yagpo		mkhyen	gyi1dug@@@@1@5@He	Tibetan	good-NMZ	know	LK-AUX'He knows Tibetan well'@john cadigan and xinyi ji@january 13, 2018
+17@b:186@@@1@adv@khyedranggis	laska	hurpo		byasnas		mgo	thugsshag@@@@1@6@you-ERG		work	active-NMZ	did-sub		begin	AUX"You evidently started the work engergetically"@john cadigan and xinyi ji@january 13, 2018
+18@a:132@@@1@wo,c,tam@ngas	stag	bsad payin@@@@1@4@I-ERG	tiger	killed LK-PRF'I killed the tiger.'@john cadigan and xinyi ji@january 13, 2018
+19@a:133@@@1@c@nga	stag	bsad payin@@@@0@4@I	tiger	killed LK-PRF'I killed the tiger.'@john cadigan and xinyi ji@january 13, 2018
+20@author@@@1@c@ngala   stag  bsad	payin@@@@0@4@I-DAT	tiger	killed	pa-AUX.PRF'I killed the tiger.'@john cadigan and xinyi ji@january 13, 2018
+21@author@@@1@c@ngala	stagla		bsad	payin@@@@0@4@I-DAT	tiger-DAT	killed	LK-PRF'I killed the tiger.'@john cadigan and xinyi ji@january 13, 2018
+22@c:274@@@1@wo,c,tam@thubbstangyis	blobzangla	gzhus	song@@@@1@4@Thubten-ERG	Lobsang-DAT	hit	AUX.PRF'Thubten hit Lobsang'@john cadigan and xinyi ji@january 13, 2018
+23@author@@@1@c@thubbstangyis	blobzang	gzhus	song@@@@0@4@Thubten-ERG	Lobsang		hit	AUX.PRF'Thubten hit Lobsang'@john cadigan and xinyi ji@january 13, 2018
+24@c:274@@@1@c@thubbstangyis  blobzangla     bsad pared@@@@0@4@Thubten-ERG     Lobsang-DAT     kill LK-AUX:PRF'Thubten killed Lobsang'@john cadigan and xinyi ji@january 13, 2018
+25@b:203@@@1@wo,c,tam@khos		yige		bris	song@@@@1@4@3sg-ERG		letter		wrote	PRF.AUX‘He wrote the letter.’@john cadigan and xinyi ji@january 13, 2018
+26@b:203@@@1@wo,c,tam@khos		  yige  	smyuggus	bris	song@@@@1@5@3sg-ERG		letter		pen-INST	wrote	PRF.AUX‘He wrote the letter with a pen.’@john cadigan and xinyi ji@january 13, 2018
+27@b:215@@@1@c@ngas     khola     yige     btang 	giyin@@@@1@5@1SG-ERG  3SG-DAT   letter   send 	LK-AUX'I will send him a letter."@john cadigan and xinyi ji@january 13, 2018
+28@author@@@1@c@ngas    kho   yige    btang	giyin@@@@0@5@I-ERG   3SG   letter  send	LK-AUX'I will send him a letter.'@john cadigan and xinyi ji@january 13, 2018
+29@b:220@@@1@crd,crdagr,svc@zhoggas	ngatshos	yige	bris	denas	khalag	bzas	denas	chamchamla	phyin	payin@@@@1@11@morning	I-num-ERG	letter	write	then	meal	ate	then	walk-DAT	went	LK-AUX"In the morning we wrote letters, then we had a meal, then we went for a walk"@john cadigan and xinyi ji@january 13, 2018
+30@author@@@1@crd,crdagr,svc@ngatshos	yige	bris	khalag	bzas@@@@1@5@I-num-ERG	letter	write	meal	ate"We wrote letters and ate a meal"@john cadigan and xinyi ji@january 13, 2018
+31@author@@@1@crd@ngatshos        yige    bris    dang    khalag  bzas@@@@0@6@I-num-ERG       letter  write   and     meal    ate"We wrote letters and ate a meal"@john cadigan and xinyi ji@january 13, 2018
+32@b:277@@@1@crd,crdagr,svc@grogspo	mi	dila		yar	khorangla	skyeddman	yogred	bugu	yogred@@@@1@9@friend	man	this-DAT	top.	he-DAT		wife		exist	child	exist'The friend had a wife and child'@john cadigan and xinyi ji@january 13, 2018
+33@author@@@1@crd,crdagr,svc@khorangla	skyeddman	yogred	bugu	yogred@@@@1@5@he-DAT		wife		exist	child	exist'He had a wife and child'@john cadigan and xinyi ji@january 13, 2018
+34@b:104@@@1@crd,crdagr@lcogtse	tshangma	1ditsho		dang	rkubkyag	thsong	giyin@@@@1@7@table	all		this-num	CRD	chair		sell	LK-AUX"I shall sell all these tables and the chairs"@john cadigan and xinyi ji@january 13, 2018
+35@author@@@1@crd,crdagr@ngas	lcogtse	dang	rkubkyag	thsong	giyin@@@@1@6@I-ERG	table	CRD	chair		sell	LK-AUX"I shall sell the tables and chairs"@john cadigan and xinyi ji@january 13, 2018
+36@author@@@1@crd,crdagr@ngas	lcogtse rkubkyag	thsong	giyin@@@@0@5@I-ERG	table	chair		sell	LK-AUX"I shall sell the tables and chairs"@john cadigan and xinyi ji@january 13, 2018
+37@author@@@1@crdagr@ngas	lcogtsela	dang	rkubkyag	thsong	giyin@@@@0@6@I-ERG	table-DAT	CRD	chair		sell	LK-AUX"I shall sell the tables and chairs"@john cadigan and xinyi ji@january 13, 2018
+38@author@@@1@crdagr@ngas	lcogtses	dang	rkubkyag	thsong	giyin@@@@0@6@I-ERG	table-ERG	CRD	chair		sell	LK-AUX"I shall sell the tables and chairs"@john cadigan and xinyi ji@january 13, 2018
+39@b:277@@@1@crd,crdagr@denas	khothso		gangkha		mar	dang	phyurba	sha	pagspa	dopo	brgyabnas	lhasala		tshonggag	yong	gired@@@@1@14@de-ABL	3sg-num		all		butter	CRD	cheese	meat	hide	load	make_up-SUB	Lhasa-DAT	sell-SUB	come	LK-AUX"Then they all make up loads of butter, cheese, meats and hides and come to Lhasa to sell them"@john cadigan and xinyi ji@january 13, 2018
+40@author@@@1@crd,crdagr@mar	dang	phyurba	sha	pagspa	1dug@@@@1@6@butter	CRD	cheese	meat	hide	exist"There are butter, cheese, meats and hides."@john cadigan and xinyi ji@january 13, 2018
+41@author@@@1@crd@mar	phyurba	sha	pagspa	1dug@@@@0@5@butter	cheese	meat	hide	exist"There are butter, cheese, meats and hides."@john cadigan and xinyi ji@january 13, 2018
+42@d:100@@@1@wo,c,det@1mibculngatsam    cig yogred@@@@1@3@people-fiteen-about num exist'There are about fiteeen people.'@john cadigan and xinyi ji@january 13, 2018
+43@author@@@1@det@cig 1mibculngatsam yogred@@@@0@3@num people-fiteen-about exist'There are about fiteeen people.'@john cadigan and xinyi ji@january 13, 2018
+44@d:100@@@1@wo,c,det@1mibculngatsam  yogred@@@@1@2@people-fiteen-about exist'There are about fiteeen people.'@john cadigan and xinyi ji@january 13, 2018
+45@c:284@@@1@emb-d@ngas	kho	laska		byed	kyiyodpa	mthong	byung@@@@1@7@I-ERG	he.ABS	work.ABS	do	LK-exist-NMZ	see	PRF"I see he is working"@john cadigan and xinyi ji@january 13, 2018
+46@author@@@1@emb-d@ngas	kho	laska		byed	kyiyod		mthong	byung@@@@0@7@I-ERG	he.ABS	work.ABS	do	LK-exist	see	PRF"I see he is working"@john cadigan and xinyi ji@january 13, 2018
+47@c:284@@@1@emb-d@nga	bodla		phyinpa		khos	shes	kyi@@@@1@6@I.ABS	Tibet-DAT	go.PST-NMZ	he-ERG	know	AUX"He knows I went to Tibet"@john cadigan and xinyi ji@january 13, 2018
+48@c:284@@@1@emb-d@khos	laska		byedyag			1gobtsugs 		song@@@@1@5@He-ERG	work.ABS	do.PST-NMZ		start.PST		PRF"He started to work"@john cadigan and xinyi ji@january 13, 2018
+49@author@@@1@emb-d@nga	bodla		phyin	khos	shes	kyi@@@@0@6@I.ABS	Tibet-DAT	went	he-ERG	know	AUX"He knows I went to Tibet"@john cadigan and xinyi ji@january 13, 2018
+50@author@@@1@emb-d@khos	laska		byedyagpa		1gobtsugs 	song@@@@0@5@He-ERG	work.ABS	do.PST-NMZ-NMZ		start		PRF"He started to work"@john cadigan and xinyi ji@january 13, 2018
+51@b:116@@@1@wo,neg@maphyinparedda@@@@1@1@not-went        LK-AUX-EMPH'Certainly he didn't go.'@john cadigan and xinyi ji@january 13, 2018
+52@author@@@1@neg@phyinmaparedda@@@@0@1@went-ma        LK-AUX-EMPH'Certainly he didn't go.'@john cadigan and xinyi ji@january 13, 2018
+53@b:116@@@1@wo,neg@1grogimi1dugga@@@@1@1@Go	LK-NEG-AUX-EMPH"Certainly he's not going"@john cadigan and xinyi ji@january 13, 2018
+54@author@@@1@neg@1grogi1dugmiga@@@@0@1@Go	LK-AUX-NEG-EMPH"Certainly he's not going"@john cadigan and xinyi ji@january 13, 2018
+55@b:145@@@1@wo,neg,tam@khos    yige btang masong@@@@1@4@he-ERG  yige send  NEG-AUX"He didn't send a letter."@john cadigan and xinyi ji@january 13, 2018
+56@author@@@1@neg@khos    yige btang misong@@@@0@4@he-ERG  yige send  NEG-AUX"He didn't send a letter."@john cadigan and xinyi ji@january 13, 2018
+57@b:146@@@1@wo,neg,tam,pro-d@ngas    sprad med@@@@1@3@1ST-ERG give NEG_AUX"I didn't give."@john cadigan and xinyi ji@january 13, 2018
+58@b:146@@@1@wo,neg,tam,pro-d@khonggis   magnang  pared@@@@1@3@3SG-ERG    NEG-give LK-AUX"He didn't give it."@john cadigan and xinyi ji@january 13, 2018
+59@b:160@@@1@poss,pro-d@ngali	nyigdugs	lus	1dug@@@@1@4@I-GEN	umbrella	leave	AUX"I've left my umbrella behind (I remember doing so)"@john cadigan and xinyi ji@january 13, 2018
+60@author@@@1@poss@ngas	ngali	nyigdugs	lus	1dug@@@@1@5@I-ERG	I-GEN	umbrella	leave	AUX"I've left my umbrella behind (I remember doing so)"@john cadigan and xinyi ji@january 13, 2018
+61@author@@@1@poss@ngas	nyigdugs	ngali	lus	1dug@@@@0@5@I-ERG	umbrella	I-GEN	leave	AUX"I've left my umbrella behind (I remember doing so)"@john cadigan and xinyi ji@january 13, 2018
+62@b:160@@@1@poss,pro-d@khonggi		mtshan	brjed	shag@@@@1@4@3sg-GEN		name	forget	AUX"I've forgotten his name (I must have because I can't call it to mind)"@john cadigan and xinyi ji@january 13, 2018
+63@author@@@1@poss@khonggi		11awa1i		pheb1gro	nakpo		re@@@@1@5@He-GEN		child-GEN	car.ABS		black-NMZ	be"His child's car is black"@john cadigan and xinyi ji@january 13, 2018
+64@d:279@@@1@wo,c,pn@khos dkaryol bcag	song@@@@1@4@S/He-ERG cup broke	AUX.PRF'He broke the cup'@john cadigan and xinyi ji@january 13, 2018
+65@b:178@@@1@pn,wo@nga 1gro	dgosred@@@@1@3@I   go		LK-AUX'I  must go.'@john cadigan and xinyi ji@january 13, 2018
+66@b:107@@@1@pn@kyedrang 1gro	dgos	kyired@@@@1@4@you       go	should	LK-AUX'you  should go'@john cadigan and xinyi ji@january 13, 2018
+67@b:178@@@1@pn@khong 1grodgos    byed	kyired@@@@1@4@she    go-NMZ     do	LK-AUX'she will have to go.'@john cadigan and xinyi ji@january 13, 2018
+68@b:178@@@1@pn@kho gros	dgosred@@@@1@3@he  go		LK-AUX'He must go.'@john cadigan and xinyi ji@january 13, 2018
+69@author@@@1@pn@khotsho gros	dgosred@@@@1@3@3RD-M_PL  go	LK-AUX'They must go.'@john cadigan and xinyi ji@january 13, 2018
+70@b:178@@@1@pn@motsho  1grodgos    byed	kyired@@@@1@4@3RD.F-PL    go-NMZ     do	LK-AUX'They will have to go.'@john cadigan and xinyi ji@january 13, 2018
+71@b:137@@@1@wo,c,tam@ngas    yige    cig bris	kyiyod@@@@1@5@1ST-AUX letter  num write	LK-AUX'I am writing a letter.'@john cadigan and xinyi ji@january 13, 2018
+72@b:137@@@1@wo,c,tam@ngas  yige    klog bayin@@@@1@4@1ST-ERG letter  read LK-AUX'I read the letter.'@john cadigan and xinyi ji@january 13, 2018
+73@b:137@@@1@wo,c,tam@sangnyin  ngas    laska  1di   byed	kyiyin@@@@1@6@tomorrow  1ST-ERG  work   this  do	LK-AUX'He is sure to do the work tomorrow.'@john cadigan and xinyi ji@january 13, 2018
+74@b:227@@@1@wo,c,tam@laska	1di	tsharba		byed	11a@@@@1@5@work	this	finish_nom	do	IMP'Try to finish the work'@john cadigan and xinyi ji@january 13, 2018
+75@a:132@@@1@wo,c,tam@nga     1si byung@@@@1@3@I       die-PRF'I have died.'@john cadigan and xinyi ji@january 13, 2018
+76@a:161@@@1@wo,c,tam@nga	blebs	groyin@@@@1@3@I	arrive	LK-AUX'I had just arrived'@john cadigan and xinyi ji@january 13, 2018
+77@a:162@@@1@wo,c,tam@nga	nyocha		nyo ryguin@@@@1@4@I	shopping	buy LK-AUX'I have still to do the shopping'@john cadigan and xinyi ji@january 13, 2018
+78@b:160@@@1@wo,c,tam@khong  nangla   bzhugsshag@@@@1@3@3SG inside-DAT fall-PRF'She is at home.'@john cadigan and xinyi ji@january 13, 2018
+79@b:128@@@1@tam@gsar1gyur	11eyod@@@@1@2@news		DUB-exist"I wonder whether there's any news"@john cadigan and xinyi ji@january 13, 2018
+80@author@@@1@det,tam,neg@yige    de    medpa	1dra@@@@1@4@letter  that  neg-EXIST	AUX'That letter does not seem to be here'@john cadigan and xinyi ji@january 13, 2018
+81@author@@@1@det,tam,neg@yige    medpa		1dra@@@@1@3@letter  neg-EXIST	AUX'The letter does not seem to be here.'@john cadigan and xinyi ji@january 13, 2018
+82@b:108@@@1@c,wh@gare  zerba@@@@1@2@what say_wh.INTERR'What's it called?'@john cadigan and xinyi ji@january 13, 2018
+83@b:130@@@1@c,wh@khongla rogspa    su  yogredpa@@@@1@4@3SG-DAT many-NOM  who exist_wh-INTERR'Who was with him?'@john cadigan and xinyi ji@january 13, 2018
+84@b:130@@@1@wh,c@kyedrang   su    yinpa@@@@1@3@you         who   be_wh-INTERR'Who are you?'@john cadigan and xinyi ji@january 13, 2018
+85@b:130@@@1@wh@gare  yin-am@@@@1@2@what  be-alt'Why?'@john cadigan and xinyi ji@january 13, 2018
+86@b:165@@@1@c,wh@kyedrang	ganas		phebspa@@@@1@3@you		what-ABL	come-INTERR'Where did you come from?'@john cadigan and xinyi ji@january 13, 2018
+87@b:197@@@1@c,wh@chalag  digyad 		sus 		tshong	paredpa@@@@1@5@thing	this-num 	who-ERG		sell	LK-AUX-Q'Who sold the things?'@john cadigan and xinyi ji@january 13, 2018
+88@c:285@@@1@wh,cl-mod@slobgra	tsharna		khyedrang	gare	gnangga@@@@1@5@school	finish-when	you		what	do-Q'What will you do when you finish school'@john cadigan and xinyi ji@january 13, 2018
+89@b:203@@@1@wo@khos      yige    bris	song@@@@1@4@3SG-ERG   letter  wrote	PRF.AUX‘He wrote the letter.’@john cadigan and xinyi ji@january 13, 2018
+90@author@@@1@wo@khos    bris	song    yige@@@@0@4@3SG-ERG wrote	PRF.AUX   letter'He wrote the letter.'@john cadigan and xinyi ji@january 13, 2018
+91@a:132@@@1@wo,c,@nga	1si	byung@@@@1@3@I	die	AUX.PRF'I have died.'@john cadigan and xinyi ji@january 13, 2018
+92@author@@@1@wo@1si	byung	nga@@@@0@3@die	PRF	nga'I have died.'@john cadigan and xinyi ji@january 13, 2018
+93@a:132@@@1@wo,c,@ngas	stag    bsad	payin@@@@1@4@I-ERG	tiger	killed	LK-AUX.PRF'I killed the tiger.'@john cadigan and xinyi ji@january 13, 2018
+94@author@@@1@wo@ngas	bsad	payin		stag@@@@0@4@I-ERG	killed	LK-AUX.PRF	tiger'I killed the tiger.'@john cadigan and xinyi ji@january 13, 2018
+95@author@@@1@wo@stag	ngas	bsad	payin@@@@0@4@tiger	I-ERG	killed	LK-AUX.PRF'I killed the tiger.'@john cadigan and xinyi ji@january 13, 2018
+96@author@@@1@wo@stag	bsad	payin		ngas@@@@0@4@tiger	killed	LK-AUX.PRF	I-ERG'I killed the tiger.'@john cadigan and xinyi ji@january 13, 2018
+97@author@@@1@wo@bsad	payin		stag	ngas@@@@0@4@killed	LK-AUX.PRF	tiger	I-ERG'I killed the tiger.'@john cadigan and xinyi ji@january 13, 2018
+98@author@@@1@wo@bsad	payin		ngas	stag@@@@0@4@killed	LK-AUX.PRF	I-ERG	tiger'I killed the tiger.'@john cadigan and xinyi ji@january 13, 2018
+99@b:132@@@1@wo@maphyinparedda@@@@1@1@not-went	LK-AUX-emph'Certainly he didn't go.'@john cadigan and xinyi ji@january 13, 2018
+100@author@@@1@wo@paredmaphyinda@@@@0@1@link-aux	not-went'Certainly he didn't go.'@john cadigan and xinyi ji@january 13, 2018
+101@b:166@@@1@tam,wo,c@khonggis        slobsbyong      gnang	musyingired@@@@1@4@She-ERG         study           do	LK-AUX-LK-AUX"She's probably at her studies"@john cadigan and xinyi ji@january 13, 2018
+102@c:285@@@1@q,cop@kho	bodpa		redpas@@@@1@3@He	Tibetan		be-Q"Is he a Tibetan?"@john cadigan and xinyi ji@january 13, 2018
+103@c:285@@@1@q@khyedrang	bodla		phebs	myongngas@@@@1@4@you		Tibet-DAT	go.HON	experiential.AUX-Q"Have you ever been to Tibet?"@john cadigan and xinyi ji@january 13, 2018
+104@author@@@1@q@khyedrang	bodla		phebspas	myongngas@@@@0@4@you		Tibet-DAT	go.HON-Q	experiential-Q"Have you ever been to Tibet"@john cadigan and xinyi ji@january 13, 2018
+105@c:128@@@1@q@deb	mangpo		miyongngas@@@@1@3@book	many-NMZ	NEG-be-INTERR"I wonder if there are many books. (Note polarity in English)"@john cadigan and xinyi ji@january 13, 2018
