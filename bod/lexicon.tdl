@@ -512,11 +512,7 @@ byas_2 := s-attach-clause-final-prehead-subord-lex-item &
   [ STEM < "byas" >,
     SYNSEM.LKEYS.KEYREL.PRED "_did_subord_rel" ].
 
-byas_3 := shared-subject-clause-init-prehead-vp-attach-subord-lex-item &
-  [ STEM < "byas" >,
-    SYNSEM.LKEYS.KEYREL.PRED "_did_subord2_rel" ].
-
-khongla := shared-subject-clause-init-prehead-vp-attach-subord-lex-item &
+khongla := s-attach-clause-final-prehead-subord-lex-item &
   [ STEM < "khongla" >,
     SYNSEM.LKEYS.KEYREL.PRED "_before_subord_rel" ].
 

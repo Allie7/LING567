@@ -13,9 +13,9 @@ Source: c:284
 Vetted: s
 Judgment: g
 Phenomena: emb-d
-ngas	kho	laska		byed	kyi	yodpa		mthong	byung
-nga-s	kho	laska		byed	kyi	yod-pa		mthong	byung
-I-ERG	he.ABS	work.ABS	do	AUX	exist-NMZ	see	PRF
+ngas	kho	laska		byed	kyiyodpa	mthong	byung
+nga-s	kho	laska		byed	kyi-yod-pa	mthong	byung
+I-ERG	he.ABS	work.ABS	do	LK-exist-NMZ	see	PRF
 "I see he is working"
 
 
@@ -26,11 +26,15 @@ Source: author
 Vetted: f
 Judgment: u
 Phenomena: emb-d
-ngas	kho	laska		byed	kyi	yod		mthong	byung
-nga-s	kho	laska		byed	kyi	yod		mthong	byung
-I-ERG	he.ABS	work.ABS	do	AUX	exist		see	PRF
+ngas	kho	laska		byed	kyiyod		mthong	byung
+nga-s	kho	laska		byed	kyi-yod		mthong	byung
+I-ERG	he.ABS	work.ABS	do	LK-exist	see	PRF
 "I see he is working"
 
+
+#
+# Exhibits fronting 
+#
 Source: c:284
 Vetted: s
 Judgment: g
@@ -39,6 +43,21 @@ nga	bodla		phyinpa		khos	shes	kyi
 nga	bod-la		phyin-pa	kho-s	shes	kyi
 I.ABS	Tibet-DAT	go.PST-NMZ	he-ERG	know	AUX
 "He knows I went to Tibet"
+
+#
+# c:284 without fronting 
+#
+Source: author
+Vetted: f
+Judgment: g
+Phenomena: emb-d
+khos	nga	bodla		phyinpa		shes	kyi
+kho-s	nga	bod-la		phyin-pa	shes	kyi
+He-ERG	I.ABS	Tibet-DAT	go.PST-NMZ	know	AUX
+"He knows I went to Tibet"
+
+
+
 
 Source: c:284
 Vetted: s
@@ -61,7 +80,6 @@ nga	bodla		phyin	khos	shes	kyi
 nga	bod-la		phyin	kho-s	shes	kyi
 I.ABS	Tibet-DAT	went	he-ERG	know	AUX
 "He knows I went to Tibet"
-
 
 #
 # Example with two nominalizations

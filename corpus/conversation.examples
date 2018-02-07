@@ -1,0 +1,105 @@
+#
+# Source B, 15.1 Lhasa Tibetan
+# The Horpas
+# The following is from an unscripted taped conversaion
+
+
+#
+# Speaker A
+#
+
+#1
+Source: b:275
+Vetted: s
+Judgment: g
+Phenomena:q
+bodla		dgunkha		zhedrag	grangmo		yogred-bas
+bod-la		dgunkha		zhedrag	grang-mo	yogred-bas
+Tibet-DAT	winter.ABS	very	cold-NMZ	exist-INTERR
+"Are winters very cold in Tibet?"
+
+#
+# Speaker B
+#
+
+#Source: b:275
+#Vetted: s
+#Judgment: g
+#Phenomena:q
+#lags	red
+#lags	red
+#CONV	be
+#"Yes"
+
+#2
+Source: b:275
+Vetted: s
+Judgment: g
+Phenomena:adj
+bodla		zhedrag	grangmo		yogred
+bod-la		zhedrag	grang-mo	yogred
+Tibet-DAT	very	cold-NMZ	exist
+"It's very cold in Tibet"
+
+
+#3
+Source: b:275
+Vetted: s
+Judgment: g
+Phenomena:adv
+lhasarangla	1digatsam	grangmo		yogmared
+lhasa-rang-la	1digatsam	grang-mo	yog-ma-red
+Lhasa-self-DAT	so		cold-NMZ	LK-NEG-EXIST
+"It's not so cold in Lhasa itself"
+
+#4
+Source: b:275
+Vetted: s
+Judgment: g
+Phenomena:cl-mod
+yinnayang	byangphyogsla	zlaba		brgyadpanas	gangs		btangnas	logsar		bardu		gangs		mabzhuspar		sdod	kyired
+yinnayang	byangphyogs-la	zlaba		brgyadpa-nas	gangs		btang-nas	logsar		bar-du		gangs		ma-bzhus-par		sdod	kyi-red
+but		north-DAT	month.ABS	eight-ABL	snow.ABS	fall-SUB	new_year.ABS	until.DAT	snow.ABS	NEG-melt-NMZ.DAT	stay	LK-AUX
+"But in the north, from October, when snow falls it lies without melting until New Year (March)"
+
+
+#
+# Speaker B
+#
+
+#5
+
+Source: b:275
+Vetted: s
+Judgment: g
+Phenomena:q
+dgunkhar	byangthangla	mi		bsdadmkhan	yogredpas
+dgun-khar	byangthang-la	mi		bsdad-mkhan	yog-red-pas
+winter-DAT	Changthang-DAT	people.ABS	dwell-NMZ	LK-exist-INTERR
+"Are there people who live in Changthang ('northern plains') in the winter?"
+
+#6
+Source: b:276
+Vetted: s
+Judgment: g
+Phenomena:adv
+horpa	sgangkha	sdodsa		byangla		red
+horpa	sgangkha	sdod-sa		byang-la	red
+horpa	all		dwell-NMZ	north-DAT	be
+"The Horpas all live in the north"
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
