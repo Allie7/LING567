@@ -796,6 +796,7 @@ aspect-marker-suffixes-rule-dtr := word-or-lexrule.
 polarity-marker-rule-dtr := word-or-lexrule.
 possessive-rule-lex-rule-dtr := word-or-lexrule.
 tense-marker-rule-dtr := word-or-lexrule.
+mood-marker-rule-dtr := word-or-lexrule.
 
 ;;; Lexical rule types
 
@@ -1081,7 +1082,7 @@ gis-lex-rule := tense-marker-lex-rule-super &
 
 mood-marker-lex-rule-super := add-only-no-ccont-rule & infl-lex-rule &
   [ INFLECTED #infl,
-    DTR verb-lex &
+    DTR mood-marker-rule-dtr &
         [ INFLECTED #infl &
                     [ YIN-AUX-FLAG na ] ] ].
 
