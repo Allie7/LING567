@@ -125,6 +125,10 @@ bodpa := common_noun_lex-noun-lex &
   [ STEM < "bodpa" >,
     SYNSEM.LKEYS.KEYREL.PRED "_Tibetan_n_rel" ].
 
+slobsyong := common_noun_lex-noun-lex &
+  [ STEM < "slobsyong" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_study_n_rel" ].
+
 nga := 1st_person_lex-noun-lex &
   [ STEM < "nga" >,
     SYNSEM.LKEYS.KEYREL.PRED "pron_rel" ].
