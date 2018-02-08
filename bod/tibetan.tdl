@@ -120,6 +120,11 @@ basic-head-opt-subj-phrase :+ [ HEAD-DTR.SYNSEM.LOCAL.CAT.VAL.COMPS < > ].
 head-adj-int-phrase :+ [ NON-HEAD-DTR.SYNSEM.LOCAL.CAT [ HEAD.POSSESSOR nonpossessive,
                                     POSSESSUM nonpossessive ] ].
 
+;Added for adverbs
+adj-head-int-phrase := adj-head-phrase & isect-mod-phrase &
+  [ NON-HEAD-DTR.SYNSEM.LOCAL.CAT [ POSTHEAD - ] ].
+;
+
 adj-head-scop-phrase :+ [ NON-HEAD-DTR.SYNSEM.LOCAL.CAT [ HEAD.POSSESSOR nonpossessive,
                                     POSSESSUM nonpossessive ] ].
 
@@ -408,10 +413,17 @@ comp-accept-verb-lex := clausal-verb-lex & clausal-second-arg-trans-lex-item &
                    CAT.VAL.COMPS < [ LOCAL.CAT.HEAD noun &
                                                     [ NMZ + ] ] > ] ].
 
+
+;Constraining unspecified transitive for generation purposes
+
 unspec-trans-verb-lex := transitive-verb-lex &
+  [ SYNSEM.LOCAL.CAT.VAL [ SUBJ.FIRST.LOCAL.CAT.HEAD.CASE abs,
+                           COMPS.FIRST.LOCAL.CAT.HEAD.CASE abs ] ] &
   [ SYNSEM.LOCAL [ CONT.HOOK.INDEX.E.TENSE past,
                    CAT.VAL [ SUBJ.FIRST.OPT -,
                              COMPS.FIRST.OPT - ] ] ].
+;
+
 
 no-subj-drop-verb-lex := verb-lex &
   [ SYNSEM.LOCAL.CAT.VAL.SUBJ.FIRST.OPT - ].
@@ -707,6 +719,15 @@ nom-adj-verb-lex-adj-lex := attr-adj-lex &
 attr-adj-lex := adj-lex & intersective-mod-lex &
   [ SYNSEM.LOCAL.CAT.HEAD.MOD < [ LOCAL.CAT [ HEAD noun,
                                               VAL.SPR cons ] ] > ].
+
+;;;Adverbs
+
+adverb-lex := basic-adverb-lex & intersective-mod-lex &
+  [ SYNSEM [ LOCAL [ CAT [ HEAD.MOD < [ LOCAL.CAT.HEAD verb ]>,
+			   VAL [ SPR < >,
+				 SUBJ < >,
+				 COMPS < >,
+				 SPEC < > ]]]]].
 
 ;;;;;;;;;;;;;;;;;;;
 ;;; Subordinators

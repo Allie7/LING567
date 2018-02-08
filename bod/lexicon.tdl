@@ -203,11 +203,11 @@ mangse := nom-adj-verb-lex-adj-lex &
   [ STEM < "mangse" >,
     SYNSEM.LKEYS.KEYREL.PRED "_many_a_rel" ].
 
-yagpo := nom-adj-verb-lex-adj-lex &
+yagpo := adverb-lex &
   [ STEM < "yagpo" >,
     SYNSEM.LKEYS.KEYREL.PRED "_well_a_rel" ].
 
-hurpo := nom-adj-verb-lex-adj-lex &
+hurpo := adverb-lex &
   [ STEM < "hurpo" >,
     SYNSEM.LKEYS.KEYREL.PRED "_actively_a_rel" ].
 
@@ -406,6 +406,11 @@ shes := comp-accept-verb-lex &
 byas_1 := unspec-trans-verb-lex &
   [ STEM < "byas" >,
     SYNSEM.LKEYS.KEYREL.PRED "_do_v_rel" ].
+
+byas_trans := transitive-erg-verb-lex-verb-lex &
+  [ STEM < "byas" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_do_v_rel" ].
+
 
 ;;; Auxiliaries
 
