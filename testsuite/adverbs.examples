@@ -25,6 +25,30 @@ kyedrang-gis	laska	hur-po		byas-nas	mgo	thugsshag
 you-ERG		work	active-NMZ	did-sub		begin	AUX
 "You evidently started the work engergetically"
 
+#
+# Source D 237
+#
+# 'Adjectives can be transformed into adverbs by the addition of the suffix cha, which is derived from the verb "to do", 
+# as the following example shows'
+#
 
+Source: d:234
+Vetted: s
+Judgment: g
+Phenomena: adv, pro-d
+lholocha shuto
+lholo-cha shuto
+calm-ADV  sit_lets
+"Let's sit quietly"
+
+
+Source: b:280
+Vetted: s
+Judgment: g
+Phenomena: adv
+da	1di1dra		cigla	namsang		serra		cig	btang	songzer
+da	1di1dra		cig-la	namsang		serra		cig	btang	song-zer
+now	such		a-DAT	suddenly	hail.ABS	NUM	send	send-say
+"'Then just as suddenly, some hail fell' (He said)"
 
 

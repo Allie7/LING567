@@ -125,8 +125,8 @@ bodpa := common_noun_lex-noun-lex &
   [ STEM < "bodpa" >,
     SYNSEM.LKEYS.KEYREL.PRED "_Tibetan_n_rel" ].
 
-slobsyong := common_noun_lex-noun-lex &
-  [ STEM < "slobsyong" >,
+slobsbyong := common_noun_lex-noun-lex &
+  [ STEM < "slobsbyong" >,
     SYNSEM.LKEYS.KEYREL.PRED "_study_n_rel" ].
 
 nga := 1st_person_lex-noun-lex &
@@ -223,6 +223,10 @@ tshapo := nom-adj-verb-lex-adj-lex &
 
 blebs := intransitive-verb-lex-verb-lex &
   [ STEM < "blebs" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_arrive_v_rel" ].
+
+bslebs := intransitive-verb-lex-verb-lex &
+  [ STEM < "bslebs" >,
     SYNSEM.LKEYS.KEYREL.PRED "_arrive_v_rel" ].
 
 1si := intransitive-verb-lex-verb-lex &
