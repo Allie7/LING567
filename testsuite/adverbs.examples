@@ -32,14 +32,14 @@ you-ERG		work	active-NMZ	did-sub		begin	AUX
 # as the following example shows'
 #
 
-Source: d:234
-Vetted: s
-Judgment: g
-Phenomena: adv, pro-d
-lholocha shuto
-lholo-cha shuto
-calm-ADV  sit_lets
-"Let's sit quietly"
+#Source: d:234
+#Vetted: s
+#Judgment: g
+#Phenomena: adv, pro-d
+#lholocha shuto
+#lholo-cha shuto
+#calm-ADV  sit_lets
+#"Let's sit quietly"
 
 
 Source: b:280
@@ -50,5 +50,33 @@ da	1di1dra		cigla	namsang		serra		cig	btang	songzer
 da	1di1dra		cig-la	namsang		serra		cig	btang	song-zer
 now	such		a-DAT	suddenly	hail.ABS	NUM	send	send-say
 "'Then just as suddenly, some hail fell' (He said)"
+
+
+#
+# Source E
+#
+
+#adverb of degree
+Source: e:40
+Vetted: s
+Judgment: g
+Phenomena: adv
+khos	khongtshola	mgoskor		mangpo		btang	pared
+kho-s	khong-tsho-la	mgoskor		mang-po		btang	pa-red
+3sg-ERG	3sg-PL-DAT	deception.ABS	many-NMZ	send	LK-AUX
+"He cheated them a lot"
+
+#adverb of manner
+Source: e:48
+Vetted: s
+Judgment: g
+Phenomena: adv
+mota	mgyogspo	zhedrags	btang	na	dpe	bsags	yong
+mota	mgyogs-po	zhedrags	btang	na	dpe	bsags	yong
+cat.ABS	fast-NMZ	very		do	if	very	fall	come
+"If a vehicle is driven too fast, there will be an accident"
+
+
+
 
 

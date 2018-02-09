@@ -1,0 +1,17 @@
+
+
+Lab 5 Writeup
+
+I & II. Test suite instances and choices for starter grammar
+
+A. Modification 
+
+In order to implement adverbs, we had to add in adj-head-int because they precede verbs, unlike adjectives following nouns. When we parsed a sentence without a modifier, we did not notice any extra applications of the head adj rule.  
+
+B. Refine demonstratives
+
+C. Argument Optionality
+
+There have been issues with argument optionality applying to all sorts of constructs outside of simple transitive and intransitive verbs. To improve this some, I first took measures to severely limit its application. I added OPT - to the object of all transitive verbs except for a handful.  
+
+D. Beat back ambiguity
