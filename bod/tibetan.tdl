@@ -125,10 +125,6 @@ adj-head-int-phrase := adj-head-phrase & isect-mod-phrase &
   [ NON-HEAD-DTR.SYNSEM.LOCAL.CAT [ POSTHEAD - ] ].
 ;
 
-adj-head-int-phrase :+ [ NON-HEAD-DTR.SYNSEM.LOCAL.CAT [ HEAD.POSSESSOR nonpossessive,
-                                    POSSESSUM nonpossessive ] ].
-
-
 adj-head-scop-phrase :+ [ NON-HEAD-DTR.SYNSEM.LOCAL.CAT [ HEAD.POSSESSOR nonpossessive,
                                     POSSESSUM nonpossessive ] ].
 
@@ -186,6 +182,21 @@ subj-head-phrase := decl-head-subj-phrase & head-final &
 form := *top*.
 nonfinite := form.
 finite := form.
+
+inner := form.
+aux1 := form.
+mv := inner.
+aux2 := inner.
+
+inner-fin := inner & finite.
+aux2-fin := inner-fin & aux2.
+mv-fin := inner-fin & mv.
+aux1-fin := aux1 & finite.
+
+inner-inf := inner & nonfinite.
+aux2-inf := inner-inf & aux2.
+mv-inf := inner-inf & mv.
+aux1-inf := aux1 & nonfinite.
 
 
 ;;; Tense
@@ -485,7 +496,8 @@ subj-raise-aux-no-pred := subj-raise-aux & raise-sem-lex-item &
 
 
 yin-aux-lex := subj-raise-aux-no-pred &
-  [ SYNSEM.LOCAL.CAT.VAL.COMPS.FIRST.LOCAL.CAT.HEAD.FORM nonfinite,
+  [ SYNSEM.LOCAL.CAT [ HEAD.FORM aux2,
+		       VAL.COMPS.FIRST.LOCAL.CAT.HEAD.FORM mv-inf ],
     INFLECTED [ 1DUG-AUX-OR-1DUG-VERB-OR-BYUNG-AUX-OR-MAN-AUX-OR-MED-AUX-OR-RED-AUX-OR-RED-VERB-OR-YIN-AUX-OR-YIN-VERB-OR-YOD-AUX-OR-YOD-VERB-OR-YOGMARED-AUX-OR-YOGRED-AUX-OR-YOGRED-VERB-FLAG +,
                 BYUNG-AUX-OR-MAN-AUX-OR-MED-AUX-OR-RED-AUX-OR-RED-VERB-OR-SONG-AUX-OR-SONG-VERB-OR-YIN-AUX-OR-YIN-VERB-OR-YOD-AUX-OR-YOD-VERB-OR-YOGMARED-AUX-OR-YOGRED-AUX-OR-YOGRED-VERB-OR-YONG-AUX-FLAG +,
                 1DUG-AUX-OR-MAN-AUX-OR-RED-AUX-OR-YIN-AUX-FLAG +,
@@ -501,7 +513,8 @@ yin-aux-lex := subj-raise-aux-no-pred &
 ; might not be true.
 
 red-aux-lex := subj-raise-aux-no-pred &
-  [ SYNSEM.LOCAL.CAT.VAL.COMPS.FIRST.LOCAL.CAT.HEAD.FORM nonfinite,
+  [ SYNSEM.LOCAL.CAT [ HEAD.FORM aux1,
+		       VAL.COMPS.FIRST.LOCAL.CAT.HEAD.FORM inner-inf ],
     INFLECTED [ 1DUG-AUX-OR-1DUG-VERB-OR-BYUNG-AUX-OR-MAN-AUX-OR-MED-AUX-OR-RED-AUX-OR-RED-VERB-OR-YIN-AUX-OR-YIN-VERB-OR-YOD-AUX-OR-YOD-VERB-OR-YOGMARED-AUX-OR-YOGRED-AUX-OR-YOGRED-VERB-FLAG +,
                 BYUNG-AUX-OR-MAN-AUX-OR-MED-AUX-OR-RED-AUX-OR-RED-VERB-OR-SONG-AUX-OR-SONG-VERB-OR-YIN-AUX-OR-YIN-VERB-OR-YOD-AUX-OR-YOD-VERB-OR-YOGMARED-AUX-OR-YOGRED-AUX-OR-YOGRED-VERB-OR-YONG-AUX-FLAG +,
                 1DUG-AUX-OR-MAN-AUX-OR-RED-AUX-OR-YIN-AUX-FLAG +,
@@ -1259,8 +1272,20 @@ np1-bottom-coord-rule := conj-first-bottom-coord-rule & np-bottom-coord-phrase &
 
 ;;; Coordination Strategy 2
 
+;;; EMB 2018-02-08 Paramaterized list type to restrict VP coordination to VPs that are either COMPS < > or are looking for non-verby complements.  This is probably a hack. The goal is to rule out coordination of auxiliaries.  May run afoul of coordination of sentential complement taking verbs.
+
+non-v-list := list.
+
+non-v-cons := olist & cons &
+  [ FIRST [ LOCAL.CAT.HEAD +njrpcdmo ],
+    REST  non-v-list ].
+
+non-v-null := non-v-list & null.
+
+
 vp2-top-coord-rule := basic-vp-top-coord-rule & apoly-top-coord-rule &
-  [ SYNSEM.LOCAL.COORD-STRAT "2" ].
+  [ SYNSEM.LOCAL [ CAT.VAL.COMPS non-v-list,
+		   COORD-STRAT "2" ] ].
 
 vp2-bottom-coord-rule := unary-bottom-coord-rule & vp-bottom-coord-phrase &
   [ SYNSEM.LOCAL [ COORD-STRAT "2",
