@@ -383,7 +383,7 @@ obj-dat-trans-verb-lex-verb-lex := transtive-verb-lex-verb-lex &
                            COMPS.FIRST.LOCAL.CAT.HEAD.CASE dat ] ].
 
 transtive-verb-lex-verb-lex := transitive-verb-lex &
-  [ SYNSEM.LOCAL.CAT.VAL.COMPS.FIRST.OPT -,
+  [ SYNSEM.LOCAL.CAT.VAL.COMPS.FIRST.OPT +,
     INFLECTED.1DRA-AUX-OR-BYUNG-AUX-OR-INTRANSITIVE-VERB-LEX-VERB-OR-SONG-AUX-OR-TRANSTIVE-VERB-LEX-VERB-OR-YONG-AUX-FLAG + ].
 
 abs-dat-transitive-verb-lex := transtive-verb-lex-verb-lex &
