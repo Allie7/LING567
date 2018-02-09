@@ -1,4 +1,4 @@
-;;; -*- Mode: TDL; Coding: utf-8 -*-
+;; -*- Mode: TDL; Coding: utf-8 -*-
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;;; Grammar of Tibetan
 ;;; created at:
@@ -1256,24 +1256,36 @@ same-same-same-case-coord-rule := coord-phrase &
 
 ;;; Coordination Strategy 1
 
-n1-same-same-same-top-coord-rule := basic-n-top-coord-rule & monopoly-top-coord-rule & same-same-same-case-coord-rule &
+;JC 2018 2-8 special inverse coordination rule. this is likely incorrect and dang truly means "with"
+; this takes care of coordination up until past the conjunct
+
+inv-monopoly-top-coord-rule := top-coord-rule &
+  [ LCOORD-DTR.SYNSEM.LOCAL.COORD +,
+    RCOORD-DTR.SYNSEM.LOCAL.COORD - ].
+
+inv-monopoly-mid-coord-rule := mid-coord-rule &
+  [ LCOORD-DTR.SYNSEM.LOCAL.COORD +,
+    RCOORD-DTR.SYNSEM.LOCAL.COORD - ].
+;
+
+n1-same-same-same-top-coord-rule := basic-n-top-coord-rule & inv-monopoly-top-coord-rule & same-same-same-case-coord-rule &
   [ SYNSEM.LOCAL.COORD-STRAT "1" ].
 
-n1-same-same-same-mid-coord-rule := basic-n-mid-coord-rule & monopoly-mid-coord-rule & same-same-same-case-coord-rule &
+n1-same-same-same-mid-coord-rule := basic-n-mid-coord-rule & inv-monopoly-mid-coord-rule & same-same-same-case-coord-rule &
   [ SYNSEM.LOCAL.COORD-STRAT "1" ].
 
-n1-bottom-coord-rule := conj-first-bottom-coord-rule & n-bottom-coord-phrase & pass-up-png-coord-rule &
+n1-bottom-coord-rule := conj-last-bottom-coord-rule & n-bottom-coord-phrase & pass-up-png-coord-rule &
   [ SYNSEM.LOCAL.COORD-STRAT "1" ].
 
 ;;; Coordination Strategy 1
 
-np1-same-same-same-top-coord-rule := basic-np-top-coord-rule & monopoly-top-coord-rule & same-same-same-case-coord-rule &
+np1-same-same-same-top-coord-rule := basic-np-top-coord-rule & inv-monopoly-top-coord-rule & same-same-same-case-coord-rule &
   [ SYNSEM.LOCAL.COORD-STRAT "1" ].
 
-np1-same-same-same-mid-coord-rule := basic-np-mid-coord-rule & monopoly-mid-coord-rule & same-same-same-case-coord-rule &
+np1-same-same-same-mid-coord-rule := basic-np-mid-coord-rule & inv-monopoly-mid-coord-rule & same-same-same-case-coord-rule &
   [ SYNSEM.LOCAL.COORD-STRAT "1" ].
 
-np1-bottom-coord-rule := conj-first-bottom-coord-rule & np-bottom-coord-phrase & pass-up-png-coord-rule &
+np1-bottom-coord-rule := conj-last-bottom-coord-rule & np-bottom-coord-phrase & pass-up-png-coord-rule &
   [ SYNSEM.LOCAL.COORD-STRAT "1" ].
 
 ;;; Coordination Strategy 2

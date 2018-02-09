@@ -93,10 +93,52 @@ Source: b:276
 Vetted: s
 Judgment: g
 Phenomena:adv
-khangpa		1di1dra		rtsigpa		yodpa	thog	cidag	yogmared
+khangpa	1di1dra		rtsigpa		yodpa		thog	cidag	yogmared
+khangpa	1di1dra		rtsigpa		yod-pa		thog	cidag	yog-ma-red
+house	suchlike	wall		exist-NMZ	roof	etc.	LK-NEG-exist
+"They have no houses or suchlike with walls; no roofs and so on"
 
-horpa	all		dwell-NMZ	north-DAT	be
-"The Horpas all live in the north"
+
+#8
+Source: b:276
+Vetted: s
+Judgment: g
+Phenomena:adv
+yinnayang	mitshang	chenpo		yinna	khangpa	chungchung	thog	yodpa		1di1dra		yogred
+yinnayang	mitshang	chen-po		yin-na	khangpa	chung-chung	thog	yod-pa		1di1dra		yog-red
+but		family		big-NMZ		be-SUB	house	small-redup.	roof	exist-NMZ	suchlike	LK-exist
+"However, if it's an important family they may have a small house with a roof or suchlike"
+
+
+#9
+Source: b:276
+Vetted: s
+Judgment: g
+Phenomena:adv
+yinnayang	mitshang	chenpo		yinna	khangpa	chungchung	thog	yodpa		1di1dra		yogred
+yinnayang	mitshang	chen-po		yin-na	khangpa	chung-chung	thog	yod-pa		1di1dra		yog-red
+but		family		big-NMZ		be-SUB	house	small-redup.	roof	exist-NMZ	suchlike	LK-exist
+"However, if it's an important family they may have a small house with a roof or suchlike"
+
+
+#10
+Source: b:276
+Vetted: s
+Judgment: g
+Phenomena:adv
+mi	gzhanpatshos	sbra	rkyangkyang	phubsnas	bsdad	yogred
+mi	gzhan-pa-tshos	sbra	rkyangkyang	phubs-nas	bsdad	yog-red
+people	other-NUM-PL	tent	only		pitch-SUB	stay	LK-AUX
+"Other people just pitch their tents and live in them"
+
+
+
+
+
+
+
+
+
 
 
 
