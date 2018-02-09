@@ -143,7 +143,7 @@ khong := 3rd_person_m_lex-noun-lex &
 
 khorang := 3rd_person_m_lex-noun-lex &
   [ STEM < "khorang" >,
-    SYNSEM.LKEYS.KEYREL.PRED "pron_n_rel" ].
+    SYNSEM.LKEYS.KEYREL.PRED "pron_rel" ].
 
 kyed := 2nd_person_lex-noun-lex &
   [ STEM < "kyed" >,
@@ -151,11 +151,11 @@ kyed := 2nd_person_lex-noun-lex &
 
 khyed := 2nd_person_lex-noun-lex &
   [ STEM < "khyed" >,
-    SYNSEM.LKEYS.KEYREL.PRED "pron_n_rel" ].
+    SYNSEM.LKEYS.KEYREL.PRED "pron_rel" ].
 
 khyedrang := 2nd_person_lex-noun-lex &
   [ STEM < "khyedrang" >,
-    SYNSEM.LKEYS.KEYREL.PRED "pron_n_rel" ].
+    SYNSEM.LKEYS.KEYREL.PRED "pron_rel" ].
 
 kyedrang := 2nd_person_lex-noun-lex &
   [ STEM < "kyedrang" >,
