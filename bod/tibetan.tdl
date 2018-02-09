@@ -125,6 +125,10 @@ adj-head-int-phrase := adj-head-phrase & isect-mod-phrase &
   [ NON-HEAD-DTR.SYNSEM.LOCAL.CAT [ POSTHEAD - ] ].
 ;
 
+adj-head-int-phrase :+ [ NON-HEAD-DTR.SYNSEM.LOCAL.CAT [ HEAD.POSSESSOR nonpossessive,
+                                    POSSESSUM nonpossessive ] ].
+
+
 adj-head-scop-phrase :+ [ NON-HEAD-DTR.SYNSEM.LOCAL.CAT [ HEAD.POSSESSOR nonpossessive,
                                     POSSESSUM nonpossessive ] ].
 
