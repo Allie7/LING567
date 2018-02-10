@@ -319,5 +319,5 @@ you             Tibet-DAT       go.HON-Q        experiential-Q
 
 G. Test Corpus
 
-We collected a test corpus from the back of source B. We had our choice of a conversation, a narrative style story, and a synthetic conversation for teaching purposes. We chose the first 10 sentences in a conversation which involve questions and the like. We may add more examples from another format if this proves too difficult. 
+We collected a test corpus from the back of source B. We had our choice of a conversation, a narrative style story, and a synthetic conversation for teaching purposes. We chose the first 10 sentences in a conversation which involve questions and the like. We may add more examples from another discursive quality if this proves too difficult. The lines are like the IGT; we are targeting the translit line.
 
