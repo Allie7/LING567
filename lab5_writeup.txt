@@ -273,6 +273,8 @@ mood-marker-lex-rule-super := add-only-no-ccont-rule & infl-lex-rule &
 
 E. Beating Ambiguity
 
+A lot of our ambiguities last week are caused by the interactions between argument optionality and other rules such as coordinationa and clausal modifiers, one sentence was parsed 63 trees because of that. After fixing the libraries and the removal of coordination between auxiliaries, the ambiguities dropped significantly down. The rest of our ambiguities are mainly caused by the homographs of auxiliaries and main verbs, corpular verbs and adjectives and noun coordination. But the overall ambiguities are still reduced significantly. Our greatest amibiguities currently is 11 parses for one sentence, but it has three words with multiple entries and is a complex interactions between coordination and clausal complements. 
+
 
 F. Coverage and Overgeneration
 
