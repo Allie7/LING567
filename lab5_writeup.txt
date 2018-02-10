@@ -276,6 +276,23 @@ E. Beating Ambiguity
 
 F. Coverage and Overgeneration
 
+		Baseline	Current	
+Coverage 	42/80		47/80
+Ambiguity	3.6		1.8
+Overgeneration	1/30		1/30
+
+The coverage has increased thanks in part due to the work on the phenomena this week as well, new phenomena covered and increases in vocabulary. 
+
+Unfortunately, one of our sentences still continues to parse despite our additions of form to the FORM system:
+
+Source: author
+Vetted: f
+Judgment: u
+Phenomena: q
+khyedrang       bodla           phebspas        myongngas
+khyedrang       bod-la          phebs-pas       myong-ngas
+you             Tibet-DAT       go.HON-Q        experiential-Q
+"Have you ever been to Tibet"
 
 G. Test Corpus
 
