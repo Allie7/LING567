@@ -21,7 +21,7 @@ nga-s   nga-li  nyigdugs        lus     1dug
 I-ERG   I-GEN   umbrella        leave   AUX
 "I've left my umbrella behind (I remember doing so)"
 
-I checked and compared the MRS for the sentence pair about the black pen which could be attributive or predicative based on the position of the determiner.
+We checked and compared the MRS for the sentence pair about the black pen which could be attributive or predicative based on the position of the determiner.
 
 Predicative:
 
@@ -49,7 +49,7 @@ pen     black-NMZ       this    be
 The attributive example, of course, had one more MRS block for the verb situation whereas the predicative example did not.
 
 
-Because we had feeback that our section on adverbs was thin, I revisited sources to find more examples of adverbs and looked for new ones. Most say that they appear as adjectives. However, source D states that -cha can be added to any adjective to make it an adverb. Source D is a textbook of "standard" Tibetan; the forward states "The Manual of Standard Tibetan emphasizes Modern colloquial Tibetan as spoken in and around Lhasa, but adhering to a register that is widely used and understood" (16). Perhaps this is a pattern outside the Lhasan dialect. 
+Because we had feeback that our section on adverbs was thin, we revisited sources to find more examples of adverbs and looked for new ones. Most say that they appear as adjectives. However, source D states that -cha can be added to any adjective to make it an adverb. Source D is a textbook of "standard" Tibetan; the forward states "The Manual of Standard Tibetan emphasizes Modern colloquial Tibetan as spoken in and around Lhasa, but adhering to a register that is widely used and understood" (16). Perhaps this is a pattern outside the Lhasan dialect. 
 
 We did find a second source which explicitly identified nominalized adjectives as adverbs in an example. They note that adverbs can appear between a verb and its CP. Unfortunately, the example is ditransitive, so it will not parse:
 
@@ -75,7 +75,7 @@ mota    mgyogs-po       zhedrags        btang   na      dpe     bsags   yong
 cat.ABS fast-NMZ        very            do      if      very    fall    come
 "If a vehicle is driven too fast, there will be an accident"
 
-To implement this, we added another type as mentioned in the lab:
+To implement adverbs, we added another type as mentioned in the lab:
 
 adverb-lex := basic-adverb-lex & intersective-mod-lex &
   [ SYNSEM [ LOCAL [ CAT [ HEAD.MOD < [ LOCAL.CAT.HEAD verb ]>,
@@ -101,57 +101,30 @@ khong   bodskad yag-po          mkhyen  gyi-1dug
 He      Tibetan good-NMZ        know    LK-AUX
 'He knows Tibetan well'
 
+We added cardinal numbers as subtypes of adjectives to parse another example of coordination:
+
+cardinal-lex := attr-adj-lex.
+
 B. Refine demonstratives
 
-C. Argument Optionality
 
-In our sources, we have found no mention of systematic rules for argument optionality. However, based on the meaning of the sentences such as negation and translation, we can see that some of them have likely have certain constraints. 
 
-# type-id
-Source: b:116
-Vetted: s
-Judgment: g
-Phenomena: wo, neg, pro-d
-maphyin         paredda
-ma-phyin        pa-red-da
-not-went        LK-AUX-EMPH
-'Certainly he didn't go.'
-
-#focus
-Source: b:146
-Vetted: s
-Judgment: g
-Phenomena: wo, neg, tam, pro-d
-khonggis   magnang  pared
-khong-gis  ma-gnang pa-red
-3SG-ERG    NEG-give LK-AUX
-"He didn't give it.
-
-#subject
-Source: b:160
-Vetted: s
-Judgment: g
-Phenomena: poss, pro-d
-ngali   nyigdugs        lus     1dug
-nga-li  nyigdugs        lus     1dug
-I-GEN   umbrella        leave   AUX
-"I've left my umbrella behind (I remember doing so)"
 
 D. Coordination revisited 
 
 Though source B identifies "dang" as a coordinator (102), it is unlikely that "dang" ("with") is a true coordination based on typology. However, in our implementation we have made this assumption. The only other 3+ coordinated NP's we have encountered so far in the corpus have included the word etc.. which is special in English. Furthermore, a second source explicitly identifies "dang" was a coordinator:
 
-This example doesn't parse yet:
+This parses correctly but with ambiguity, in part due to the added cardinal number type we introduced:
 
 Source: e:57
 Vetted: s
 Judgment: g
 Phenomena: crd
-bzhedtshal              gnyis   dang    thang           cig     bzos    tshar   payin
-bzhedtshal              gnyis   dang    thang.ABS       cig     bzos    tshar   payin
-vegetables.HON.ABS      two     and     soup            a       make    finish  PRF
+bzhedtshal              gnyis   dang    thang           cig     bzos        tshar   payin
+bzhedtshal              gnyis   dang    thang.ABS       cig     bzos        tshar   payin
+vegetables.HON.ABS      two     and     soup            a       make.PST    finish  PRF
 "I have already made two vegetable dishes and a soup"
- 
+
 For the time being, it is thus reasonable to assume that the word is a coordinator. This sentence does not parse due to the assumed order within the monosydentonic coordination pattern:
 
 Source: author

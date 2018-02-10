@@ -129,6 +129,17 @@ slobsbyong := common_noun_lex-noun-lex &
   [ STEM < "slobsbyong" >,
     SYNSEM.LKEYS.KEYREL.PRED "_study_n_rel" ].
 
+bzhedtshal := common_noun_lex-noun-lex &
+  [ STEM < "bzhedtshal" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_verbetables_n_rel" ].
+
+thang := common_noun_lex-noun-lex &
+  [ STEM < "thang" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_soup_n_rel" ].
+
+
+
+
 nga := 1st_person_lex-noun-lex &
   [ STEM < "nga" >,
     SYNSEM.LKEYS.KEYREL.PRED "pron_rel" ].
@@ -219,6 +230,14 @@ tshapo := nom-adj-verb-lex-adj-lex &
   [ STEM < "tshapo" >,
     SYNSEM.LKEYS.KEYREL.PRED "_hot_a_rel" ].
 
+
+;;; Cardinal numbers
+
+gnyis := cardinal-lex &
+  [ STEM < "gnyis" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_two_cd_rel" ].
+
+
 ;;; Verbs
 
 blebs := intransitive-verb-lex-verb-lex &
@@ -248,6 +267,10 @@ re_1 := intransitive-verb-lex-verb-lex &
 bcag := transitive-erg-verb-lex-verb-lex &
   [ STEM < "bcag" >,
     SYNSEM.LKEYS.KEYREL.PRED "_break_v_rel" ].
+
+bzos := transitive-erg-verb-lex-verb-lex &
+  [ STEM < "bzos" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_make_v_rel" ].
 
 bsad := transitive-erg-verb-lex-verb-lex &
   [ STEM < "bsad" >,
@@ -421,6 +444,7 @@ byas_trans := transitive-erg-verb-lex-verb-lex &
 yin_2 := yin-aux-lex &
   [ STEM < "yin" > ].
 
+
 red_2 := red-aux-lex &
   [ STEM < "red" > ].
 
@@ -466,6 +490,10 @@ ryguin := ryguin-aux-lex &
 myong := myong-aux-lex &
   [ STEM < "myong" >,
     SYNSEM.LKEYS.KEYREL.PRED "_experience_v_rel" ].
+
+tshar := tshar-aux-lex &
+  [ STEM < "tshar" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_finish_v_rel" ].
 
 kyi := kyi-aux-lex &
   [ STEM < "kyi" > ].

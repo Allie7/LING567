@@ -706,6 +706,13 @@ myong-aux-lex := subj-raise-aux-with-pred &
 		       VAL.COMPS.FIRST.LOCAL.CAT.HEAD.FORM inner1-inf ],
     INFLECTED.1DRA-AUX-OR-1DUG-AUX-OR-BYUNG-AUX-OR-MED-AUX-OR-MYONG-AUX-OR-RYGUIN-AUX-OR-SONG-AUX-OR-YOD-AUX-OR-YOGRED-AUX-OR-YONG-AUX-FLAG + ].
 
+tshar-aux-lex := subj-raise-aux-with-pred &
+  [ SYNSEM.LOCAL.CAT [ HEAD.FORM aux3,
+		       VAL.COMPS.FIRST.LOCAL.CAT.HEAD.FORM inner2-inf ],
+    INFLECTED.1DRA-AUX-OR-1DUG-AUX-OR-BYUNG-AUX-OR-MED-AUX-OR-MYONG-AUX-OR-RYGUIN-AUX-OR-SONG-AUX-OR-YOD-AUX-OR-YOGRED-AUX-OR-YONG-AUX-FLAG + ].
+
+
+
 
 ; To keep the semantically empty ones from spinning on
 ; generation, require complement to be [AUX -].  The
@@ -774,6 +781,19 @@ adverb-lex := basic-adverb-lex & intersective-mod-lex &
 				 SUBJ < >,
 				 COMPS < >,
 				 SPEC < > ]]]]].
+
+
+
+;;; Intensifier: can work on adverbs and adjectives
+;intense-lex := adj-lex & intersective-mod-lex
+;  [ SYNSEM [ LOCAL [ CAT [ HEAD.MOD < [ LOCAL.CAT.HEAD intersective-mod-lex ]>,
+;			   VAL [ SPR < >,
+;				 SUBJ < >,
+;				 COMPS < >,
+;				 SPEC < > ]]]]].
+
+
+cardinal-lex := attr-adj-lex.
 
 ;;;;;;;;;;;;;;;;;;;
 ;;; Subordinators
