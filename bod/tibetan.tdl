@@ -1193,7 +1193,8 @@ gis-lex-rule := tense-marker-lex-rule-super &
 ;;; Form feature specified as finite.
 
 mood-marker-lex-rule-super := add-only-no-ccont-rule & infl-lex-rule &
-  [ INFLECTED #infl,
+  [ SYNSEM.LOCAL.CAT.HEAD.FORM finite,
+    INFLECTED #infl,
     DTR mood-marker-rule-dtr &
         [ SYNSEM.LOCAL.CAT.HEAD.FORM finite,
 	  INFLECTED #infl &
@@ -1206,7 +1207,8 @@ ngas-interr-lex-rule := interr-marker-rule-lex-rule &
   [ DTR.INFLECTED.1DUG-AUX-OR-1DUG-VERB-OR-BYUNG-AUX-OR-MAN-AUX-OR-MED-AUX-OR-RED-AUX-OR-RED-VERB-OR-YIN-AUX-OR-YIN-VERB-OR-YOD-AUX-OR-YOD-VERB-OR-YOGMARED-AUX-OR-YOGRED-AUX-OR-YOGRED-VERB-FLAG na ].
 
 pas-interr-lex-rule := interr-marker-rule-lex-rule &
-  [ DTR.INFLECTED.1DUG-AUX-OR-1DUG-VERB-OR-BYUNG-AUX-OR-SONG-AUX-OR-SONG-VERB-OR-YONG-AUX-FLAG na ].
+  [ SYNSEM.LOCAL.CAT.HEAD.FORM finite  , 
+    DTR.INFLECTED.1DUG-AUX-OR-1DUG-VERB-OR-BYUNG-AUX-OR-SONG-AUX-OR-SONG-VERB-OR-YONG-AUX-FLAG na ].
 
 gas-interr-lex-rule := interr-marker-rule-lex-rule &
   [ DTR.INFLECTED.BYUNG-AUX-OR-MAN-AUX-OR-MED-AUX-OR-RED-AUX-OR-RED-VERB-OR-SONG-AUX-OR-SONG-VERB-OR-YIN-AUX-OR-YIN-VERB-OR-YOD-AUX-OR-YOD-VERB-OR-YOGMARED-AUX-OR-YOGRED-AUX-OR-YOGRED-VERB-OR-YONG-AUX-FLAG na ].
