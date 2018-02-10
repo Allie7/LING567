@@ -129,6 +129,8 @@ However, after following step by step to the specification and loading the gramm
 
 determiner-lex-supertype := norm-hook-lex-item & basic-zero-arg & non-mod-lex-item.
 
+That fixes the problem.
+
 
 
 C. Argument Optionality
@@ -164,6 +166,8 @@ ngali   nyigdugs        lus     1dug
 nga-li  nyigdugs        lus     1dug
 I-GEN   umbrella        leave   AUX
 "I've left my umbrella behind (I remember doing so)"
+
+Our source b did mention that due to the Given/New system, in certain context the subject can be ellipsed. However, it also mentioned that Tibetan used ellipsis to extreme limit, not only the subject and object, even the main verb can be dropped in one case it gives, and leaving only the auxiliary. Another source mentioned that within context such as a conversation, where the hearer and speaker are both clear about the subject and object they refer to, the arguments can be dropped. It also mentioned that the auxiliaries can imply the PERSON value of the subjects and serve as the "second proof" to make the hearer understand what the subject is. But still, our data is very limited on this matter. And to prevent unnecessary ambiguities due to interactions with coordination rules and clausal modifier rules, like we got last week, we decide to put argument optionality aside first.
 
 D. Coordination revisited 
 
