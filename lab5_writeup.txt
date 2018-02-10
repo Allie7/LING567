@@ -241,7 +241,7 @@ Phenomena: tam, wo, c
 go   FUT-EXIST FUT-be FUT-seem
 "So it seems he's going."
 
-(The second example is perfect for illustrating the order of auxiliaries, though unfortunatly we haven't make it parse. but "1gro giyod payin 1dra" parses, which indicates that it is not the problem with the auxiliary stem.)
+(The second example is perfect for illustrating the order of auxiliaries, though unfortunatly we haven't make it parse. but "1gro giyod payin 1dra" parses, which indicates that it is not the problem with the auxiliary stem. We are not sure about the cause of this problem yet.)
 
 We implement this by first turn the requirement of auxiliary complement to be [AUX bool] instead of [AUX - ]:
 
