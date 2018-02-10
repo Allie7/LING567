@@ -134,7 +134,9 @@ letter  that  neg-EXIST	AUX
 
 We implement the demonstrative determiners by following the instructions in lab5 specifications step by step. We first redefine the determiner super type as the the snippet in the specification, and then define the normal and demonstrative subtype accordingly. 
 
-determiner-lex-supertype := norm-hook-lex-item & basic-zero-arg &
+However, after following step by step to the specification and loading the grammar, we found that we got multiple parses for determiners containing phrases, allowing the determiner to attach to the verb. To constrain this, we added one more supertype for the determiner-lex-supertype:
+
+determiner-lex-supertype := norm-hook-lex-item & basic-zero-arg & non-mod-lex-item &
   [ SYNSEM [ LOCAL [ CAT [ HEAD det,
 			   VAL[ SPEC.FIRST.LOCAL.CONT.HOOK [ INDEX #ind,
 				  			     LTOP #larg ],
@@ -147,12 +149,23 @@ determiner-lex-supertype := norm-hook-lex-item & basic-zero-arg &
 	     LKEYS.KEYREL quant-relation &
 		   [ ARG0 #ind,
 		     RSTR #harg ] ] ].
-
-However, after following step by step to the specification and loading the grammar, we found that we got multiple parses for determiners containing phrases, allowing the determiner to attach to the verb. To constrain this, we added one more supertype for the determiner-lex-supertype:
-
-determiner-lex-supertype := norm-hook-lex-item & basic-zero-arg & non-mod-lex-item.
-
+		     
 That fixes the problem.
+
+for the demonstrative determiners:
+
+
+demonstrative-determiner-lex := determiner-lex-supertype &
+[ SYNSEM [LOCAL [ CONT.RELS <! [ PRED "exist_q_rel" ], 
+                              #rel & arg1-ev-relation & 
+                                     [LBL #lbl , 
+                                      ARG1 #arg ] !> ,
+                  CAT.VAL.SPEC.FIRST.LOCAL.CONT.HOOK [ INDEX #arg &
+                                                           [COG-ST activ+fam ],
+                                                       LTOP #lbl ] ],
+          LKEYS.ALTKEYREL #rel ] ].
+
+
 
 C. Argument Optionality
 
