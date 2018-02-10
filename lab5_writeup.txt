@@ -5,7 +5,11 @@ Lab 5 Writeup
 
 A. Modification 
 
-In order to implement adverbs, we had to add in adj-head-int because they precede verbs, unlike adjectives following nouns. When we parsed a sentence without a modifier, we did not notice any extra applications of the head adj rule. However, we noticed the return of issues with the possessions library. We fixed this problem in the same way as it was fixed for head-adj by specifying that the head of the phrase be nonpossessive and marking the phrase itself nonpossessive:
+In order to implement adverbs, we had to add in adj-head-int because they precede verbs, unlike adjectives following nouns. 
+
+adj-head-int := adj-head-int-phrase.
+
+When we parsed a sentence without a modifier, we did not notice any extra applications of the head adj rule. However, we noticed the return of issues with the possessions library. We fixed this problem in the same way as it was fixed for head-adj by specifying that the head of the phrase be nonpossessive and marking the phrase itself nonpossessive:
 
 adj-head-int-phrase :+ [ NON-HEAD-DTR.SYNSEM.LOCAL.CAT [ HEAD.POSSESSOR nonpossessive,
                                     POSSESSUM nonpossessive ] ].
@@ -104,6 +108,8 @@ We added cardinal numbers as subtypes of adjectives to parse another example of 
 
 cardinal-lex := attr-adj-lex.
 
+Though this allows a new coordination example to to parse, the decl-head-opt-subj rule fires and increases ambiguity for that sentence.
+
 B. Refine demonstratives
 
 Tibetan has a few demonstrative determiners aside from regular determiners such as "cig"(like the English "a"), among them, "1di/ti"(close to the speaker) and "de" (far from the speaker) appeared in our testsuite:
@@ -128,6 +134,20 @@ letter  that  neg-EXIST	AUX
 
 We implement the demonstrative determiners by following the instructions in lab5 specifications step by step. We first redefine the determiner super type as the the snippet in the specification, and then define the normal and demonstrative subtype accordingly. 
 
+determiner-lex-supertype := norm-hook-lex-item & basic-zero-arg &
+  [ SYNSEM [ LOCAL [ CAT [ HEAD det,
+			   VAL[ SPEC.FIRST.LOCAL.CONT.HOOK [ INDEX #ind,
+				  			     LTOP #larg ],
+                                SPR < >,
+                                SUBJ < >,
+                                COMPS < >]],
+		     CONT.HCONS <! qeq &
+				 [ HARG #harg,
+				   LARG #larg ] !> ], 
+	     LKEYS.KEYREL quant-relation &
+		   [ ARG0 #ind,
+		     RSTR #harg ] ] ].
+
 However, after following step by step to the specification and loading the grammar, we found that we got multiple parses for determiners containing phrases, allowing the determiner to attach to the verb. To constrain this, we added one more supertype for the determiner-lex-supertype:
 
 determiner-lex-supertype := norm-hook-lex-item & basic-zero-arg & non-mod-lex-item.
@@ -136,7 +156,7 @@ That fixes the problem.
 
 C. Argument Optionality
 
-When we proposed working on ARG-OPT, We did not consider how much data would be required to implement COG-ST for argument optionality based on verb types. There may be some relationship with the evidentiality and viewpoint system through the AUX verbs, but since we are not modeling those, we gave up on modeling COG-ST of argument optionality.
+When we proposed working on ARG-OPT, we did not consider how much data would be required to implement COG-ST for argument optionality based on verb types. There may be some relationship with the evidentiality and viewpoint system through the AUX verbs, but since we are not modeling those, we gave up on modeling COG-ST of argument optionality.
 
 Our source b did mention that due to the Given/New system, in certain context the subject can be ellipsed. However, it also mentioned that Tibetan used ellipsis to extreme limit, not only the subject and object, even the main verb can be dropped in one case it gives, and leaving only the auxiliary. Another source mentioned that within context such as a conversation, where the hearer and speaker are both clear about the subject and object they refer to, the arguments can be dropped. It also mentioned that the auxiliaries can imply the PERSON value of the subjects and serve as the "second proof" to make the hearer understand what the subject is. But still, our data is very limited on this matter. And to prevent unnecessary ambiguities due to interactions with coordination rules and clausal modifier rules, like we got last week, we decide to put argument optionality aside first.
 
@@ -294,7 +314,7 @@ Phenomena: q
 khyedrang       bodla           phebspas        myongngas
 khyedrang       bod-la          phebs-pas       myong-ngas
 you             Tibet-DAT       go.HON-Q        experiential-Q
-"Have you ever been to Tibet"
+"Have you ever been to Tibet?"
 
 G. Test Corpus
 
