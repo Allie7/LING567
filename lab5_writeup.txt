@@ -103,6 +103,34 @@ He      Tibetan good-NMZ        know    LK-AUX
 
 B. Refine demonstratives
 
+Tibetan has a few demonstrative determiners aside from regular determiners such as "cig"(like the English "a"), among them, "1di/ti"(close to the speaker) and "de" (far from the speaker) appeared in our testsuite:
+
+Source: b:124
+Vetted: s
+Judgement: g
+Phenomena: adj
+ja 1di zhimpo yin
+ja 1di zhim-po yin
+tea this tasty-NMZ  be
+"This tea is tasty."
+
+Source: author
+Vetted: f
+Judgment: g
+Phenomena: det, tam, neg
+yige    de    medpa	1dra
+yige    de    med-pa	1dra
+letter  that  neg-EXIST	AUX 
+'That letter does not seem to be here'
+
+We implement the demonstrative determiners by following the instructions in lab5 specifications step by step. We first redefine the determiner super type as the the snippet in the specification, and then define the normal and demonstrative subtype accordingly. 
+
+However, after following step by step to the specification and loading the grammar, we found that we got multiple parses for determiners containing phrases, allowing the determiner to attach to the verb. To constrain this, we added one more supertype for the determiner-lex-supertype:
+
+determiner-lex-supertype := norm-hook-lex-item & basic-zero-arg & non-mod-lex-item.
+
+
+
 C. Argument Optionality
 
 In our sources, we have found no mention of systematic rules for argument optionality. However, based on the meaning of the sentences such as negation and translation, we can see that some of them have likely have certain constraints. 
@@ -187,4 +215,88 @@ This was enough to coordinate all of the words in the above example from CRD to 
 n1-bottom-coord-rule := conj-last-bottom-coord-rule & n-bottom-coord-phrase & pass-up-png-coord-rule &
   [ SYNSEM.LOCAL.COORD-STRAT "1" ].
 
-D. Beat back ambiguity
+D. Auxiliaries
+The Tibetan auxiliaries are used to indicate tense, aspect, modality, view point and evidentiality. Though our source has not explore more on this topic, it shows that the verb-auxiliary pattern can expand to at least zero to three auxiliaries on a single main verb. The sources did not mention specifically on what order the auxiliaries are when they appear together, but according to our observation, there seems to be certain patterns: "yod" > "yin" > "red" / "yogred". The auxiliary with the mood marker appears at the right most. The order of the rest of auxiliaries are unclear, but they either have not appear in series in our source, or appear at the rightmost position.
+
+Source: b:166
+Vetted: s
+Judgment: g
+Phenomena: tam, wo, c
+khonggis        slobsbyong      gnang	musyin	gired
+khong-gis       slobsbyong      gnang	mus-yin	gi-red
+She-ERG         study           do	PROS-be	FUT-be
+"She's probably at her studies"
+
+
+Source: b:117
+Vetted: s
+Judgment: g
+Phenomena: tam, wo, c
+1gro giyod  payin  pa1dra
+1gro gi-yod pa-yin pa-1dra
+go   FUT-EXIST FUT-be FUT-seem
+"So it seems he's going."
+
+(The second example is perfect for illustrating the order of auxiliaries, though unfortunatly we haven't make it parse. but "1gro giyod payin 1dra" parses, which indicates that it is not the problem with the auxiliary stem.)
+
+We implement this by first turn the requirement of auxiliary complement to be [AUX bool] instead of [AUX - ]:
+
+subj-raise-aux-no-pred := subj-raise-aux & raise-sem-lex-item &
+  [ ARG-ST < [ ],
+             [ LOCAL.CAT.HEAD.AUX bool ] > ].
+	      
+Then we added a few FORM feature types, to constrain the order of auxiliaries. Since the longest expansion we can find is three, we specified 3 form feature types AUX1, AUX2, AUX3 and two inner level types + one main verb types, and specified their corresponding infinite and finite types:
+
+form := *top*.
+nonfinite := form.
+finite := form.
+
+inner1 := form.
+inner2 := inner1.
+aux1 := form.
+aux3 := inner2.
+mv := inner2.
+aux2 := inner1.
+
+inner1-fin := inner1 & finite.
+inner2-fin := inner2 & inner1-fin.
+aux2-fin := inner1-fin & aux2.
+aux3-fin := inner2-fin & aux3.
+mv-fin := inner2-fin & mv.
+aux1-fin := aux1 & finite.
+
+inner1-inf := inner1 & nonfinite.
+inner2-inf := inner2 & inner1-inf.
+aux2-inf := inner1-inf & aux2.
+aux3-inf := inner2-inf & aux3.
+mv-inf := inner2-inf & mv.
+aux1-inf := aux1 & nonfinite.
+
+Then we specify the FORM feature of the auxiliaries and their complement FORM feature constraints accordingly. The auxiliary that appear at the right most would have [FORM aux1] and complement constraint [FORM inner1-inf], the innermost, such as yod, would have [FORM aux3] and complement constraint [FORM mv-inf], the ones in the middle would have [FORM aux2] and complement constraints [FORM inner2-inf]. The form feature of the main verbs would be [FORM mv]:
+
+
+red-aux-lex := subj-raise-aux-no-pred &
+  [ SYNSEM.LOCAL.CAT [ HEAD.FORM  aux1,
+		       VAL.COMPS.FIRST.LOCAL.CAT.HEAD.FORM inner1-inf ]]
+		       
+yin-aux-lex := subj-raise-aux-no-pred &
+  [ SYNSEM.LOCAL.CAT [ HEAD.FORM  aux2,
+		       VAL.COMPS.FIRST.LOCAL.CAT.HEAD.FORM inner2-inf ]]
+
+yod-aux-lex := subj-raise-aux-no-pred &
+  [ SYNSEM.LOCAL.CAT [ HEAD.FORM  aux3,
+		       VAL.COMPS.FIRST.LOCAL.CAT.HEAD.FORM mv-inf ],
+		       
+
+The mood-marker-rule would specify the auxiliary it marks to be [FORM finite]:
+	
+mood-marker-lex-rule-super := add-only-no-ccont-rule & infl-lex-rule &
+  [ INFLECTED #infl,
+    DTR mood-marker-rule-dtr &
+        [ SYNSEM.LOCAL.CAT.HEAD.FORM finite,
+	  INFLECTED #infl &
+                    [ YIN-AUX-FLAG na ] ] ].
+
+
+
+
