@@ -510,7 +510,7 @@ rogspa := determinant-adj-lex-determiner-lex &
 
 ti := demonstrative-determiner-lex &
   [ STEM < "ti" >,
-    SYNSEM.LKEYS.ALTKEYREL.PRED _distal+dem_a_rel ].
+    SYNSEM.LKEYS.ALTKEYREL.PRED distal+dem_a_rel ].
 
 dang1 := conj-lex &
   [ STEM < "dang" >,
