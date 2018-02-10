@@ -132,9 +132,13 @@ However, after following step by step to the specification and loading the gramm
 
 determiner-lex-supertype := norm-hook-lex-item & basic-zero-arg & non-mod-lex-item.
 
+That fixes the problem.
+
 C. Argument Optionality
 
 When we proposed working on ARG-OPT, We did not consider how much data would be required to implement COG-ST for argument optionality based on verb types. There may be some relationship with the evidentiality and viewpoint system through the AUX verbs, but since we are not modeling those, we gave up on modeling COG-ST of argument optionality.
+
+Our source b did mention that due to the Given/New system, in certain context the subject can be ellipsed. However, it also mentioned that Tibetan used ellipsis to extreme limit, not only the subject and object, even the main verb can be dropped in one case it gives, and leaving only the auxiliary. Another source mentioned that within context such as a conversation, where the hearer and speaker are both clear about the subject and object they refer to, the arguments can be dropped. It also mentioned that the auxiliaries can imply the PERSON value of the subjects and serve as the "second proof" to make the hearer understand what the subject is. But still, our data is very limited on this matter. And to prevent unnecessary ambiguities due to interactions with coordination rules and clausal modifier rules, like we got last week, we decide to put argument optionality aside first.
 
 D. Coordination revisited 
 
@@ -208,7 +212,7 @@ Phenomena: tam, wo, c
 go   FUT-EXIST FUT-be FUT-seem
 "So it seems he's going."
 
-(The second example is perfect for illustrating the order of auxiliaries, though unfortunatly we haven't make it parse. but "1gro giyod payin 1dra" parses, which indicates that it is not the problem with the auxiliary stem.)
+(The second example is perfect for illustrating the order of auxiliaries, though unfortunatly we haven't make it parse. but "1gro giyod payin 1dra" parses, which indicates that it is not the problem with the auxiliary stem. We are not sure about the cause of this problem yet.)
 
 We implement this by first turn the requirement of auxiliary complement to be [AUX bool] instead of [AUX - ]:
 
@@ -258,7 +262,6 @@ yod-aux-lex := subj-raise-aux-no-pred &
   [ SYNSEM.LOCAL.CAT [ HEAD.FORM  aux3,
 		       VAL.COMPS.FIRST.LOCAL.CAT.HEAD.FORM mv-inf ],
 		       
-
 The mood-marker-rule would specify the auxiliary it marks to be [FORM finite]:
 	
 mood-marker-lex-rule-super := add-only-no-ccont-rule & infl-lex-rule &
@@ -276,5 +279,5 @@ F. Coverage and Overgeneration
 
 G. Test Corpus
 
-We collected a test corpus from the back of source B. 
+We collected a test corpus from the back of source B. We had our choice of a conversation, a narrative style story, and a synthetic conversation for teaching purposes. We chose the first 10 sentences in a conversation which involve questions and the like. We may add more examples from another format if this proves too difficult. 
 

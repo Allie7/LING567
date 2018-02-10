@@ -1,0 +1,173 @@
+Language: Tibetan
+Language code: bod
+Lines: translit translit-seg gloss translat
+Author: John Cadigan and Xinyi Ji
+Date: January 13, 2018
+Source a:DeLancey, Scott. "Transitivity and ergative case in Lhasa Tibetan." Annual Meeting of the Berkeley Linguistics Society. Vol. 10. 1984.
+Source b:Denwood, Philip. Tibetan. Vol. 3. John Benjamins Publishing, 1999.
+Source c:LaPolla, Randy J., and Graham Thurgood, eds. The Sino-Tibetan Languages. Routledge, 2006.
+Source d:Tournadre, Nicolas. Manual of standard Tibetan: language and civilization: introduction to standard Tibetan (spoken and written) followed by an appendix on classical literary Tibetan. Snow Lion Publications, Incorporated, 2003.
+Source e: RANDALL, MICHAEL GRAHAM GORDON. "THE PROPERTIES OF LHASA TIBETAN VERBALIZERS." (2016).
+
+
+
+
+#corpus//conversation.examples
+
+
+#
+# Source B, 15.1 Lhasa Tibetan
+# The Horpas
+# The following is from an unscripted taped conversaion
+
+
+#
+# Speaker A
+#
+
+#1
+Source: b:275
+Vetted: s
+Judgment: g
+Phenomena:q
+bodla		dgunkha		zhedrag	grangmo		yogred-bas
+bod-la		dgunkha		zhedrag	grang-mo	yogred-bas
+Tibet-DAT	winter.ABS	very	cold-NMZ	exist-INTERR
+"Are winters very cold in Tibet?"
+
+#
+# Speaker B
+#
+
+#Source: b:275
+#Vetted: s
+#Judgment: g
+#Phenomena:q
+#lags	red
+#lags	red
+#CONV	be
+#"Yes"
+
+#2
+Source: b:275
+Vetted: s
+Judgment: g
+Phenomena:adj
+bodla		zhedrag	grangmo		yogred
+bod-la		zhedrag	grang-mo	yogred
+Tibet-DAT	very	cold-NMZ	exist
+"It's very cold in Tibet"
+
+
+#3
+Source: b:275
+Vetted: s
+Judgment: g
+Phenomena:adv
+lhasarangla	1digatsam	grangmo		yogmared
+lhasa-rang-la	1digatsam	grang-mo	yog-ma-red
+Lhasa-self-DAT	so		cold-NMZ	LK-NEG-EXIST
+"It's not so cold in Lhasa itself"
+
+#4
+Source: b:275
+Vetted: s
+Judgment: g
+Phenomena:cl-mod
+yinnayang	byangphyogsla	zlaba		brgyadpanas	gangs		btangnas	logsar		bardu		gangs		mabzhuspar		sdod	kyired
+yinnayang	byangphyogs-la	zlaba		brgyadpa-nas	gangs		btang-nas	logsar		bardu		gangs		ma-bzhus-par		sdod	kyi-red
+but		north-DAT	month.ABS	eight-ABL	snow.ABS	fall-SUB	new_year.ABS	until.DAT	snow.ABS	NEG-melt-NMZ.DAT	stay	LK-AUX
+"But in the north, from October, when snow falls it lies without melting until New Year (March)"
+
+
+#
+# Speaker B
+#
+
+#5
+
+Source: b:275
+Vetted: s
+Judgment: g
+Phenomena:q
+dgunkhar	byangthangla	mi		bsdadmkhan	yogredpas
+dgun-khar	byangthang-la	mi		bsdad-mkhan	yog-red-pas
+winter-DAT	Changthang-DAT	people.ABS	dwell-NMZ	LK-exist-INTERR
+"Are there people who live in Changthang ('northern plains') in the winter?"
+
+#6
+Source: b:276
+Vetted: s
+Judgment: g
+Phenomena:adv
+horpa	sgangkha	sdodsa		byangla		red
+horpa	sgangkha	sdod-sa		byang-la	red
+horpa	all		dwell-NMZ	north-DAT	be
+"The Horpas all live in the north"
+
+#7
+Source: b:276
+Vetted: s
+Judgment: g
+Phenomena:adv
+khangpa	1di1dra		rtsigpa		yodpa		thog	cidag	yogmared
+khangpa	1di1dra		rtsigpa		yod-pa		thog	cidag	yog-ma-red
+house	suchlike	wall		exist-NMZ	roof	etc.	LK-NEG-exist
+"They have no houses or suchlike with walls; no roofs and so on"
+
+
+#8
+Source: b:276
+Vetted: s
+Judgment: g
+Phenomena:adv
+yinnayang	mitshang	chenpo		yinna	khangpa	chungchung	thog	yodpa		1di1dra		yogred
+yinnayang	mitshang	chen-po		yin-na	khangpa	chung-chung	thog	yod-pa		1di1dra		yog-red
+but		family		big-NMZ		be-SUB	house	small-redup.	roof	exist-NMZ	suchlike	LK-exist
+"However, if it's an important family they may have a small house with a roof or suchlike"
+
+
+#9
+Source: b:276
+Vetted: s
+Judgment: g
+Phenomena:adv
+yinnayang	mitshang	chenpo		yinna	khangpa	chungchung	thog	yodpa		1di1dra		yogred
+yinnayang	mitshang	chen-po		yin-na	khangpa	chung-chung	thog	yod-pa		1di1dra		yog-red
+but		family		big-NMZ		be-SUB	house	small-redup.	roof	exist-NMZ	suchlike	LK-exist
+"However, if it's an important family they may have a small house with a roof or suchlike"
+
+
+#10
+Source: b:276
+Vetted: s
+Judgment: g
+Phenomena:adv
+mi	gzhanpatshos	sbra	rkyangkyang	phubsnas	bsdad	yogred
+mi	gzhan-pa-tshos	sbra	rkyangkyang	phubs-nas	bsdad	yog-red
+people	other-NUM-PL	tent	only		pitch-SUB	stay	LK-AUX
+"Other people just pitch their tents and live in them"
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
