@@ -273,7 +273,9 @@ common_noun_lex-noun-lex := noun-lex & pron-num-marker-rule-dtr &
                 CASE-MARKER-FLAG -,
                 POSSESSIVE-RULE-LEX-FLAG - ] ].
 
-pron-noun-lex := noun-lex & pron-num-marker-rule-dtr.
+pron-noun-lex := noun-lex & pron-num-marker-rule-dtr &
+  [ SYNSEM.LOCAL.CONT.HOOK.INDEX [ COG-ST activ-or-more,
+				   SPECI + ] ].
 
 1st_person_lex-noun-lex := no-spr-noun-lex & pron-noun-lex & 
   [ SYNSEM.LOCAL [ CAT.HEAD.PRON +,
