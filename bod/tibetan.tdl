@@ -189,19 +189,25 @@ form := *top*.
 nonfinite := form.
 finite := form.
 
-inner := form.
+inner1 := form.
+inner2 := inner1.
 aux1 := form.
-mv := inner.
-aux2 := inner.
+aux3 := inner2.
+mv := inner2.
+aux2 := inner1.
 
-inner-fin := inner & finite.
-aux2-fin := inner-fin & aux2.
-mv-fin := inner-fin & mv.
+inner1-fin := inner1 & finite.
+inner2-fin := inner2 & inner1-fin.
+aux2-fin := inner1-fin & aux2.
+aux3-fin := inner2-fin & aux3.
+mv-fin := inner2-fin & mv.
 aux1-fin := aux1 & finite.
 
-inner-inf := inner & nonfinite.
-aux2-inf := inner-inf & aux2.
-mv-inf := inner-inf & mv.
+inner1-inf := inner1 & nonfinite.
+inner2-inf := inner2 & inner1-inf.
+aux2-inf := inner1-inf & aux2.
+aux3-inf := inner2-inf & aux3.
+mv-inf := inner2-inf & mv.
 aux1-inf := aux1 & nonfinite.
 
 
@@ -316,7 +322,7 @@ verb-lex := non-mod-lex-item & aspect-marker-suffixes-rule-dtr & mood-marker-rul
 
 main-verb-lex := verb-lex & basic-verb-lex &
   [ SYNSEM.LOCAL [ CAT [ HEAD [AUX -,
-    		       	       FORM form ],
+    		       	       FORM mv ],
                          VAL [ SPR < >,
                                SPEC < >,
                                SUBJ < #subj > ] ],
@@ -498,12 +504,12 @@ subj-raise-aux-no-pred := subj-raise-aux & raise-sem-lex-item &
   [ ARG-ST < [ ],
              [ LOCAL.CAT.HEAD.AUX bool ] > ].
 
-;;; Complements specified as [FORM nonfinite]
+;;; Xinyi Ji 0209 FORM
 
 
 yin-aux-lex := subj-raise-aux-no-pred &
   [ SYNSEM.LOCAL.CAT [ HEAD.FORM aux2,
-		       VAL.COMPS.FIRST.LOCAL.CAT.HEAD.FORM mv-inf ],
+		       VAL.COMPS.FIRST.LOCAL.CAT.HEAD.FORM inner2-inf ],
     INFLECTED [ 1DUG-AUX-OR-1DUG-VERB-OR-BYUNG-AUX-OR-MAN-AUX-OR-MED-AUX-OR-RED-AUX-OR-RED-VERB-OR-YIN-AUX-OR-YIN-VERB-OR-YOD-AUX-OR-YOD-VERB-OR-YOGMARED-AUX-OR-YOGRED-AUX-OR-YOGRED-VERB-FLAG +,
                 BYUNG-AUX-OR-MAN-AUX-OR-MED-AUX-OR-RED-AUX-OR-RED-VERB-OR-SONG-AUX-OR-SONG-VERB-OR-YIN-AUX-OR-YIN-VERB-OR-YOD-AUX-OR-YOD-VERB-OR-YOGMARED-AUX-OR-YOGRED-AUX-OR-YOGRED-VERB-OR-YONG-AUX-FLAG +,
                 1DUG-AUX-OR-MAN-AUX-OR-RED-AUX-OR-YIN-AUX-FLAG +,
@@ -519,8 +525,8 @@ yin-aux-lex := subj-raise-aux-no-pred &
 ; might not be true.
 
 red-aux-lex := subj-raise-aux-no-pred &
-  [ SYNSEM.LOCAL.CAT [ HEAD.FORM aux1,
-		       VAL.COMPS.FIRST.LOCAL.CAT.HEAD.FORM inner-inf ],
+  [ SYNSEM.LOCAL.CAT [ HEAD.FORM  aux1,
+		       VAL.COMPS.FIRST.LOCAL.CAT.HEAD.FORM inner1-inf ],
     INFLECTED [ 1DUG-AUX-OR-1DUG-VERB-OR-BYUNG-AUX-OR-MAN-AUX-OR-MED-AUX-OR-RED-AUX-OR-RED-VERB-OR-YIN-AUX-OR-YIN-VERB-OR-YOD-AUX-OR-YOD-VERB-OR-YOGMARED-AUX-OR-YOGRED-AUX-OR-YOGRED-VERB-FLAG +,
                 BYUNG-AUX-OR-MAN-AUX-OR-MED-AUX-OR-RED-AUX-OR-RED-VERB-OR-SONG-AUX-OR-SONG-VERB-OR-YIN-AUX-OR-YIN-VERB-OR-YOD-AUX-OR-YOD-VERB-OR-YOGMARED-AUX-OR-YOGRED-AUX-OR-YOGRED-VERB-OR-YONG-AUX-FLAG +,
                 1DUG-AUX-OR-MAN-AUX-OR-RED-AUX-OR-YIN-AUX-FLAG +,
@@ -536,7 +542,8 @@ red-aux-lex := subj-raise-aux-no-pred &
 
 yod-aux-lex := subj-raise-aux-no-pred &
   [ SYNSEM.LOCAL [ CONT.HOOK.INDEX.E.ASPECT prf,
-                   CAT.VAL.COMPS.FIRST.LOCAL.CAT.HEAD.FORM nonfinite ],
+                   CAT [ HEAD.FORM aux3,
+		         VAL.COMPS.FIRST.LOCAL.CAT.HEAD.FORM mv-inf ]  ],
     INFLECTED [ 1DUG-AUX-OR-1DUG-VERB-OR-BYUNG-AUX-OR-MAN-AUX-OR-MED-AUX-OR-RED-AUX-OR-RED-VERB-OR-YIN-AUX-OR-YIN-VERB-OR-YOD-AUX-OR-YOD-VERB-OR-YOGMARED-AUX-OR-YOGRED-AUX-OR-YOGRED-VERB-FLAG +,
                 MED-AUX-OR-YOD-AUX-FLAG +,
                 BYUNG-AUX-OR-MAN-AUX-OR-MED-AUX-OR-RED-AUX-OR-RED-VERB-OR-SONG-AUX-OR-SONG-VERB-OR-YIN-AUX-OR-YIN-VERB-OR-YOD-AUX-OR-YOD-VERB-OR-YOGMARED-AUX-OR-YOGRED-AUX-OR-YOGRED-VERB-OR-YONG-AUX-FLAG +,
@@ -553,7 +560,8 @@ yod-aux-lex := subj-raise-aux-no-pred &
 
 yogred-aux-lex := subj-raise-aux-no-pred &
   [ SYNSEM.LOCAL [ CONT.HOOK.INDEX.E.ASPECT prf,
-                   CAT.VAL.COMPS.FIRST.LOCAL.CAT.HEAD.FORM nonfinite ],
+                   CAT [ HEAD.FORM aux1 ,
+			 VAL.COMPS.FIRST.LOCAL.CAT.HEAD.FORM inner1-inf ]  ],
     INFLECTED [ 1DUG-AUX-OR-1DUG-VERB-OR-BYUNG-AUX-OR-MAN-AUX-OR-MED-AUX-OR-RED-AUX-OR-RED-VERB-OR-YIN-AUX-OR-YIN-VERB-OR-YOD-AUX-OR-YOD-VERB-OR-YOGMARED-AUX-OR-YOGRED-AUX-OR-YOGRED-VERB-FLAG +,
                 BYUNG-AUX-OR-MAN-AUX-OR-MED-AUX-OR-RED-AUX-OR-RED-VERB-OR-SONG-AUX-OR-SONG-VERB-OR-YIN-AUX-OR-YIN-VERB-OR-YOD-AUX-OR-YOD-VERB-OR-YOGMARED-AUX-OR-YOGRED-AUX-OR-YOGRED-VERB-OR-YONG-AUX-FLAG +,
                 1DRA-AUX-OR-1DUG-AUX-OR-BYUNG-AUX-OR-MED-AUX-OR-MYONG-AUX-OR-RYGUIN-AUX-OR-SONG-AUX-OR-YOD-AUX-OR-YOGRED-AUX-OR-YONG-AUX-FLAG +,
@@ -570,7 +578,8 @@ yogred-aux-lex := subj-raise-aux-no-pred &
 
 1dug-aux-lex := subj-raise-aux-no-pred &
   [ SYNSEM.LOCAL [ CONT.HOOK.INDEX.E.ASPECT prf,
-                   CAT.VAL.COMPS.FIRST.LOCAL.CAT.HEAD.FORM nonfinite ],
+                   CAT [ HEAD.FORM aux1 ,
+			 VAL.COMPS.FIRST.LOCAL.CAT.HEAD.FORM inner1-inf ] ],
     INFLECTED [ 1DUG-AUX-OR-1DUG-VERB-OR-BYUNG-AUX-OR-MAN-AUX-OR-MED-AUX-OR-RED-AUX-OR-RED-VERB-OR-YIN-AUX-OR-YIN-VERB-OR-YOD-AUX-OR-YOD-VERB-OR-YOGMARED-AUX-OR-YOGRED-AUX-OR-YOGRED-VERB-FLAG +,
                 1DUG-AUX-OR-MAN-AUX-OR-RED-AUX-OR-YIN-AUX-FLAG +,
                 1DRA-AUX-OR-1DUG-AUX-OR-BYUNG-AUX-OR-MED-AUX-OR-MYONG-AUX-OR-RYGUIN-AUX-OR-SONG-AUX-OR-YOD-AUX-OR-YOGRED-AUX-OR-YONG-AUX-FLAG +,
@@ -586,7 +595,8 @@ yogred-aux-lex := subj-raise-aux-no-pred &
 ; might not be true.
 
 1dra-aux-lex := subj-raise-aux-no-pred &
-  [ SYNSEM.LOCAL.CAT.VAL.COMPS.FIRST.LOCAL.CAT.HEAD.FORM nonfinite,
+  [ SYNSEM.LOCAL.CAT [ HEAD.FORM aux1 ,
+		       VAL.COMPS.FIRST.LOCAL.CAT.HEAD.FORM inner1-inf ],
     INFLECTED [ 1DRA-AUX-OR-BYUNG-AUX-OR-INTRANSITIVE-VERB-LEX-VERB-OR-SONG-AUX-OR-TRANSTIVE-VERB-LEX-VERB-OR-YONG-AUX-FLAG +,
                 1DRA-AUX-OR-1DUG-AUX-OR-BYUNG-AUX-OR-MED-AUX-OR-MYONG-AUX-OR-RYGUIN-AUX-OR-SONG-AUX-OR-YOD-AUX-OR-YOGRED-AUX-OR-YONG-AUX-FLAG + ] ].
 
@@ -599,7 +609,8 @@ yogred-aux-lex := subj-raise-aux-no-pred &
 byung-aux-lex := subj-raise-aux-no-pred &
   [ SYNSEM.LOCAL [ CONT.HOOK.INDEX.E [ TENSE past,
                                        ASPECT prf ],
-                   CAT.VAL.COMPS.FIRST.LOCAL.CAT.HEAD.FORM nonfinite ],
+                   CAT [ HEAD.FORM aux1,
+			 VAL.COMPS.FIRST.LOCAL.CAT.HEAD.FORM inner1-inf ]  ],
     INFLECTED [ 1DRA-AUX-OR-BYUNG-AUX-OR-INTRANSITIVE-VERB-LEX-VERB-OR-SONG-AUX-OR-TRANSTIVE-VERB-LEX-VERB-OR-YONG-AUX-FLAG +,
                 1DUG-AUX-OR-1DUG-VERB-OR-BYUNG-AUX-OR-MAN-AUX-OR-MED-AUX-OR-RED-AUX-OR-RED-VERB-OR-YIN-AUX-OR-YIN-VERB-OR-YOD-AUX-OR-YOD-VERB-OR-YOGMARED-AUX-OR-YOGRED-AUX-OR-YOGRED-VERB-FLAG +,
                 BYUNG-AUX-OR-MAN-AUX-OR-MED-AUX-OR-RED-AUX-OR-RED-VERB-OR-SONG-AUX-OR-SONG-VERB-OR-YIN-AUX-OR-YIN-VERB-OR-YOD-AUX-OR-YOD-VERB-OR-YOGMARED-AUX-OR-YOGRED-AUX-OR-YOGRED-VERB-OR-YONG-AUX-FLAG +,
@@ -616,7 +627,8 @@ byung-aux-lex := subj-raise-aux-no-pred &
 song-aux-lex := subj-raise-aux-no-pred &
   [ SYNSEM.LOCAL [ CONT.HOOK.INDEX.E [ TENSE past,
                                        ASPECT prf ],
-                   CAT.VAL.COMPS.FIRST.LOCAL.CAT.HEAD.FORM nonfinite ],
+                   CAT [ HEAD.FORM aux1,
+			 VAL.COMPS.FIRST.LOCAL.CAT.HEAD.FORM inner1-inf ]  ],
     INFLECTED [ 1DRA-AUX-OR-BYUNG-AUX-OR-INTRANSITIVE-VERB-LEX-VERB-OR-SONG-AUX-OR-TRANSTIVE-VERB-LEX-VERB-OR-YONG-AUX-FLAG +,
                 1DRA-AUX-OR-1DUG-AUX-OR-BYUNG-AUX-OR-MED-AUX-OR-MYONG-AUX-OR-RYGUIN-AUX-OR-SONG-AUX-OR-YOD-AUX-OR-YOGRED-AUX-OR-YONG-AUX-FLAG +,
                 1DUG-AUX-OR-1DUG-VERB-OR-BYUNG-AUX-OR-SONG-AUX-OR-SONG-VERB-OR-YONG-AUX-FLAG +,
@@ -632,7 +644,8 @@ song-aux-lex := subj-raise-aux-no-pred &
 
 yong-aux-lex := subj-raise-aux-no-pred &
   [ SYNSEM.LOCAL [ CONT.HOOK.INDEX.E.TENSE future,
-                   CAT.VAL.COMPS.FIRST.LOCAL.CAT.HEAD.FORM nonfinite ],
+                   CAT [ HEAD.FORM aux1,
+			 VAL.COMPS.FIRST.LOCAL.CAT.HEAD.FORM inner1-inf ]  ],
     INFLECTED [ 1DRA-AUX-OR-BYUNG-AUX-OR-INTRANSITIVE-VERB-LEX-VERB-OR-SONG-AUX-OR-TRANSTIVE-VERB-LEX-VERB-OR-YONG-AUX-FLAG +,
                 1DRA-AUX-OR-1DUG-AUX-OR-BYUNG-AUX-OR-MED-AUX-OR-MYONG-AUX-OR-RYGUIN-AUX-OR-SONG-AUX-OR-YOD-AUX-OR-YOGRED-AUX-OR-YONG-AUX-FLAG +,
                 1DUG-AUX-OR-1DUG-VERB-OR-BYUNG-AUX-OR-SONG-AUX-OR-SONG-VERB-OR-YONG-AUX-FLAG +,
@@ -644,7 +657,8 @@ subj-raise-aux-with-pred := subj-raise-aux & norm-sem-lex-item & trans-first-arg
 
 med-aux-lex := subj-raise-aux-with-pred &
   [ SYNSEM.LOCAL [ CONT.HOOK.INDEX.E.ASPECT prf,
-                   CAT.VAL.COMPS.FIRST.LOCAL.CAT.HEAD.FORM nonfinite ],
+                   CAT [ HEAD.FORM aux3 ,
+			 VAL.COMPS.FIRST.LOCAL.CAT.HEAD.FORM mv-inf ] ],
     INFLECTED [ 1DUG-AUX-OR-1DUG-VERB-OR-BYUNG-AUX-OR-MAN-AUX-OR-MED-AUX-OR-RED-AUX-OR-RED-VERB-OR-YIN-AUX-OR-YIN-VERB-OR-YOD-AUX-OR-YOD-VERB-OR-YOGMARED-AUX-OR-YOGRED-AUX-OR-YOGRED-VERB-FLAG +,
                 MED-AUX-OR-YOD-AUX-FLAG +,
                 BYUNG-AUX-OR-MAN-AUX-OR-MED-AUX-OR-RED-AUX-OR-RED-VERB-OR-SONG-AUX-OR-SONG-VERB-OR-YIN-AUX-OR-YIN-VERB-OR-YOD-AUX-OR-YOD-VERB-OR-YOGMARED-AUX-OR-YOGRED-AUX-OR-YOGRED-VERB-OR-YONG-AUX-FLAG +,
@@ -654,7 +668,8 @@ med-aux-lex := subj-raise-aux-with-pred &
                 1DUG-AUX-OR-MED-AUX-OR-YOD-AUX-OR-YOGMARED-AUX-OR-YOGRED-AUX-FLAG + ] ].
 
 man-aux-lex := subj-raise-aux-with-pred &
-  [ SYNSEM.LOCAL.CAT.VAL.COMPS.FIRST.LOCAL.CAT.HEAD.FORM nonfinite,
+  [ SYNSEM.LOCAL.CAT [ HEAD.FORM aux2,
+		       VAL.COMPS.FIRST.LOCAL.CAT.HEAD.FORM inner2-inf ],
     INFLECTED [ 1DUG-AUX-OR-1DUG-VERB-OR-BYUNG-AUX-OR-MAN-AUX-OR-MED-AUX-OR-RED-AUX-OR-RED-VERB-OR-YIN-AUX-OR-YIN-VERB-OR-YOD-AUX-OR-YOD-VERB-OR-YOGMARED-AUX-OR-YOGRED-AUX-OR-YOGRED-VERB-FLAG +,
                 BYUNG-AUX-OR-MAN-AUX-OR-MED-AUX-OR-RED-AUX-OR-RED-VERB-OR-SONG-AUX-OR-SONG-VERB-OR-YIN-AUX-OR-YIN-VERB-OR-YOD-AUX-OR-YOD-VERB-OR-YOGMARED-AUX-OR-YOGRED-AUX-OR-YOGRED-VERB-OR-YONG-AUX-FLAG +,
                 1DUG-AUX-OR-MAN-AUX-OR-RED-AUX-OR-YIN-AUX-FLAG +,
@@ -664,7 +679,8 @@ man-aux-lex := subj-raise-aux-with-pred &
 
 yogmared-aux-lex := subj-raise-aux-with-pred &
   [ SYNSEM.LOCAL [ CONT.HOOK.INDEX.E.ASPECT prf,
-                   CAT.VAL.COMPS.FIRST.LOCAL.CAT.HEAD.FORM nonfinite ],
+                   CAT [ HEAD.FORM aux1,
+			 VAL.COMPS.FIRST.LOCAL.CAT.HEAD.FORM inner1-inf ]  ],
     INFLECTED [ 1DUG-AUX-OR-1DUG-VERB-OR-BYUNG-AUX-OR-MAN-AUX-OR-MED-AUX-OR-RED-AUX-OR-RED-VERB-OR-YIN-AUX-OR-YIN-VERB-OR-YOD-AUX-OR-YOD-VERB-OR-YOGMARED-AUX-OR-YOGRED-AUX-OR-YOGRED-VERB-FLAG +,
                 BYUNG-AUX-OR-MAN-AUX-OR-MED-AUX-OR-RED-AUX-OR-RED-VERB-OR-SONG-AUX-OR-SONG-VERB-OR-YIN-AUX-OR-YIN-VERB-OR-YOD-AUX-OR-YOD-VERB-OR-YOGMARED-AUX-OR-YOGRED-AUX-OR-YOGRED-VERB-OR-YONG-AUX-FLAG +,
                 YOGMARED-AUX-OR-YOGRED-AUX-FLAG +,
@@ -681,12 +697,15 @@ yogmared-aux-lex := subj-raise-aux-with-pred &
 ryguin-aux-lex := subj-raise-aux-no-pred &
   [ SYNSEM.LOCAL [ CONT.HOOK.INDEX.E [ TENSE present,
                                        ASPECT pros ],
-                   CAT.VAL.COMPS.FIRST.LOCAL.CAT.HEAD.FORM nonfinite ],
+                   CAT [  HEAD.FORM aux2 ,
+			  VAL.COMPS.FIRST.LOCAL.CAT.HEAD.FORM inner2-inf ] ],
     INFLECTED.1DRA-AUX-OR-1DUG-AUX-OR-BYUNG-AUX-OR-MED-AUX-OR-MYONG-AUX-OR-RYGUIN-AUX-OR-SONG-AUX-OR-YOD-AUX-OR-YOGRED-AUX-OR-YONG-AUX-FLAG + ].
 
 myong-aux-lex := subj-raise-aux-with-pred &
-  [ SYNSEM.LOCAL.CAT.VAL.COMPS.FIRST.LOCAL.CAT.HEAD.FORM nonfinite,
+  [ SYNSEM.LOCAL.CAT [ HEAD.FORM aux1,
+		       VAL.COMPS.FIRST.LOCAL.CAT.HEAD.FORM inner1-inf ],
     INFLECTED.1DRA-AUX-OR-1DUG-AUX-OR-BYUNG-AUX-OR-MED-AUX-OR-MYONG-AUX-OR-RYGUIN-AUX-OR-SONG-AUX-OR-YOD-AUX-OR-YOGRED-AUX-OR-YONG-AUX-FLAG + ].
+
 
 ; To keep the semantically empty ones from spinning on
 ; generation, require complement to be [AUX -].  The
@@ -696,7 +715,8 @@ myong-aux-lex := subj-raise-aux-with-pred &
 
 kyi-aux-lex := subj-raise-aux-no-pred &
   [ SYNSEM.LOCAL [ CONT.HOOK.INDEX.E.ASPECT prog,
-                   CAT.VAL.COMPS.FIRST.LOCAL.CAT.HEAD.FORM nonfinite ] ].
+                   CAT [ HEAD.FORM aux1,
+			 VAL.COMPS.FIRST.LOCAL.CAT.HEAD.FORM inner1-inf ] ] ].
 
 ;;; Copulas
 
@@ -799,13 +819,33 @@ s-attach-clause-final-prehead-subord-lex-item := subord-with-verbal-comp-lex &
 ;;; Determiners
 ;;; SPEC is non-empty, and already specified by basic-determiner-lex.
 
-determiner-lex := basic-determiner-lex & norm-zero-arg & non-mod-lex-item &
-  [ SYNSEM.LOCAL.CAT.VAL [ SPR < >,
-                           COMPS < >,
-                           SUBJ < > ] ].
+determiner-lex-supertype := norm-hook-lex-item & basic-zero-arg & non-mod-lex-item &
+  [ SYNSEM [ LOCAL [ CAT [ HEAD det,
+			   VAL[ SPEC.FIRST.LOCAL.CONT.HOOK [ INDEX #ind,
+				  			     LTOP #larg ],
+                                SPR < >,
+                                SUBJ < >,
+                                COMPS < >]],
+		     CONT.HCONS <! qeq &
+				 [ HARG #harg,
+				   LARG #larg ] !> ], 
+	     LKEYS.KEYREL quant-relation &
+		   [ ARG0 #ind,
+		     RSTR #harg ] ] ].
+
+determiner-lex := determiner-lex-supertype & single-rel-lex-item.
 
 determinant-adj-lex-determiner-lex := determiner-lex & no-icons-lex-item.
 
+demonstrative-determiner-lex := determiner-lex-supertype &
+[ SYNSEM [LOCAL [ CONT.RELS <! [ PRED "exist_q_rel" ], 
+                              #rel & arg1-ev-relation & 
+                                     [LBL #lbl , 
+                                      ARG1 #arg ] !> ,
+                  CAT.VAL.SPEC.FIRST.LOCAL.CONT.HOOK [ INDEX #arg &
+                                                           [COG-ST activ+fam ],
+                                                       LTOP #lbl ] ],
+          LKEYS.ALTKEYREL #rel ] ].
 
 ;;;;;;;;;;;;;;;;;;;
 ;;; Lexical Rules

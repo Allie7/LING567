@@ -496,21 +496,21 @@ cig := determinant-adj-lex-determiner-lex &
   [ STEM < "cig" >,
     SYNSEM.LKEYS.KEYREL.PRED "_a_q_rel" ].
 
-de := determinant-adj-lex-determiner-lex &
+de := demonstrative-determiner-lex &
   [ STEM < "de" >,
-    SYNSEM.LKEYS.KEYREL.PRED "_that_q_rel" ].
+    SYNSEM.LKEYS.ALTKEYREL.PRED distal+dem_a_rel ].
 
-1di := determinant-adj-lex-determiner-lex &
+1di := demonstrative-determiner-lex &
   [ STEM < "1di" >,
-    SYNSEM.LKEYS.KEYREL.PRED "_this_q_rel" ].
+    SYNSEM.LKEYS.ALTKEYREL.PRED proximal+dem_a_rel ].
 
 rogspa := determinant-adj-lex-determiner-lex &
   [ STEM < "rogspa" >,
     SYNSEM.LKEYS.KEYREL.PRED "_many_q_rel" ].
 
-ti := determinant-adj-lex-determiner-lex &
+ti := demonstrative-determiner-lex &
   [ STEM < "ti" >,
-    SYNSEM.LKEYS.KEYREL.PRED "_this_q_rel" ].
+    SYNSEM.LKEYS.ALTKEYREL.PRED _distal+dem_a_rel ].
 
 dang1 := conj-lex &
   [ STEM < "dang" >,
