@@ -335,8 +335,12 @@ main-verb-lex := verb-lex & basic-verb-lex &
                                        COMPS < > ] ],
                            CONT.HOOK.INDEX #xarg ] ] ].
 
+;
+; No argument optionality for aux verbs
+; JC 02-11
 aux-lex := verb-lex &
-  [ SYNSEM.LOCAL.CAT.HEAD.AUX + ].
+ [ SYNSEM.LOCAL.CAT [ HEAD.AUX +,
+                      VAL.COMPS < [ OPT - ] > ] ] .
 
 intransitive-verb-lex := main-verb-lex & intransitive-lex-item &
   [ SYNSEM.LOCAL.CAT.VAL.COMPS < >,
@@ -705,8 +709,23 @@ ryguin-aux-lex := subj-raise-aux-no-pred &
 
 myong-aux-lex := subj-raise-aux-with-pred &
   [ SYNSEM.LOCAL.CAT [ HEAD.FORM aux1,
-		       VAL.COMPS.FIRST.LOCAL.CAT.HEAD.FORM inner1-inf ],
+		       VAL.COMPS.FIRST.LOCAL.CAT.HEAD.FORM inner1-inf,
+                       VAL.COMPS < [ OPT - ] >              ],
     INFLECTED.1DRA-AUX-OR-1DUG-AUX-OR-BYUNG-AUX-OR-MED-AUX-OR-MYONG-AUX-OR-RYGUIN-AUX-OR-SONG-AUX-OR-YOD-AUX-OR-YOGRED-AUX-OR-YONG-AUX-FLAG + ].
+
+
+;  [ SYNSEM.LOCAL.CAT [ MC -,
+;                       HEAD adp &
+;                            [ MOD < [ LOCAL scopal-mod &
+;                                            [ CAT [ HEAD verb,
+;                                                    VAL.COMPS < > ] ] ] > ],
+;                       VAL [ SUBJ < >,
+;                             SPR < >,
+;                             COMPS < [ OPT -,
+;                                       LOCAL.CAT [ MC -,
+;                                                   VAL.COMPS < > ] ] > ] ] ].
+
+
 
 tshar-aux-lex := subj-raise-aux-with-pred &
   [ SYNSEM.LOCAL.CAT [ HEAD.FORM aux3,
