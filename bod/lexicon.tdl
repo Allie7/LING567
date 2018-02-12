@@ -1,6 +1,22 @@
 ;;; -*- Mode: TDL; Coding: utf-8 -*-
 ;;; Nouns
 
+
+;;JC 2-11 Wh pronouns
+gare := wh-pronoun-noun-lex &
+  [ STEM < "gare" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_thing_n_rel" ].
+
+ga := wh-pronoun-noun-lex &
+  [ STEM < "gare" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_thing_n_rel" ].
+
+su := wh-pronoun-noun-lex &
+  [ STEM < "su" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_person_n_rel" ].
+
+;; end
+
 dkaryol := common_noun_lex-noun-lex &
   [ STEM < "dkaryol" >,
     SYNSEM.LKEYS.KEYREL.PRED "_cup_n_rel" ].

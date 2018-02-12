@@ -7,6 +7,26 @@ adj-head-int := adj-head-int-phrase.
 
 ;
 
+
+; added for wh questions
+
+wh-int-cl := clause & head-compositional &  head-only &
+  [ SYNSEM [ LOCAL.CAT [ VAL #val,
+			 MC bool ],
+	     NON-LOCAL non-local-none ],
+    C-CONT [ RELS <! !>,
+	     HCONS <! !>,
+	     HOOK.INDEX.SF ques ],
+    HEAD-DTR.SYNSEM [ LOCAL.CAT [ HEAD verb & [ FORM finite ],
+				  VAL #val & 
+				    [ SUBJ < >,
+				      COMPS < > ] ],
+		      NON-LOCAL [ SLASH <! !>,
+				  REL <! !>,
+				  QUE <! ref-ind !> ] ] ].
+
+;
+
 decl-head-opt-subj := decl-head-opt-subj-phrase.
 
 basic-head-opt-comp := basic-head-opt-comp-phrase.

@@ -180,9 +180,36 @@ f := gender.
 comp-head-phrase := basic-head-1st-comp-phrase & head-final &
   [ HEAD-DTR.SYNSEM.LOCAL.CAT.HEAD.INIT - ].
 
-subj-head-phrase := decl-head-subj-phrase & head-final &
+; JC working on wh questions 2-11
+
+eng-subj-head-phrase := head-valence-phrase & head-compositional & 
+              basic-binary-headed-phrase &
+  [ SYNSEM phr-synsem & 
+           [ LOCAL.CAT [ POSTHEAD +,
+                 HC-LIGHT -,
+                 VAL [ SUBJ < >,
+                       COMPS #comps,
+                       SPR #spr ] ] ],
+    C-CONT [ HOOK.INDEX.SF prop-or-ques,
+         RELS <! !>,
+         HCONS <! !>,
+         ICONS <! !> ],
+    HEAD-DTR.SYNSEM.LOCAL.CAT.VAL [ SUBJ < #synsem >,
+                    COMPS #comps,    
+                    SPR #spr ],
+    NON-HEAD-DTR.SYNSEM #synsem & canonical-synsem &
+       [ LOCAL [ CAT [ VAL [ SUBJ olist,
+                 COMPS olist,
+                 SPR olist ] ] ],
+         NON-LOCAL [ SLASH 0-dlist & [ LIST < > ],
+             REL 0-dlist ] ]].
+
+
+subj-head-phrase := eng-subj-head-phrase & head-final &
   [ HEAD-DTR.SYNSEM.LOCAL.CAT.VAL.COMPS < > ].
 
+
+;
 ;;; Form
 
 form := *top*.
@@ -235,6 +262,30 @@ wh-interr := mood.
 ;;;;;;;;;;;;;;;;;;;
 ;;; Lexical Types
 ;;;;;;;;;;;;;;;;;;;
+
+;;; Wh pronouns
+
+;; JC 2-11 for wh questions
+
+wh-pronoun-noun-lex := case-marker-rule-dtr & possessive-rule-lex-rule-dtr & norm-hook-lex-item & basic-icons-lex-item & 
+  [ SYNSEM [ LOCAL [ CAT [ HEAD noun,
+			   VAL [ SPR < >,
+				 SUBJ < >,
+				 COMPS < >,
+				 SPEC < > ] ],
+		     CONT [ HOOK.INDEX.PNG.PER 3rd,
+	                    RELS <! [ LBL #larg,
+				       ARG0 #ind & ref-ind ],
+				  [ PRED "wh_q_rel",
+				    ARG0 #ind,
+				    RSTR #harg ] !>,
+			    HCONS <! [ HARG #harg,
+				        LARG #larg ] !> ] ],
+	     NON-LOCAL.QUE <! #ind !> ] ].
+
+;end
+
+
 
 ;;; Nouns
 

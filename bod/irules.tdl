@@ -129,6 +129,10 @@ pas-interr-suffix :=
 %suffix (* pas)
 pas-interr-lex-rule.
 
+pas-interr-suffix2 :=
+%suffix (* pa)
+pas-interr-lex-rule.
+
 gas-interr-suffix :=
 %suffix (* gas)
 gas-interr-lex-rule.
