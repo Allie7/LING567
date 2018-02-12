@@ -340,14 +340,19 @@ main-verb-lex := verb-lex & basic-verb-lex &
 ; JC 02-11
 aux-lex := verb-lex &
  [ SYNSEM.LOCAL.CAT [ HEAD.AUX +,
-                      VAL.COMPS < [ OPT - ] > ] ] .
+                      VAL.COMPS < [ OPT - ,
+				    LOCAL.CAT.HEAD.NMZ -
+					 ] > ] ] .
 
 intransitive-verb-lex := main-verb-lex & intransitive-lex-item &
   [ SYNSEM.LOCAL.CAT.VAL.COMPS < >,
     ARG-ST.FIRST.LOCAL.CAT.HEAD noun ].
 
+
+;attempt to cut down on overgeneration by specifying tense didn't work
+;  [ SYNSEM.LOCAL.CONT.HOOK.INDEX.E.TENSE past,
 transitive-verb-lex := main-verb-lex & transitive-lex-item &
-  [ SYNSEM.LOCAL.CAT.VAL.COMPS < #comps >,
+   [ SYNSEM.LOCAL.CAT.VAL.COMPS < #comps >,
     ARG-ST < [ LOCAL.CAT.HEAD noun ],
              #comps &
              [ LOCAL.CAT cat-sat &
@@ -1210,6 +1215,7 @@ gis-lex-rule := tense-marker-lex-rule-super &
                                      ASPECT prog ] ].
 
 ;;; Form feature specified as finite.
+;;;
 
 mood-marker-lex-rule-super := add-only-no-ccont-rule & infl-lex-rule &
   [ SYNSEM.LOCAL.CAT.HEAD.FORM finite,
@@ -1237,6 +1243,12 @@ mood-lex-rule := mood-marker-lex-rule-super.
 interr-marker-rule-lex-rule := mood-marker-lex-rule-super &
   [ SYNSEM.LOCAL.CONT.HOOK.INDEX [ E.MOOD interr,
                                    SF ques ] ].
+
+indic-marker-rule-lex-rule := mood-marker-lex-rule-super &
+  [ SYNSEM.LOCAL.CONT.HOOK.INDEX [ E.MOOD indic]].
+
+
+
 
 aspect-marker-suffixes-lex-rule-super := add-only-no-ccont-rule & infl-lex-rule &
   [ INFLECTED #infl,
