@@ -316,9 +316,12 @@ proper_noun_lex-noun-lex := no-spr-noun-lex &
 
 ;;; Verbs
 
-verb-lex := non-mod-lex-item & aspect-marker-suffixes-rule-dtr & mood-marker-rule-dtr & polarity-marker-rule-dtr & tense-marker-rule-dtr &
-  [ SYNSEM.LOCAL.CAT.HEAD verb &
+verb-lex-super := non-mod-lex-item & aspect-marker-suffixes-rule-dtr & mood-marker-rule-dtr & polarity-marker-rule-dtr & tense-marker-rule-dtr & mood-marker-rule-dtr & nominalizer-marker-rule-dtr.
+
+verb-lex := verb-lex-super &  [ SYNSEM.LOCAL.CAT.HEAD verb &
                           [ NMZ - ] ].
+
+
 
 ;;; main verb stems specified as [FORM nonfinite]
 
@@ -931,6 +934,7 @@ mood-marker-rule-dtr := word-or-lexrule.
 polarity-marker-rule-dtr := word-or-lexrule.
 possessive-rule-lex-rule-dtr := word-or-lexrule.
 tense-marker-rule-dtr := word-or-lexrule.
+nominalizer-marker-rule-dtr := word-or-lexrule.
 
 ;;; Lexical rule types
 
@@ -1150,7 +1154,7 @@ nonpossessive-lex-rule-1 := add-only-no-ccont-rule &
                             [ POSSESSOR nonpossessive ],
                        POSSESSUM nonpossessive ] ].
 
-polarity-marker-lex-rule-super := aspect-marker-suffixes-rule-dtr & cont-change-only-lex-rule & infl-lex-rule & mood-marker-rule-dtr & tense-marker-rule-dtr &
+polarity-marker-lex-rule-super := aspect-marker-suffixes-rule-dtr & cont-change-only-lex-rule & infl-lex-rule & mood-marker-rule-dtr & tense-marker-rule-dtr & nominalizer-marker-rule-dtr &
   [ INFLECTED #infl,
     DTR polarity-marker-rule-dtr &
         [ INFLECTED #infl &
@@ -1184,7 +1188,7 @@ negation-marker-rule1-lex-rule := negation-marker-rule-lex-rule &
 negation-marker-rule2-lex-rule := negation-marker-rule-lex-rule &
   [ DTR.INFLECTED.BYUNG-AUX-OR-RED-AUX-OR-SONG-AUX-FLAG na ].
 
-tense-marker-lex-rule-super := add-only-no-ccont-rule & aspect-marker-suffixes-rule-dtr & infl-lex-rule & mood-marker-rule-dtr &
+tense-marker-lex-rule-super := add-only-no-ccont-rule & aspect-marker-suffixes-rule-dtr & infl-lex-rule & mood-marker-rule-dtr & nominalizer-marker-rule-dtr &
   [ INFLECTED #infl,
     DTR tense-marker-rule-dtr &
         [   INFLECTED #infl &
@@ -1258,7 +1262,7 @@ aspect-marker-suffixes-lex-rule-super := add-only-no-ccont-rule & infl-lex-rule 
 simple-perfect-lex-rule := aspect-marker-suffixes-lex-rule-super &
   [ SYNSEM.LOCAL.CONT.HOOK.INDEX.E.ASPECT prf ].
 
-aspect-marker-prefixes-lex-rule-super := add-only-no-ccont-rule & infl-lex-rule & mood-marker-rule-dtr &
+aspect-marker-prefixes-lex-rule-super := add-only-no-ccont-rule & infl-lex-rule & mood-marker-rule-dtr & nominalizer-marker-rule-dtr &
   [ INFLECTED #infl,
     DTR aux-lex &
         [ INFLECTED #infl &
@@ -1275,7 +1279,7 @@ pros-lex-rule := aspect-marker-prefixes-lex-rule-super &
 
 nominalizer-lex-rule-super := high-or-mid-nominalization-lex-rule & infl-lex-rule &
   [ INFLECTED #infl,
-    DTR verb-lex &
+    DTR nominalizer-marker-rule-dtr &
         [ INFLECTED #infl ] ].
 
 nominalization-lex-rule := nominalizer-lex-rule-super.
