@@ -283,6 +283,22 @@ wh-pronoun-noun-lex := case-marker-rule-dtr & possessive-rule-lex-rule-dtr & nor
 				        LARG #larg ] !> ] ],
 	     NON-LOCAL.QUE <! #ind !> ] ].
 
+
+wh-int-cl := clause & head-compositional &  head-only &
+  [ SYNSEM [ LOCAL.CAT [ VAL #val,
+			 MC bool ],
+	     NON-LOCAL non-local-none ],
+    C-CONT [ RELS <! !>,
+	     HCONS <! !>,
+	     HOOK.INDEX.SF ques ],
+    HEAD-DTR.SYNSEM [ LOCAL.CAT [ HEAD verb & [ FORM finite ],
+				  VAL #val & 
+				    [ SUBJ < >,
+				      COMPS < > ] ],
+		      NON-LOCAL [ SLASH <! !>,
+				  REL <! !>,
+				  QUE <! ref-ind !> ] ] ].
+
 ;end
 
 
