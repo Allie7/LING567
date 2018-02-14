@@ -2,23 +2,11 @@
 ;;; Inflecting Lexical Rule Instances
 
 dative-lex-rule-suffix1 :=
-%suffix (* la)
-dative-lex-rule-lex-rule.
-
-dative-lex-rule-suffix2 :=
-%suffix (* r)
+%suffix (* la)(* r)
 dative-lex-rule-lex-rule.
 
 ergative-lex-rule-suffix1 :=
-%suffix (* s)
-ergative-lex-rule-lex-rule.
-
-ergative-lex-rule-suffix2 :=
-%suffix (* gyis)
-ergative-lex-rule-lex-rule.
-
-ergative-lex-rule-suffix3 :=
-%suffix (* gis)
+%suffix (* s)(* gyis)(* gis)
 ergative-lex-rule-lex-rule.
 
 instrumental-lex-rule-suffix :=
@@ -26,19 +14,7 @@ instrumental-lex-rule-suffix :=
 instrumental-lex-rule-lex-rule.
 
 genitive-lex-rule-suffix1 :=
-%suffix (* i)
-genitive-lex-rule-lex-rule.
-
-genitive-lex-rule-suffix2 :=
-%suffix (* li)
-genitive-lex-rule-lex-rule.
-
-genitive-lex-rule-suffix3 :=
-%suffix (* 1i)
-genitive-lex-rule-lex-rule.
-
-genitive-lex-rule-suffix4 :=
-%suffix (* gi)
+%suffix (* i)(* li)(* gi)
 genitive-lex-rule-lex-rule.
 
 plural-pron-rule-suffix :=
@@ -54,35 +30,11 @@ negation-marker-rule2-prefix :=
 negation-marker-rule2-lex-rule.
 
 past-tense-rule-prefix1 :=
-%prefix (* pa)
-past-tense-rule-lex-rule.
-
-past-tense-rule-prefix2 :=
-%prefix (* ba)
-past-tense-rule-lex-rule.
-
-past-tense-rule-prefix3 :=
-%prefix (* nga)
-past-tense-rule-lex-rule.
-
-past-tense-rule-prefix4 :=
-%prefix (* ga)
-past-tense-rule-lex-rule.
-
-past-tense-rule-prefix5 :=
-%prefix (* ra)
+%prefix (* pa)(* ba)(* nga)(* ga)(* ra)
 past-tense-rule-lex-rule.
 
 present-tense-rule-prefix1 :=
-%prefix (* gi)
-present-tense-rule-lex-rule.
-
-present-tense-rule-prefix2 :=
-%prefix (* kyi)
-present-tense-rule-lex-rule.
-
-present-tense-rule-prefix3 :=
-%prefix (* gyi)
+%prefix (* gi)(* kyi)(* gyi)
 present-tense-rule-lex-rule.
 
 gi-fut-prefix :=
@@ -102,35 +54,11 @@ gis-prefix :=
 gis-lex-rule.
 
 mood-suffix1 :=
-%suffix (* da)
-mood-lex-rule.
-
-mood-suffix2 :=
-%suffix (* gro)
-mood-lex-rule.
-
-mood-suffix3 :=
-%suffix (* ngas)
-mood-lex-rule.
-
-mood-suffix4 :=
-%suffix (* gro1s)
-mood-lex-rule.
-
-mood-suffix5 :=
-%suffix (* ga)
-mood-lex-rule.
-
-mood-suffix6 :=
-%suffix (* pa1dra)
+%suffix (* da)(* gro)(* ngas)(* gro1s)(* ga)(* pa1dra)
 mood-lex-rule.
 
 pas-interr-suffix :=
 %suffix (* pas)
-pas-interr-lex-rule.
-
-pas-interr-suffix2 :=
-%suffix (* pa)
 pas-interr-lex-rule.
 
 gas-interr-suffix :=
@@ -146,27 +74,11 @@ ngas-interr-suffix :=
 ngas-interr-lex-rule.
 
 simple-perfect-suffix1 :=
-%suffix (* shag)
-simple-perfect-lex-rule.
-
-simple-perfect-suffix2 :=
-%suffix (* bzhag)
-simple-perfect-lex-rule.
-
-simple-perfect-suffix3 :=
-%suffix (* gzha1)
+%suffix (* shag)(* bzhag)(* gzha1)
 simple-perfect-lex-rule.
 
 recent-aspect-prefix1 :=
-%prefix (* gro)
-recent-aspect-lex-rule.
-
-recent-aspect-prefix2 :=
-%prefix (* padaga)
-recent-aspect-lex-rule.
-
-recent-aspect-prefix3 :=
-%prefix (* tsam)
+%prefix (* gro)(* padaga)(* tsam)
 recent-aspect-lex-rule.
 
 prog-aspect-prefix :=
@@ -174,69 +86,9 @@ prog-aspect-prefix :=
 prog-aspect-lex-rule.
 
 pros-prefix1 :=
-%prefix (* rgyu)
-pros-lex-rule.
-
-pros-prefix2 :=
-%prefix (* yag)
-pros-lex-rule.
-
-pros-prefix3 :=
-%prefix (* chog)
-pros-lex-rule.
-
-pros-prefix4 :=
-%prefix (* grabs)
+%prefix (* rgyu)(* yag)(* chog)(* grabs)
 pros-lex-rule.
 
 nominalization-suffix1 :=
-%suffix (* po)
-nominalization-lex-rule.
-
-nominalization-suffix2 :=
-%suffix (* pa)
-nominalization-lex-rule.
-
-nominalization-suffix3 :=
-%suffix (* ba)
-nominalization-lex-rule.
-
-nominalization-suffix4 :=
-%suffix (* mkhan)
-nominalization-lex-rule.
-
-nominalization-suffix5 :=
-%suffix (* yag)
-nominalization-lex-rule.
-
-nominalization-suffix6 :=
-%suffix (* rgyu)
-nominalization-lex-rule.
-
-nominalization-suffix7 :=
-%suffix (* rtsis)
-nominalization-lex-rule.
-
-nominalization-suffix8 :=
-%suffix (* 1dod)
-nominalization-lex-rule.
-
-nominalization-suffix9 :=
-%suffix (* long)
-nominalization-lex-rule.
-
-nominalization-suffix10 :=
-%suffix (* thabs)
-nominalization-lex-rule.
-
-nominalization-suffix11 :=
-%suffix (* re)
-nominalization-lex-rule.
-
-nominalization-suffix12 :=
-%suffix (* mdog)
-nominalization-lex-rule.
-
-nominalization-suffix13 :=
-%suffix (* rogs)
+%suffix (* po)(* pa)(* ba)(* mkhan)(* yag)(* rgyu)(* rtsis)(* 1dod)(* long)(* thabs)(* re)(* mdog)(* rogs)
 nominalization-lex-rule.
