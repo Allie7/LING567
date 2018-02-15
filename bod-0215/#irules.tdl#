@@ -1,0 +1,94 @@
+;;; -*- Mode: TDL; Coding: utf-8 -*-
+;;; Inflecting Lexical Rule Instances
+
+dative-lex-rule-suffix1 :=
+%suffix (* la)(* r)
+dative-lex-rule-lex-rule.
+
+ergative-lex-rule-suffix1 :=
+%suffix (* s)(* gyis)(* gis)
+ergative-lex-rule-lex-rule.
+
+instrumental-lex-rule-suffix :=
+%suffix (* gus)
+instrumental-lex-rule-lex-rule.
+
+genitive-lex-rule-suffix1 :=
+%suffix (* i)(* li)(* gi)
+genitive-lex-rule-lex-rule.
+
+plural-pron-rule-suffix :=
+%suffix (* tsho)
+plural-pron-rule-lex-rule.
+
+negation-marker-rule1-prefix :=
+%prefix (* ma)
+negation-marker-rule1-lex-rule.
+
+negation-marker-rule2-prefix :=
+%prefix (* mi)
+negation-marker-rule2-lex-rule.
+
+past-tense-rule-prefix1 :=
+%prefix (* pa)(* ba)(* nga)(* ga)(* ra)
+past-tense-rule-lex-rule.
+
+present-tense-rule-prefix1 :=
+%prefix (* gi)(* kyi)(* gyi)
+present-tense-rule-lex-rule.
+
+gi-fut-prefix :=
+%prefix (* gi)
+gi-fut-lex-rule.
+
+pa-fut-prefix :=
+%prefix (* pa)
+pa-fut-lex-rule.
+
+dgos-lex-prefix :=
+%prefix (* dgos)
+dgos-lex-lex-rule.
+
+gis-prefix :=
+%prefix (* gis)
+gis-lex-rule.
+
+mood-suffix1 :=
+%suffix (* da)(* gro)(* ngas)(* gro1s)(* ga)(* pa1dra)
+mood-lex-rule.
+
+pas-interr-suffix :=
+%suffix (* pas)
+pas-interr-lex-rule.
+
+gas-interr-suffix :=
+%suffix (* gas)
+gas-interr-lex-rule.
+
+bas-interr-suffix :=
+%suffix (* bas)
+bas-interr-lex-rule.
+
+ngas-interr-suffix :=
+%suffix (* ngas)
+ngas-interr-lex-rule.
+
+simple-perfect-suffix1 :=
+%suffix (* shag)(* bzhag)(* gzha1)
+simple-perfect-lex-rule.
+
+recent-aspect-prefix1 :=
+%prefix (* gro)(* padaga)(* tsam)
+recent-aspect-lex-rule.
+
+prog-aspect-prefix :=
+%prefix (* mus)
+prog-aspect-lex-rule.
+
+pros-prefix1 :=
+%prefix (* rgyu)(* yag)(* chog)(* grabs)
+pros-lex-rule.
+
+nominalization-suffix1 :=
+%suffix (* po)(* pa)(* ba)(* mkhan)(* yag)(* rgyu)(* rtsis)(* 1dod)(* long)(* thabs)(* re)(* mdog)(* rogs)
+nominalization-lex-rule.
