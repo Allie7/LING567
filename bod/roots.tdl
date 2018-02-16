@@ -9,7 +9,8 @@
 root := sign &
   [ SYNSEM [ NON-LOCAL non-local-none,
              LOCAL [ COORD -,
-                     CAT [ VAL [ SUBJ < >,
+                     CAT [ HEAD.NMZ -, 
+                           VAL [ SUBJ < >,
                                  COMPS < > ],
                            MC +,
                            HEAD verb &

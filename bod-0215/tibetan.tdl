@@ -502,11 +502,16 @@ abs-dat-transitive-verb-lex := transtive-verb-lex-verb-lex &
   [ SYNSEM.LOCAL.CAT.VAL [ SUBJ.FIRST.LOCAL.CAT.HEAD.CASE abs,
                            COMPS.FIRST.LOCAL.CAT.HEAD.CASE dat ] ].
 
+; JC added no arg opt
 yin-verb-lex := transitive-verb-lex &
+  [ SYNSEM.LOCAL.CAT.VAL.COMPS.FIRST.OPT - ] & 
   [ INFLECTED [ YIN-AUX-OR-YIN-VERB-OR-YOD-AUX-OR-YOD-VERB-OR-YOGRED-AUX-OR-YOGRED-VERB-FLAG +,
                 CONTRACTED-RULE-FLAG + ] ].
 
+; JC added no arg opt
+
 red-verb-lex := transitive-verb-lex &
+  [ SYNSEM.LOCAL.CAT.VAL.COMPS.FIRST.OPT - ] &  
   [ INFLECTED.CONTRACTED-RULE-FLAG + ].
 
 yod-verb-lex := intransitive-verb-lex &
