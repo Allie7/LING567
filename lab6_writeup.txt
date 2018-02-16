@@ -1,0 +1,45 @@
+John Cadigan
+Ling 567
+February 14, 2018
+
+Lab 6 Writeup
+
+
+A. Yes-no questions
+
+Yes-no questinons have the correct semantics. The SF value for the verb situation is ques. We have no evidence of a question focus clitic as in Russian.
+
+
+B. Embedded clauses
+
+For the most part, emb
+
+C. Wh-questions
+
+D.
+
+
+F. Coverage and Overgeneration
+
+		Baseline	Current	
+Coverage 	42/80		47/80
+Ambiguity	3.6		1.8
+Overgeneration	1/30		1/30
+
+The coverage has increased thanks in part due to the work on the phenomena this week as well, new phenomena covered and increases in vocabulary. 
+
+Unfortunately, one of our sentences still continues to parse despite our additions of form to the FORM system:
+
+Source: author
+Vetted: f
+Judgment: u
+Phenomena: q
+khyedrang       bodla           phebspas        myongngas
+khyedrang       bod-la          phebs-pas       myong-ngas
+you             Tibet-DAT       go.HON-Q        experiential-Q
+"Have you ever been to Tibet?"
+
+G. Test Corpus
+
+We collected a test corpus from the back of source B. We had our choice of a conversation, a narrative style story, and a synthetic conversation for teaching purposes. We chose the first 10 sentences in a conversation which involve questions and the like. We may add more examples from another discursive quality if this proves too difficult. The lines are like the IGT; we are targeting the translit line.
+

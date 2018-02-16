@@ -31,6 +31,20 @@ nga-s	kho	laska		byed	kyi-yod		mthong	byung
 I-ERG	he.ABS	work.ABS	do	LK-exist	see	PRF
 "I see he is working"
 
+#
+# ending in nominalization
+#
+Source: author
+Vetted: f
+Judgment: u
+Phenomena: emb-d
+kho	laska		byed	kyiyodpa
+kho	laska		byed	kyi-yod-pa
+he.ABS	work.ABS	do	LK-AUX-NMZ
+"He is working"
+
+
+
 
 #
 # Exhibits fronting 
@@ -57,8 +71,6 @@ He-ERG	I.ABS	Tibet-DAT	go.PST-NMZ	know	AUX
 "He knows I went to Tibet"
 
 
-
-
 Source: c:284
 Vetted: s
 Judgment: g
@@ -71,7 +83,6 @@ He-ERG	work.ABS	do.PST-NMZ		start.PST		PRF
 #
 # Example missing nominalization
 #
-
 Source: author
 Vetted: f
 Judgment: u

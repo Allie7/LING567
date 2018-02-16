@@ -55,6 +55,21 @@ chalag	di-gyad		su-s		tshong	pa-red-pa
 thing	this-num 	who-ERG		sell	LK-AUX-Q
 'Who sold the things?'
 
+
+Source: author
+Vetted: s
+Judgement: g
+Phenomena: c, wh
+chalag  digyad 		sus 		tshong	paredpa
+chalag	di-gyad		su-s		tshong	pa-red-pa
+thing	this-num 	who-ERG		sell	LK-AUX-Q
+'Who sold the things?'
+
+
+
+
+
+
 # Source C 285
 #
 # Information questions have the interrogative word in its expected sentence position.
@@ -68,7 +83,7 @@ Phenomena: wh, cl-mod
 slobgra	tsharna		khyedrang	gare	gnangga
 slobgra	tshar-na	khyedrang	gare	gnang-ga
 school	finish-when	you		what	do-Q
-'What will you do when you finish school'
+'What will you do when you finish school?'
 
 
 
@@ -77,7 +92,23 @@ Source: author
 Vetted: f
 Judgment: g
 Phenomena: wo, c,
-sus    stag    bsad    payin
-su-s   stag    bsad    pa-yin
-who-ERG   tiger.ABS   kill.PST  LK-AUX.PRF
+sus		stag		bsad		paredpas
+su-s		stag		bsad		pa-yin-pas
+who-ERG		tiger.ABS	kill.PST	LK-AUX.PRF
 'Who killed the tiger?'
+
+
+Source: author
+Vetted: f
+Judgment: g
+Phenomena: wo, c,
+sus		su	bsad		paredpas
+su-s		su	bsad		pa-yin-pas
+who-ERG		su.ABS	kill.PST	LK-AUX.PRF
+'Who killed whom?'
+
+
+
+
+
+

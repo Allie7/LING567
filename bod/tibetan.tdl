@@ -182,7 +182,7 @@ comp-head-phrase := basic-head-1st-comp-phrase & head-final &
 
 ; JC working on wh questions 2-11
 
-eng-subj-head-phrase := head-valence-phrase & head-compositional & 
+bod-subj-head-phrase := head-valence-phrase & head-compositional & 
               basic-binary-headed-phrase &
   [ SYNSEM phr-synsem & 
            [ LOCAL.CAT [ POSTHEAD +,
@@ -205,7 +205,7 @@ eng-subj-head-phrase := head-valence-phrase & head-compositional &
              REL 0-dlist ] ]].
 
 
-subj-head-phrase := eng-subj-head-phrase & head-final &
+subj-head-phrase := bod-subj-head-phrase & head-final &
   [ HEAD-DTR.SYNSEM.LOCAL.CAT.VAL.COMPS < > ].
 
 
@@ -257,7 +257,6 @@ indic := mood.
 interr := mood.
 emph := mood.
 corrob := mood.
-wh-interr := mood.
 
 ;;;;;;;;;;;;;;;;;;;
 ;;; Lexical Types

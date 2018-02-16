@@ -58,7 +58,7 @@ mood-suffix1 :=
 mood-lex-rule.
 
 pas-interr-suffix :=
-%suffix (* pas)
+%suffix (* pas) (* pa)
 pas-interr-lex-rule.
 
 gas-interr-suffix :=
