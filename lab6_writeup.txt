@@ -106,9 +106,9 @@ Source: author
 Vetted: f
 Judgment: u
 Phenomena: emb-d
-kho     laska           byed    kyiyodmkhan
-kho     laska           byed    kyi-yod-mkhan
-he.ABS  work.ABS        do      LK-AUX-NMZ
+kho     laska           byed    yodmkhan
+kho     laska           byed    yod-mkhan
+he.ABS  work.ABS        do      AUX-NMZ
 "He is working"
 
 C. Wh-questions
@@ -246,18 +246,13 @@ E. Grammar improvements
 
 One thing which helped improve the generation this week was the dramatic reduction of inflection rules in the morphology. 
 
+Between this week and last week, we were able to make the following not parse by
+specifying the FORM becomes finite when a verb is inflected in the interrogative:
 
-F. Coverage and Overgeneration
-
-		Baseline	Current	
-Coverage 	42/80		47/83
-Ambiguity	3.6		2.34
-Overgeneration	1/30		0/31
-
-The coverage has increased thanks in part due to the work on the phenomena this week as well, new phenomena covered and increases in vocabulary. 
-
-Unfortunately, one of our sentences still continues to parse despite our additions of form to the FORM system:
-
+pas-interr-lex-rule := interr-marker-rule-lex-rule &
+  [ SYNSEM.LOCAL.CAT.HEAD.FORM finite  ,
+    DTR.INFLECTED.1DUG-AUX-OR-1DUG-VERB-OR-BYUNG-AUX-OR-SONG-AUX-OR-SONG-VERB-OR-YONG-AUX-FLAG na ].
+ 
 Source: author
 Vetted: f
 Judgment: u
@@ -266,6 +261,22 @@ khyedrang       bodla           phebspas        myongngas
 khyedrang       bod-la          phebs-pas       myong-ngas
 you             Tibet-DAT       go.HON-Q        experiential-Q
 "Have you ever been to Tibet?"
+
+F. Coverage and Overgeneration
+
+		Baseline	Current	
+Coverage 	47/83		47/83
+Ambiguity	1.81		2.34
+Overgeneration	1/31		0/31
+
+One reason that ambiguity has increased is that we now have issues with the wh-in-situ clause firing because mood is underspecified--we have interr specified but that will still unify with the underspecified "mood". With a forthcoming major refactoring of the grammar, we will have an obligatory succession of verb inflection rules which will allow us to take care of the underspecification issues.   
+Another way in which ambiguity has increased is that the wh-pronoun seems to optionally go through the possessive inflection rule.
+
+
+
+
+
+
 
 G. Test Corpus
 
