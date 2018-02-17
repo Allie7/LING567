@@ -12,12 +12,12 @@ SPECI : SPECI
   * <> *
 
 SF : SF
-  prop <> prop
   ques <> ques
   prop-or-ques >> prop-or-ques
   prop << prop-or-ques
   comm <> comm
-  * <> *
+  * >> prop
+  prop << *
 
 COG-ST : COG-ST
   type-id <> type-id
@@ -72,4 +72,5 @@ E.MOOD : E.MOOD
   apparent <> apparent
   possible <> possible
   wh_interr <> wh_interr
-  indic <> indic
+  * >> indic
+  indic << [e]

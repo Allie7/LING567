@@ -1345,7 +1345,8 @@ interr-marker-rule-lex-rule := mood-marker-lex-rule-super &
                                    SF ques ] ].
 
 indic-marker-rule-lex-rule := mood-marker-lex-rule-super &
-  [ SYNSEM.LOCAL.CONT.HOOK.INDEX [ E.MOOD indic]].
+  [ SYNSEM.LOCAL.CONT.HOOK.INDEX [ E.MOOD indic,
+				   SF prop ]].
 
 wh_interr-marker-rule-lex-rule := mood-marker-lex-rule-super &
   [ SYNSEM.LOCAL.CONT.HOOK.INDEX [ E.MOOD wh_interr,
