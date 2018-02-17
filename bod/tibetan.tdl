@@ -40,8 +40,6 @@ coord-phrase :+ [ SYNSEM.LOCAL.CAT.HEAD.NMZ #nmz,
 unary-bottom-coord-rule :+ [ SYNSEM.LOCAL.CAT.HEAD.NMZ #nmz,
     ARGS < [ SYNSEM.LOCAL.CAT.HEAD.NMZ #nmz ] > ].
 
-
-
 inflected :+ [ 1DRA-AUX-OR-1DUG-AUX-OR-BYUNG-AUX-OR-MED-AUX-OR-MYONG-AUX-OR-RYGUIN-AUX-OR-SONG-AUX-OR-YOD-AUX-OR-YOGRED-AUX-OR-YONG-AUX-FLAG luk,
     1DUG-AUX-OR-MAN-AUX-OR-RED-AUX-OR-YIN-AUX-FLAG luk,
     1DUG-AUX-OR-1DUG-VERB-OR-MAN-AUX-OR-MED-AUX-OR-RED-AUX-OR-RED-VERB-OR-SONG-AUX-OR-SONG-VERB-OR-YIN-AUX-OR-YIN-VERB-OR-YOD-AUX-OR-YOD-VERB-OR-YOGMARED-AUX-OR-YOGRED-AUX-OR-YOGRED-VERB-OR-YONG-AUX-FLAG luk,
@@ -260,7 +258,6 @@ indic := mood.
 interr := mood.
 emph := mood.
 corrob := mood.
-wh_interr := mood.
 apparent := mood.
 possible := mood.
 
@@ -273,7 +270,7 @@ possible := mood.
 
 ;; JC 2-11 for wh questions
 
-wh-pronoun-noun-lex := case-marker-rule-dtr & possessive-rule-lex-rule-dtr & norm-hook-lex-item & basic-icons-lex-item & 
+wh-pronoun-noun-lex :=  case-marker-rule-dtr & possessive-rule-lex-rule-dtr & norm-hook-lex-item & basic-icons-lex-item & 
   [ SYNSEM [ LOCAL [ CAT [ HEAD noun,
 			   VAL [ SPR < >,
 				 SUBJ < >,
@@ -293,7 +290,7 @@ wh-pronoun-noun-lex := case-marker-rule-dtr & possessive-rule-lex-rule-dtr & nor
 wh-int-cl := clause & head-compositional &  head-only &
   [ SYNSEM [ LOCAL [ CAT [ VAL #val,
 			 MC bool ],
-		     CONT.HOOK.INDEX.E.MOOD wh_interr ],
+		     CONT.HOOK.INDEX.E.MOOD interr ],
 	     NON-LOCAL non-local-none ],
     C-CONT [ RELS <! !>,
 	     HCONS <! !>,
@@ -1328,6 +1325,7 @@ pas-interr-lex-rule := interr-marker-rule-lex-rule &
   [ SYNSEM.LOCAL.CAT.HEAD.FORM finite  , 
     DTR.INFLECTED.1DUG-AUX-OR-1DUG-VERB-OR-BYUNG-AUX-OR-SONG-AUX-OR-SONG-VERB-OR-YONG-AUX-FLAG na ].
 
+
 gas-interr-lex-rule := interr-marker-rule-lex-rule &
   [ DTR.INFLECTED.BYUNG-AUX-OR-MAN-AUX-OR-MED-AUX-OR-RED-AUX-OR-RED-VERB-OR-SONG-AUX-OR-SONG-VERB-OR-YIN-AUX-OR-YIN-VERB-OR-YOD-AUX-OR-YOD-VERB-OR-YOGMARED-AUX-OR-YOGRED-AUX-OR-YOGRED-VERB-OR-YONG-AUX-FLAG na ].
 
@@ -1350,11 +1348,6 @@ interr-marker-rule-lex-rule := mood-marker-lex-rule-super &
 indic-marker-rule-lex-rule := mood-marker-lex-rule-super &
   [ SYNSEM.LOCAL.CONT.HOOK.INDEX [ E.MOOD indic,
 				   SF prop ]].
-
-wh_interr-marker-rule-lex-rule := mood-marker-lex-rule-super &
-  [ SYNSEM.LOCAL.CONT.HOOK.INDEX [ E.MOOD wh_interr,
-				   SF ques ] ].
-
 
 aspect-marker-suffixes-lex-rule-super := add-only-no-ccont-rule & infl-lex-rule &
   [ INFLECTED #infl,

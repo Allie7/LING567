@@ -91,20 +91,20 @@ school	finish-when	you		what	do-Q
 Source: author
 Vetted: f
 Judgment: g
-Phenomena: wo, c,
+Phenomena: wh, c,
 sus		stag		bsad		paredpas
 su-s		stag		bsad		pa-yin-pas
-who-ERG		tiger.ABS	kill.PST	LK-AUX.PRF
+who-ERG		tiger.ABS	kill.PST	LK-AUX.PRF-INTERR
 'Who killed the tiger?'
 
 
 Source: author
 Vetted: f
 Judgment: g
-Phenomena: wo, c,
+Phenomena: wh, c,
 sus		su	bsad		paredpas
 su-s		su	bsad		pa-yin-pas
-who-ERG		su.ABS	kill.PST	LK-AUX.PRF
+who-ERG		su.ABS	kill.PST	LK-AUX.PRF-INTERR
 'Who killed whom?'
 
 

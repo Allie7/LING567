@@ -69,10 +69,6 @@ corrob-suffix :=
 %suffix (* pa)(* ga)(* nga)
 corrob-marker-rule-lex-rule.
 
-wh_interr-suffix :=
-%suffix (* pa)
-wh_interr-marker-rule-lex-rule.
-
 pas-interr-suffix :=
 %suffix (* pas) (* pa)
 pas-interr-lex-rule.

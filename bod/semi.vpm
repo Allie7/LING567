@@ -71,6 +71,8 @@ E.MOOD : E.MOOD
   corrob <> corrob
   apparent <> apparent
   possible <> possible
-  wh_interr <> wh_interr
+  indic <> indic
   * >> indic
-  indic << [e]
+  indic << *
+
+

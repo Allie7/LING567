@@ -97,7 +97,7 @@ root := sign &
 +                     CAT [ HEAD.NMZ -, 
 +                           VAL [ SUBJ < >,
 
-We added a corresponding testsuite item:
+We added a corresponding testsuite item--"pa", the most common nominalization suffix would create a grammatical interrogative sentence:
 
 #
 # ending in nominalization
@@ -106,8 +106,8 @@ Source: author
 Vetted: f
 Judgment: u
 Phenomena: emb-d
-kho     laska           byed    kyiyodpa
-kho     laska           byed    kyi-yod-pa
+kho     laska           byed    kyiyodmkhan
+kho     laska           byed    kyi-yod-mkhan
 he.ABS  work.ABS        do      LK-AUX-NMZ
 "He is working"
 
@@ -115,23 +115,23 @@ C. Wh-questions
 
 In Tibetan, wh questions are formulated in-situ with the pronouns undergoing through case declension with an interrogative mood marker on the last verb. To implement this, we followed the instructions. 
 
-We added wh-pronouns:
+We added wh-pronouns and made them go through the case marking and possessive rules for the sake of consistency with other nouns--we do not have evidence that the wh-pronouns can be plural:
 
-wh-pronoun-noun-lex := norm-hook-lex-item & basic-icons-lex-item & 
+wh-pronoun-noun-lex := case-marker-rule-dtr & possessive-rule-lex-rule-dtr & norm-hook-lex-item & basic-icons-lex-item &
   [ SYNSEM [ LOCAL [ CAT [ HEAD noun,
-			   VAL [ SPR < >,
-				 SUBJ < >,
-				 COMPS < >,
-				 SPEC < > ] ],
-		     CONT [ HOOK.INDEX.PNG.PER 3rd,
-	                    RELS <! [ LBL #larg,
-				       ARG0 #ind & ref-ind ],
-				  [ PRED "wh_q_rel",
-				    ARG0 #ind,
-				    RSTR #harg ] !>,
-			    HCONS <! [ HARG #harg,
-				        LARG #larg ] !> ] ],
-	     NON-LOCAL.QUE <! #ind !> ] ].
+                           VAL [ SPR < >,
+                                 SUBJ < >,
+                                 COMPS < >,
+                                 SPEC < > ] ],
+                     CONT [ HOOK.INDEX.PNG.PER 3rd,
+                            RELS <! [ LBL #larg,
+                                       ARG0 #ind & ref-ind ],
+                                  [ PRED "wh_q_rel",
+                                    ARG0 #ind,
+                                    RSTR #harg ] !>,
+                            HCONS <! [ HARG #harg,
+                                        LARG #larg ] !> ] ],
+             NON-LOCAL.QUE <! #ind !> ] ].
 
 su := wh-pronoun-noun-lex &
   [ STEM < "su" >,
@@ -216,7 +216,7 @@ Based on this, we created what we suppose are simpler, grammatical questions
 Source: author
 Vetted: f
 Judgment: g
-Phenomena: wo, c,
+Phenomena: wh, c,
 sus             stag            bsad            paredpas
 su-s            stag            bsad            pa-yin-pas
 who-ERG         tiger.ABS       kill.PST        LK-AUX.PRF
@@ -227,10 +227,10 @@ We suppose the following is accurate, but it doesn't parse; there was a unificat
 Source: author
 Vetted: f
 Judgment: g
-Phenomena: wo, c,
+Phenomena: wh, c,
 sus             su      bsad            paredpas
 su-s            su      bsad            pa-yin-pas
-who-ERG         su.ABS  kill.PST        LK-AUX.PRF
+who-ERG         whom.ABS  kill.PST        LK-AUX.PRF
 'Who killed whom?'
 
 Since it is considered optional, we focused on other things.
@@ -247,15 +247,12 @@ E. Grammar improvements
 One thing which helped improve the generation this week was the dramatic reduction of inflection rules in the morphology. 
 
 
-
-
-
 F. Coverage and Overgeneration
 
 		Baseline	Current	
-Coverage 	42/80		47/80
-Ambiguity	3.6		1.8
-Overgeneration	1/30		1/30
+Coverage 	42/80		47/83
+Ambiguity	3.6		2.34
+Overgeneration	1/30		0/31
 
 The coverage has increased thanks in part due to the work on the phenomena this week as well, new phenomena covered and increases in vocabulary. 
 
