@@ -6,7 +6,7 @@ Lab 6 Writeup
 
 A. Yes-no questions
 
-Yes-no questinons have the appropriate MRS. The SF value for the verb situation is ques. We have no evidence of a question focus clitic as in Russian ("li").
+Yes-no questinons have the appropriate MRS. The SF value for the verb situation is ques. We have no evidence of a question focus clitic as in Russian ("li"). The following uses a transitive verb to simulate a copular one:
 
 Source: c:285
 Vetted: s
@@ -33,7 +33,7 @@ B. Embedded clauses
 
 For the most part, embedded clauses are the same since we have not found examples of embedded interrogative complementary clauses. According to source B (108) and IGT in source E (136), the verb for ask and say is the same "zhu". The following IGT examples illustrating speech are not part of the testsuite and will not parse.
 
-Source: c:118
+Source: b:118
 Vetted: s
 Judgment: g
 Phenomena: speech
@@ -44,7 +44,7 @@ I	come	LK-AUX	say
 
 Furthermore, source D claims that form-wise indirect and direct speech are the same and that there are circumstances of "hybrid" reported speech which involves the use of the honorific system. Source B illustrates example of this in which an honorific verb and direct speech are used but mutually understood to indicate that those '"quoted" words' were not used because of lower honorific status of the speaker:
 
-Source: c:217
+Source: b:217
 Vetted: s
 Judgment: g
 Phenomena: speech
@@ -106,9 +106,9 @@ Source: author
 Vetted: f
 Judgment: u
 Phenomena: emb-d
-kho     laska           byed    kyiyodmkhan
-kho     laska           byed    kyi-yod-mkhan
-he.ABS  work.ABS        do      LK-AUX-NMZ
+kho     laska           byed    yodmkhan
+kho     laska           byed    yod-mkhan
+he.ABS  work.ABS        do      AUX-NMZ
 "He is working"
 
 C. Wh-questions
@@ -317,6 +317,8 @@ pas-interr-lex-rule := interr-marker-rule-lex-rule &
   [ SYNSEM.LOCAL.CAT.HEAD.FORM finite  ,
     DTR.INFLECTED.1DUG-AUX-OR-1DUG-VERB-OR-BYUNG-AUX-OR-SONG-AUX-OR-SONG-VERB-OR-YONG-AUX-FLAG na ].
  
+Eliminating parses from this example:
+
 Source: author
 Vetted: f
 Judgment: u
@@ -331,12 +333,14 @@ F. Coverage and Overgeneration
 		Baseline	Current	
 Coverage 	47/83		48/83
 Ambiguity	1.81		2.34
-Overgeneration	1/31		0/31
+Overgeneration	2/31		0/31
 
 One reason that ambiguity has increased is that we now have issues with the wh-in-situ clause firing because mood is underspecified--we have interr specified but that will still unify with the underspecified "mood". With a forthcoming major refactoring of the grammar, we will have an obligatory succession of verb inflection rules which will allow us to take care of the underspecification issues.   
 Another way in which ambiguity has increased is that the wh-pronoun seems to optionally go through either of the possessive inflection rules. Ideally, it would behave like nouns and go through the rule obligatorily.
 
+Besides not parsing the sentence due to specifying FORM, we are also not parsing the previously mentioned negative nominalization example.
 
+Since we are parsing at least two more wh-question sentences, this means that a few no longer parse--we have not been able to track them down.
 
 
 
