@@ -899,6 +899,8 @@ adverb-adj-lex := basic-adverb-lex & intersective-mod-lex &
 
 
 
+
+
 ;;; Intensifier: can work on adverbs and adjectives
 ;intense-lex := adj-lex & intersective-mod-lex
 ;  [ SYNSEM [ LOCAL [ CAT [ HEAD.MOD < [ LOCAL.CAT.HEAD intersective-mod-lex ]>,
