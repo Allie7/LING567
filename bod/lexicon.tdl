@@ -401,6 +401,10 @@ bsdad_2 := abs-dat-transitive-verb-lex &
 phyin := abs-dat-transitive-verb-lex &
   [ STEM < "phyin" >,
     SYNSEM.LKEYS.KEYREL.PRED "_go_v_rel" ].
+    
+bzhugs := transtive-verb-lex-verb-lex &
+  [ STEM < "bzhugs" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_fall_v_rel"].
 
 1gro_2 := abs-dat-transitive-verb-lex &
   [ STEM < "1gro" >,

@@ -137,11 +137,13 @@ su := wh-pronoun-noun-lex &
   [ STEM < "su" >,
     SYNSEM.LKEYS.KEYREL.PRED "_person_n_rel" ].
 
-We added the wh-int-cl clause:
+
+We added the wh-int-cl clause and specified the mood to be wh_interr(interr):
 
 wh-int-cl := clause & head-compositional &  head-only &
   [ SYNSEM [ LOCAL.CAT [ VAL #val,
-			 MC bool ],
+			 MC bool,
++			 CONT.HOOK.INDEX.E.MOOD wh_interr ],
 	     NON-LOCAL non-local-none ],
     C-CONT [ RELS <! !>,
 	     HCONS <! !>,
@@ -237,14 +239,78 @@ Since it is considered optional, we focused on other things.
 
 We have not been able to find instances of question pronouns in lower clauses, so we do not model it.
 
-
 D. One corpus sentence
 
+This week we manage to make the following sentence to parse. 
+
+#2
+Source: b:275
+Vetted: s
+Judgment: g
+Phenomena:adj
+bodla		zhedrag	grangmo		yogred
+bod-la		zhedrag	grang-mo	yogred
+Tibet-DAT	very	cold-NMZ	exist
+"It's very cold in Tibet (Tibetan is very cold)"
+
+We already have copular verbs and adjectives in last week's grammar, so the only thing we need to add is an adverb type that modifies adjectives:
+
+adverb-adj-lex := basic-adverb-lex & intersective-mod-lex &
+  [ SYNSEM [ LOCAL [ CAT [ HEAD.MOD < [ LOCAL.CAT.HEAD adj ]>,
+			   VAL [ SPR < >,
+				 SUBJ < >,
+				 COMPS < >,
+				 SPEC < > ]]]]].
 
 
 E. Grammar improvements
 
-One thing which helped improve the generation this week was the dramatic reduction of inflection rules in the morphology. 
+One thing which helped improve the generation this week was the dramatic reduction of inflection rules in the morphology. Now, we have limited generations for most of the sentences we parsed. We did the following:
+
+1. Collapse all the different forms of affixes that has the same funtion into one:
+
+emph-suffix :=
+%suffix (* ga)(* da)(* nga)
+emph-marker-rule-lex-rule.
+
+2. Further specify the singular number marker rule:
+
+singular-pron-rule-lex-rule := const-lex-rule & pron-num-marker-lex-rule-super &
+   [ SYNSEM.LOCAL.CONT.HOOK.INDEX.PNG.NUM sg ].
+
+3. Making aspect-suffixes rule to be finite as well temporarily. According to our observation, the aux/verb with simple perfect aspect also appears at the right most:
+
+#
+# Perfective verb
+#
+Source: b:160
+Vetted: s
+Judgment: g
+Phenomena: wo, c, tam
+khong  nangla   bzhugsshag
+khong nang-la  bzhugs-shag
+3SG inside-DAT fall-PRF
+'She is at home.'
+
+tdl snippets:
+
+aspect-marker-suffixes-lex-rule-super := add-only-no-ccont-rule & infl-lex-rule &
+  [ INFLECTED #infl,
++   SYNSEM.LOCAL.CAT [ HEAD.FORM finite ], 
+    DTR aspect-marker-suffixes-rule-dtr &
+        [ INFLECTED #infl ] ].
+
+4. we also tried adding no-tense feature and no-aspect features and setting them to default by modifying the semi.vpm file like the following. But doing this has not brought improvements, so we changed them back:
+
+ E.ASPECT : E.ASPECT
+    prf <> prf
+    rec <> rec
+    pros <> pros
+    prog <> prog
+    no-aspect >> *
+    * << no-aspect
+
+5. We have also implemented a refactored grammar, adding empty tam marker rules and making all the tam inflections obligatory. However, doing this has significantly increased the ambiguity and reduced our coverge. However, doing this may further reduce our generation with what we tried in step 4. We gave up this version temporarily due to the limited time.
 
 Between this week and last week, we were able to make the following not parse by
 specifying the FORM becomes finite when a verb is inflected in the interrogative:
