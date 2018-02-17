@@ -121,9 +121,6 @@ head-adj-int-phrase :+ [ NON-HEAD-DTR.SYNSEM.LOCAL.CAT [ HEAD.POSSESSOR nonposse
                                     POSSESSUM nonpossessive ] ].
 
 ;Added for adverbs
-adj-head-int-phrase := adj-head-phrase & isect-mod-phrase &
-  [ NON-HEAD-DTR.SYNSEM.LOCAL.CAT [ POSTHEAD - ] ].
-
 
 adj-head-int-phrase :+ [ NON-HEAD-DTR.SYNSEM.LOCAL.CAT [ HEAD.POSSESSOR nonpossessive,
                                     POSSESSUM nonpossessive ] ].
@@ -876,6 +873,8 @@ adverb-lex := basic-adverb-lex & intersective-mod-lex &
 				 SUBJ < >,
 				 COMPS < >,
 				 SPEC < > ]]]]].
+
+
 
 
 
