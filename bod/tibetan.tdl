@@ -40,6 +40,8 @@ coord-phrase :+ [ SYNSEM.LOCAL.CAT.HEAD.NMZ #nmz,
 unary-bottom-coord-rule :+ [ SYNSEM.LOCAL.CAT.HEAD.NMZ #nmz,
     ARGS < [ SYNSEM.LOCAL.CAT.HEAD.NMZ #nmz ] > ].
 
+
+
 inflected :+ [ 1DRA-AUX-OR-1DUG-AUX-OR-BYUNG-AUX-OR-MED-AUX-OR-MYONG-AUX-OR-RYGUIN-AUX-OR-SONG-AUX-OR-YOD-AUX-OR-YOGRED-AUX-OR-YONG-AUX-FLAG luk,
     1DUG-AUX-OR-MAN-AUX-OR-RED-AUX-OR-YIN-AUX-FLAG luk,
     1DUG-AUX-OR-1DUG-VERB-OR-MAN-AUX-OR-MED-AUX-OR-RED-AUX-OR-RED-VERB-OR-SONG-AUX-OR-SONG-VERB-OR-YIN-AUX-OR-YIN-VERB-OR-YOD-AUX-OR-YOD-VERB-OR-YOGMARED-AUX-OR-YOGRED-AUX-OR-YOGRED-VERB-OR-YONG-AUX-FLAG luk,
@@ -87,6 +89,8 @@ infl-satisfied :+ [ 1DRA-AUX-OR-1DUG-AUX-OR-BYUNG-AUX-OR-MED-AUX-OR-MYONG-AUX-OR
     BARE-ABS-RULE-OR-DATIVE-LEX-RULE-OR-ERGATIVE-LEX-RULE-OR-INSTRUMENTAL-LEX-RULE-FLAG na-or-+,
     PRON-NUM-MARKER-FLAG na-or-+,
     YIN-AUX-OR-YOD-AUX-OR-YOGRED-AUX-OR-YOGRED-VERB-FLAG na-or-+ ].
+
+;
 
 cat :+ [ POSSESSUM poss ].
 
@@ -243,6 +247,7 @@ aux1-inf := aux1 & nonfinite.
 past := tense.
 present := tense.
 future := tense.
+no-tense := tense.
 
 ;;; Aspect
 
@@ -250,6 +255,7 @@ prf := aspect.
 rec := aspect.
 pros := aspect.
 prog := aspect.
+no-aspect := aspect.
 
 ;;; Mood
 
@@ -257,6 +263,10 @@ indic := mood.
 interr := mood.
 emph := mood.
 corrob := mood.
+wh_interr := mood.
+apparent := mood.
+possible := mood.
+
 
 ;;;;;;;;;;;;;;;;;;;
 ;;; Lexical Types
@@ -284,8 +294,9 @@ wh-pronoun-noun-lex := case-marker-rule-dtr & possessive-rule-lex-rule-dtr & nor
 
 
 wh-int-cl := clause & head-compositional &  head-only &
-  [ SYNSEM [ LOCAL.CAT [ VAL #val,
+  [ SYNSEM [ LOCAL [ CAT [ VAL #val,
 			 MC bool ],
+		     CONT.HOOK.INDEX.E.MOOD wh_interr ],
 	     NON-LOCAL non-local-none ],
     C-CONT [ RELS <! !>,
 	     HCONS <! !>,
@@ -612,7 +623,7 @@ red-aux-lex := subj-raise-aux-no-pred &
                 1DUG-AUX-OR-MAN-AUX-OR-RED-AUX-OR-YIN-AUX-FLAG +,
                 1DUG-AUX-OR-1DUG-VERB-OR-MAN-AUX-OR-MED-AUX-OR-RED-AUX-OR-RED-VERB-OR-SONG-AUX-OR-SONG-VERB-OR-YIN-AUX-OR-YIN-VERB-OR-YOD-AUX-OR-YOD-VERB-OR-YOGMARED-AUX-OR-YOGRED-AUX-OR-YOGRED-VERB-OR-YONG-AUX-FLAG +,
                 MAN-AUX-OR-RED-AUX-OR-YIN-AUX-FLAG +,
-                BYUNG-AUX-OR-RED-AUX-OR-SONG-AUX-FLAG + ] ].
+                BYUNG-AUX-OR-RED-AUX-OR-SONG-AUX-FLAG +] ].
 
 ; To keep the semantically empty ones from spinning on
 ; generation, require complement to be [AUX -].  The
@@ -630,7 +641,7 @@ yod-aux-lex := subj-raise-aux-no-pred &
                 1DRA-AUX-OR-1DUG-AUX-OR-BYUNG-AUX-OR-MED-AUX-OR-MYONG-AUX-OR-RYGUIN-AUX-OR-SONG-AUX-OR-YOD-AUX-OR-YOGRED-AUX-OR-YONG-AUX-FLAG +,
                 1DUG-AUX-OR-1DUG-VERB-OR-MAN-AUX-OR-MED-AUX-OR-RED-AUX-OR-RED-VERB-OR-SONG-AUX-OR-SONG-VERB-OR-YIN-AUX-OR-YIN-VERB-OR-YOD-AUX-OR-YOD-VERB-OR-YOGMARED-AUX-OR-YOGRED-AUX-OR-YOGRED-VERB-OR-YONG-AUX-FLAG +,
                 1DUG-AUX-OR-MED-AUX-OR-YOD-AUX-OR-YOGMARED-AUX-OR-YOGRED-AUX-FLAG +,
-                YIN-AUX-OR-YOD-AUX-OR-YOGRED-AUX-OR-YOGRED-VERB-FLAG + ] ].
+                YIN-AUX-OR-YOD-AUX-OR-YOGRED-AUX-OR-YOGRED-VERB-FLAG +] ].
 
 ; To keep the semantically empty ones from spinning on
 ; generation, require complement to be [AUX -].  The
@@ -877,6 +888,14 @@ adverb-lex := basic-adverb-lex & intersective-mod-lex &
 				 COMPS < >,
 				 SPEC < > ]]]]].
 
+;;;Xinyi Ji adverbs for adjectives
+
+adverb-adj-lex := basic-adverb-lex & intersective-mod-lex &
+  [ SYNSEM [ LOCAL [ CAT [ HEAD.MOD < [ LOCAL.CAT.HEAD adj ]>,
+			   VAL [ SPR < >,
+				 SUBJ < >,
+				 COMPS < >,
+				 SPEC < > ]]]]].
 
 
 ;;; Intensifier: can work on adverbs and adjectives
@@ -1131,7 +1150,8 @@ plural-pron-rule-lex-rule := infl-lex-rule & pron-num-marker-lex-rule-super &
   [ DTR.INFLECTED.3RD_PERSON_F_LEX-NOUN-FLAG na,
     SYNSEM.LOCAL.CONT.HOOK.INDEX.PNG.NUM pl ].
 
-singular-pron-rule-lex-rule := const-lex-rule & pron-num-marker-lex-rule-super.
+singular-pron-rule-lex-rule := const-lex-rule & pron-num-marker-lex-rule-super &
+  [ SYNSEM.LOCAL.CONT.HOOK.INDEX.PNG.NUM sg ].
 
 possessive-rule-lex-lex-rule-super := const-lex-rule &
   [ INFLECTED [ POSSESSIVE-RULE-LEX-FLAG +,
@@ -1255,10 +1275,10 @@ negation-marker-rule2-lex-rule := negation-marker-rule-lex-rule &
   [ DTR.INFLECTED.BYUNG-AUX-OR-RED-AUX-OR-SONG-AUX-FLAG na ].
 
 tense-marker-lex-rule-super := add-only-no-ccont-rule & aspect-marker-suffixes-rule-dtr & infl-lex-rule & mood-marker-rule-dtr & nominalizer-marker-rule-dtr &
-  [ INFLECTED #infl,
+  [ INFLECTED #infl ,
     DTR tense-marker-rule-dtr &
         [   INFLECTED #infl &
-                    [ 1DRA-AUX-OR-BYUNG-AUX-OR-INTRANSITIVE-VERB-LEX-VERB-OR-SONG-AUX-OR-TRANSTIVE-VERB-LEX-VERB-OR-YONG-AUX-FLAG na ] ] ].
+                    [ 1DRA-AUX-OR-BYUNG-AUX-OR-INTRANSITIVE-VERB-LEX-VERB-OR-SONG-AUX-OR-TRANSTIVE-VERB-LEX-VERB-OR-YONG-AUX-FLAG na  ] ] ].
 
 past-tense-rule-lex-rule := tense-marker-lex-rule-super &
   [ DTR.INFLECTED.1DUG-AUX-OR-MED-AUX-OR-YOD-AUX-OR-YOGMARED-AUX-OR-YOGRED-AUX-FLAG na,
@@ -1308,7 +1328,17 @@ pas-interr-lex-rule := interr-marker-rule-lex-rule &
 gas-interr-lex-rule := interr-marker-rule-lex-rule &
   [ DTR.INFLECTED.BYUNG-AUX-OR-MAN-AUX-OR-MED-AUX-OR-RED-AUX-OR-RED-VERB-OR-SONG-AUX-OR-SONG-VERB-OR-YIN-AUX-OR-YIN-VERB-OR-YOD-AUX-OR-YOD-VERB-OR-YOGMARED-AUX-OR-YOGRED-AUX-OR-YOGRED-VERB-OR-YONG-AUX-FLAG na ].
 
-mood-lex-rule := mood-marker-lex-rule-super.
+corrob-marker-rule-lex-rule := mood-marker-lex-rule-super &
+  [ SYNSEM.LOCAL.CONT.HOOK.INDEX [ E.MOOD corrob ] ].
+
+emph-marker-rule-lex-rule := mood-marker-lex-rule-super & 
+  [ SYNSEM.LOCAL.CONT.HOOK.INDEX [ E.MOOD emph ] ].
+
+poss-marker-rule-lex-rule := mood-marker-lex-rule-super &
+  [ SYNSEM.LOCAL.CONT.HOOK.INDEX [ E.MOOD possible] ].
+
+apparent-marker-rule-lex-rule := mood-marker-lex-rule-super &
+  [ SYNSEM.LOCAL.CONT.HOOK.INDEX [ E.MOOD apparent ] ].
 
 interr-marker-rule-lex-rule := mood-marker-lex-rule-super &
   [ SYNSEM.LOCAL.CONT.HOOK.INDEX [ E.MOOD interr,
@@ -1317,11 +1347,14 @@ interr-marker-rule-lex-rule := mood-marker-lex-rule-super &
 indic-marker-rule-lex-rule := mood-marker-lex-rule-super &
   [ SYNSEM.LOCAL.CONT.HOOK.INDEX [ E.MOOD indic]].
 
-
+wh_interr-marker-rule-lex-rule := mood-marker-lex-rule-super &
+  [ SYNSEM.LOCAL.CONT.HOOK.INDEX [ E.MOOD wh_interr,
+				   SF ques ] ].
 
 
 aspect-marker-suffixes-lex-rule-super := add-only-no-ccont-rule & infl-lex-rule &
   [ INFLECTED #infl,
+    SYNSEM.LOCAL.CAT [ HEAD.FORM finite ], 
     DTR aspect-marker-suffixes-rule-dtr &
         [ INFLECTED #infl ] ].
 
