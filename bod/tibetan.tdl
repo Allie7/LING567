@@ -270,6 +270,7 @@ prf := aspect.
 rec := aspect.
 pros := aspect.
 prog := aspect.
+no-aspect := aspect.
 
 ;;; Mood
 
@@ -537,16 +538,16 @@ yogmared-verb-lex := intransitive-verb-lex &
   [ INFLECTED [ YIN-AUX-OR-YIN-VERB-OR-YOD-AUX-OR-YOD-VERB-OR-YOGRED-AUX-OR-YOGRED-VERB-FLAG +,
 		CONTRACTED-RULE-FLAG - ] ].
 
-song-verb-lex := abs-intransitive-verb-lex &
-  [ SYNSEM.LOCAL.CONT.HOOK.INDEX.E.TENSE past,
-    INFLECTED [ BYUNG-AUX-OR-SONG-AUX-OR-SONG-VERB-OR-SUPER-MAIN-VERB-LEX-VERB-OR-YONG-AUX-FLAG + ,
-		CONTRACTED-RULE-FLAG + ] ].
+;song-verb-lex := abs-intransitive-verb-lex &
+;  [ SYNSEM.LOCAL.CONT.HOOK.INDEX.E.TENSE past,
+;    INFLECTED [ BYUNG-AUX-OR-SONG-AUX-OR-SONG-VERB-OR-SUPER-MAIN-VERB-LEX-VERB-OR-YONG-AUX-FLAG + ,
+;		CONTRACTED-RULE-FLAG + ] ].
 
 comp-accept-verb-lex := super-main-verb-lex-verb-lex & clausal-verb-lex & clausal-second-arg-trans-lex-item &
-  [ SYNSEM.LOCAL [ CONT.HOOK.INDEX.E.TENSE present,
-                   CAT.VAL.COMPS < [ LOCAL.CAT.HEAD noun &
+   [ SYNSEM.LOCAL [ CAT.VAL.COMPS < [ OPT -, LOCAL.CAT.HEAD noun &
                                                     [ NMZ + ] ] > ],
     INFLECTED.CONTRACTED-RULE-FLAG + ].
+
 
 ;Constraining unspecified transitive for generation purposes
 
@@ -1897,12 +1898,41 @@ non-v-cons := olist & cons &
 non-v-null := non-v-list & null.
 
 
+vp-coord-phrase := event-coord-phrase &
+  [ SYNSEM.LOCAL.CAT [ HEAD verb,
+                       VAL.SUBJ < [ ] > ],
+    LCOORD-DTR.SYNSEM.LOCAL.CAT.HEAD verb & [ FORM finite ],
+    RCOORD-DTR.SYNSEM.LOCAL.CAT.HEAD verb & [ FORM finite ]].
+
+basic-vp-top-coord-rule := vp-coord-phrase &
+  [ C-CONT [ RELS <! !>,
+             HCONS <! !> ]].
+
+basic-vp-mid-coord-rule := vp-coord-phrase &
+  [ SYNSEM.LOCAL.COORD-REL #crel,
+    C-CONT [ RELS <! #crel !>,
+             HCONS <! !> ]].
+
+vp-bottom-coord-phrase := bottom-coord-phrase &
+  [ SYNSEM.LOCAL.CAT [ HEAD verb,
+                       VAL.SUBJ < [ ] > ],
+    NONCONJ-DTR.SYNSEM.LOCAL.CAT [ HEAD verb & [ FORM finite ],
+                                   VAL.SUBJ < [ ] > ]].
+
+
+
 vp2-top-coord-rule := basic-vp-top-coord-rule & apoly-top-coord-rule &
   [ SYNSEM.LOCAL [ CAT.VAL.COMPS non-v-list,
-                   COORD-STRAT "2" ] ].
+                   COORD-STRAT "2" ]].
+;    RCOORD-DTR.SYNSEM.LOCAL.CAT.HEAD.FORM finite,
+;    LCOORD-DTR.SYNSEM.LOCAL.CAT.HEAD.FORM finite] .
+
 
 vp2-bottom-coord-rule := unary-bottom-coord-rule & vp-bottom-coord-phrase &
   [ SYNSEM.LOCAL [ COORD-STRAT "2",
-                   COORD-REL.PRED "_and_coord_rel" ] ].
+                   COORD-REL.PRED "_and_coord_rel" ]].
+;    NONCONJ-DIR.SYNSEM.LOCAL.CAT.HEAD.FORM finite].
+;    LCOORD-DTR.SYNSEM.LOCAL.CAT.HEAD.FORM finite ] .
+
 
 ;

@@ -353,10 +353,6 @@ mthong_1 := transitive-erg-verb-lex-verb-lex &
   [ STEM < "mthong" >,
     SYNSEM.LKEYS.KEYREL.PRED "_see_v_rel" ].
 
-1gobtsugs_1 := transitive-erg-verb-lex-verb-lex &
-  [ STEM < "1gobtsugs" >,
-    SYNSEM.LKEYS.KEYREL.PRED "_start_v_rel" ].
-
 mkhyen_1 := transitive-erg-verb-lex-verb-lex &
   [ STEM < "mkhyen" >,
     SYNSEM.LKEYS.KEYREL.PRED "_know_v_rel" ].
@@ -378,9 +374,9 @@ bzas_2 := transtive-verb-lex-verb-lex &
   [ STEM < "bzas" >,
     SYNSEM.LKEYS.KEYREL.PRED "_eat_v_rel" ].
 
-byed_2 := transtive-verb-lex-verb-lex &
-  [ STEM < "byed" >,
-    SYNSEM.LKEYS.KEYREL.PRED "_do_v_rel" ].
+;byed_2 := transtive-verb-lex-verb-lex &
+;  [ STEM < "byed" >,
+;    SYNSEM.LKEYS.KEYREL.PRED "_do_v_rel" ].
 
 bsags := transtive-verb-lex-verb-lex &
   [ STEM < "bsags" >,
@@ -393,10 +389,6 @@ mkhyen_2 := transtive-verb-lex-verb-lex &
 phebs := abs-dat-transitive-verb-lex &
   [ STEM < "phebs" >,
     SYNSEM.LKEYS.KEYREL.PRED "_go_v_rel" ].
-
-bsdad_2 := abs-dat-transitive-verb-lex &
-  [ STEM < "bsdad" >,
-    SYNSEM.LKEYS.KEYREL.PRED "_stay_v_rel" ].
 
 phyin := abs-dat-transitive-verb-lex &
   [ STEM < "phyin" >,
@@ -447,9 +439,9 @@ yogmared_1 := yogmared-verb-lex &
   [ STEM < "yogmared" >,
     SYNSEM.LKEYS.KEYREL.PRED "_nonexist_v_rel" ].
 
-song_1 := song-verb-lex &
-  [ STEM < "song" >,
-    SYNSEM.LKEYS.KEYREL.PRED "_went_v_rel" ].
+;song_1 := song-verb-lex &
+;  [ STEM < "song" >,
+;    SYNSEM.LKEYS.KEYREL.PRED "_went_v_rel" ].
 
 mthong_2 := comp-accept-verb-lex &
   [ STEM < "mthong" >,
@@ -459,7 +451,7 @@ shes := comp-accept-verb-lex &
   [ STEM < "shes" >,
     SYNSEM.LKEYS.KEYREL.PRED "_know_v_rel" ].
 
-1gobtsugs_2 := comp-accept-verb-lex &
+1gobtsugs_1 := comp-accept-verb-lex &
   [ STEM < "1gobtsugs" >,
     SYNSEM.LKEYS.KEYREL.PRED "_start_v_rel" ].
 

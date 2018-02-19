@@ -63,7 +63,8 @@ E.ASPECT : E.ASPECT
   rec <> rec
   pros <> pros
   prog <> prog
-  no-aspect <> no-aspect
+  * >> no-aspect
+  no-aspect << [e]
 
 E.MOOD : E.MOOD
   interr <> interr
