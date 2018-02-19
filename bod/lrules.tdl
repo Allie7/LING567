@@ -6,3 +6,17 @@ singular-pron-rule-lex := singular-pron-rule-lex-rule.
 poss-gen-lex-lex := poss-gen-lex-lex-rule.
 
 nonposs-lex-lex := nonposs-lex-lex-rule.
+
+empty-polarity-marker-rule-lex := empty-polarity-marker-rule-lex-rule.
+
+contracted-rule-lex := contracted-rule-lex-rule.
+
+empty-tense-marker-rule-lex := empty-tense-marker-rule-lex-rule.
+
+empty-mood-marker-rule-lex := empty-mood-marker-rule-lex-rule.
+
+empty-mood-nonfinite-rule-lex := empty-mood-nonfinite-rule-lex-rule.
+
+empty-aspect-marker-suffix-rule-lex := empty-aspect-marker-suffix-rule-lex-rule.
+
+empty-aspect-prefix-marker-lex := empty-aspect-prefix-marker-lex-rule.

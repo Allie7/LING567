@@ -1,14 +1,13 @@
 ;;; -*- Mode: TDL; Coding: utf-8 -*-
 ;;; Nouns
 
-
 ;;JC 2-11 Wh pronouns
 gare := wh-pronoun-noun-lex &
   [ STEM < "gare" >,
     SYNSEM.LKEYS.KEYREL.PRED "_thing_n_rel" ].
 
 ga := wh-pronoun-noun-lex &
-  [ STEM < "gare" >,
+  [ STEM < "ga" >,
     SYNSEM.LKEYS.KEYREL.PRED "_thing_n_rel" ].
 
 su := wh-pronoun-noun-lex &
@@ -153,7 +152,9 @@ thang := common_noun_lex-noun-lex &
   [ STEM < "thang" >,
     SYNSEM.LKEYS.KEYREL.PRED "_soup_n_rel" ].
 
-
+dgunkha := common_noun_lex-noun-lex &
+  [ STEM <"dgunkha" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_dgunkha_n_rel" ].
 
 
 nga := 1st_person_lex-noun-lex &
@@ -192,6 +193,10 @@ thubbstan := proper_noun_lex-noun-lex &
   [ STEM < "thubbstan" >,
     SYNSEM.LKEYS.KEYREL.PRED "_thubbstan_n_rel" ].
 
+bod := proper_noun_lex-noun-lex &
+  [ STEM < "bod" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_bod_n_rel" ].
+
 blobzang := proper_noun_lex-noun-lex &
   [ STEM < "blobzang" >,
     SYNSEM.LKEYS.KEYREL.PRED "_lobsang_n_rel" ].
@@ -218,9 +223,9 @@ mangpo := nom-adj-verb-lex-adj-lex &
   [ STEM < "mangpo" >,
     SYNSEM.LKEYS.KEYREL.PRED "_many_a_rel" ].
 
-che := nom-adj-verb-lex-adj-lex &
-  [ STEM < "che" >,
-    SYNSEM.LKEYS.KEYREL.PRED "_well_a_rel" ].
+grangmo := nom-adj-verb-lex-adj-lex &
+  [ STEM < "grangmo" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_cold_a_rel" ].
 
 bdepo := nom-adj-verb-lex-adj-lex &
   [ STEM < "bdepo" >,
@@ -237,6 +242,10 @@ mangse := nom-adj-verb-lex-adj-lex &
 yagpo := adverb-lex &
   [ STEM < "yagpo" >,
     SYNSEM.LKEYS.KEYREL.PRED "_well_a_rel" ].
+
+zhedrag := adverb-adj-lex &
+  [ STEM < "zhedrag" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_very_a_rel" ].
 
 hurpo := adverb-lex &
   [ STEM < "hurpo" >,
@@ -279,6 +288,10 @@ bslebs := intransitive-verb-lex-verb-lex &
 gros := intransitive-verb-lex-verb-lex &
   [ STEM < "gros" >,
     SYNSEM.LKEYS.KEYREL.PRED "_go_v_rel" ].
+
+re_1 := intransitive-verb-lex-verb-lex &
+  [ STEM < "re" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_exist_v_rel" ].
 
 bcag := transitive-erg-verb-lex-verb-lex &
   [ STEM < "bcag" >,
@@ -388,6 +401,10 @@ bsdad_2 := abs-dat-transitive-verb-lex &
 phyin := abs-dat-transitive-verb-lex &
   [ STEM < "phyin" >,
     SYNSEM.LKEYS.KEYREL.PRED "_go_v_rel" ].
+    
+bzhugs := transtive-verb-lex-verb-lex &
+  [ STEM < "bzhugs" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_fall_v_rel"].
 
 1gro_2 := abs-dat-transitive-verb-lex &
   [ STEM < "1gro" >,
@@ -519,11 +536,11 @@ kyi := kyi-aux-lex &
 re_2 := copula-verb-lex-cop-lex &
   [ STEM < "re" > ].
 
+yogred_3 := copula-verb-lex-cop-lex &
+  [ STEM < "yogred" > ].
+
 pa := copula-verb-lex-cop-lex &
   [ STEM < "pa" > ].
-
-drags := copula-verb-lex-cop-lex &
-  [ STEM < "drags" >  ].
 
 red_3 := copula-verb-lex-cop-lex &
   [ STEM < "red" > ].

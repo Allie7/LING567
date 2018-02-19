@@ -12,7 +12,6 @@ wh-situ-clause := wh-int-cl.
 
 
 
-
 decl-head-opt-subj := decl-head-opt-subj-phrase.
 
 basic-head-opt-comp := basic-head-opt-comp-phrase.

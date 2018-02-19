@@ -198,26 +198,25 @@ f := gender.
 comp-head-phrase := basic-head-1st-comp-phrase & head-final &
   [ HEAD-DTR.SYNSEM.LOCAL.CAT.HEAD.INIT - ].
 
-subj-head-phrase := decl-head-subj-phrase & head-final &
-  [ HEAD-DTR.SYNSEM.LOCAL.CAT.VAL.COMPS < > ].
-
 ; JC working on wh questions 2-11
 
-eng-subj-head-phrase := head-valence-phrase & head-compositional & 
+bod-subj-head-phrase := head-valence-phrase & head-compositional & 
               basic-binary-headed-phrase &
   [ SYNSEM phr-synsem & 
            [ LOCAL.CAT [ POSTHEAD +,
                  HC-LIGHT -,
                  VAL [ SUBJ < >,
                        COMPS #comps,
-                       SPR #spr ] ] ],
+                       SPR #spr ], 
+                 HEAD.FORM #form & finite ] ],
     C-CONT [ HOOK.INDEX.SF prop-or-ques,
          RELS <! !>,
          HCONS <! !>,
          ICONS <! !> ],
-    HEAD-DTR.SYNSEM.LOCAL.CAT.VAL [ SUBJ < #synsem >,
+    HEAD-DTR.SYNSEM.LOCAL.CAT [ VAL [ SUBJ < #synsem >,
                     COMPS #comps,    
                     SPR #spr ],
+                    HEAD.FORM #form ],
     NON-HEAD-DTR.SYNSEM #synsem & canonical-synsem &
        [ LOCAL [ CAT [ VAL [ SUBJ olist,
                  COMPS olist,
@@ -225,8 +224,7 @@ eng-subj-head-phrase := head-valence-phrase & head-compositional &
          NON-LOCAL [ SLASH 0-dlist & [ LIST < > ],
              REL 0-dlist ] ]].
 
-
-subj-head-phrase := eng-subj-head-phrase & head-final &
+subj-head-phrase := bod-subj-head-phrase & head-final &
   [ HEAD-DTR.SYNSEM.LOCAL.CAT.VAL.COMPS < > ].
 
 
@@ -279,7 +277,6 @@ indic := mood.
 interr := mood.
 emph := mood.
 corrob := mood.
-wh-interr := mood.
 
 ;;;;;;;;;;;;;;;;;;;
 ;;; Lexical Types
@@ -307,13 +304,16 @@ wh-pronoun-noun-lex := case-marker-rule-dtr & possessive-rule-lex-rule-dtr & nor
 
 
 wh-int-cl := clause & head-compositional &  head-only &
-  [ SYNSEM [ LOCAL.CAT [ VAL #val,
-			 MC bool ],
+  [ SYNSEM [ LOCAL [ CAT [ VAL #val,
+			 MC bool,
+                         HEAD.NMZ -],
+             CONT.HOOK.INDEX.E.MOOD interr ],
 	     NON-LOCAL non-local-none ],
     C-CONT [ RELS <! !>,
 	     HCONS <! !>,
 	     HOOK.INDEX.SF ques ],
     HEAD-DTR.SYNSEM [ LOCAL.CAT [ HEAD verb & [ FORM finite ],
+
 				  VAL #val & 
 				    [ SUBJ < >,
 				      COMPS < > ] ],
@@ -496,7 +496,7 @@ obj-dat-trans-verb-lex-verb-lex := transtive-verb-lex-verb-lex &
                            COMPS.FIRST.LOCAL.CAT.HEAD.CASE dat ] ].
 
 transtive-verb-lex-verb-lex := super-main-verb-lex-verb-lex & transitive-verb-lex &
-  [ SYNSEM.LOCAL.CAT.VAL.COMPS.FIRST.OPT - ].
+  [ SYNSEM.LOCAL.CAT.VAL.COMPS.FIRST.OPT + ].
 
 abs-dat-transitive-verb-lex := transtive-verb-lex-verb-lex &
   [ SYNSEM.LOCAL.CAT.VAL [ SUBJ.FIRST.LOCAL.CAT.HEAD.CASE abs,
@@ -618,9 +618,7 @@ subj-raise-aux-no-pred := subj-raise-aux & raise-sem-lex-item &
              [ LOCAL.CAT.HEAD.AUX bool ] > ,
     INFLECTED.CONTRACTED-RULE-FLAG + ].
 
-
 ;;; Xinyi Ji 0209 FORM
-
 
 yin-aux-lex := subj-raise-aux-no-pred &
   [ SYNSEM.LOCAL.CAT [ HEAD.FORM aux2,
@@ -850,7 +848,7 @@ kyi-aux-lex := subj-raise-aux-no-pred &
 
 ;;; Copulas
 
-cop-lex := basic-verb-lex-super & trans-first-arg-raising-lex-item-2 & non-mod-lex-item &
+cop-lex := basic-verb-lex-super & non-mod-lex-item & aspect-marker-suffixes-rule-dtr & mood-marker-rule-dtr & polarity-marker-rule-dtr & tense-marker-rule-dtr & mood-marker-rule-dtr & nominalizer-marker-rule-dtr & trans-first-arg-raising-lex-item-2 &
   [ SYNSEM.LOCAL [ CAT.VAL [ SUBJ < [ LOCAL [ CONT.HOOK.INDEX #xarg,
                                               CAT cat-sat &
                                                   [ VAL [ SPR < >,
@@ -862,7 +860,13 @@ cop-lex := basic-verb-lex-super & trans-first-arg-raising-lex-item-2 & non-mod-l
                                                          COMPS < > ] ] ] >,
                              SPR < >,
                              SPEC < > ],
-                   CONT.HOOK.XARG #xarg ] ].
+                   CONT.HOOK.XARG #xarg ] ,
+    INFLECTED [ MOOD-MARKER-FLAG -,
+                ASPECT-MARKER-SUFFIXES-FLAG -,
+                POLARITY-MARKER-FLAG -,
+                TENSE-MARKER-FLAG -,
+                ASPECT-MARKER-PREFIXES-FLAG - ]] .
+
 
 ; Copula type taking adjectival complements.
 ; Need to define more for additional complement types.
@@ -908,14 +912,15 @@ adverb-lex := basic-adverb-lex & intersective-mod-lex &
 				 SPEC < > ]]]]].
 
 
+;;;Xinyi Ji adverbs for adjectives
 
-;;; Intensifier: can work on adverbs and adjectives
-;intense-lex := adj-lex & intersective-mod-lex
-;  [ SYNSEM [ LOCAL [ CAT [ HEAD.MOD < [ LOCAL.CAT.HEAD intersective-mod-lex ]>,
-;			   VAL [ SPR < >,
-;				 SUBJ < >,
-;				 COMPS < >,
-;				 SPEC < > ]]]]].
+adverb-adj-lex := basic-adverb-lex & intersective-mod-lex &
+  [ SYNSEM [ LOCAL [ CAT [ HEAD.MOD < [ LOCAL.CAT.HEAD adj ]>,
+                           VAL [ SPR < >,
+                                 SUBJ < >,
+                                 COMPS < >,
+                                 SPEC < > ]]]]].
+
 
 
 cardinal-lex := attr-adj-lex.
@@ -1577,8 +1582,9 @@ mood-marker-lex-rule-super := add-only-no-ccont-rule & nominalizer-rule-dtr &
                       BYUNG-AUX-OR-RED-AUX-OR-SONG-AUX-FLAG #byung-aux-or-red-aux-or-song-aux,
                       3RD_PERSON_F_LEX-NOUN-FLAG #3rd_person_f_lex-noun ] ] ].
 
-non-empty-mood-marker-rule-lex-rule := infl-lex-rule & mood-marker-lex-rule-super &
-  [ DTR.INFLECTED.SIMPLE-PERFECT-FLAG na ].
+non-empty-mood-marker-rule-lex-rule := infl-lex-rule & mood-marker-lex-rule-super &  [ SYNSEM.LOCAL.CAT.HEAD.FORM finite & #form, 
+      DTR [ SYNSEM.LOCAL.CAT.HEAD.FORM #form,
+            INFLECTED.SIMPLE-PERFECT-FLAG na ] ].
 
 bas-interr-lex-rule := interr-marker-rule-lex-rule &
   [ DTR.INFLECTED.1DUG-AUX-OR-MAN-AUX-OR-MED-AUX-OR-RED-AUX-OR-SONG-AUX-OR-YIN-AUX-OR-YOD-AUX-OR-YOGMARED-AUX-OR-YOGRED-AUX-OR-YONG-AUX-FLAG na ].
@@ -1598,7 +1604,16 @@ interr-marker-rule-lex-rule := non-empty-mood-marker-rule-lex-rule &
   [ SYNSEM.LOCAL.CONT.HOOK.INDEX [ E.MOOD interr,
                                    SF ques ] ].
 
-empty-mood-marker-rule-lex-rule := const-lex-rule & mood-marker-lex-rule-super.
+empty-mood-marker-rule-lex-rule := const-lex-rule & mood-marker-lex-rule-super &
+  [ SYNSEM.LOCAL[ CAT.HEAD.FORM finite, 
+                  CONT.HOOK.INDEX [ E.MOOD indic,
+                                   SF prop ] ]].
+
+empty-mood-nonfinite-rule-lex-rule := const-lex-rule & mood-marker-lex-rule-super &  [ SYNSEM.LOCAL.CAT.HEAD.FORM nonfinite & #form,
+      DTR [ SYNSEM.LOCAL.CAT.HEAD.FORM #form] ]. 
+
+
+
 
 aspect-marker-suffixes-lex-rule-super := add-only-no-ccont-rule & mood-marker-rule-dtr & nominalizer-rule-dtr &
   [ INFLECTED [ ASPECT-MARKER-SUFFIXES-FLAG +,

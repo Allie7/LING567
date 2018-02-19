@@ -53,24 +53,8 @@ gis-prefix :=
 %prefix (* gis)
 gis-lex-rule.
 
-emph-suffix :=
-%suffix (* ga)(* da)(* nga)
-emph-marker-rule-lex-rule.
-
-apparent-suffix := 
-%suffix (* pa1dra)
-apparent-marker-rule-lex-rule.
-
-poss-suffix :=
-%suffix (* gro)(* gro1s)
-poss-marker-rule-lex-rule.
-
-corrob-suffix :=
-%suffix (* pa)(* ga)(* nga)
-corrob-marker-rule-lex-rule.
-
 pas-interr-suffix :=
-%suffix (* pas) (* pa)
+%suffix (* pas)
 pas-interr-lex-rule.
 
 gas-interr-suffix :=

@@ -15,6 +15,8 @@ empty-tense-marker-rule-lex := empty-tense-marker-rule-lex-rule.
 
 empty-mood-marker-rule-lex := empty-mood-marker-rule-lex-rule.
 
+empty-mood-nonfinite-rule-lex := empty-mood-nonfinite-rule-lex-rule.
+
 empty-aspect-marker-suffix-rule-lex := empty-aspect-marker-suffix-rule-lex-rule.
 
 empty-aspect-prefix-marker-lex := empty-aspect-prefix-marker-lex-rule.

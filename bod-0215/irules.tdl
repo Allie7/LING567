@@ -53,10 +53,6 @@ gis-prefix :=
 %prefix (* gis)
 gis-lex-rule.
 
-mood-suffix1 :=
-%suffix (* da)(* gro)(* ngas)(* gro1s)(* ga)(* pa1dra)
-mood-lex-rule.
-
 pas-interr-suffix :=
 %suffix (* pas)
 pas-interr-lex-rule.
