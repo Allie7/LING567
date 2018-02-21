@@ -123,7 +123,6 @@ basic-bare-np-phrase :+ [ SYNSEM.LOCAL.CAT [ HEAD.POSSESSOR #possessor,
                        POSSESSUM #possessum ],
     HEAD-DTR.SYNSEM.LOCAL.CAT [ HEAD.POSSESSOR #possessor,
                                 POSSESSUM #possessum ] ].
-
 possessive-1 := possessive.
 
 possessor-1 := possessor & possessive-1.
@@ -900,6 +899,21 @@ nom-adj-verb-lex-adj-lex := attr-adj-lex &
 attr-adj-lex := adj-lex & intersective-mod-lex &
   [ SYNSEM.LOCAL.CAT.HEAD.MOD < [ LOCAL.CAT [ HEAD noun,
                                               VAL.SPR cons ] ] > ].
+
+
+
+;;; Prepositions 
+
+;basic-scopal-mod-adposition-lex := basic-mod-adp-lex & scopal-mod-lex.
+;basic-int-mod-adposition-lex := basic-mod-adp-lex & intersective-mod-lex.
+;basic-nomod-adposition-lex := basic-adposition-lex & no-mod-lex & norm-hook-lex-item.
+
+
+preposition-verb-lex := basic-int-mod-adposition-lex & 
+  [ SYNSEM [ LOCAL [ CAT [ HEAD.MOD < [ LOCAL.CAT.HEAD verb ]>,
+                           VAL [ SPR < >,
+                                 SUBJ < >,
+                                 SPEC < > ]]]]].
 
 
 
