@@ -56,14 +56,16 @@ E.TENSE : E.TENSE
   present <> present
   past <> past
   future <> future
-  no-tense <> no-tense
+  * >> no-tense
+  no-tense << [e]
 
 E.ASPECT : E.ASPECT
   prf <> prf
   rec <> rec
   pros <> pros
   prog <> prog
-  no-aspect <> no-aspect
+  * >> no-aspect
+  no-aspect << [e]
 
 E.MOOD : E.MOOD
   interr <> interr
@@ -72,7 +74,9 @@ E.MOOD : E.MOOD
   apparent <> apparent
   possible <> possible
   indic <> indic
-  * >> indic
-  indic << *
+  * >> no-mood
+  no-mood << [e]
+
+
 
 
