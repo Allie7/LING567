@@ -441,9 +441,10 @@ aux-lex := verb-lex &
                 TENSE-MARKER-FLAG -,
                 ASPECT-MARKER-PREFIXES-FLAG - ] ].
 
+
+;  [ SYNSEM.LOCAL [ CONT.HOOK.INDEX.E.TENSE past, 
 intransitive-verb-lex := main-verb-lex & intransitive-lex-item &
-  [ SYNSEM.LOCAL [ CONT.HOOK.INDEX.E.TENSE past,
-                   CAT.VAL.COMPS < >],
+  [ SYNSEM.LOCAL [ CAT.VAL.COMPS < >],
     ARG-ST.FIRST.LOCAL.CAT.HEAD noun ].
 
 
@@ -726,6 +727,7 @@ yogred-aux-lex := subj-raise-aux-no-pred &
 ; but I don't want to rely on this.  Then again, [ AUX - ]
 ; might not be true.
 
+; [ SYNSEM.LOCAL [ CONT.HOOK.INDEX.E [ TENSE past,
 byung-aux-lex := subj-raise-aux-no-pred &
   [ SYNSEM.LOCAL [ CONT.HOOK.INDEX.E [ TENSE past,
                                        ASPECT prf ],
