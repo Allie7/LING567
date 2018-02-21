@@ -442,14 +442,16 @@ aux-lex := verb-lex &
                 ASPECT-MARKER-PREFIXES-FLAG - ] ].
 
 intransitive-verb-lex := main-verb-lex & intransitive-lex-item &
-  [ SYNSEM.LOCAL.CAT.VAL.COMPS < >,
+  [ SYNSEM.LOCAL [ CONT.HOOK.INDEX.E.TENSE past,
+                   CAT.VAL.COMPS < >],
     ARG-ST.FIRST.LOCAL.CAT.HEAD noun ].
 
 
 ;attempt to cut down on overgeneration by specifying tense didn't work
 ;  [ SYNSEM.LOCAL.CONT.HOOK.INDEX.E.TENSE past,
 transitive-verb-lex := main-verb-lex & transitive-lex-item &
-  [ SYNSEM.LOCAL.CAT.VAL.COMPS < #comps >,
+  [ SYNSEM.LOCAL [ CONT.HOOK.INDEX.E.TENSE past,
+                   CAT.VAL.COMPS < #comps >],
     ARG-ST < [ LOCAL.CAT.HEAD noun ],
              #comps &
              [ LOCAL.CAT cat-sat &

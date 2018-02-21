@@ -56,7 +56,8 @@ E.TENSE : E.TENSE
   present <> present
   past <> past
   future <> future
-  no-tense <> no-tense
+  * >> present
+  present << [e]
 
 E.ASPECT : E.ASPECT
   prf <> prf
