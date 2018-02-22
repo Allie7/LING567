@@ -225,8 +225,7 @@ bod-subj-head-phrase := head-valence-phrase & head-compositional &
 
 
 subj-head-phrase := bod-subj-head-phrase & head-final &
-  [ HEAD-DTR.SYNSEM.LOCAL.CAT [ VAL.COMPS < >,
-				HEAD.FORM finite ] ].
+  [ HEAD-DTR.SYNSEM.LOCAL.CAT.VAL.COMPS < > ].
 
 
 ;
@@ -447,7 +446,7 @@ aux-lex := verb-lex &
    INFLECTED [  POLARITY-MARKER-FLAG -,
     	      	ASPECT-MOOD-SUFFIX-FLAG -,
 		TENSE-ASPECT-PREFIX-FLAG -,
-		NON-CONTRACTED-FORM-LEX-FLAG + ] ] .
+		NON-NEGATION-MARKER-FLAG + ] ] .
 
 intransitive-verb-lex := main-verb-lex & intransitive-lex-item &
   [ SYNSEM.LOCAL.CAT.VAL.COMPS < >,
@@ -521,8 +520,7 @@ yin-verb-lex := transitive-verb-lex &
     	      	NON-NEGATION-MARKER-FLAG + ] ].
 
 red-verb-lex := transitive-verb-lex &
-  [ INFLECTED [ RED-FLAG +,
-		NON-CONTRACTED-FORM-LEX-FLAG + ] ].
+  [ INFLECTED [ RED-FLAG + ] ].
 
 yod-verb-lex := intransitive-verb-lex &
   [ INFLECTED [ YOD-FLAG +,
@@ -531,10 +529,6 @@ yod-verb-lex := intransitive-verb-lex &
 1dug-verb-lex := intransitive-verb-lex &
   [ INFLECTED [ 1DUG-FLAG +,
     	      	NON-CONTRACTED-FORM-LEX-FLAG + ] ].
-
-1dra-verb-lex := intransitive-verb-lex & 
-  [ INFLECTED [ 1DRA-FLAG +,
-		NON-CONTRACTED-FORM-LEX-FLAG + ] ].
 
 yogred-verb-lex := intransitive-verb-lex &
   [ INFLECTED [ YOGRED-FLAG +,
@@ -570,10 +564,7 @@ unspec-trans-verb-lex := transitive-verb-lex &
                            COMPS.FIRST.LOCAL.CAT.HEAD.CASE abs ] ] &
   [ SYNSEM.LOCAL [ CONT.HOOK.INDEX.E.TENSE past,
                    CAT.VAL [ SUBJ.FIRST.OPT -,
-                             COMPS.FIRST.OPT - ] ],
-    INFLECTED [ POLARITY-MARKER-FLAG -,
-		ASPECT-MOOD-SUFFIX-FLAG -,
-		NON-CONTRACTED-FORM-LEX-FLAG + ]].
+                             COMPS.FIRST.OPT - ] ] ].
 ;
 
 
@@ -852,13 +843,8 @@ cop-lex := basic-verb-lex-super & trans-first-arg-raising-lex-item-2 & non-mod-l
 adj-comp-copula-verb-lex := cop-lex &
   [ SYNSEM.LOCAL.CAT.VAL.COMPS.FIRST.LOCAL.CAT.HEAD adj ].
 
-copula-verb-lex-cop-lex := adj-comp-copula-verb-lex & polarity-marker-rule-dtr &
-  [ SYNSEM.LOCAL.CONT.HOOK.INDEX.E.TENSE present,
-    INFLECTED [ TENSED-LEX-FLAG +,
-		NON-CONTRACTED-FORM-LEX-FLAG +,
-		POLARITY-MARKER-FLAG -,
-		ASPECT-MOOD-SUFFIX-FLAG -,
-		TENSE-ASPECT-PREFIX-FLAG - ] ].
+copula-verb-lex-cop-lex := adj-comp-copula-verb-lex &
+  [ SYNSEM.LOCAL.CONT.HOOK.INDEX.E.TENSE present ].
 
 question-copula-cop-lex := adj-comp-copula-verb-lex &
   [ SYNSEM.LOCAL.CONT.HOOK.INDEX [ E [ TENSE present,
@@ -1374,7 +1360,7 @@ polarity-marker-lex-rule-super := cont-change-only-lex-rule & tense-aspect-prefi
 ; This adds negative semantics to the verb's
 ; RELS list.
 
-negation-marker-rule-lex-rule := polarity-marker-lex-rule-super & 
+negation-marker-rule-lex-rule := polarity-marker-lex-rule-super & infl-lex-rule &
   [ C-CONT [ HOOK [ XARG #xarg,
                     LTOP #ltop,
                     INDEX #ind ],
@@ -1385,30 +1371,26 @@ negation-marker-rule-lex-rule := polarity-marker-lex-rule-super &
              HCONS <! qeq &
                       [ HARG #harg,
                         LARG #larg ] !> ],
-    SYNSEM.LOCAL.CONT.HOOK.INDEX.E #e,
     SYNSEMLKEYS #lkeys,
-    DTR [ INFLECTED [ NON-NEGATION-MARKER-FLAG na ],
+    DTR [ INFLECTED [ NON-NEGATION-MARKER-FLAG + ],
           SYNSEM [ LKEYS #lkeys,
                    LOCAL [ CONT.HOOK [ XARG #xarg,
                                        INDEX #ind,
-                                       LTOP #larg,
-				       INDEX.E #e ],
+                                       LTOP #larg ],
                            CAT.HEAD verb ] ] ] ].
 
 empty-polarity-marker-rule-lex-rule := const-lex-rule & polarity-marker-lex-rule-super &
-  [ SYNSEM.LOCAL.CONT.HOOK.INDEX.E #e,
-     DTR [ INFLECTED [ CONTRACTED-FORM-LEX-FLAG na ],
-	   SYNSEM.LOCAL.CONT.HOOK.INDEX.E #e ] ].
+  [ DTR.INFLECTED [ CONTRACTED-FORM-LEX-FLAG na ] ].
 
-contracted-rule-lex-rule := negation-marker-rule-lex-rule & const-lex-rule &
-   [ INFLECTED.CONTRACTED-FORM-LEX-FLAG +,
-     DTR [ INFLECTED.NON-CONTRACTED-FORM-LEX-FLAG na ] ].
+;; contracted-rule-lex-rule := negation-marker-rule-lex-rule & const-lex-rule &
+;;   [ INFLECTED.CONTRACTED-FORM-LEX-FLAG +,
+;;     DTR.INFLECTED.NON-CONTRACTED-FORM-LEX-FLAG na ].
 
-negation-marker-rule1-lex-rule := negation-marker-rule-lex-rule & infl-lex-rule &
- [ DTR.INFLECTED [ 1DUG-FLAG na,
+negation-marker-rule1-lex-rule := negation-marker-rule-lex-rule &
+  [ DTR.INFLECTED [ 1DUG-FLAG na,
     		    YONG-FLAG na ] ].
 
-negation-marker-rule2-lex-rule := negation-marker-rule-lex-rule & infl-lex-rule &
+negation-marker-rule2-lex-rule := negation-marker-rule-lex-rule &
   [ DTR.INFLECTED [ BYUNG-FLAG na,
     		    RED-FLAG na,
 		    SONG-FLAG na ] ].
@@ -1483,7 +1465,12 @@ non-empty-prefix-rule := tense-aspect-prefix-lex-rule-super & infl-lex-rule.
    [ DTR.INFLECTED [ ASPECT-LEX-FLAG #aspect-lex,
      		    TENSED-LEX-FLAG #tensed-lex ],
      INFLECTED [ ASPECT-LEX-FLAG #aspect-lex,
-     	        TENSED-LEX-FLAG #tensed-lex ] ].
+     	        TENSED-LEX-FLAG #tensed-lex,
+		YIN-FLAG na,
+		YOD-FLAG na,
+		 RED-FLAG na,
+		 1DRA-FLAG na,
+		 YOGRED-FLAg na ] ].
 
 past-tense-rule-lex-rule := non-empty-prefix-rule &
   [ INFLECTED [ TENSED-LEX-FLAG +,
@@ -1507,13 +1494,12 @@ pa-fut-lex-rule := future-tense-rule-lex-rule &
 gi-fut-lex-rule := future-tense-rule-lex-rule &
   [ INFLECTED [ ASPECT-LEX-FLAG #aspect-lex ],
     DTR.INFLECTED [ YOD-FLAG na,
-		    YIN-FLAG na,
-		    YOD-FLAG na,
     		    ASPECT-LEX-FLAG #aspect-lex ] ].
 
 present-tense-rule-lex-rule := non-empty-prefix-rule &
   [ INFLECTED.TENSED-LEX-FLAG +,
     DTR.INFLECTED [ YIN-FLAG na,
+    		    RED-FLAG na,
 		    NON-PRESENT-INF-FLAG na,
 		    TENSED-LEX-FLAG na ],
     SYNSEM.LOCAL [ CONT.HOOK.INDEX.E.TENSE present ] ].
@@ -1545,7 +1531,7 @@ pros-lex-rule := non-empty-prefix-rule &
 ;;; Form feature specified as finite.
 ;;;
 
-aspect-mood-suffix-lex-rule-super := add-only-no-ccont-rule & nominalizer-marker-rule-dtr &
+aspect-mood-suffix-lex-rule-super := add-only-no-ccont-rule &
   [ INFLECTED [ MAIN-VERB-LEX-FLAG #main-verb-lex,
 	       TENSED-LEX-FLAG #tensed-lex,
 	       ASPECT-LEX-FLAG #aspect-lex,
@@ -1644,36 +1630,35 @@ gas-interr-lex-rule := interr-marker-rule-lex-rule &
 		   YONG-FLAG na,
 		   SONG-FLAG na ] ].
 
-corrob-marker-rule-lex-rule := non-empty-suffix-rule & infl-lex-rule &
+corrob-marker-rule-lex-rule := non-empty-suffix-rule &
   [ SYNSEM.LOCAL.CONT.HOOK.INDEX [ E.MOOD corrob ] ].
 
-emph-marker-rule-lex-rule := non-empty-suffix-rule & infl-lex-rule &
+emph-marker-rule-lex-rule := non-empty-suffix-rule & 
   [ SYNSEM.LOCAL.CONT.HOOK.INDEX [ E.MOOD emph ] ].
 
-poss-marker-rule-lex-rule := non-empty-suffix-rule & infl-lex-rule &
+poss-marker-rule-lex-rule := non-empty-suffix-rule &
   [ SYNSEM.LOCAL.CONT.HOOK.INDEX [ E.MOOD possible] ].
 
-apparent-marker-rule-lex-rule := non-empty-suffix-rule & infl-lex-rule &
+apparent-marker-rule-lex-rule := non-empty-suffix-rule &
   [ SYNSEM.LOCAL.CONT.HOOK.INDEX [ E.MOOD apparent ] ].
 
-interr-marker-rule-lex-rule := non-empty-suffix-rule & infl-lex-rule &
+interr-marker-rule-lex-rule := non-empty-suffix-rule &
   [ SYNSEM.LOCAL.CONT.HOOK.INDEX [ E.MOOD interr,
                                    SF ques ] ].
 
-indic-marker-rule-lex-rule := non-empty-suffix-rule & const-lex-rule &
+indic-marker-rule-lex-rule := non-empty-suffix-rule & 
   [ SYNSEM.LOCAL [ CONT.HOOK.INDEX [ E.MOOD indic,
     				   SF prop ] ] ].
 
-empty-suffix-rule := aspect-mood-suffix-lex-rule-super & const-lex-rule &
-  [ SYNSEM.LOCAL.CAT.HEAD.FORM nonfinite ].
+empty-suffix-rule := aspect-mood-suffix-lex-rule-super & const-lex-rule.
 
 
-simple-perfect-lex-rule := non-empty-suffix-rule & infl-lex-rule &
+simple-perfect-lex-rule := non-empty-suffix-rule &
   [ SYNSEM.LOCAL [ CONT.HOOK.INDEX.E.ASPECT prf ],
     DTR [ SYNSEM.LOCAL.CAT.HEAD.FORM mv,
     	  INFLECTED.ASPECT-LEX-FLAG na ] ].
 
-non-empty-suffix-rule := aspect-mood-suffix-lex-rule-super & 
+non-empty-suffix-rule := aspect-mood-suffix-lex-rule-super & infl-lex-rule &
   [ SYNSEM.LOCAL.CAT.HEAD.FORM finite ].
 
 nominalizer-lex-rule-super := high-or-mid-nominalization-lex-rule & infl-lex-rule &
@@ -1681,11 +1666,7 @@ nominalizer-lex-rule-super := high-or-mid-nominalization-lex-rule & infl-lex-rul
     DTR nominalizer-marker-rule-dtr &
         [ INFLECTED #infl ] ].
 
-nominalization-lex-rule := nominalizer-lex-rule-super &
-   [ SYNSEM.LOCAL.CONT.HOOK.INDEX.E #e,
-     DTR [ SYNSEM.LOCAL [ CONT.HOOK.INDEX.E #e &
-					    [ MOOD indic ],
-			 CAT.HEAD.FORM finite ] ] ].
+nominalization-lex-rule := nominalizer-lex-rule-super.
 
 ;Constraint on MC used to be part of matrix.tdl
 ;;it applies to all wo implementations, except for v2
