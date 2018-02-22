@@ -175,9 +175,9 @@ erg := abs+erg.
 ;;; Person
 
 person := *top*.
-1st := person.
-2nd := person.
-3rd := person.
+first := person.
+second := person.
+third := person.
 
 ;;; Number
 
@@ -292,7 +292,7 @@ wh-pronoun-noun-lex := case-marker-rule-dtr & possessive-rule-lex-rule-dtr & nor
 				 SUBJ < >,
 				 COMPS < >,
 				 SPEC < > ] ],
-		     CONT [ HOOK.INDEX.PNG.PER 3rd,
+		     CONT [ HOOK.INDEX.PNG.PER third,
 	                    RELS <! [ LBL #larg,
 				       ARG0 #ind & ref-ind ],
 				  [ PRED "wh_q_rel",
@@ -355,8 +355,7 @@ head-spec-phrase := basic-head-spec-phrase & head-initial &
                                            [ POSSESSOR nonpossessive ] ] ] ].
 
 common_noun_lex-noun-lex := noun-lex & pron-num-marker-rule-dtr &
-  [ SYNSEM.LOCAL.CONT.HOOK.INDEX.PNG [ PER 3rd,
-                                       NUM sg ],
+  [ SYNSEM.LOCAL.CONT.HOOK.INDEX.PNG [ PER third ],
     INFLECTED [ PRON-NUM-MARKER-FLAG -,
                 CASE-MARKER-FLAG -,
                 POSSESSIVE-RULE-LEX-FLAG - ] ].
@@ -367,7 +366,7 @@ pron-noun-lex := noun-lex & pron-num-marker-rule-dtr &
 
 1st_person_lex-noun-lex := no-spr-noun-lex & pron-noun-lex &
   [ SYNSEM.LOCAL [ CAT.HEAD.PRON +,
-                   CONT.HOOK.INDEX.PNG.PER 1st ],
+                   CONT.HOOK.INDEX.PNG.PER first ],
     INFLECTED [ PRON-NUM-MARKER-FLAG -,
                 CASE-MARKER-FLAG -,
                 POSSESSIVE-RULE-LEX-FLAG - ] ].
@@ -375,27 +374,27 @@ pron-noun-lex := noun-lex & pron-num-marker-rule-dtr &
 3rd_person_m_lex-noun-lex := no-spr-noun-lex & pron-noun-lex &
   [ SYNSEM.LOCAL [ CAT.HEAD.PRON +,
                    CONT.HOOK.INDEX.PNG [ GEND m,
-                                         PER 3rd ] ],
+                                         PER third ] ],
     INFLECTED [ PRON-NUM-MARKER-FLAG -,
                 CASE-MARKER-FLAG -,
                 POSSESSIVE-RULE-LEX-FLAG - ] ].
 
 2nd_person_lex-noun-lex := no-spr-noun-lex & pron-noun-lex &
   [ SYNSEM.LOCAL [ CAT.HEAD.PRON +,
-                   CONT.HOOK.INDEX.PNG.PER 2nd ],
+                   CONT.HOOK.INDEX.PNG.PER second ],
     INFLECTED [ PRON-NUM-MARKER-FLAG -,
                 CASE-MARKER-FLAG -,
                 POSSESSIVE-RULE-LEX-FLAG - ] ].
 
 proper_noun_lex-noun-lex := no-spr-noun-lex &
-  [ SYNSEM.LOCAL.CONT.HOOK.INDEX.PNG [ PER 3rd,
+  [ SYNSEM.LOCAL.CONT.HOOK.INDEX.PNG [ PER third,
                                        NUM sg ],
     INFLECTED [ CASE-MARKER-FLAG -,
                 POSSESSIVE-RULE-LEX-FLAG - ] ].
 
 3rd_person_f_lex-noun-lex := no-spr-noun-lex & pron-noun-lex &
   [ SYNSEM.LOCAL [ CAT.HEAD.PRON +,
-                   CONT.HOOK.INDEX.PNG [ PER 3rd,
+                   CONT.HOOK.INDEX.PNG [ PER third,
                                          GEND f ] ],
     INFLECTED [ PRON-NUM-MARKER-FLAG -,
                 3RD_PERSON_F_LEX-NOUN-FLAG +,
