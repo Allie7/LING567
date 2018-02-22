@@ -10,7 +10,10 @@ adj-head-int := adj-head-int-phrase.
 wh-situ-clause := wh-int-cl.
 ; added for wh questions
 
+;added for adpositions
 
+loc-pp := locative-pp-phrase.
+;
 
 decl-head-opt-subj := decl-head-opt-subj-phrase.
 

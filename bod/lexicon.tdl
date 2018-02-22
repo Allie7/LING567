@@ -26,6 +26,11 @@ dkaryol := common_noun_lex-noun-lex &
   [ STEM < "dkaryol" >,
     SYNSEM.LKEYS.KEYREL.PRED "_cup_n_rel" ].
 
+dgunkha := common_noun_lex-noun-lex &
+  [ STEM < "dgunkha" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_winter_n_rel" ].
+
+
 stag := common_noun_lex-noun-lex &
   [ STEM < "stag" >,
     SYNSEM.LKEYS.KEYREL.PRED "_tiger_n_rel" ].

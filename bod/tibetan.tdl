@@ -141,7 +141,6 @@ head-adj-int-phrase :+ [ NON-HEAD-DTR.SYNSEM.LOCAL.CAT [ HEAD.POSSESSOR nonposse
 adj-head-int-phrase := adj-head-phrase & isect-mod-phrase &
   [ NON-HEAD-DTR.SYNSEM.LOCAL.CAT [ POSTHEAD - ] ].
 
-
 adj-head-int-phrase :+ [ NON-HEAD-DTR.SYNSEM.LOCAL.CAT [ HEAD.POSSESSOR nonpossessive,
                                     POSSESSUM nonpossessive ] ].
 ;
@@ -905,18 +904,28 @@ attr-adj-lex := adj-lex & intersective-mod-lex &
 
 
 
-;;; Prepositions 
-
-;basic-scopal-mod-adposition-lex := basic-mod-adp-lex & scopal-mod-lex.
-;basic-int-mod-adposition-lex := basic-mod-adp-lex & intersective-mod-lex.
-;basic-nomod-adposition-lex := basic-adposition-lex & no-mod-lex & norm-hook-lex-item.
+;;; Adposition 
 
 
-preposition-verb-lex := basic-int-mod-adposition-lex & 
-  [ SYNSEM [ LOCAL [ CAT [ HEAD.MOD < [ LOCAL.CAT.HEAD verb ]>,
-                           VAL [ SPR < >,
-                                 SUBJ < >,
-                                 SPEC < > ]]]]].
+locative-pp-phrase := unary-phrase &
+  [ SYNSEM [ LOCAL.CAT [ HEAD adp & [ MOD < [ LOCAL  intersective-mod & 
+                                                    [ CAT.HEAD verb ] ] > ],
+		          VAL [ COMPS < >,
+			        SUBJ < >, 
+			        SPR < > ]]],
+    C-CONT [ HOOK [ LTOP #ltop,
+		    INDEX #index,
+		    XARG #xarg ],
+	     RELS <! arg12-ev-relation &
+		   [ PRED "_loc_p_rel",
+		     LBL #ltop,
+		     ARG0 #index,
+		     ARG1 #xarg,
+		     ARG2 #dtr ] !>,
+	     HCONS <! !>  ],
+    ARGS < [ SYNSEM.LOCAL [ CAT [ HEAD noun & [CASE dat],
+				  VAL.SPR < > ],
+			    CONT.HOOK [ INDEX #dtr ]]] > ].
 
 
 
