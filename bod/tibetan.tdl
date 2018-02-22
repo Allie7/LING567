@@ -1514,7 +1514,11 @@ gi-fut-lex-rule := future-tense-rule-lex-rule &
 present-tense-rule-lex-rule := non-empty-prefix-rule &
   [ INFLECTED.TENSED-LEX-FLAG +,
     DTR.INFLECTED [ YIN-FLAG na,
+<<<<<<< HEAD
 		    NON-PRESENT-INF-FLAG na,
+=======
+    		    NON-PRESENT-INF-FLAG na,
+>>>>>>> 7218bb2faad6fb50d1b01a30b9a6df4a618eb72b
 		    TENSED-LEX-FLAG na ],
     SYNSEM.LOCAL [ CONT.HOOK.INDEX.E.TENSE present ] ].
 
