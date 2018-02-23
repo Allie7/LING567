@@ -1,0 +1,105 @@
+John Cadigan
+Ling 567
+February 14, 2018
+
+Lab 6 Writeup
+
+A. One more corpus sentence
+
+We decided to parse the question to last week's answer from the corpus: 
+
+Source: b:275
+Vetted: s
+Judgment: g
+Phenomena:q
+bodla           dgunkha         zhedrag grangmo         yogred-bas
+bod-la          dgunkha         zhedrag grang-mo        yogred-bas
+Tibet-DAT       winter.ABS      very    cold-NMZ        exist-INTERR
+"Are winters very cold in Tibet?"
+
+To add this, we needed prepositional phrases, ideally deriveable from case; to do so, we added the locative noun phrase suggested to us on the forums:
+
+locative-pp-phrase := unary-phrase &
+  [ SYNSEM [ LOCAL.CAT [ HEAD adp & [ MOD < [ LOCAL  intersective-mod &
+                                                    [ CAT.HEAD verb ] ] > ],
+                          VAL [ COMPS < >,
+                                SUBJ < >,
+                                SPR < > ]]],
+    C-CONT [ HOOK [ LTOP #ltop,
+                    INDEX #index,
+                    XARG #xarg ],
+             RELS <! arg12-ev-relation &
+                   [ PRED "_loc_p_rel",
+                     LBL #ltop,
+                     ARG0 #index,
+                     ARG1 #xarg,
+                     ARG2 #dtr ] !>,
+             HCONS <! !>  ],
+    ARGS < [ SYNSEM.LOCAL [ CAT [ HEAD noun & [CASE dat],
+                                  VAL.SPR < > ],
+                            CONT.HOOK [ INDEX #dtr ]]] > ].
+
+
+A minor change from the example was required, removing SYNSEM.
+
+  [ SYNSEM [ LOCAL.CAT [ HEAD adp & [ MOD < [ SYNSEM.LOCAL intersective-mod &
+
+With intensifiers and copular verbs in place, the sentence parses and the correct MRS is present. However, there are interpretations which involve the contraction rule which currently introduces negation.
+
+B. Variable property mapping
+
+For MT, we introduced the following changes to VPM. We removed E. from TENSE, ASPECT and MOOD. We removed PNG from PER and NUM.
+
+
+To improve results for generation and MT, we gave reasonable default types for TENSE, ASPECT and MOOD:
+
+  * >> present
+  present << [e]
+
+  * >> no-aspect
+  no-aspect << [e]
+
+  * >> indic
+  indic << [e]
+
+
+C. First MT
+
+To translate, we added the relevant vocabulary and tested translation between Tibetan and English 
+
+D. Grammar improvements
+
+The current grammar includes an obligatory series of case classes on verbs which now make it possible to specify mood. 
+
+With the rules in place, we had to add some rules to prevent the coordination of verbs aux verbs with their complements--we did this by constraining coordination to finite verbs.  
+
++vp-coord-phrase := event-coord-phrase &
++  [ SYNSEM.LOCAL.CAT [ HEAD verb,
++                       VAL.SUBJ < [ ] > ],
++    LCOORD-DTR.SYNSEM.LOCAL.CAT.HEAD verb & [ FORM finite ],
++    RCOORD-DTR.SYNSEM.LOCAL.CAT.HEAD verb & [ FORM finite ]].
+
++vp-bottom-coord-phrase := bottom-coord-phrase &
++  [ SYNSEM.LOCAL.CAT [ HEAD verb,
++                       VAL.SUBJ < [ ] > ],
++    NONCONJ-DTR.SYNSEM.LOCAL.CAT [ HEAD verb & [ FORM finite ],
++                                   VAL.SUBJ < [ ] > ]]
+
+
+
+F. Coverage and Overgeneration
+
+		Baseline	Current	
+Coverage 	47/83		48/83
+Ambiguity	1.81		2.34
+Overgeneration	2/31		0/31
+
+One reason that ambiguity has increased is that we now have issues with the wh-in-situ clause firing because mood is underspecified--we have interr specified but that will still unify with the underspecified "mood". With a forthcoming major refactoring of the grammar, we will have an obligatory succession of verb inflection rules which will allow us to take care of the underspecification issues.   
+Another way in which ambiguity has increased is that the wh-pronoun seems to optionally go through either of the possessive inflection rules. Ideally, it would behave like nouns and go through the rule obligatorily.
+
+Besides not parsing the sentence due to specifying FORM, we are also not parsing the previously mentioned negative nominalization example.
+
+Since we are parsing at least two more wh-question sentences, this means that a few no longer parse--we have not been able to track them down.
+
+
+

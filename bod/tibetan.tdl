@@ -327,6 +327,28 @@ wh-int-cl := clause & head-compositional &  head-only &
 ;end
 
 
+;;; Adposition 
+
+
+locative-pp-phrase := unary-phrase &
+  [ SYNSEM [ LOCAL.CAT [ HEAD adp & [ MOD < [ LOCAL  intersective-mod & 
+                                                    [ CAT.HEAD verb ] ] > ],
+		          VAL [ COMPS < >,
+			        SUBJ < >, 
+			        SPR < > ]]],
+    C-CONT [ HOOK [ LTOP #ltop,
+		    INDEX #index,
+		    XARG #xarg ],
+	     RELS <! arg12-ev-relation &
+		   [ PRED "_loc_p_rel",
+		     LBL #ltop,
+		     ARG0 #index,
+		     ARG1 #xarg,
+		     ARG2 #dtr ] !>,
+	     HCONS <! !>  ],
+    ARGS < [ SYNSEM.LOCAL [ CAT [ HEAD noun & [CASE dat],
+				  VAL.SPR < > ],
+			    CONT.HOOK [ INDEX #dtr ]]] > ].
 
 ;;; Nouns
 
@@ -450,7 +472,8 @@ aux-lex := verb-lex &
 		NON-CONTRACTED-FORM-LEX-FLAG + ] ] .
 
 intransitive-verb-lex := main-verb-lex & intransitive-lex-item &
-  [ SYNSEM.LOCAL.CAT.VAL.COMPS < >,
+  [ SYNSEM.LOCAL.CONT.HOOK.INDEX.E.TENSE present,
+    SYNSEM.LOCAL.CAT.VAL.COMPS < >,
     ARG-ST.FIRST.LOCAL.CAT.HEAD noun ].
 
 
@@ -557,10 +580,16 @@ song-verb-lex := intransitive-verb-lex-verb-lex &
   [ INFLECTED [ SONG-FLAG +,
     	      	NON-NEGATION-MARKER-FLAG + ] ].
 
-comp-accept-verb-lex := clausal-verb-lex & clausal-second-arg-trans-lex-item &
-  [ SYNSEM.LOCAL [ CONT.HOOK.INDEX.E.TENSE present,
-                   CAT.VAL.COMPS < [ LOCAL.CAT.HEAD noun &
-                                                    [ NMZ + ] ] > ] ].
+comp-accept-verb-lex := main-verb-lex & clausal-arg-intrans-lex-item &
+  [ SYNSEM.LOCAL [ CAT.VAL [ COMPS < >,
+			     SPR < >,
+			     SPEC < >,
+			     SUBJ < #subj & [ LOCAL.CAT [ VAL [ SPR < >,
+							      COMPS < >,
+							      SUBJ < > ],
+							  HEAD noun &
+							      [ NMZ + ] ] ] > ] ],
+    ARG-ST < #subj > ].
 
 
 ;Constraining unspecified transitive for generation purposes
@@ -995,7 +1024,7 @@ demonstrative-determiner-lex := determiner-lex-supertype &
 ;;; Lexical Rules
 ;;;;;;;;;;;;;;;;;;;
 
-high-or-mid-nominalization-lex-rule := cat-change-with-ccont-lex-rule & same-cont-lex-rule &
+high-or-mid-nominalization-lex-rule := cat-change-with-ccont-lex-rule & same-cont-lex-rule & same-non-local-lex-rule &
   [ SYNSEM.LOCAL [ CONT.HOOK.INDEX event,
                    CAT [ HEAD verb &
                               [ NMZ +,
@@ -1397,6 +1426,9 @@ negation-marker-rule-lex-rule := polarity-marker-lex-rule-super &
 
 empty-polarity-marker-rule-lex-rule := const-lex-rule & polarity-marker-lex-rule-super &
   [ SYNSEM.LOCAL.CONT.HOOK.INDEX.E #e,
+    C-CONT [ RELS <! !>,
+	     HCONS <! !>,
+	     ICONS <! !> ],
      DTR [ INFLECTED [ CONTRACTED-FORM-LEX-FLAG na ],
 	   SYNSEM.LOCAL.CONT.HOOK.INDEX.E #e ] ].
 
@@ -1695,25 +1727,27 @@ nominalization-lex-rule := nominalizer-lex-rule-super &
 ;;;;;;;;;;;;;;;;;;;
 
 high-no-rel-nominalized-clause-phrase := unary-phrase &
-  [ SYNSEM.LOCAL.CAT [ HEAD noun &
+  [ SYNSEM [ NON-LOCAL #nl,
+	     LOCAL.CAT [ HEAD noun &
                             [ NMZ +,
                               MOD < > ],
                        VAL [ COMPS < >,
                              SUBJ < >,
                              SPR < >,
-                             SPEC < > ] ],
+                             SPEC < > ] ] ], 
     C-CONT [ RELS <!  !>,
              HCONS <!  !>,
              HOOK [ XARG #xarg,
                     LTOP #ltop ] ],
-    ARGS < [ SYNSEM.LOCAL [ CAT [ HEAD verb &
+    ARGS < [ SYNSEM [ NON-LOCAL #nl,
+		      LOCAL [ CAT [ HEAD verb &
                                        [ NMZ + ],
                                   VAL [ COMPS < >,
                                         SUBJ < >,
                                         SPR < >,
                                         SPEC < > ] ],
                             CONT.HOOK [ XARG #xarg,
-                                        LTOP #ltop ] ] ] > ].
+                                        LTOP #ltop ] ] ] ] > ].
 
 head-mod-poss-phrase-1 := basic-head-mod-phrase-simple & head-compositional & head-final &
   [ SYNSEM.LOCAL.CAT [ HEAD +np,
