@@ -1,9 +1,4 @@
 ;;; -*- Mode: TDL; Coding: utf-8 -*-
-;;; Prepositions
-
-bodla := preposition-verb-lex &
-    [ STEM < "la" >,
-    SYNSEM.LKEYS.KEYREL.PRED "_to_p_rel" ].
 
 ;;; Nouns
 
