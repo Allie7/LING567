@@ -173,6 +173,8 @@ gen := case.  ; genitive
 abs+erg := case.
 abs := abs+erg.
 erg := abs+erg.
+loc := case.
+;nominalized := dat & ins & abs & erg & gen.
 
 ;;; Person
 
@@ -305,7 +307,8 @@ wh-pronoun-noun-lex :=  case-marker-rule-dtr & possessive-rule-lex-rule-dtr & no
 				    RSTR #harg ] !>,
 			    HCONS <! [ HARG #harg,
 				        LARG #larg ] !> ] ],
-	     NON-LOCAL.QUE <! #ind !> ] ].
+	     NON-LOCAL.QUE <! #ind !> ],
+    INFLECTED.CASE-MARKER-RULE-FLAG -].
 
 
 wh-int-cl := clause & head-compositional &  head-only &
@@ -346,7 +349,7 @@ locative-pp-phrase := unary-phrase &
 		     ARG1 #xarg,
 		     ARG2 #dtr ] !>,
 	     HCONS <! !>  ],
-    ARGS < [ SYNSEM.LOCAL [ CAT [ HEAD noun & [CASE dat],
+    ARGS < [ SYNSEM.LOCAL [ CAT [ HEAD noun & [ CASE loc ],
 				  VAL.SPR < > ],
 			    CONT.HOOK [ INDEX #dtr ]]] > ].
 
@@ -418,6 +421,12 @@ proper_noun_lex-noun-lex := no-spr-noun-lex &
                                        NUM sg ],
     INFLECTED [ CASE-MARKER-RULE-FLAG -,
                 POSSESSIVE-MARKER-RULE-FLAG - ] ].
+
+time-location-noun-lex := no-spr-noun-lex & 
+  [ SYNSEM.LOCAL.CONT.HOOK.INDEX.PNG [ PER 3rd,
+				       NUM sg],
+    INFLECTED [ CASE-MARKER-RULE-FLAG -,
+		POSSESSIVE-MARKER-RULE-FLAG - ] ].
 
 3rd_person_f_lex-noun-lex := no-spr-noun-lex & pron-noun-lex &
   [ SYNSEM.LOCAL [ CAT.HEAD.PRON +,
@@ -580,7 +589,7 @@ song-verb-lex := intransitive-verb-lex-verb-lex &
   [ INFLECTED [ SONG-FLAG +,
     	      	NON-NEGATION-MARKER-FLAG + ] ].
 
-comp-accept-verb-lex := main-verb-lex & clausal-arg-intrans-lex-item &
+comp-accept-verb-lex := main-verb-lex & clausal-arg-intrans-lex-item & 
   [ SYNSEM.LOCAL [ CAT.VAL [ COMPS < >,
 			     SPR < >,
 			     SPEC < >,
@@ -589,7 +598,8 @@ comp-accept-verb-lex := main-verb-lex & clausal-arg-intrans-lex-item &
 							      SUBJ < > ],
 							  HEAD noun &
 							      [ NMZ + ] ] ] > ] ],
-    ARG-ST < #subj > ].
+    ARG-ST < #subj >,
+    INFLECTED.NON-CONTRACTED-FORM-LEX-FLAG + ].
 
 
 ;Constraining unspecified transitive for generation purposes
@@ -1143,6 +1153,12 @@ dative-lex-rule-lex-rule := case-marker-lex-rule-super & infl-lex-rule &
                     GENITIVE-MARKER-RULE-FLAG #genitive-lex-rule ],
     SYNSEM.LOCAL.CAT.HEAD.CASE dat ].
 
+locative-rule := case-marker-lex-rule-super & infl-lex-rule &
+  [ INFLECTED [ GENITIVE-MARKER-RULE-FLAG #genitive-lex-rule ],
+    DTR time-location-noun-lex & [ INFLECTED [ NOUN-LEX-FLAG +,
+                    GENITIVE-MARKER-RULE-FLAG #genitive-lex-rule ] ],
+    SYNSEM.LOCAL.CAT.HEAD.CASE loc ].
+
 genitive-lex-rule-lex-rule := case-marker-lex-rule-super & infl-lex-rule &
   [ INFLECTED [ GENITIVE-MARKER-RULE-FLAG + ],
     SYNSEM.LOCAL.CAT.HEAD.CASE gen ].
@@ -1296,10 +1312,14 @@ possessive-rule-lex-lex-rule-super := const-lex-rule &
 	       ASPECT-MOOD-SUFFIX-FLAG #aspect-mood-suffix ] ] ].
 
 nonposs-lex-lex-rule := nonpossessive-lex-rule-1 & possessive-rule-lex-lex-rule-super &
-  [ DTR.INFLECTED.CASE-MARKER-RULE-FLAG + ].
+  [ DTR [ INFLECTED.CASE-MARKER-RULE-FLAG +,
+	  SYNSEM.LOCAL.CAT.HEAD.CASE #case ],
+    SYNSEM.LOCAL.CAT.HEAD.CASE #case ].
 
 poss-gen-lex-lex-rule := possessive-rule-lex-lex-rule-super & possessor-lex-rule-1 &
-  [ DTR.INFLECTED.GENITIVE-MARKER-RULE-FLAG + ].
+  [ DTR [ INFLECTED.GENITIVE-MARKER-RULE-FLAG +, 
+	  SYNSEM.LOCAL.CAT.HEAD.CASE #case ],
+    SYNSEM.LOCAL.CAT.HEAD.CASE #case ].
 
 possessor-lex-rule-1 := head-change-with-ccont-lex-rule &
   [ SYNSEM.LOCAL.CAT [ HEAD noun &
@@ -1545,8 +1565,7 @@ gi-fut-lex-rule := future-tense-rule-lex-rule &
 
 present-tense-rule-lex-rule := non-empty-prefix-rule &
   [ INFLECTED.TENSED-LEX-FLAG +,
-    DTR.INFLECTED [ YIN-FLAG na,
-		    NON-PRESENT-INF-FLAG na,
+    DTR.INFLECTED [ NON-PRESENT-INF-FLAG na,
 		    TENSED-LEX-FLAG na ],
     SYNSEM.LOCAL [ CONT.HOOK.INDEX.E.TENSE present ] ].
 
@@ -1714,10 +1733,10 @@ nominalizer-lex-rule-super := high-or-mid-nominalization-lex-rule & infl-lex-rul
         [ INFLECTED #infl ] ].
 
 nominalization-lex-rule := nominalizer-lex-rule-super &
-   [ SYNSEM.LOCAL.CONT.HOOK.INDEX.E #e,
+   [ SYNSEM.LOCAL [ CONT.HOOK.INDEX.E #e ],
      DTR [ SYNSEM.LOCAL [ CONT.HOOK.INDEX.E #e &
 					    [ MOOD indic ],
-			 CAT.HEAD.FORM finite ] ] ].
+			  CAT.HEAD [ FORM finite ] ] ] ].
 
 ;Constraint on MC used to be part of matrix.tdl
 ;;it applies to all wo implementations, except for v2
@@ -1730,7 +1749,8 @@ high-no-rel-nominalized-clause-phrase := unary-phrase &
   [ SYNSEM [ NON-LOCAL #nl,
 	     LOCAL.CAT [ HEAD noun &
                             [ NMZ +,
-                              MOD < > ],
+                              MOD < >,
+			      CASE abs+erg ],
                        VAL [ COMPS < >,
                              SUBJ < >,
                              SPR < >,

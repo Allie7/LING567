@@ -53,9 +53,10 @@ PNG.NUM : NUM
 ;  * <> *
 
 E.TENSE : TENSE
-  present <> present
+
   past <> past
   future <> future
+  present <> present
   * >> no-tense
   no-tense << [e]
 

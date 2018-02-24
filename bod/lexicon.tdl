@@ -20,7 +20,7 @@ khyi := common_noun_lex-noun-lex &
   [ STEM < "khyi" >,
     SYNSEM.LKEYS.KEYREL.PRED "_dog_n_rel" ].
 
-dgunkha := common_noun_lex-noun-lex &
+dgunkha := time-location-noun-lex & common_noun_lex-noun-lex &
   [ STEM < "dgunkha" >,
     SYNSEM.LKEYS.KEYREL.PRED "_winter_n_rel" ].
 
@@ -201,7 +201,7 @@ thubbstan := proper_noun_lex-noun-lex &
   [ STEM < "thubbstan" >,
     SYNSEM.LKEYS.KEYREL.PRED "_thubbstan_n_rel" ].
 
-bod := proper_noun_lex-noun-lex &
+bod := time-location-noun-lex & 
   [ STEM < "bod" >,
     SYNSEM.LKEYS.KEYREL.PRED "_bod_n_rel" ].
 
@@ -209,11 +209,11 @@ blobzang := proper_noun_lex-noun-lex &
   [ STEM < "blobzang" >,
     SYNSEM.LKEYS.KEYREL.PRED "_lobsang_n_rel" ].
 
-bod := proper_noun_lex-noun-lex &
+bod := time-location-noun-lex &
   [ STEM < "bod" >,
     SYNSEM.LKEYS.KEYREL.PRED "_Tibet_n_rel" ].
 
-rgyagar := proper_noun_lex-noun-lex &
+rgyagar := time-location-noun-lex & 
   [ STEM < "rgyagar" >,
     SYNSEM.LKEYS.KEYREL.PRED "_India_n_rel" ].
 
@@ -325,10 +325,6 @@ klog := transitive-erg-verb-lex-verb-lex &
   [ STEM < "klog" >,
     SYNSEM.LKEYS.KEYREL.PRED "_read_v_rel" ].
 
-byed_1 := transitive-erg-verb-lex-verb-lex &
-  [ STEM < "byed" >,
-    SYNSEM.LKEYS.KEYREL.PRED "_do_v_rel" ].
-
 btang := transitive-erg-verb-lex-verb-lex &
   [ STEM < "btang" >,
     SYNSEM.LKEYS.KEYREL.PRED "_write_v_rel" ].
@@ -349,9 +345,6 @@ thsong := transitive-erg-verb-lex-verb-lex &
   [ STEM < "thsong" >,
     SYNSEM.LKEYS.KEYREL.PRED "_sell_v_rel" ].
 
-bzas_1 := transitive-erg-verb-lex-verb-lex &
-  [ STEM < "bzas" >,
-    SYNSEM.LKEYS.KEYREL.PRED "_eat_v_rel" ].
 
 lus := transitive-erg-verb-lex-verb-lex &
   [ STEM < "lus" >,
@@ -406,9 +399,6 @@ phebs := abs-dat-transitive-verb-lex &
   [ STEM < "phebs" >,
     SYNSEM.LKEYS.KEYREL.PRED "_go_v_rel" ].
 
-bsdad_2 := abs-dat-transitive-verb-lex &
-  [ STEM < "bsdad" >,
-    SYNSEM.LKEYS.KEYREL.PRED "_stay_v_rel" ].
 
 phyin := abs-dat-transitive-verb-lex &
   [ STEM < "phyin" >,
@@ -471,7 +461,7 @@ mthong_2 := comp-accept-verb-lex &
   [ STEM < "mthong" >,
     SYNSEM.LKEYS.KEYREL.PRED "_see_v_rel" ].
 
-shes := comp-accept-verb-lex &
+shes := transitive-erg-verb-lex-verb-lex &
   [ STEM < "shes" >,
     SYNSEM.LKEYS.KEYREL.PRED "_know_v_rel" ].
 

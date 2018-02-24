@@ -3741,10 +3741,16 @@ adv-bottom-coord-phrase := bottom-coord-phrase &
 ; VP Coordination rules
 
 vp-coord-phrase := event-coord-phrase &
-  [ SYNSEM.LOCAL.CAT [ HEAD verb,
-    		       VAL.SUBJ < [ ] > ],
-    LCOORD-DTR.SYNSEM.LOCAL.CAT.HEAD verb,
-    RCOORD-DTR.SYNSEM.LOCAL.CAT.HEAD verb ].
+  [ SYNSEM.LOCAL [ CAT [ HEAD verb & [ FORM #form & finite,
+				       AUX #aux ],
+			 VAL.SUBJ < [ ] > ],
+		   CONT.HOOK.INDEX.E #e ],
+    LCOORD-DTR.SYNSEM.LOCAL [ CAT.HEAD verb & [ FORM #form,
+						AUX #aux ],
+			      CONT.HOOK.INDEX.E #e ],
+    RCOORD-DTR.SYNSEM.LOCAL [ CAT.HEAD verb & [ FORM #form,
+						AUX #aux ],
+			      CONT.HOOK.INDEX.E #e ] ].
 
 basic-vp-top-coord-rule := vp-coord-phrase &
   [ C-CONT [ RELS <! !>,
