@@ -142,6 +142,7 @@
 ; output all complete generated results
 ; (setf *bypass-equality-check* t)
 
-(setf *translate-grid* '(:sje :bod))
-(setf *translate-grid* '(:bod :sje))
+(setf *translate-grid* '(:eng :sje :bod))
+(setf *translate-grid* '(:sje :eng :bod))
+
 
