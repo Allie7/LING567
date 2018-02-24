@@ -12,7 +12,7 @@ Source: b:275
 Vetted: s
 Judgment: g
 Phenomena:q
-bodla           dgunkha         zhedrag grangmo         yogred-bas
+bodla           dgunkha         zhedrag grangmo         yogredbas
 bod-la          dgunkha         zhedrag grang-mo        yogred-bas
 Tibet-DAT       winter.ABS      very    cold-NMZ        exist-INTERR
 "Are winters very cold in Tibet?"
@@ -46,6 +46,7 @@ A minor change from the example was required, removing SYNSEM.
 
 With intensifiers and copular verbs in place, the sentence parses and the correct MRS is present. However, there are interpretations which involve the contraction rule which currently introduces negation.
 
+
 B. Variable property mapping
 
 For MT, we introduced the following changes to VPM. We removed E. from TENSE, ASPECT and MOOD. We removed PNG from PER and NUM.
@@ -53,8 +54,8 @@ For MT, we introduced the following changes to VPM. We removed E. from TENSE, AS
 
 To improve results for generation and MT, we gave reasonable default types for TENSE, ASPECT and MOOD:
 
-  * >> present
-  present << [e]
+  * >> no-tense
+  no-tense << [e]
 
   * >> no-aspect
   no-aspect << [e]
@@ -69,6 +70,134 @@ To translate, we added the relevant vocabulary and tested translation between Ti
 
 D. Grammar improvements
 
+1.
+In our previous grammar, verb inflections are not obligatory, and there were six of verb inflection position classes: sorted by order: polarity-marker(prefix), tense(prefix), aspect(prefix), aspect(suffix), mood(suffix) and nominalization rule(suffix). They were not obligatory, so that verbs' tam features were not always fully specified, and when we generate, we either generate a lot of sentences with different tam values or can't generate at all. This week, we shrink them into four: polarity-marker, tense-aspect-prefix, aspect-mood-suffix, nominalization, and make all the verb inflections obligatory( all three are required for auxiliary verbs, main verbs do not undergo tense-aspect-prefix) except for nominalization. We added empty inflection lexical rule types to allow verbs without inflection markers to go through, below is an example snippet showing the mood-aspect-suffix-marker:
+
+aux-lex := verb-lex &
+ [ SYNSEM.LOCAL.CAT [ HEAD.AUX +,
+                      VAL.COMPS < [ OPT - ,
+				    LOCAL.CAT.HEAD.NMZ -
+					 ] > ],
+   INFLECTED [  POLARITY-MARKER-FLAG -,
+    	      	ASPECT-MOOD-SUFFIX-FLAG -,
+		TENSE-ASPECT-PREFIX-FLAG -,
+		NON-CONTRACTED-FORM-LEX-FLAG + ] ] .
+
+
+(NON-CONTRACTED-FORM-LEX-FLAG is to forbid the non contracted forms of verbs to undergo contraction rule, an negation marker rule that does not require affixes).
+
+aspect-mood-suffix-lex-rule-super := add-only-no-ccont-rule & nominalizer-marker-rule-dtr &
+  [ INFLECTED [ MAIN-VERB-LEX-FLAG #main-verb-lex,
+	       TENSED-LEX-FLAG #tensed-lex,
+	       ASPECT-LEX-FLAG #aspect-lex,
+	       NOUN-LEX-FLAG #noun-lex,
+	       3RD-PERSON-F-LEX-NOUN-FLAG #3rd-person-f-lex-noun,
+	       CONTRACTED-FORM-LEX-FLAG #contracted-form-lex,
+	       NON-CONTRACTED-FORM-LEX-FLAG #non-contracted-form-lex,
+
+	       YIN-FLAG #yin,
+	       RED-FLAG #red,
+	       YOD-FLAG #yod,
+	       1DUG-FLAG #1dug,
+	       YOGRED-FLAG #yogred,
+	       SONG-FLAG #song,
+	       YONG-FLAG #yong,
+	       BYUNG-FLAG #byung,
+	       1DRA-FLAG #1dra,
+	       NON-PRESENT-INF-FLAG #non-present-inf,	       
+	       
+	       NUM-MARKER-RULE-FLAG #num-marker-rule,
+	       CASE-MARKER-RULE-FLAG #case-marker-rule,
+	       SELF-INDICATE-RULE-FLAG #self-indicate,
+	       GENITIVE-MARKER-RULE-FLAG #genitive-marker-rule,
+	       POSSESSIVE-MARKER-RULE-FLAG #possessive-marker-rule,
+
+	       POLARITY-MARKER-FLAG #polarity-marker,
+	       MI-NEGATION-MARKER-FLAG #mi-negation-marker,
+	       MA-NEGATION-MARKER-FLAG #ma-negation-marker,
+	       NON-NEGATION-MARKER-FLAG #non-negation-marker,
+
+	       TENSE-ASPECT-PREFIX-FLAG #tense-aspect-prefix,
+
+	       ASPECT-MOOD-SUFFIX-FLAG + ],
+    DTR aspect-mood-suffix-rule-dtr &
+        [ INFLECTED [ MAIN-VERB-LEX-FLAG #main-verb-lex,
+	       TENSED-LEX-FLAG #tensed-lex,
+	       ASPECT-LEX-FLAG #aspect-lex,
+	       NOUN-LEX-FLAG #noun-lex,
+	       3RD-PERSON-F-LEX-NOUN-FLAG #3rd-person-f-lex-noun,
+	       CONTRACTED-FORM-LEX-FLAG #contracted-form-lex,
+	       NON-CONTRACTED-FORM-LEX-FLAG #non-contracted-form-lex,
+
+	       YIN-FLAG #yin,
+	       RED-FLAG #red,
+	       YOD-FLAG #yod,
+	       1DUG-FLAG #1dug,
+	       YOGRED-FLAG #yogred,
+	       SONG-FLAG #song,
+	       YONG-FLAG #yong,
+	       BYUNG-FLAG #byung,
+	       1DRA-FLAG #1dra,
+	       NON-PRESENT-INF-FLAG #non-present-inf,	       
+	       
+	       NUM-MARKER-RULE-FLAG #num-marker-rule,
+	       CASE-MARKER-RULE-FLAG #case-marker-rule,
+	       SELF-INDICATE-RULE-FLAG #self-indicate,
+	       GENITIVE-MARKER-RULE-FLAG #genitive-marker-rule,
+	       POSSESSIVE-MARKER-RULE-FLAG #possessive-marker-rule,
+
+	       POLARITY-MARKER-FLAG #polarity-marker & na-or-+,
+	       MI-NEGATION-MARKER-FLAG #mi-negation-marker,
+	       MA-NEGATION-MARKER-FLAG #ma-negation-marker,
+	       NON-NEGATION-MARKER-FLAG #non-negation-marker,
+
+	       TENSE-ASPECT-PREFIX-FLAG #tense-aspect-prefix ] ] ].
+
+corrob-marker-rule-lex-rule := non-empty-suffix-rule & infl-lex-rule &
+  [ SYNSEM.LOCAL.CONT.HOOK.INDEX [ E.MOOD corrob ] ].
+
+emph-marker-rule-lex-rule := non-empty-suffix-rule & infl-lex-rule &
+  [ SYNSEM.LOCAL.CONT.HOOK.INDEX [ E.MOOD emph ] ].
+
+poss-marker-rule-lex-rule := non-empty-suffix-rule & infl-lex-rule &
+  [ SYNSEM.LOCAL.CONT.HOOK.INDEX [ E.MOOD possible] ].
+
+apparent-marker-rule-lex-rule := non-empty-suffix-rule & infl-lex-rule &
+  [ SYNSEM.LOCAL.CONT.HOOK.INDEX [ E.MOOD apparent ] ].
+
+interr-marker-rule-lex-rule := non-empty-suffix-rule & infl-lex-rule &
+  [ SYNSEM.LOCAL.CONT.HOOK.INDEX [ E.MOOD interr,
+                                   SF ques ] ].
+
+
+(indic marker does not have affixes, but it specified as FORM finite by inheriting the non-empty-suffix-rule)
+
+indic-marker-rule-lex-rule := non-empty-suffix-rule & const-lex-rule &
+  [ SYNSEM.LOCAL [ CONT.HOOK.INDEX [ E.MOOD indic,
+    				   SF prop ] ] ].
+
+
+(empty-suffix-rule is for the main verbs or auxiliaries that is not at the end of the verb series, it is specified as nonfinite to prevent them to be able stand at the end of whole VP)
+
+empty-suffix-rule := aspect-mood-suffix-lex-rule-super & const-lex-rule &
+  [ SYNSEM.LOCAL.CAT.HEAD.FORM nonfinite ].
+
+
+simple-perfect-lex-rule := non-empty-suffix-rule & infl-lex-rule &
+  [ SYNSEM.LOCAL [ CONT.HOOK.INDEX.E.ASPECT prf ],
+    DTR [ SYNSEM.LOCAL.CAT.HEAD.FORM mv,
+    	  INFLECTED.ASPECT-LEX-FLAG na ] ].
+
+(non-empty-suffix-rule, specify the verb as FORM finite)
+
+non-empty-suffix-rule := aspect-mood-suffix-lex-rule-super & 
+  [ SYNSEM.LOCAL.CAT.HEAD.FORM finite ].
+
+
+The polarity-marker and tense-aspect-prefix rules are implemented by similar stradegies. As we have said before, we also changed the semi.vpm to set default types. Doing those allow us to make all valid VPs to have tam features fully specified, so that generations can work. 
+
+
+2.
 The current grammar includes an obligatory series of case classes on verbs which now make it possible to specify mood. 
 
 With the rules in place, we had to add some rules to prevent the coordination of verbs aux verbs with their complements--we did this by constraining coordination to finite verbs.  
@@ -83,19 +212,18 @@ With the rules in place, we had to add some rules to prevent the coordination of
 +  [ SYNSEM.LOCAL.CAT [ HEAD verb,
 +                       VAL.SUBJ < [ ] > ],
 +    NONCONJ-DTR.SYNSEM.LOCAL.CAT [ HEAD verb & [ FORM finite ],
-+                                   VAL.SUBJ < [ ] > ]]
-
++                                   VAL.SUBJ < [ ] > ] 
 
 
 F. Coverage and Overgeneration
 
 		Baseline	Current	
-Coverage 	47/83		48/83
-Ambiguity	1.81		2.34
+Coverage 	47/83		50/83
+Ambiguity	1.81		1.53
 Overgeneration	2/31		0/31
 
 One reason that ambiguity has increased is that we now have issues with the wh-in-situ clause firing because mood is underspecified--we have interr specified but that will still unify with the underspecified "mood". With a forthcoming major refactoring of the grammar, we will have an obligatory succession of verb inflection rules which will allow us to take care of the underspecification issues.   
-Another way in which ambiguity has increased is that the wh-pronoun seems to optionally go through either of the possessive inflection rules. Ideally, it would behave like nouns and go through the rule obligatorily.
+oAnother way in which ambiguity has increased is that the wh-pronoun seems to optionally go through either of the possessive inflection rules. Ideally, it would behave like nouns and go through the rule obligatorily.
 
 Besides not parsing the sentence due to specifying FORM, we are also not parsing the previously mentioned negative nominalization example.
 
