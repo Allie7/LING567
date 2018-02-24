@@ -14,7 +14,7 @@ Judgment: g
 Phenomena:q
 bodla           dgunkha         zhedrag grangmo         yogredbas
 bod-la          dgunkha         zhedrag grang-mo        yogred-bas
-Tibet-DAT       winter.ABS      very    cold-NMZ        exist-INTERR
+Tibet-LOC       winter.ABS      very    cold-NMZ        exist-INTERR
 "Are winters very cold in Tibet?"
 
 To add this, we needed prepositional phrases, ideally deriveable from case; to do so, we added the locative noun phrase suggested to us on the forums: 
@@ -38,6 +38,24 @@ locative-pp-phrase := unary-phrase &
     ARGS < [ SYNSEM.LOCAL [ CAT [ HEAD noun & [CASE loc],
                                   VAL.SPR < > ],
                             CONT.HOOK [ INDEX #dtr ]]] > ].
+
+In Tibtan, locative cases are actually datives, at least they have the same case marker. However, it is clear not all dative case nouns can be locative PPs, and if we treat normal datives as locatives, our ambiguity would rise significantly. so we introduced an seperatate locatice case:
+
+loc := case.
+
+We also added a new time-location noun types and locative case marker rule, only that time-location nounts can undergo the locative case marker rule:
+
+
+time-location-noun-lex := no-spr-noun-lex & 
+  [ SYNSEM.LOCAL.CONT.HOOK.INDEX.PNG [ PER 3rd,
+				       NUM sg],
+    INFLECTED [ CASE-MARKER-RULE-FLAG -,
+		POSSESSIVE-MARKER-RULE-FLAG - ] ].
+
+locative-rule := case-marker-lex-rule-super & infl-lex-rule &
+  [ INFLECTED [ GENITIVE-MARKER-RULE-FLAG #genitive-lex-rule ],
+    DTR time-location-noun-lex & [ INFLECTED [ GENITIVE-MARKER-RULE-FLAG #genitive-lex-rule ] ],
+    SYNSEM.LOCAL.CAT.HEAD.CASE loc ].
 
 
 A minor change from the example was required, removing SYNSEM.
@@ -100,7 +118,7 @@ PNG.NUM : NUM
 D. Grammar improvements
 
 1.
-In our previous grammar, verb inflections are not obligatory, and there were six of verb inflection position classes: sorted by order: polarity-marker(prefix), tense(prefix), aspect(prefix), aspect(suffix), mood(suffix) and nominalization rule(suffix). They were not obligatory, so that verbs' tam features were not always fully specified, and when we generate, we either generate a lot of sentences with different tam values or can't generate at all. This week, we shrink them into four: polarity-marker, tense-aspect-prefix, aspect-mood-suffix, nominalization, and make all the verb inflections obligatory( all three are required for auxiliary verbs, main verbs do not undergo tense-aspect-prefix) except for nominalization. We added empty inflection lexical rule types to allow verbs without inflection markers to go through, below is an example snippet showing the mood-aspect-suffix-marker:
+In our previous grammar, verb inflections are not obligatory, and there were six of verb inflection position classes: sorted by order: polarity-marker(prefix), tense(prefix), aspect(prefix), aspect(suffix), mood(suffix) and nominalization rule(suffix). They were not obligatory, so that verbs' tam features were not always fully specified. This has caused a lot of problems, such as ambiguities resulted from wh-in-situ clause. Our grammar last week specified the wh-cl clauses to require [MOOD interr], however, since mood is not always fully specified, that specification does not always work. And when we generate, we either generate a lot of sentences with different tam values or can't generate at all. This week, we shrink them into four: polarity-marker, tense-aspect-prefix, aspect-mood-suffix, nominalization, and make all the verb inflections obligatory( all three are required for auxiliary verbs, main verbs do not undergo tense-aspect-prefix) except for nominalization. We added empty inflection lexical rule types to allow verbs without inflection markers to go through, below is an example snippet showing the mood-aspect-suffix-marker:
 
 aux-lex := verb-lex &
  [ SYNSEM.LOCAL.CAT [ HEAD.AUX +,
@@ -223,7 +241,8 @@ non-empty-suffix-rule := aspect-mood-suffix-lex-rule-super &
   [ SYNSEM.LOCAL.CAT.HEAD.FORM finite ].
 
 
-The polarity-marker and tense-aspect-prefix rules are implemented by similar stradegies. As we have said before, we also changed the semi.vpm to set default types. Doing those allow us to make all valid VPs to have tam features fully specified, so that generations can work. 
+The polarity-marker and tense-aspect-prefix rules are implemented by similar stradegies. As we have said before, we also changed the semi.vpm to set default types. Doing those allow us to make all valid VPs to have tam features fully specified, so that generations can work, and the wh-in-situ ambiguities are prevented.
+
 
 
 F. Coverage and Overgeneration
