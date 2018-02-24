@@ -1,6 +1,6 @@
-John Cadigan
+Xinyi Ji
 Ling 567
-February 14, 2018
+February 23, 2018
 
 Lab 6 Writeup
 
@@ -217,7 +217,7 @@ interr-marker-rule-lex-rule := non-empty-suffix-rule & infl-lex-rule &
                                    SF ques ] ].
 
 
-(indic marker does not have affixes, but it specified as FORM finite by inheriting the non-empty-suffix-rule)
+(indic marker does not have affixes, but it specified as FORM finite by inheriting the non-empty-suffix-rule to differentiate with empty-suffix-rule)
 
 indic-marker-rule-lex-rule := non-empty-suffix-rule & const-lex-rule &
   [ SYNSEM.LOCAL [ CONT.HOOK.INDEX [ E.MOOD indic,
@@ -239,6 +239,12 @@ simple-perfect-lex-rule := non-empty-suffix-rule & infl-lex-rule &
 
 non-empty-suffix-rule := aspect-mood-suffix-lex-rule-super & 
   [ SYNSEM.LOCAL.CAT.HEAD.FORM finite ].
+
+To prevent non-finite verbs/aux to attach at the end of VP, we also specify the the subj-head phrase to be finite:
+
+ subj-head-phrase := bod-subj-head-phrase & head-final &
+ +  [ HEAD-DTR.SYNSEM.LOCAL.CAT [ VAL.COMPS < >,
+ +				HEAD.FORM finite ] ].
 
 
 The polarity-marker and tense-aspect-prefix rules are implemented by similar stradegies. As we have said before, we also changed the semi.vpm to set default types. Doing those allow us to make all valid VPs to have tam features fully specified, so that generations can work, and the wh-in-situ ambiguities are prevented.
@@ -262,4 +268,20 @@ Since we are parsing at least two more wh-question sentences, this means that a 
 
 G. Outstanding issues
 
-We have a few issues with our grammar. 
+We have a few issues with our grammar.
+
+1. First of all, though our generations works after our modification with verb inflections, they fail to work at the last hours before deadline, displaying such warning messages:
+
+Warning: invalid predicates: |"_letter_n_rel"|
+
+Only common nouns and proper names are having such problems, sentences with only pronouns generates fine. We haven't figure out the reason yet.
+
+2. The coordination rules and homographs of AUXs and verbs and affixes are still causing ambiguities. In sentences like :
+
+Yige 	Medpa 	1DRA
+Yige	med-pa	1dra
+letter	neg-EXIST-NMZ seem
+"the letter seems to be here"
+
+"MED" is the contracted form of the verb "yod", which have auxiliary homographs "yod" and "med", "pa" is the nominalization marker, it has two homograph "-pa" that are interr mood marker and corrob mood markers. Coordination rule would coordinate medpa and 1dra. We have not figure out how to forbid that.
+
