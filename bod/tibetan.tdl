@@ -308,8 +308,8 @@ wh-pronoun-noun-lex :=  case-marker-rule-dtr & possessive-rule-lex-rule-dtr & no
 			    HCONS <! [ HARG #harg,
 				        LARG #larg ] !> ] ],
 	     NON-LOCAL.QUE <! #ind !> ],
-    INFLECTED.CASE-MARKER-RULE-FLAG -].
-
+    INFLECTED [ CASE-MARKER-RULE-FLAG -,
+                POSSESSIVE-MARKER-RULE-FLAG -] ].
 
 wh-int-cl := clause & head-compositional &  head-only &
   [ SYNSEM [ LOCAL [ CAT [ VAL #val,
@@ -1319,7 +1319,7 @@ nonposs-lex-lex-rule := nonpossessive-lex-rule-1 & possessive-rule-lex-lex-rule-
 
 poss-gen-lex-lex-rule := possessive-rule-lex-lex-rule-super & possessor-lex-rule-1 &
   [ DTR [ INFLECTED.GENITIVE-MARKER-RULE-FLAG +, 
-	  SYNSEM.LOCAL.CAT.HEAD.CASE #case ],
+	  SYNSEM.LOCAL.CAT.HEAD.CASE #case & gen],
     SYNSEM.LOCAL.CAT.HEAD.CASE #case ].
 
 possessor-lex-rule-1 := head-change-with-ccont-lex-rule &

@@ -250,12 +250,17 @@ To prevent non-finite verbs/aux to attach at the end of VP, we also specify the 
 The polarity-marker and tense-aspect-prefix rules are implemented by similar stradegies. As we have said before, we also changed the semi.vpm to set default types. Doing those allow us to make all valid VPs to have tam features fully specified, so that generations can work, and the wh-in-situ ambiguities are prevented.
 
 
+2. We fixed issues with the wh-pronouns by adding requirements for inflection just like other nouns:
+
+    INFLECTED [ CASE-MARKER-RULE-FLAG -,
+                POSSESSIVE-MARKER-RULE-FLAG -] ].
+
 
 F. Coverage and Overgeneration
 
 		Baseline	Current	
 Coverage 	48/83		50/83
-Ambiguity	2.31		1.74
+Ambiguity	2.31		1.66
 Overgeneration	0/31		0/31
 
 For the most part, we have fixed ambiguity issues with the wh-in-situ clause. One ambiguity issue with the wh-in-situ clause persists somewhat because it is not obligated to fire for every interrogative sentence as can be seen in the test corpus example--there is a valid parse without it.
