@@ -254,17 +254,12 @@ The polarity-marker and tense-aspect-prefix rules are implemented by similar str
 F. Coverage and Overgeneration
 
 		Baseline	Current	
-Coverage 	47/83		50/83
-Ambiguity	1.81		1.53
-Overgeneration	2/31		0/31
+Coverage 	48/83		50/83
+Ambiguity	2.31		1.74
+Overgeneration	0/31		0/31
 
-One reason that ambiguity has increased is that we now have issues with the wh-in-situ clause firing because mood is underspecified--we have interr specified but that will still unify with the underspecified "mood". With a forthcoming major refactoring of the grammar, we will have an obligatory succession of verb inflection rules which will allow us to take care of the underspecification issues.   
-oAnother way in which ambiguity has increased is that the wh-pronoun seems to optionally go through either of the possessive inflection rules. Ideally, it would behave like nouns and go through the rule obligatorily.
-
-Besides not parsing the sentence due to specifying FORM, we are also not parsing the previously mentioned negative nominalization example.
-
-Since we are parsing at least two more wh-question sentences, this means that a few no longer parse--we have not been able to track them down.
-
+For the most part, we have fixed ambiguity issues with the wh-in-situ clause. One ambiguity issue with the wh-in-situ clause persists somewhat because it is not obligated to fire for every interrogative sentence as can be seen in the test corpus example--there is a valid parse without it.
+   
 
 G. Outstanding issues
 
