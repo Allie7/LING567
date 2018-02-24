@@ -334,7 +334,7 @@ wh-int-cl := clause & head-compositional &  head-only &
 
 
 locative-pp-phrase := unary-phrase &
-  [ SYNSEM [ LOCAL.CAT [ HEAD adp & [ MOD < [ LOCAL  intersective-mod & 
+  [ SYNSEM [ LOCAL.CAT [ HEAD adp & [ MOD < [ LOCAL intersective-mod &
                                                     [ CAT.HEAD verb ] ] > ],
 		          VAL [ COMPS < >,
 			        SUBJ < >, 
@@ -349,9 +349,10 @@ locative-pp-phrase := unary-phrase &
 		     ARG1 #xarg,
 		     ARG2 #dtr ] !>,
 	     HCONS <! !>  ],
-    ARGS < [ SYNSEM.LOCAL [ CAT [ HEAD noun & [ CASE loc ],
+    ARGS < [ SYNSEM.LOCAL [ CAT [ HEAD noun & [CASE loc],
 				  VAL.SPR < > ],
 			    CONT.HOOK [ INDEX #dtr ]]] > ].
+
 
 ;;; Nouns
 
