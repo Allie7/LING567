@@ -199,36 +199,40 @@ f := gender.
 ;;it applies to all wo implementations, except for v2
 
 comp-head-phrase := basic-head-1st-comp-phrase & head-final &
-  [ HEAD-DTR.SYNSEM.LOCAL.CAT.HEAD.INIT - ].
+  [ HEAD-DTR.SYNSEM.LOCAL [ CAT.HEAD.INIT -,
+			    CONT.HOOK.INDEX #index ], 
+    SYNSEM.LOCAL.CONT.HOOK.INDEX #index ].
 
 ; JC working on wh questions 2-11
 
 bod-subj-head-phrase := head-valence-phrase & head-compositional & 
               basic-binary-headed-phrase &
   [ SYNSEM phr-synsem & 
-           [ LOCAL.CAT [ POSTHEAD +,
-                 HC-LIGHT -,
-                 VAL [ SUBJ < >,
-                       COMPS #comps,
-                       SPR #spr ] ] ],
+           [ LOCAL [ CAT [ POSTHEAD +,
+			   HC-LIGHT -,
+			   VAL [ SUBJ < >,
+				 COMPS #comps,
+				 SPR #spr ] ] ] ],
     C-CONT [ HOOK.INDEX.SF prop-or-ques,
          RELS <! !>,
          HCONS <! !>,
          ICONS <! !> ],
-    HEAD-DTR.SYNSEM.LOCAL.CAT.VAL [ SUBJ < #synsem >,
-                    COMPS #comps,    
-                    SPR #spr ],
+    HEAD-DTR.SYNSEM.LOCAL [ CAT.VAL [ SUBJ < #synsem >,
+				     COMPS #comps,    
+				     SPR #spr ] ],
     NON-HEAD-DTR.SYNSEM #synsem & canonical-synsem &
-       [ LOCAL [ CAT [ VAL [ SUBJ olist,
-                 COMPS olist,
-                 SPR olist ] ] ],
-         NON-LOCAL [ SLASH 0-dlist & [ LIST < > ],
-             REL 0-dlist ] ]].
+		   [ LOCAL [ CAT [ VAL [ SUBJ olist,
+					 COMPS olist,
+					 SPR olist ] ] ],
+		     NON-LOCAL [ SLASH 0-dlist & [ LIST < > ],
+					 REL 0-dlist ] ] ].
 
 
 subj-head-phrase := bod-subj-head-phrase & head-final &
-  [ HEAD-DTR.SYNSEM.LOCAL.CAT [ VAL.COMPS < >,
-				HEAD.FORM finite ] ].
+  [ HEAD-DTR.SYNSEM.LOCAL [ CAT [ VAL.COMPS < >,
+				HEAD.FORM finite ],
+			    CONT.HOOK.INDEX #index],
+    SYNSEM.LOCAL.CONT.HOOK.INDEX #index ].
 
 
 ;
@@ -1435,23 +1439,23 @@ negation-marker-rule-lex-rule := polarity-marker-lex-rule-super &
              HCONS <! qeq &
                       [ HARG #harg,
                         LARG #larg ] !> ],
-    SYNSEM.LOCAL.CONT.HOOK.INDEX.E #e,
+    SYNSEM.LOCAL.CONT.HOOK.INDEX  #e,
     SYNSEMLKEYS #lkeys,
     DTR [ INFLECTED [ NON-NEGATION-MARKER-FLAG na ],
           SYNSEM [ LKEYS #lkeys,
                    LOCAL [ CONT.HOOK [ XARG #xarg,
                                        INDEX #ind,
                                        LTOP #larg,
-				       INDEX.E #e ],
+				       INDEX #e ],
                            CAT.HEAD verb ] ] ] ].
 
 empty-polarity-marker-rule-lex-rule := const-lex-rule & polarity-marker-lex-rule-super &
-  [ SYNSEM.LOCAL.CONT.HOOK.INDEX.E #e,
+  [ SYNSEM.LOCAL.CONT.HOOK.INDEX #e,
     C-CONT [ RELS <! !>,
 	     HCONS <! !>,
 	     ICONS <! !> ],
      DTR [ INFLECTED [ CONTRACTED-FORM-LEX-FLAG na ],
-	   SYNSEM.LOCAL.CONT.HOOK.INDEX.E #e ] ].
+	   SYNSEM.LOCAL.CONT.HOOK.INDEX #e ] ].
 
 contracted-rule-lex-rule := negation-marker-rule-lex-rule & const-lex-rule &
    [ INFLECTED.CONTRACTED-FORM-LEX-FLAG +,
@@ -1733,9 +1737,9 @@ nominalizer-lex-rule-super := high-or-mid-nominalization-lex-rule & infl-lex-rul
         [ INFLECTED #infl ] ].
 
 nominalization-lex-rule := nominalizer-lex-rule-super &
-   [ SYNSEM.LOCAL [ CONT.HOOK.INDEX.E #e ],
-     DTR [ SYNSEM.LOCAL [ CONT.HOOK.INDEX.E #e &
-					    [ MOOD indic ],
+   [ SYNSEM.LOCAL [ CONT.HOOK.INDEX #index & [ E #e ] ],
+     DTR [ SYNSEM.LOCAL [ CONT.HOOK.INDEX #index & [ E #e &
+						       [ MOOD indic ] ],
 			  CAT.HEAD [ FORM finite ] ] ] ].
 
 ;Constraint on MC used to be part of matrix.tdl

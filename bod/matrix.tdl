@@ -1927,8 +1927,10 @@ basic-head-comp-phrase := head-valence-phrase & head-compositional &
 ; ERB 2004-12-14 This is what used to be called basic-head-comp-phrase.
 
 basic-head-1st-comp-phrase := basic-head-comp-phrase &
-  [ SYNSEM.LOCAL.CAT.VAL.COMPS #comps,
-    HEAD-DTR.SYNSEM.LOCAL.CAT.VAL.COMPS < #synsem . #comps >,
+  [ SYNSEM.LOCAL [ CAT.VAL.COMPS #comps,
+		   CONT.HOOK.INDEX #index ],
+    HEAD-DTR.SYNSEM.LOCAL [ CAT.VAL.COMPS < #synsem . #comps >,
+			    CONT.HOOK.INDEX #index ],
     NON-HEAD-DTR.SYNSEM #synsem ].
 
 ; ERB 2004-12-14 First pass at a rule that realizes complements
