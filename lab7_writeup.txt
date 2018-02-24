@@ -12,12 +12,12 @@ Source: b:275
 Vetted: s
 Judgment: g
 Phenomena:q
-bodla           dgunkha         zhedrag grangmo         yogred-bas
+bodla           dgunkha         zhedrag grangmo         yogredbas
 bod-la          dgunkha         zhedrag grang-mo        yogred-bas
 Tibet-DAT       winter.ABS      very    cold-NMZ        exist-INTERR
 "Are winters very cold in Tibet?"
 
-To add this, we needed prepositional phrases, ideally deriveable from case; to do so, we added the locative noun phrase suggested to us on the forums:
+To add this, we needed prepositional phrases, ideally deriveable from case; to do so, we added the locative noun phrase suggested to us on the forums: 
 
 locative-pp-phrase := unary-phrase &
   [ SYNSEM [ LOCAL.CAT [ HEAD adp & [ MOD < [ LOCAL  intersective-mod &
@@ -35,7 +35,7 @@ locative-pp-phrase := unary-phrase &
                      ARG1 #xarg,
                      ARG2 #dtr ] !>,
              HCONS <! !>  ],
-    ARGS < [ SYNSEM.LOCAL [ CAT [ HEAD noun & [CASE dat],
+    ARGS < [ SYNSEM.LOCAL [ CAT [ HEAD noun & [CASE loc],
                                   VAL.SPR < > ],
                             CONT.HOOK [ INDEX #dtr ]]] > ].
 
@@ -44,12 +44,28 @@ A minor change from the example was required, removing SYNSEM.
 
   [ SYNSEM [ LOCAL.CAT [ HEAD adp & [ MOD < [ SYNSEM.LOCAL intersective-mod &
 
-With intensifiers and copular verbs in place, the sentence parses and the correct MRS is present. However, there are interpretations which involve the contraction rule which currently introduces negation.
+Though most sources identify dative and locative as one case in Tibetan, we introduced a separate locative case to cut down on ambiguity. We have a substantial number of dative  words  and  words which could unfortunately appear as dative, khongla as khong-la ("before" as "3sg-DAT")
+
+This required introducing a locative rule which expects time-location nouns:
+
+locative-rule := case-marker-lex-rule-super & infl-lex-rule &
+  [ INFLECTED [ GENITIVE-MARKER-RULE-FLAG #genitive-lex-rule ],
+    DTR time-location-noun-lex & [ INFLECTED [ NOUN-LEX-FLAG +,
+                    GENITIVE-MARKER-RULE-FLAG #genitive-lex-rule ] ],
+    SYNSEM.LOCAL.CAT.HEAD.CASE loc ].
+
+time-location-noun-lex := no-spr-noun-lex &
+  [ SYNSEM.LOCAL.CONT.HOOK.INDEX.PNG [ PER 3rd,
+                                       NUM sg],
+    INFLECTED [ CASE-MARKER-RULE-FLAG -,
+                POSSESSIVE-MARKER-RULE-FLAG - ] ].
+
+
+With intensifiers and copular verbs in place, sentence produces 3 parses which are due to the wh-in-situ applying to each S node and the normal subj-head rule applying. Unfortunately, the MRS chain connecting the verb with phrasal index starts breaking at the comp-head phrase "zhedrag grangmo yogredbas".
 
 B. Variable property mapping
 
 For MT, we introduced the following changes to VPM. We removed E. from TENSE, ASPECT and MOOD. We removed PNG from PER and NUM.
-
 
 To improve results for generation and MT, we gave reasonable default types for TENSE, ASPECT and MOOD:
 
@@ -65,12 +81,29 @@ To improve results for generation and MT, we gave reasonable default types for T
 
 C. First MT
 
-To translate, we added the relevant vocabulary and tested translation between Tibetan and English 
+To translate, we added the relevant vocabulary and tested translation between Tibetan and English. To do this, we added renamed PER values:
+
+PNG.PER : PER
+  3rd <> third
+  2nd <> second
+  1st <> first
+  * <> *
+
+We also mapped pl to sg because plural nouns tend to be mapped to sg because they are underspecified in Tibetan:
+
+PNG.NUM : NUM
+  pl <> sg
+  sg <> sg
+
 
 D. Grammar improvements
 
-The current grammar includes an obligatory series of case classes on verbs which now make it possible to specify mood. 
+The current grammar includes an obligatory series of case classes on verbs which now make it possible to specify mood and finite FORM as well as nonfinite FORM consistently. 
 
+empty-suffix-rule := aspect-mood-suffix-lex-rule-super & const-lex-rule &
+  [ SYNSEM.LOCAL.CAT.HEAD.FORM nonfinite ].
+
+ 
 With the rules in place, we had to add some rules to prevent the coordination of verbs aux verbs with their complements--we did this by constraining coordination to finite verbs.  
 
 +vp-coord-phrase := event-coord-phrase &
@@ -102,4 +135,6 @@ Besides not parsing the sentence due to specifying FORM, we are also not parsing
 Since we are parsing at least two more wh-question sentences, this means that a few no longer parse--we have not been able to track them down.
 
 
+G. Outstanding issues
 
+We have a few issues with our grammar. 

@@ -6,7 +6,7 @@ dative-lex-rule-suffix1 :=
 dative-lex-rule-lex-rule.
 
 locative-rule-suffix :=
-%suffix [* la)(* r)
+%suffix (* la)(* r)
 locative-rule.
 
 ergative-lex-rule-suffix1 :=

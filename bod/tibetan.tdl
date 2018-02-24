@@ -1719,7 +1719,6 @@ indic-marker-rule-lex-rule := non-empty-suffix-rule & const-lex-rule &
 empty-suffix-rule := aspect-mood-suffix-lex-rule-super & const-lex-rule &
   [ SYNSEM.LOCAL.CAT.HEAD.FORM nonfinite ].
 
-
 simple-perfect-lex-rule := non-empty-suffix-rule & infl-lex-rule &
   [ SYNSEM.LOCAL [ CONT.HOOK.INDEX.E.ASPECT prf ],
     DTR [ SYNSEM.LOCAL.CAT.HEAD.FORM mv,

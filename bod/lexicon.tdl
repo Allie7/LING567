@@ -201,10 +201,6 @@ thubbstan := proper_noun_lex-noun-lex &
   [ STEM < "thubbstan" >,
     SYNSEM.LKEYS.KEYREL.PRED "_thubbstan_n_rel" ].
 
-bod := time-location-noun-lex & 
-  [ STEM < "bod" >,
-    SYNSEM.LKEYS.KEYREL.PRED "_bod_n_rel" ].
-
 blobzang := proper_noun_lex-noun-lex &
   [ STEM < "blobzang" >,
     SYNSEM.LKEYS.KEYREL.PRED "_lobsang_n_rel" ].
