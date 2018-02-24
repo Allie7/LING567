@@ -2,7 +2,7 @@ Xinyi Ji
 Ling 567
 February 23, 2018
 
-Lab 6 Writeup
+Lab 7 Writeup
 
 A. One more corpus sentence
 
@@ -224,6 +224,14 @@ indic-marker-rule-lex-rule := non-empty-suffix-rule & const-lex-rule &
     				   SF prop ] ] ].
 
 
+One benefit of this is that we were able to restrict the wh-int-cl to just interrogative verbs:
+
+wh-int-cl := clause & head-compositional &  head-only &
+  [ SYNSEM [ LOCAL [ CAT [ VAL #val,
+                         MC bool ],
+                     CONT.HOOK.INDEX.E.MOOD interr ],
+
+
 (empty-suffix-rule is for the main verbs or auxiliaries that is not at the end of the verb series, it is specified as nonfinite to prevent them to be able stand at the end of whole VP)
 
 empty-suffix-rule := aspect-mood-suffix-lex-rule-super & const-lex-rule &
@@ -250,11 +258,29 @@ To prevent non-finite verbs/aux to attach at the end of VP, we also specify the 
 The polarity-marker and tense-aspect-prefix rules are implemented by similar stradegies. As we have said before, we also changed the semi.vpm to set default types. Doing those allow us to make all valid VPs to have tam features fully specified, so that generations can work, and the wh-in-situ ambiguities are prevented.
 
 
-2. We fixed issues with the wh-pronouns by adding requirements for inflection just like other nouns:
+2. Follow-up on lab 6 and demo suggestions:
+
+We fixed issues with the wh-pronouns by adding requirements for inflection just like other nouns:
 
     INFLECTED [ CASE-MARKER-RULE-FLAG -,
                 POSSESSIVE-MARKER-RULE-FLAG -] ].
 
+We added the suggestions to contrain NON-LOCAL values to nom clauses:
+
+high-no-rel-nominalized-clause-phrase := unary-phrase:
+...
+	     NON-LOCAL #nl ],
+...
+	      NON-LOCAL #nl ] ] > ].
+
+We added the suggestions for adjectives:
+
+nom-adj-verb-lex-adj-lex := attr-adj-lex &
+  [ SYNSEM.LOCAL.CAT [ POSTHEAD +,
+                       VAL.SUBJ < >,
+                       HEAD.PRD + ] ].
+
+We incorporated the changes to the grammar suggested in the demo class.
 
 F. Coverage and Overgeneration
 
@@ -264,7 +290,19 @@ Ambiguity	2.31		1.66
 Overgeneration	0/31		0/31
 
 For the most part, we have fixed ambiguity issues with the wh-in-situ clause. One ambiguity issue with the wh-in-situ clause persists somewhat because it is not obligated to fire for every interrogative sentence as can be seen in the test corpus example--there is a valid parse without it.
-   
+
+Despite our solution to the ambiguity of PPs, some of it finds it way into our sentences. For example, the test corpus sentence from last week now has 8 parses due to the fact that arguments can be optional for the copular verb--which is suggested as the correct parse in the translation by the preposition. Alongside this, there are readings such as "A very cold Tibet exists", "In a very cold Tibet, <pro-d> exists," and "A very cold X exists in Tibet". Since this is the answer to the question "Are winters cold in Tibet?," something like the last is the most reasonable but incurs the most ambiguity.
+
+Source: b:275
+Vetted: s
+Judgment: g
+Phenomena:adj
+bodla           zhedrag grangmo         yogred
+bod-la          zhedrag grang-mo        yogred
+Tibet-DAT       very    cold-NMZ        exist
+"It's very cold in Tibet"
+
+We don't have issues with it applying everywhere though as in the first implementation because it is restricted to just a few nouns. 
 
 G. Outstanding issues
 
