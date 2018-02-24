@@ -45,7 +45,6 @@ loc := case.
 
 We also added a new time-location noun types and locative case marker rule, only that time-location nounts can undergo the locative case marker rule:
 
-
 time-location-noun-lex := no-spr-noun-lex & 
   [ SYNSEM.LOCAL.CONT.HOOK.INDEX.PNG [ PER 3rd,
 				       NUM sg],
@@ -58,11 +57,11 @@ locative-rule := case-marker-lex-rule-super & infl-lex-rule &
     SYNSEM.LOCAL.CAT.HEAD.CASE loc ].
 
 
-A minor change from the example was required, removing SYNSEM.
+Please note that a minor change from the example on the 2017/lab6 page was required, removing SYNSEM from SYNSEM.LOCAL.
 
   [ SYNSEM [ LOCAL.CAT [ HEAD adp & [ MOD < [ SYNSEM.LOCAL intersective-mod &
 
-Though most sources identify dative and locative as one case in Tibetan, we introduced a separate locative case to cut down on ambiguity. We have a substantial number of dative  words  and  words which could unfortunately appear as dative, khongla as khong-la ("before" as "3sg-DAT")
+Though most sources identify dative and locative as one case in Tibetan, we introduced a separate locative case to cut down on ambiguity--we did not make this choice in an earlier implementation and had very high ambiguity. We have a substantial number of dative  words  and  words which could unfortunately appear as dative, khongla as khong-la ("before" as "3sg-DAT")
 
 This required introducing a locative rule which expects time-location nouns:
 
@@ -78,9 +77,7 @@ time-location-noun-lex := no-spr-noun-lex &
     INFLECTED [ CASE-MARKER-RULE-FLAG -,
                 POSSESSIVE-MARKER-RULE-FLAG - ] ].
 
-
 With intensifiers and copular verbs in place, sentence produces 3 parses which are due to the wh-in-situ applying to each S node and the normal subj-head rule applying. Unfortunately, the MRS chain connecting the verb with phrasal index starts breaking at the comp-head phrase "zhedrag grangmo yogredbas".
-
 
 B. Variable property mapping
 
@@ -97,6 +94,7 @@ To improve results for generation and MT, we gave reasonable default types for T
   * >> indic
   indic << [e]
 
+We have not introduced any major properties since the end of using the customization system, so no additional work was required.
 
 C. First MT
 
@@ -108,7 +106,7 @@ PNG.PER : PER
   1st <> first
   * <> *
 
-We also mapped pl to sg because plural nouns tend to be mapped to sg because they are underspecified in Tibetan:
+We also mapped pl to sg because plural nouns tend to be mapped to sg because they are underspecified in Tibetan; we only inflect pronouns to plural at this point:
 
 PNG.NUM : NUM
   pl <> sg
@@ -223,7 +221,6 @@ indic-marker-rule-lex-rule := non-empty-suffix-rule & const-lex-rule &
   [ SYNSEM.LOCAL [ CONT.HOOK.INDEX [ E.MOOD indic,
     				   SF prop ] ] ].
 
-
 One benefit of this is that we were able to restrict the wh-int-cl to just interrogative verbs:
 
 wh-int-cl := clause & head-compositional &  head-only &
@@ -302,19 +299,31 @@ bod-la          zhedrag grang-mo        yogred
 Tibet-DAT       very    cold-NMZ        exist
 "It's very cold in Tibet"
 
-We don't have issues with it applying everywhere though as in the first implementation because it is restricted to just a few nouns. 
+We don't have issues with it applying everywhere though as in the first implementation because it is restricted to just a few nouns. Other sentences with increased ambiguity due to PPs are those which still have our previous DAT-accepting transitive verb:
+
+Source: author
+Vetted: f
+Judgment: g
+Phenomena: emb-d
+khos    nga     bodla           phyinpa         shes    kyi
+kho-s   nga     bod-la          phyin-pa        shes    kyi
+He-ERG  I.ABS   Tibet-DAT       go.PST-NMZ      know    AUX
+"He knows I went to Tibet"
+
 
 G. Outstanding issues
 
 We have a few issues with our grammar.
 
-1. First of all, though our generations works after our modification with verb inflections, they fail to work at the last hours before deadline, displaying such warning messages:
+1. The most important issue is that MRS chains are broken. The Index for the sentence does not attach to any of the MRS in the RELS list and there is an extra event in the ARG0 of the verb. Those two should be identified with each other, so we have some leads. 
+
+2. Second of all, though our generations works after our modification with verb inflections, they fail to work at the last hours before deadline, displaying such warning messages:
 
 Warning: invalid predicates: |"_letter_n_rel"|
 
 Only common nouns and proper names are having such problems, sentences with only pronouns generates fine. We haven't figure out the reason yet.
 
-2. The coordination rules and homographs of AUXs and verbs and affixes are still causing ambiguities. In sentences like :
+3. The coordination rules and homographs of AUXs and verbs and affixes are still causing ambiguities. In sentences like :
 
 Yige 	Medpa 	1DRA
 Yige	med-pa	1dra
@@ -323,3 +332,4 @@ letter	neg-EXIST-NMZ seem
 
 "MED" is the contracted form of the verb "yod", which have auxiliary homographs "yod" and "med", "pa" is the nominalization marker, it has two homograph "-pa" that are interr mood marker and corrob mood markers. Coordination rule would coordinate medpa and 1dra. We have not figure out how to forbid that.
 
+ 
