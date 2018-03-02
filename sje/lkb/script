@@ -44,6 +44,10 @@
 (lkb-pathname (parent-directory) "head-types.tdl")
    (lkb-pathname (parent-directory) "pite_saami.tdl")
 (lkb-pathname (parent-directory) "mtr.tdl")
+;;; ERB 2008-03-03 Reading in transfer types directly as part of
+;;; source grammar.
+  (lkb-pathname (parent-directory) "mtr.tdl")
+  (lkb-pathname (parent-directory) "acm.tdl")
 ))
 
 ;;;
@@ -135,3 +139,12 @@
 
 (load-irregular-spellings
 	(lkb-pathname(parent-directory) "irregs.tab"))
+
+
+
+(mt:read-transfer-rules
+ (list
+  (lkb-pathname (parent-directory) "acm.mtr"))
+ "A place to put your transfer rules"
+ :filter nil :task :paraphrase)
+
