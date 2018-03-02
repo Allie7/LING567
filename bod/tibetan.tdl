@@ -388,10 +388,8 @@ head-spec-phrase := basic-head-spec-phrase & head-initial &
                                       HEAD +vjrcdmo &
                                            [ POSSESSOR nonpossessive ] ] ] ].
 
-common_noun_lex-noun-lex := noun-lex & pron-num-marker-rule-dtr &
-  [ SYNSEM.LOCAL.CONT.HOOK.INDEX.PNG [ PER 3rd,
-                                       NUM sg ],
-    INFLECTED [ NUM-MARKER-RULE-FLAG -,
+common_noun_lex-noun-lex := noun-lex & 
+  [ INFLECTED [ NUM-MARKER-RULE-FLAG +,
                 CASE-MARKER-RULE-FLAG -,
                 POSSESSIVE-MARKER-RULE-FLAG - ] ].
 
@@ -1243,7 +1241,8 @@ pron-num-marker-lex-rule-super := add-only-no-ccont-rule & case-marker-rule-dtr 
 	       ASPECT-MOOD-SUFFIX-FLAG #aspect-mood-suffix ] ] ].
 
 plural-pron-rule-lex-rule := infl-lex-rule & pron-num-marker-lex-rule-super &
-  [ DTR.INFLECTED.3RD-PERSON-F-LEX-NOUN-FLAG na,
+  [ 
+    DTR.INFLECTED.3RD-PERSON-F-LEX-NOUN-FLAG na,
     SYNSEM.LOCAL.CONT.HOOK.INDEX.PNG.NUM pl ].
 
 singular-pron-rule-lex-rule := const-lex-rule & pron-num-marker-lex-rule-super &
@@ -1777,6 +1776,7 @@ high-no-rel-nominalized-clause-phrase := unary-phrase &
 head-mod-poss-phrase-1 := basic-head-mod-phrase-simple & head-compositional & head-final &
   [ SYNSEM.LOCAL.CAT [ HEAD +np,
                        VAL.SPEC #spec ],
+    C-CONT.HCONS <! !>,
     HEAD-DTR.SYNSEM.LOCAL.CAT [ HEAD +np,
                                 VAL.SPEC #spec,
                                 POSSESSUM nonpossessive ],

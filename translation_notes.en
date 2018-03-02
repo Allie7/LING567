@@ -1,15 +1,13 @@
 Here are notes about the translations
 
-6/23
+8/23
 
 Dogs sleep X
-
 
 Dogs chase cars X
 
 I chase you X
 Except I always appears to be plural for some reason....
-
 
 Dogs eat
 Doesn't work because we need argument optionality for the transitive verb
@@ -18,9 +16,7 @@ The dogs chase cars X
 
 The dogs dont chase cars X
 
-
 I think that you know that dogs chase cars ?
-
 
 I ask whether you know that dogs chase cars ?
 Won't be able to do without speech
@@ -43,7 +39,6 @@ Argument optionality issue applies
 Dogs eat quickly
 Argument optionality issue applies
 
-
 Who sleeps
 Mood issue?
 
@@ -56,16 +51,12 @@ Mood issue
 Who asked what the dogs chase
 Won't be albe to do without speech
 
-
 I asked what the dogs chased ?
 Won't be able to do without speech 
 
-The dog s car sleeps
-Does not parse due to some issue with possession
+The dog s car sleeps X
 
-My dogs sleep
-Similar issue with possession
-
+My dogs sleep X
 
 The dog sleeps because the cat sleeps
 Need to add because subordinator

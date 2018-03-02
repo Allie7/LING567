@@ -236,6 +236,10 @@ grangmo := nom-adj-verb-lex-adj-lex &
   [ STEM < "grangmo" >,
     SYNSEM.LKEYS.KEYREL.PRED "_cold_a_rel" ].
 
+grangmo2 := nom-adj-verb-lex-adj-lex &
+  [ STEM < "grangmo" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_hungry_a_rel" ].
+
 bdepo := nom-adj-verb-lex-adj-lex &
   [ STEM < "bdepo" >,
     SYNSEM.LKEYS.KEYREL.PRED "_well_a_rel" ].
@@ -251,6 +255,10 @@ mangse := nom-adj-verb-lex-adj-lex &
 yagpo := adverb-lex &
   [ STEM < "yagpo" >,
     SYNSEM.LKEYS.KEYREL.PRED "_well_a_rel" ].
+
+mgyogspo := adverb-lex &
+  [ STEM < "mgyogspo" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_quickly_a_rel" ].
 
 zhedrag := adverb-adj-lex &
   [ STEM < "zhedrag" >,

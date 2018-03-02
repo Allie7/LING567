@@ -44,8 +44,9 @@ PNG.PER : PER
   * <> *
 
 PNG.NUM : NUM
-  pl <> sg
+  pl <> pl
   sg <> sg
+  * <> *
 
 ;PNG.GEND : PNG.GEND
 ;  f <> f
