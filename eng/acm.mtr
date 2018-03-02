@@ -1,1 +1,3 @@
 ;pro-drop := pronoun-delete-mtr.
+;pro-ins1 := pro-insert-arg1-mtr. 
+eat-drop  := eat-mtr.

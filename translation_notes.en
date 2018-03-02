@@ -1,6 +1,6 @@
 Here are notes about the translations
 
-8/23
+11/23
 
 Dogs sleep X
 
@@ -9,8 +9,7 @@ Dogs chase cars X
 I chase you X
 Except I always appears to be plural for some reason....
 
-Dogs eat
-Doesn't work because we need argument optionality for the transitive verb
+Dogs eat X
 
 The dogs chase cars X
 
@@ -33,11 +32,9 @@ Can't do yet because cats can't be transitive and ergative at the same time
 Do cats chase dogs
 Can't do yet, likely because of some mood issue
 
-Hungry dogs eat
-Argument optionality issue applies
+Hungry dogs eat X
 
-Dogs eat quickly
-Argument optionality issue applies
+Dogs eat quickly X
 
 Who sleeps
 Mood issue?

@@ -160,6 +160,18 @@ chase-mtr := monotonic_mtr &
 	   HCONS <! [ HARG #harg,
 		     LARG #larg ] !> ]].
 
+
+eat-mtr := monotonic_omtr &
+[ INPUT [ RELS <! [ PRED "_eat_v_rel", 
+                    ARG0 #arg0,
+                    ARG1 #arg1,
+                    ARG2 #arg2 ] !> ],
+  FILTER [ RELS <! [ARG0 #arg2 ] !> ],
+  OUTPUT [ RELS <! [ PRED "_eat_v_rel",
+                     ARG0 #arg0,
+                     ARG1 #arg1] !> ] ].
+
+
 eat-food-mtr := monotonic_mtr &
 [ CONTEXT [ RELS <! [ PRED "_eat_v_rel",
 		     ARG2 #arg2 ] !> ],
@@ -174,6 +186,7 @@ eat-food-mtr := monotonic_mtr &
   OUTPUT [ RELS <! !>,
 	   HCONS <! !> ],
   FLAGS [ EQUAL < #arg2 > ]].
+
 
 eat-ini-mtr := monotonic_mtr &
 [ CONTEXT [ RELS <! [ PRED "_eat_v_rel",
