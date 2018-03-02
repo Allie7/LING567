@@ -389,7 +389,8 @@ head-spec-phrase := basic-head-spec-phrase & head-initial &
                                            [ POSSESSOR nonpossessive ] ] ] ].
 
 common_noun_lex-noun-lex := noun-lex & 
-  [ INFLECTED [ NUM-MARKER-RULE-FLAG +,
+  [ SYNSEM.LOCAL.CONT.HOOK.INDEX.PNG [ PER 3rd],
+    INFLECTED [ NUM-MARKER-RULE-FLAG +,
                 CASE-MARKER-RULE-FLAG -,
                 POSSESSIVE-MARKER-RULE-FLAG - ] ].
 
