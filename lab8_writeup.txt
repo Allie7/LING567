@@ -1,0 +1,81 @@
+John Cadigan
+Ling 567
+March 2, 2018
+
+
+Lab 8 Writeup
+
+
+B. Variable property mapping
+
+For MT, we introduced the following changes to VPM. We removed E. from TENSE, ASPECT and MOOD. We removed PNG from PER and NUM.
+
+To improve results for generation and MT, we gave reasonable default types for TENSE, ASPECT and MOOD:
+
+  * >> no-tense
+  no-tense << [e]
+
+  * >> no-aspect
+  no-aspect << [e]
+
+  * >> indic
+  indic << [e]
+
+We have not introduced any major properties since the end of using the customization system, so no additional work was required.
+
+D. Grammar improvements
+
+A. Translation
+
+To translate the sentences we added the relevant vocabulary as much as possible. Because to be hungry was a implemented as a phrase, we made a second definition of cold with the PRED value of "_hungry_a_rel". We also pulled an adverb "fast" from our adverb IGT and identified it as "quickly". Finally, we did find a definition for the word 'follow', so we used it in the place of "chase."
+
+With vocabulary in place, there were some fixes to the grammar which needed to be done. As suggested in Lab 7, we got rid of variable property mapping pl -> sg, and redfined common nouns so they would not undergo plural inflection:
+
+common_noun_lex-noun-lex := noun-lex &
+  [ SYNSEM.LOCAL.CONT.HOOK.INDEX.PNG [ PER 3rd],
+    INFLECTED [ NUM-MARKER-RULE-FLAG +,
+                CASE-MARKER-RULE-FLAG -,
+                POSSESSIVE-MARKER-RULE-FLAG - ] ].
+
+
+To translate possessive sentences, we added the fix to C-CONT.HCONS mentioned in class.
+
+To translate sentences with eat, we implemented to the transitive to intransitive transfer rule shown in class.
+
++eat-mtr := monotonic_omtr &
++[ INPUT [ RELS <! [ PRED "_eat_v_rel", 
++                    ARG0 #arg0,
++                    ARG1 #arg1,
++                    ARG2 #arg2 ] !> ],
++  FILTER [ RELS <! [ARG0 #arg2 ] !> ],
++  OUTPUT [ RELS <! [ PRED "_eat_v_rel",
++                     ARG0 #arg0,
++                     ARG1 #arg1] !> ] ].
+
+
+The vast majority of sentences translated as eat without a complement, included the noun meal as a complement. However, we were justified in creating an intransitive version of eat on the basis of one sentence. It does not appear in our testuite and won't parse:
+
+Source: b:236
+nga	dalta	za-long	med
+I.ABS	now	eat-NMZ	exist.neg
+"I have no time to eat now"
+
+To implement questions, we had to modify a few things:
+
+
+B. 
+
+
+
+C. Coverage and Overgeneration
+
+		Baseline	Current	
+Coverage 	48/83		50/83
+Ambiguity	2.31		1.66
+Overgeneration	0/31		0/31
+
+
+
+
+
+D. Outstanding issues
