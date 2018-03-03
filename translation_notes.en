@@ -1,6 +1,6 @@
 Here are notes about the translations
 
-11/23
+14/23
 
 Dogs sleep X
 
@@ -29,21 +29,19 @@ Can't do because we don't have an S coordination strategy
 Cats chase dogs and sleep
 Can't do yet because cats can't be transitive and ergative at the same time
 
-Do cats chase dogs
-Can't do yet, likely because of some mood issue
+Do cats chase dogs X
 
 Hungry dogs eat X
 
 Dogs eat quickly X
 
-Who sleeps
+Who sleeps X
 Mood issue?
 
-What do the dogs chase
-Mood issue?
+What do the dogs chase X
 
 What do you think the dogs chase
-Mood issue
+lack of lexicon "think_v_rel"
 
 Who asked what the dogs chase
 Won't be albe to do without speech

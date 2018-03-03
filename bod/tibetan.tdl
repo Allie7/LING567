@@ -281,13 +281,14 @@ no-aspect := aspect.
 
 ;;; Mood
 
-indic := mood. 
-interr := mood.  
+indic := interr+indic. 
+interr := interr+indic.  
 emph := mood.  
 corrob := mood.
 apparent := mood.  
 possible := mood.
 no-mood := mood.
+interr+indic := mood.
 
 ;;;;;;;;;;;;;;;;;;;
 ;;; Lexical Types
@@ -303,7 +304,8 @@ wh-pronoun-noun-lex :=  case-marker-rule-dtr & possessive-rule-lex-rule-dtr & no
 				 SUBJ < >,
 				 COMPS < >,
 				 SPEC < > ] ],
-		     CONT [ HOOK.INDEX.PNG.PER 3rd,
+		     CONT [ HOOK.INDEX [ PNG [ PER 3rd,
+					       NUM sg ] ],
 	                    RELS <! [ LBL #larg,
 				       ARG0 #ind & ref-ind ],
 				  [ PRED "wh_q_rel",
@@ -485,16 +487,14 @@ aux-lex := verb-lex &
 		NON-CONTRACTED-FORM-LEX-FLAG + ] ] .
 
 intransitive-verb-lex := main-verb-lex & intransitive-lex-item &
-  [ SYNSEM.LOCAL.CONT.HOOK.INDEX.E.TENSE present,
-    SYNSEM.LOCAL.CAT.VAL.COMPS < >,
+  [ SYNSEM.LOCAL.CAT.VAL.COMPS < >,
     ARG-ST.FIRST.LOCAL.CAT.HEAD noun ].
 
 
 ;attempt to cut down on overgeneration by specifying tense didn't work
 ;  [ SYNSEM.LOCAL.CONT.HOOK.INDEX.E.TENSE past,
 transitive-verb-lex := main-verb-lex & transitive-lex-item &
-   [ SYNSEM.LOCAL.CONT.HOOK.INDEX.E.TENSE present, 
-    SYNSEM.LOCAL.CAT.VAL.COMPS < #comps >,
+   [ SYNSEM.LOCAL.CAT.VAL.COMPS < #comps >,
     ARG-ST < [ LOCAL.CAT.HEAD noun ],
              #comps &
              [ LOCAL.CAT cat-sat &
@@ -612,8 +612,7 @@ comp-accept-verb-lex := main-verb-lex & clausal-arg-intrans-lex-item &
 unspec-trans-verb-lex := transitive-verb-lex &
   [ SYNSEM.LOCAL.CAT.VAL [ SUBJ.FIRST.LOCAL.CAT.HEAD.CASE abs,
                            COMPS.FIRST.LOCAL.CAT.HEAD.CASE abs ] ] &
-  [ SYNSEM.LOCAL [ CONT.HOOK.INDEX.E.TENSE present,
-                   CAT.VAL [ SUBJ.FIRST.OPT -,
+  [ SYNSEM.LOCAL [ CAT.VAL [ SUBJ.FIRST.OPT -,
                              COMPS.FIRST.OPT - ] ],
     INFLECTED [ POLARITY-MARKER-FLAG -,
 		ASPECT-MOOD-SUFFIX-FLAG -,
