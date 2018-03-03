@@ -58,8 +58,42 @@ the changes to the semi.vpm
  +   interr+indic << [e]
 
 
-B. 
+B. Clean-ups:
 
+We tried to work on the problems left last week. The mrs chain breaks at the comp-head phrase "zhedrag grangmo yogredbas" when we tried to parse the following :
+
+Source: b:275
+Vetted: s
+Judgment: g
+Phenomena:q
+bodla           dgunkha         zhedrag grangmo         yogredbas
+bod-la          dgunkha         zhedrag grang-mo        yogred-bas
+Tibet-LOC       winter.ABS      very    cold-NMZ        exist-INTERR
+"Are winters very cold in Tibet?"
+
+To solve this, we tried to implement the adverbs and adjectives as Professor Bender advices :
+
+"What you want is a lexical entry for zhedrag that is an adverb ([ HEAD adv ]), which contributes a relation with the PRED value _very_x_deg.  The ARG1 of that should end up being the ARG0 of _cold_a_rel, and they should have the same LBL.  The should combine via a head-spec rule, so the adjective cold should have a non-empty SPR value that wants something that is [ HEAD adv ], and the adverb should have a non-empty SPEC value that wants something that is [ HEAD adj ] and that identifies the INDEX of the SPEC with its own KEYREL.ARG1 and the LTOP of the SPEC with its own LTOP."
+
+We changed the following:
+nom-adj-verb-lex-adj-lex := attr-adj-lex & norm-zero-arg &
+[ SYNSEM.LOCAL.CAT [ POSTHEAD +,
+                     VAL [ SUBJ < >,
+                           SPR < [ LOCAL.CAT.HEAD adv ] > ],
+                           HEAD.PRD + ] ].
+
+ 
+
+adverb-adj-lex := basic-adverb-lex & intersective-mod-lex &
+[ SYNSEM [ LOCAL [ CAT [  VAL [ SPR < >,
+                                SUBJ < >,
+                                COMPS < >,
+                                SPEC < [ LOCAL [ CAT.HEAD adj ] ] > ] ] ] ] ].
+
+
+head-spec-phrase := basic-head-spec-phrase & head-final. ;;HEAD-SPEC used to be head-initial.
+
+This makes the adverbs and adj go throught the HEAD-SPEC rule sucessfully, but it fails when the whole VP phrase tries to unify with the subject. there was a conflict in the ARG0 of the adjective : event / ref-ind.
 
 
 C. Coverage and Overgeneration
