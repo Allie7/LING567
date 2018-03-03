@@ -92,7 +92,7 @@ intransitive-verb-lex := main-verb-lex & intransitive-lex-item &
                                   [ CASE abs+erg ],
     SYNSEM.LOCAL.CAT.VAL.COMPS < > ].
 
-This allowed us to parse sentences with a mix of transitive and intransitive verbs.
+This allowed us to parse sentences with a mix of transitive and intransitive verbs as you will see.
 
 B. Translation
 
@@ -146,10 +146,9 @@ the changes to the semi.vpm
  +   interr+indic << [e]
 
 
-
 C. Translation results
 
-We have 14/23 sentences translating from English and 13/20 parsing for Pite Saammi. You can read about the coverage of each sentence in translation_notes.en|sje. There 
+We have 14/23 sentences translating from English and 13/20 parsing for Pite Saammi. You can read about the coverage of each sentence in translation_notes.en|sje. They appear alongside this file. bod.txt appears in a folder called translation.
 
 In general, the morphological variants present in our translation increase the outputs:  
 
@@ -221,8 +220,8 @@ dog	sleep-because	cat	sleep
 C. Coverage and Overgeneration
 
 		Baseline	Current	
-Coverage 	48/83		50/83
-Ambiguity	2.31		1.68
+Coverage 	50/83		50/83
+Ambiguity	1.66		1.68
 Overgeneration	0/31		0/31
 
 
