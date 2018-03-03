@@ -77,7 +77,7 @@ We deleted the above changes so that they won't influence the grammar's performa
 
 2. Coordination:
 
-At some point either this week or last, we rolled back our attempt at coordinating multiple NPs in their unusual pattern because it broke indices.  
+At some point either this week or last, we rolled back our attempt at coordinating  3 >=  NPs in their unusual pattern because it broke indices.  
 
 3. abs+erg
 
@@ -106,7 +106,6 @@ common_noun_lex-noun-lex := noun-lex &
                 CASE-MARKER-RULE-FLAG -,
                 POSSESSIVE-MARKER-RULE-FLAG - ] ].
 
-
 To translate possessive sentences, we added the fix to C-CONT.HCONS mentioned in class.
 
 To translate sentences with eat, we implemented to the transitive to intransitive transfer rule shown in class.
@@ -122,7 +121,7 @@ To translate sentences with eat, we implemented to the transitive to intransitiv
 +                     ARG1 #arg1] !> ] ].
 
 
-The vast majority of sentences translated as eat without a complement, included the noun meal as a complement. However, we were justified in creating an intransitive version of eat on the basis of one sentence. It does not appear in our testuite and won't parse:
+The vast majority of sentences translated as eat without a complement in English included the noun meal as a complement in the IGT. However, we were justified in creating an intransitive version of eat on the basis of one sentence. It does not appear in our testuite and won't parse:
 
 Source: b:236
 nga	dalta	za-long	med
@@ -203,7 +202,7 @@ khyi	gnyid	rjesla	zhi	gnyid
 dog.ABS	sleep	after	cat	sleep
 "The dog sleeps after the cat"
 
-A fragment of the original sentence to translate:
+A fragment of the original sentence ("I think you know that dogs chase cats"):
 
 khos	khyis	pheb1gro	snyegpa		shes
 kho-s   khyi-s	pheb1gro	snyeg-pa	shes
@@ -226,5 +225,6 @@ Overgeneration	0/31		0/31
 
 
 Despite the changes to the grammar, we managed to retain most of our parses and not increase ambiguity.
+
 
 

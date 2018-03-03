@@ -202,8 +202,6 @@ khyi	gnyid	rjesla	zhi	gnyid
 dog.ABS	sleep	after	cat	sleep
 "The dog sleeps after the cat"
 
-This is a bit of a surprise since we havne't edited the tdl concerning subordination.
-
 A fragment of the original sentence ("I think you know that dogs chase cats"):
 
 khos	khyis	pheb1gro	snyegpa		shes
