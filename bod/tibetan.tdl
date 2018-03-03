@@ -1837,7 +1837,7 @@ n1-same-same-same-top-coord-rule := basic-n-top-coord-rule & monopoly-top-coord-
 n1-same-same-same-mid-coord-rule := basic-n-mid-coord-rule & monopoly-mid-coord-rule & same-same-same-case-coord-rule &
   [ SYNSEM.LOCAL.COORD-STRAT "1" ].
 
-n1-bottom-coord-rule := conj-last-bottom-coord-rule & n-bottom-coord-phrase & pass-up-png-coord-rule &
+n1-bottom-coord-rule := conj-first-bottom-coord-rule & n-bottom-coord-phrase & pass-up-png-coord-rule &
   [ SYNSEM.LOCAL.COORD-STRAT "1" ].
 
 ;;; Coordination Strategy 1

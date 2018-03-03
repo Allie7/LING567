@@ -31,6 +31,8 @@
 ((:path . "lab7_baseline") (:content . "lab7: Ling 567 Lab7 baseline run"))
 ((:path . "lab7") (:content . "lab7: Ling 567 Lab7 run"))
 ((:path . "test_corpus") (:content . "test_corpus: Ling 567 test corpus"))
+((:path . "lab8_baseline") (:content . "lab8: Ling 567 Lab8 baseline run"))
+((:path . "lab8") (:content . "lab8: Ling 567 Lab8 run"))
 ; New test suites here. For example:
 ; ((:path . "new-test-suite") (:content . "New Test Suite: A description of the new test suite located at the subdirectory new-test-suite."))
 )
