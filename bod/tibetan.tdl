@@ -487,8 +487,8 @@ aux-lex := verb-lex &
 		NON-CONTRACTED-FORM-LEX-FLAG + ] ] .
 
 intransitive-verb-lex := main-verb-lex & intransitive-lex-item &
-  [ SYNSEM.LOCAL.CAT.VAL.COMPS < >,
-    ARG-ST.FIRST.LOCAL.CAT.HEAD noun ].
+  [ ARG-ST.FIRST.LOCAL.CAT.HEAD noun,
+    SYNSEM.LOCAL.CAT.VAL.COMPS < > ].
 
 
 ;attempt to cut down on overgeneration by specifying tense didn't work
@@ -511,8 +511,9 @@ clausal-verb-lex := main-verb-lex &
                                SUBJ < > ] ] > ].
 
 abs-intransitive-verb-lex := intransitive-verb-lex &
-  [ ARG-ST.FIRST.LOCAL.CAT.HEAD noun &
-                                [ CASE abs+erg ] ].
+   [ ARG-ST.FIRST.LOCAL.CAT.HEAD noun &
+                                [ CASE abs+erg ],
+    SYNSEM.LOCAL.CAT.VAL.COMPS < > ].
 
 erg-abs-transitive-verb-lex := transitive-verb-lex &
   [ ARG-ST < [ LOCAL.CAT.HEAD noun &
