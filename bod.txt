@@ -10,13 +10,13 @@ khyis pheb1gro snyeg
 
 khyis pheb1gro masnyeg
 
-not modeled
+not modeled: no think; You know that dogs chase cars = khos khyis pheb1gro snyegpa shes
 
-not translatable
+not translatable: no embedded interr clause
 
 zhis dang khyis pheb1gro snyeg
 
-not modeled
+not modeled: no S coordination
 
 zhis khyi snyeg gnyid
 
@@ -30,16 +30,16 @@ su gnyidpa
 
 khyis sus snyegpa
 
-not modeled
+not modeled: missing think
 
-not translatable 
+not translatable: no embedded interr clause
 
-not translatable
+not translatable: no embedded interr clause
 
 khyigi pheb1gro gnyid
 
 ngai khyi gnyid
 
-Not modeled
+khyi gnyidtsang zhi gnyid
 
-Not modeled
+khyi gnyid rjesla zhi gnyid

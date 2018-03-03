@@ -43,10 +43,74 @@ I.ABS	now	eat-NMZ	exist.neg
 
 To implement questions, we had to modify a few things:
 
+B. Translation results
 
-B. 
+We have 14/23 sentences translating from English and 13/20 parsing for Pite Saammi. You can read about the coverage of each sentence in translation_notes.en|sje
 
+In general, the morphological variants present in our translation increase the outputs:  
 
+ergative-lex-rule-suffix1 :=
+%suffix (* gyis)(* gis)(* s)
+ergative-lex-rule-lex-rule.
+
+In reality, gyis and gis only appear after consonants, but we do not model that level of morphological detail for nouns. Another thing which increases the number of translations is the number of interrogative morphemes we have:
+
+pas-interr-suffix :=
+%suffix (* pas) (* pa)
+pas-interr-lex-rule.
+
+gas-interr-suffix :=
+%suffix (* gas)
+gas-interr-lex-rule.
+
+bas-interr-suffix :=
+%suffix (* bas)
+bas-interr-lex-rule.
+
+ngas-interr-suffix :=
+%suffix (* ngas)
+ngas-interr-lex-rule.
+
+Another segment of the sentences don't parse because we are missing vocabulary for "think", but we do have "know".
+
+A few of our translations parse, but are not translated.
+
+Our first example is 
+
+zhis	khyi	snyeg	gnyid
+zhi-s	khyi	snyeg 	gnyid
+cat.ERG	dog.ABS	chase	sleep
+"Cats chase dogs and sleep"
+
+The MRS looks OK, but it does not translate. While the ergative subject usually apears with transitive verbs and absolute subject appears with intransitive verbs, we have evidence that the ergative subject appears in such constructions:
+
+Source: b:220
+Vetted: s
+Judgment: g
+Phenomena: crd, crdagr, svc
+zhoggas ngatshos        yige    bris    denas   khalag  bzas    denas   chamchamla      phyin   payin
+zhoggas nga-tsho-s      yige    bris    denas   khalag  bzas    denas   chamcham-la     phyin   pa-yin
+morning I-num-ERG       letter.ABS  write   then    meal.ABS   eat     then    walk-DAT        go.PST    LK-AUX
+"In the morning we wrote letters, then we had a meal, then we went for a walk"
+
+A few others parse for Tibetan but have broken MRS chains:
+
+khyi	gnyid	rjesla	zhi	gnyid
+khyi	gnyid	rjesla	zhi	gnyid
+dog.ABS	sleep	after	cat	sleep
+"The dog sleeps after the cat"
+
+khos	khyis	pheb1gro	snyegpa		shes
+kho-s   khyi-s	pheb1gro	snyeg-pa	shes
+you.ERG	dog.ERG car		follow-NMZ	know
+"You know that dogs chase cars"
+
+Finally, there are the sentences which do not translate because we do not model the phenomena. Foremost, are the 3 sentences containing embedded interrogative clauses with the word "ask" which we have explained do not exist in Tibetan in previous labs. Another is S coordination--we do not have IGT or sources demonstrating this. Finally, we did not implement "because" because it appears as a subordinating clitic rather than a separate word as "after" and "before" do--modeling this would require returning to the customization system:
+
+khyi	gnyidtsang	zhi	gnyid
+khyi	gnyid-tsang	zhi	gnyid
+dog	sleep-because	cat	sleep	 
+"The dog sleeps because the cat sleeps"
 
 C. Coverage and Overgeneration
 

@@ -487,7 +487,8 @@ aux-lex := verb-lex &
 		NON-CONTRACTED-FORM-LEX-FLAG + ] ] .
 
 intransitive-verb-lex := main-verb-lex & intransitive-lex-item &
-  [ ARG-ST.FIRST.LOCAL.CAT.HEAD noun,
+  [ ARG-ST.FIRST.LOCAL.CAT.HEAD noun &
+                                  [ CASE abs+erg ],
     SYNSEM.LOCAL.CAT.VAL.COMPS < > ].
 
 

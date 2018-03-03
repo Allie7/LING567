@@ -23,7 +23,7 @@ noun :+ [ CASE case ].
 det :+ [ COUNT bool ].
 
 head :+ [ AUX bool,
-    FORM form ].
+     FORM form ].
 
 cat :+ [ WH bool ].
 
@@ -44,7 +44,7 @@ basic-head-comp-phrase :+ [ SYNSEM.LOCAL.CAT.MC #mc,
     HEAD-DTR.SYNSEM.LOCAL.CAT.MC #mc ].
 
 basic-head-mod-phrase-simple :+ [ SYNSEM.LOCAL.CAT.MC #mc,
-    NON-HEAD-DTR.SYNSEM.LOCAL.CAT.MC #mc ].
+    HEAD-DTR.SYNSEM.LOCAL.CAT.MC #mc ].
 
 ; For the analysis of inverted yes-no questions, we add the feature INV.
 
@@ -976,3 +976,39 @@ extracted-comp-phrase := basic-extracted-comp-phrase &
 extracted-subj-phrase := basic-extracted-subj-phrase &
   [ SYNSEM.LOCAL.CAT.HEAD verb,
     HEAD-DTR.SYNSEM.LOCAL.CAT.VAL.COMPS < > ].
+
+;;;;;;;;;;;;;;;;;;;
+;;; Subordinators
+;;;;;;;;;;;;;;;;;;;
+
+; EMB 2018-02-23 Cribbed from the Dagaare grammar, which got this from Kristen's library, and adapted lightly for English.
+
+adposition-subord-lex-item := single-rel-lex-item & norm-ltop-lex-item &
+  [ SYNSEM.LOCAL.CAT [ MC -,
+                       HEAD adp &
+                            [ MOD < [ LOCAL scopal-mod &
+                                            [ CAT [ HEAD verb,
+                                                    VAL.COMPS < > ] ] ] > ],
+                       VAL [ SUBJ < >,
+                             SPR < >,
+                             COMPS < [ LOCAL.CAT [ MC -,
+                                                   VAL.COMPS < > ] ] > ] ] ].
+
+subord-with-verbal-comp-lex := adposition-subord-lex-item &
+  [ SYNSEM [ LOCAL [ CAT [ HEAD.MOD < [ LOCAL [ CAT.HEAD verb,
+                                                CONT.HOOK [ LTOP #mod,
+                                                            INDEX #index ] ] ] >,
+                           VAL.COMPS < [ LOCAL [ CAT.HEAD verb,
+                                                 CONT.HOOK.LTOP #comps ] ] > ],
+                     CONT [ HCONS <! qeq &
+                                     [ HARG #h1,
+                                       LARG #mod ], qeq &
+                                                    [ HARG #h2,
+                                                      LARG #comps ] !>,
+                            HOOK.INDEX #index ] ],
+             LKEYS.KEYREL [ ARG1 #h1,
+                            ARG2 #h2 ] ] ].
+
+s-attach-clause-subord-lex-item := subord-with-verbal-comp-lex &
+  [ SYNSEM.LOCAL.CAT [ VAL.COMPS < [ LOCAL.CAT.VAL.SUBJ < > ] >,
+                       HEAD [ MOD < [ LOCAL.CAT.VAL.SUBJ < > ] > ] ] ].

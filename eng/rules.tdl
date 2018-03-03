@@ -44,3 +44,9 @@ extr-subj := extracted-subj-phrase.
 ;; possessives
 
 ;poss := poss-phrase.
+
+;;; for clausal modifiers
+
+head-adj-scop := head-adj-scop-phrase.
+
+adj-head-scop := adj-head-scop-phrase.

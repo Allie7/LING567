@@ -237,3 +237,13 @@ what := wh-pronoun-noun-lex &
 who := wh-pronoun-noun-lex &
   [ STEM < "who" >,
     SYNSEM.LKEYS.KEYREL.PRED "_person_n_rel" ].
+
+;;; subordinating prepositions
+
+after := s-attach-clause-subord-lex-item &
+  [ STEM < "after" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_after_subord_rel" ].
+
+because := s-attach-clause-subord-lex-item &
+  [ STEM < "because" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_because_subord_rel" ].

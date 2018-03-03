@@ -401,7 +401,7 @@ khapar%20btang := obj-dat-trans-verb-lex-verb-lex &
            "btang" >,
     SYNSEM.LKEYS.KEYREL.PRED "_telephone_v_rel" ].
 
-bzas_2 := transtive-verb-lex-verb-lex &
+bzas_2 := erg-abs-transitive-verb-lex &
   [ STEM < "bzas" >,
     SYNSEM.LKEYS.KEYREL.PRED "_eat_v_rel" ].
 
@@ -482,6 +482,10 @@ yogmared_1 := yogmared-verb-lex &
 mthong_2 := comp-accept-verb-lex &
   [ STEM < "mthong" >,
     SYNSEM.LKEYS.KEYREL.PRED "_see_v_rel" ].
+
+shes := comp-accept-verb-lex &
+  [ STEM < "shes" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_know_v_rel" ].
 
 shes := transitive-erg-verb-lex-verb-lex &
   [ STEM < "shes" >,
@@ -612,6 +616,10 @@ dang1 := conj-lex &
 byas_2 := s-attach-clause-final-prehead-subord-lex-item &
   [ STEM < "byas" >,
     SYNSEM.LKEYS.KEYREL.PRED "_did_subord_rel" ].
+
+rjesla := s-attach-clause-final-prehead-subord-lex-item &
+  [ STEM < "rjesla" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_after_subord_rel" ].
 
 khongla := s-attach-clause-final-prehead-subord-lex-item &
   [ STEM < "khongla" >,
