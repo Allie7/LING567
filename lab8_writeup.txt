@@ -41,7 +41,21 @@ nga	dalta	za-long	med
 I.ABS	now	eat-NMZ	exist.neg
 "I have no time to eat now"
 
-To implement questions, we had to modify a few things:
+To implement questions, we had to modify a few things in the semi.vpm file. The eng and sje grammar does not have mood specified. In Tibetan we have 6 real mood types and a default type no-mood. In the translation part of this assignment, we only need interr mood for questions and indic mood for normal sentences. So we made the following changes in the tibetan.tdl : 
+
+interr+indic := mood.
+interr := interr+indic.
+indic := interr+indc.
+
+the changes to the semi.vpm
+
++ E.MOOD : MOOD
+ +   emph <> emph
+ +   corrob <> corrob
+ +   apparent <> apparent
+ +   possible <> possible
+ +   * >> no-mood
+ +   interr+indic << [e]
 
 
 B. 
