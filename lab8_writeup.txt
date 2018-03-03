@@ -95,6 +95,36 @@ head-spec-phrase := basic-head-spec-phrase & head-final. ;;HEAD-SPEC used to be 
 
 This makes the adverbs and adj go throught the HEAD-SPEC rule sucessfully, but it fails when the whole VP phrase tries to unify with the subject. there was a conflict in the ARG0 of the adjective : event / ref-ind.
 
+We also did the following modification to locative-pp-phrase to fix the mrs so that The ARG1 and LBL of _loc_p_rel are identified with the ARG0 and LBL of _cold_a_rel:
+
+locative-pp-phrase := unary-phrase &
+  [ SYNSEM [ LOCAL.CAT [ HEAD adp & [ MOD < [ LOCAL intersective-mod &
+                                                    [ CAT.HEAD verb,
+						      CONT.HOOK [ INDEX #arg1,
+								  LTOP #lbl ] ] ] > ],
+		          VAL [ COMPS < >,
+			        SUBJ < >, 
+			        SPR < > ]]],
+    C-CONT [ HOOK [ LTOP #ltop,
+		    INDEX #index,
+		    XARG #xarg ],
+	     RELS <! arg12-ev-relation &
+		   [ PRED "_loc_p_rel",
+		     LBL #ltop,
+		     ARG0 #index,
+		     ARG1 #xarg,
+		     ARG2 #dtr ] !>,
+	     HCONS <! !>  ],
+    ARGS < [ SYNSEM [ LOCAL [ CAT [ HEAD noun & [CASE loc],
+				  VAL.SPR < > ],
+			    CONT.HOOK [ INDEX #dtr ]],
+		      LKEYS.KEYREL [ ARG1 #arg1,
+				     LBL #lbl ] ] ] > ].
+
+Strangely, doing this fixed the breaking mrs of adverbs-adj, but it does not do what it is supposed to do.The locative PP phrase is broken with the rest of the sentence.
+
+We deleted the above changes so that they won't influence the grammar's performance.
+
 
 C. Coverage and Overgeneration
 
