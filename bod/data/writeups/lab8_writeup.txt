@@ -1,0 +1,230 @@
+John Cadigan
+Ling 567
+March 2, 2018
+
+
+Lab 8 Writeup
+
+A. Grammar cleanups
+
+
+1. 
+We tried to work on the problems left last week. The mrs chain breaks at the comp-head phrase "zhedrag grangmo yogredbas" when we tried to parse the following :
+
+Source: b:275
+Vetted: s
+Judgment: g
+Phenomena:q
+bodla           dgunkha         zhedrag grangmo         yogredbas
+bod-la          dgunkha         zhedrag grang-mo        yogred-bas
+Tibet-LOC       winter.ABS      very    cold-NMZ        exist-INTERR
+"Are winters very cold in Tibet?"
+
+To solve this, we tried to implement the adverbs and adjectives as Professor Bender advices :
+
+"What you want is a lexical entry for zhedrag that is an adverb ([ HEAD adv ]), which contributes a relation with the PRED value _very_x_deg.  The ARG1 of that should end up being the ARG0 of _cold_a_rel, and they should have the same LBL.  The should combine via a head-spec rule, so the adjective cold should have a non-empty SPR value that wants something that is [ HEAD adv ], and the adverb should have a non-empty SPEC value that wants something that is [ HEAD adj ] and that identifies the INDEX of the SPEC with its own KEYREL.ARG1 and the LTOP of the SPEC with its own LTOP."
+
+We changed the following:
+nom-adj-verb-lex-adj-lex := attr-adj-lex & norm-zero-arg &
+[ SYNSEM.LOCAL.CAT [ POSTHEAD +,
+                     VAL [ SUBJ < >,
+                           SPR < [ LOCAL.CAT.HEAD adv ] > ],
+                           HEAD.PRD + ] ].
+
+ 
+
+adverb-adj-lex := basic-adverb-lex & intersective-mod-lex &
+[ SYNSEM [ LOCAL [ CAT [  VAL [ SPR < >,
+                                SUBJ < >,
+                                COMPS < >,
+                                SPEC < [ LOCAL [ CAT.HEAD adj ] ] > ] ] ] ] ].
+
+
+head-spec-phrase := basic-head-spec-phrase & head-final. ;;HEAD-SPEC used to be head-initial.
+
+This makes the adverbs and adj go throught the HEAD-SPEC rule sucessfully, but it fails when the whole VP phrase tries to unify with the subject. there was a conflict in the ARG0 of the adjective : event / ref-ind.
+
+We also did the following modification to locative-pp-phrase to fix the mrs so that The ARG1 and LBL of _loc_p_rel are identified with the ARG0 and LBL of _cold_a_rel:
+
+locative-pp-phrase := unary-phrase &
+  [ SYNSEM [ LOCAL.CAT [ HEAD adp & [ MOD < [ LOCAL intersective-mod &
+                                                    [ CAT.HEAD verb,
+						      CONT.HOOK [ INDEX #arg1,
+								  LTOP #lbl ] ] ] > ],
+		          VAL [ COMPS < >,
+			        SUBJ < >, 
+			        SPR < > ]]],
+    C-CONT [ HOOK [ LTOP #ltop,
+		    INDEX #index,
+		    XARG #xarg ],
+	     RELS <! arg12-ev-relation &
+		   [ PRED "_loc_p_rel",
+		     LBL #ltop,
+		     ARG0 #index,
+		     ARG1 #xarg,
+		     ARG2 #dtr ] !>,
+	     HCONS <! !>  ],
+    ARGS < [ SYNSEM [ LOCAL [ CAT [ HEAD noun & [CASE loc],
+				  VAL.SPR < > ],
+			    CONT.HOOK [ INDEX #dtr ]],
+		      LKEYS.KEYREL [ ARG1 #arg1,
+				     LBL #lbl ] ] ] > ].
+
+Strangely, doing this fixed the breaking mrs of adverbs-adj, but it does not do what it is supposed to do.The locative PP phrase is broken with the rest of the sentence.
+
+We deleted the above changes so that they won't influence the grammar's performance.
+
+
+2. Coordination:
+
+At some point either this week or last, we rolled back our attempt at coordinating multiple NPs in their unusual pattern because it broke indices.  
+
+3. abs+erg
+
+Rather than completely underspecifying the subject's case for a few verb types we used abs+erg. Neither of us remember adding this, so if you did, thanks.
+
+abs+erg := case.
+abs := abs+erg.
+erg := abs+erg.
+
+intransitive-verb-lex := main-verb-lex & intransitive-lex-item &
+  [ ARG-ST.FIRST.LOCAL.CAT.HEAD noun &
+                                  [ CASE abs+erg ],
+    SYNSEM.LOCAL.CAT.VAL.COMPS < > ].
+
+This allowed us to parse sentences with a mix of transitive and intransitive verbs as you will see.
+
+B. Translation
+
+To translate the sentences we added the relevant vocabulary as much as possible. Because to be hungry was a implemented as a phrase, we made a second definition of cold with the PRED value of "_hungry_a_rel". We also pulled an adverb "fast" from our adverb IGT and identified it as "quickly". Finally, we did find a definition for the word 'follow', so we used it in the place of "chase."
+
+With vocabulary in place, there were some fixes to the grammar which needed to be done. As suggested in Lab 7, we got rid of variable property mapping pl -> sg, and redfined common nouns so they would not undergo plural inflection:
+
+common_noun_lex-noun-lex := noun-lex &
+  [ SYNSEM.LOCAL.CONT.HOOK.INDEX.PNG [ PER 3rd],
+    INFLECTED [ NUM-MARKER-RULE-FLAG +,
+                CASE-MARKER-RULE-FLAG -,
+                POSSESSIVE-MARKER-RULE-FLAG - ] ].
+
+
+To translate possessive sentences, we added the fix to C-CONT.HCONS mentioned in class.
+
+To translate sentences with eat, we implemented to the transitive to intransitive transfer rule shown in class.
+
++eat-mtr := monotonic_omtr &
++[ INPUT [ RELS <! [ PRED "_eat_v_rel", 
++                    ARG0 #arg0,
++                    ARG1 #arg1,
++                    ARG2 #arg2 ] !> ],
++  FILTER [ RELS <! [ARG0 #arg2 ] !> ],
++  OUTPUT [ RELS <! [ PRED "_eat_v_rel",
++                     ARG0 #arg0,
++                     ARG1 #arg1] !> ] ].
+
+
+The vast majority of sentences translated as eat without a complement, included the noun meal as a complement. However, we were justified in creating an intransitive version of eat on the basis of one sentence. It does not appear in our testuite and won't parse:
+
+Source: b:236
+nga	dalta	za-long	med
+I.ABS	now	eat-NMZ	exist.neg
+"I have no time to eat now"
+
+To implement questions, we had to modify a few things in the semi.vpm file. The eng and sje grammar does not have mood specified. In Tibetan we have 6 real mood types and a default type no-mood. In the translation part of this assignment, we only need interr mood for questions and indic mood for normal sentences. So we made the following changes in the tibetan.tdl :
+
+interr+indic := mood.
+interr := interr+indic.
+indic := interr+indc.
+
+the changes to the semi.vpm
+
++ E.MOOD : MOOD
+ +   emph <> emph
+ +   corrob <> corrob
+ +   apparent <> apparent
+ +   possible <> possible
+ +   * >> no-mood
+ +   interr+indic << [e]
+
+
+C. Translation results
+
+We have 14/23 sentences translating from English and 13/20 parsing for Pite Saammi. You can read about the coverage of each sentence in translation_notes.en|sje. They appear alongside this file. bod.txt appears in a folder called translation.
+
+In general, the morphological variants present in our translation increase the outputs:  
+
+ergative-lex-rule-suffix1 :=
+%suffix (* gyis)(* gis)(* s)
+ergative-lex-rule-lex-rule.
+
+In reality, gyis and gis only appear after consonants, but we do not model that level of morphological detail for nouns. Another thing which increases the number of translations is the number of interrogative morphemes we have:
+
+pas-interr-suffix :=
+%suffix (* pas) (* pa)
+pas-interr-lex-rule.
+
+gas-interr-suffix :=
+%suffix (* gas)
+gas-interr-lex-rule.
+
+bas-interr-suffix :=
+%suffix (* bas)
+bas-interr-lex-rule.
+
+ngas-interr-suffix :=
+%suffix (* ngas)
+ngas-interr-lex-rule.
+
+Another segment of the sentences don't parse because we are missing vocabulary for "think", but we do have "know".
+
+A few of our translations parse, but are not translated.
+
+Our first example is 
+
+zhis	khyi	snyeg	gnyid
+zhi-s	khyi	snyeg 	gnyid
+cat.ERG	dog.ABS	chase	sleep
+"Cats chase dogs and sleep"
+
+The MRS looks OK, but it does not translate. While the ergative subject usually apears with transitive verbs and absolute subject appears with intransitive verbs, we have evidence that the ergative subject appears in such constructions:
+
+Source: b:220
+Vetted: s
+Judgment: g
+Phenomena: crd, crdagr, svc
+zhoggas ngatshos        yige		bris    denas   khalag  	bzas    denas   chamchamla      phyin	payin
+zhoggas nga-tsho-s      yige		bris    denas   khalag		bzas    denas   chamcham-la     phyin	pa-yin
+morning I-num-ERG       letter.ABS	write   then    meal.ABS   	eat     then    walk-DAT        go.PST	LK-AUX
+"In the morning we wrote letters, then we had a meal, then we went for a walk"
+
+A few others parse for Tibetan but have broken MRS chains:
+
+khyi	gnyid	rjesla	zhi	gnyid
+khyi	gnyid	rjesla	zhi	gnyid
+dog.ABS	sleep	after	cat	sleep
+"The dog sleeps after the cat"
+
+A fragment of the original sentence to translate:
+
+khos	khyis	pheb1gro	snyegpa		shes
+kho-s   khyi-s	pheb1gro	snyeg-pa	shes
+you.ERG	dog.ERG car		follow-NMZ	know
+"You know that dogs chase cars"
+
+Finally, there are the sentences which do not translate because we do not model the phenomena. Foremost, are the 3 sentences containing embedded interrogative clauses with the word "ask" which we have explained do not exist in Tibetan in previous labs. Another is S coordination--we do not have IGT or sources demonstrating this. Finally, we did not implement "because" because it appears as a subordinating clitic rather than a separate word as "after" and "before" do--modeling this would require returning to the customization system:
+
+khyi	gnyidtsang	zhi	gnyid
+khyi	gnyid-tsang	zhi	gnyid
+dog	sleep-because	cat	sleep	 
+"The dog sleeps because the cat sleeps"
+
+C. Coverage and Overgeneration
+
+		Baseline	Current	
+Coverage 	50/83		50/83
+Ambiguity	1.66		1.68
+Overgeneration	0/31		0/31
+
+
+Despite the changes to the grammar, we managed to retain most of our parses and not increase ambiguity.
+
+
