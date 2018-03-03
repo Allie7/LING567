@@ -43,10 +43,17 @@ PNG.PER : PER
   1st <> first
   * <> *
 
+
 PNG.NUM : NUM
   pl <> pl
   sg <> sg
   * <> *
+
+CASE : CASE
+  abs << case
+  erg <> nom
+  dat <> dat
+  loc <> loc
 
 ;PNG.GEND : PNG.GEND
 ;  f <> f
@@ -57,9 +64,8 @@ E.TENSE : TENSE
 
   past <> past
   future <> future
-  present <> present
   * >> no-tense
-  no-tense << [e]
+  present << [e]
 
 E.ASPECT : ASPECT
   prf <> prf
@@ -69,15 +75,13 @@ E.ASPECT : ASPECT
   * >> no-aspect
   no-aspect << [e]
 
-E.MOOD : MOOD
-  interr <> interr
-  emph <> emph
-  corrob <> corrob
-  apparent <> apparent
-  possible <> possible
-  indic <> indic
-  * >> no-mood
-  indic << [e]
+ E.MOOD : MOOD
+   emph <> emph
+   corrob <> corrob
+   apparent <> apparent
+   possible <> possible
+   * >> no-mood
+   interr+indic << [e]
 
 
 
